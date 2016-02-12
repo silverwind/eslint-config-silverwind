@@ -8,4 +8,4 @@ const input = path.join(__dirname, ".eslintrc");
 const output = path.join(__dirname, "config.json");
 
 const config = YAML.parse(String(fs.readFileSync(input)));
-fs.writeFileSync(output, JSON.stringify(config, null, 2));
+fs.writeFileSync(output, JSON.stringify(config));

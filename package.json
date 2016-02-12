@@ -1,12 +1,11 @@
 {
   "name": "eslint-config-silverwind",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Personal ESLint configuration",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/droppy",
-  "license": "BSD-2-Clause",
-  "main": "index.js",
   "license": "ISC",
+  "main": "index.js",
   "files": [
     "index.js",
     "config.json"

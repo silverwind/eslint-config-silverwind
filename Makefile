@@ -22,8 +22,8 @@ npm-minor:
 npm-major:
 	npm version major
 
-patch: lint build npm-patch publish deploy
-minor: lint build npm-minor publish deploy
-major: lint build npm-major publish deploy
+patch: lint build npm-patch publish
+minor: lint build npm-minor publish
+major: lint build npm-major publish
 
 .PHONY: lint publish update npm-patch npm-minor npm-major patch minor major

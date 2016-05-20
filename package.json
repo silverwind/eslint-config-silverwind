@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "description": "Personal ESLint configuration",
   "author": "silverwind <me@silverwind.io>",
-  "repository": "silverwind/droppy",
+  "repository": "silverwind/eslint-config-silverwind",
   "license": "BSD-2-Clause",
   "main": "index.js",
   "files": [

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 "use strict";
+
 const YAML = require("yamljs");
 const fs = require("fs");
 const path = require("path");

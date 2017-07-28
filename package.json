@@ -14,7 +14,7 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "yamljs": "^0.2.8"
+    "yamljs": "^0.3.0"
   },
   "keywords": [
     "eslint",

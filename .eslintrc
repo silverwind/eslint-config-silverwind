@@ -18,7 +18,7 @@ rules:
   brace-style: [2, 1tbs, {allowSingleLine: true}]
   camelcase: [2, {properties: never}]
   capitalized-comments: [0]
-  class-methods-use-this: [2]
+  class-methods-use-this: [0]
   comma-dangle: [0]
   comma-spacing: [2, {before: false, after: true}]
   comma-style: [2, last]

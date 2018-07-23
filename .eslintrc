@@ -51,7 +51,7 @@ rules:
   linebreak-style: [2, unix]
   lines-around-comment: [0]
   lines-around-directive: [0]
-  lines-between-class-members: [2, never]
+  lines-between-class-members: [0]
   max-len: [0]
   max-lines: [0]
   max-nested-callbacks: [0]

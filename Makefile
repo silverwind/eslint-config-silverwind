@@ -7,6 +7,7 @@ build:
 publish:
 	if git ls-remote --exit-code origin &>/dev/null; then git push -u -f --tags origin master; fi
 	npm publish
+	npm i -g .
 
 update:
 	ncu -ua

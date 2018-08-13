@@ -3,6 +3,7 @@ lint:
 
 build:
 	node build.js
+	git diff --quiet || git commit -am "rebuild"
 
 publish:
 	if git ls-remote --exit-code origin &>/dev/null; then git push -u -f --tags origin master; fi

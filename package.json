@@ -5,10 +5,9 @@
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/eslint-config-silverwind",
   "license": "BSD-2-Clause",
-  "main": "index.js",
+  "main": "index.json",
   "files": [
-    "index.js",
-    "config.json"
+    "index.json"
   ],
   "engines": {
     "node": ">=4.0.0"

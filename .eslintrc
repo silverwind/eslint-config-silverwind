@@ -48,7 +48,7 @@ rules:
   id-blacklist: [0]
   id-length: [0]
   id-match: [0]
-  implicit-arrow-linebreak: [2, beside]
+  implicit-arrow-linebreak: [0]
   indent: [2, 2, {ignoreComments: true}]
   init-declarations: [0]
   jsx-quotes: [2, prefer-double]

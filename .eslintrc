@@ -128,7 +128,7 @@ rules:
   no-labels: [2]
   no-lone-blocks: [2]
   no-lonely-if: [0]
-  no-loop-func: [2]
+  no-loop-func: [0]
   no-magic-numbers: [0]
   no-misleading-character-class: [0]
   no-mixed-operators: [0]

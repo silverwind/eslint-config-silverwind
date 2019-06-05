@@ -230,7 +230,7 @@ rules:
   quote-props: [0]
   quotes: [2, double, {avoidEscape: true, allowTemplateLiterals: true}]
   radix: [2, as-needed]
-  require-atomic-updates: [2]
+  require-atomic-updates: [0]
   require-await: [0]
   require-unicode-regexp: [0]
   require-yield: [2]

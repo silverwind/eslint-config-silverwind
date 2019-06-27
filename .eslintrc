@@ -134,12 +134,7 @@ rules:
   no-mixed-operators: [0]
   no-mixed-requires: [0]
   no-mixed-spaces-and-tabs: [2]
-  no-multi-spaces:
-    - 2
-    - ignoreEOLComments: true
-      exceptions:
-        Property: true
-        VariableDeclarator: true
+  no-multi-spaces: [2, {ignoreEOLComments: true, exceptions: {Property: true, VariableDeclarator: true}}]
   no-multi-assign: [0]
   no-multi-str: [2]
   no-multiple-empty-lines: [2, {max: 1, maxEOF: 0, maxBOF: 0}]

@@ -212,7 +212,7 @@ rules:
   operator-linebreak: [2, after]
   padded-blocks: [2, never]
   padding-line-between-statements: [0]
-  prefer-arrow-callback: [2]
+  prefer-arrow-callback: [0]
   prefer-const: [2, {destructuring: all}]
   prefer-destructuring: [0]
   prefer-named-capture-group: [0]

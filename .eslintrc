@@ -1,9 +1,7 @@
-# https://github.com/eslint/eslint/tree/master/docs/rules
-
 root: true
 
 parserOptions:
-  ecmaVersion: 2019
+  ecmaVersion: 2020
 
 rules:
   accessor-pairs: [2]

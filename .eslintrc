@@ -1,4 +1,5 @@
 root: true
+reportUnusedDisableDirectives: true
 
 parserOptions:
   ecmaVersion: 2020

@@ -16,9 +16,9 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "eslint": "6.3.0",
+    "eslint": "6.4.0",
     "js-yaml": "3.13.1",
-    "updates": "8.5.3",
+    "updates": "9.0.0",
     "ver": "5.1.4"
   },
   "keywords": [

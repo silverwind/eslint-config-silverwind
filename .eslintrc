@@ -252,7 +252,7 @@ rules:
   template-tag-spacing: [2, never]
   unicode-bom: [2, never]
   use-isnan: [2]
-  valid-typeof: [2]
+  valid-typeof: [2, {requireStringLiterals: true}]
   vars-on-top: [0]
   wrap-iife: [2, inside]
   wrap-regex: [0]

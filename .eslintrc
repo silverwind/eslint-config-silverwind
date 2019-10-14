@@ -16,7 +16,7 @@ rules:
   block-scoped-var: [2]
   brace-style: [2, 1tbs, {allowSingleLine: true}]
   callback-return: [0]
-  camelcase: [2, {properties: never, allow: ["^UNSAFE_"]}]
+  camelcase: [0]
   capitalized-comments: [0]
   class-methods-use-this: [0]
   comma-dangle: [2, only-multiline]

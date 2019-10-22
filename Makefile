@@ -16,17 +16,17 @@ update:
 
 patch:
 	$(MAKE) test
-	npx ver -c 'node build.js' patch
+	npx ver -Cc 'node build.js' patch
 	$(MAKE) publish
 
 minor:
 	$(MAKE) test
-	npx ver -c 'node build.js' minor
+	npx ver -Cc 'node build.js' minor
 	$(MAKE) publish
 
 major:
 	$(MAKE) test
-	npx ver -c 'node build.js' major
+	npx ver -Cc 'node build.js' major
 	$(MAKE) publish
 
 .PHONY: test publish deps update patch minor major

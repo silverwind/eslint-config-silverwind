@@ -85,7 +85,7 @@ rules:
   no-compare-neg-zero: [2]
   no-cond-assign: [2, except-parens]
   no-confusing-arrow: [0]
-  no-console: [0]
+  no-console: [1, {allow: [info, warn, error]}]
   no-const-assign: [2]
   no-constant-condition: [0]
   no-continue: [0]

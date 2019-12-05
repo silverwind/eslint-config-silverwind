@@ -162,7 +162,7 @@ rules:
   no-redeclare: [2]
   no-regex-spaces: [2]
   no-restricted-imports: [0]
-  no-restricted-modules: [2, constants, domain, freelist, smalloc, sys, _stream_wrap, _linklist]
+  no-restricted-modules: [0]
   no-restricted-syntax: [2, WithStatement, ForInStatement, LabeledStatement]
   no-return-assign: [0]
   no-return-await: [0]

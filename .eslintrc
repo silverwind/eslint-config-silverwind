@@ -265,11 +265,7 @@ rules:
   yoda: [2, never]
 
 env:
-  amd: true
   browser: true
   commonjs: true
   es6: true
-  greasemonkey: true
-  jquery: true
-  mocha: true
   node: true

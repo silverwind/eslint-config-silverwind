@@ -25,5 +25,8 @@
     "eslint",
     "eslint-config",
     "silverwind"
-  ]
+  ],
+  "dependencies": {
+    "eslint-plugin-unicorn": "15.0.1"
+  }
 }

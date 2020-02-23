@@ -298,7 +298,6 @@ rules:
   import/no-duplicates: [2, {considerQueryString: true}]
   import/no-namespace: [2]
 
-
 env:
   browser: true
   commonjs: true

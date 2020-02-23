@@ -6,6 +6,7 @@ parserOptions:
 
 plugins:
   - unicorn
+  - import
 
 rules:
   accessor-pairs: [2]
@@ -282,6 +283,21 @@ rules:
   unicorn/prefer-starts-ends-with: [2]
   unicorn/prefer-text-content: [2]
   unicorn/throw-new-error: [2]
+  import/no-unresolved: [2, {commonjs: true}]
+  import/named: [2]
+  import/no-absolute-path: [2]
+  import/no-webpack-loader-syntax: [2]
+  import/no-self-import: [2]
+  import/no-cycle: [2]
+  import/no-useless-path-segments: [2, {commonjs: true}]
+  import/export: [2]
+  import/no-named-as-default: [2]
+  import/no-extraneous-dependencies: [2]
+  import/no-mutable-exports: [2]
+  import/first: [2]
+  import/no-duplicates: [2, {considerQueryString: true}]
+  import/no-namespace: [2]
+
 
 env:
   browser: true

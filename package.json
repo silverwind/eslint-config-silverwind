@@ -27,6 +27,7 @@
     "silverwind"
   ],
   "dependencies": {
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-unicorn": "^16.0.0"
   }
 }

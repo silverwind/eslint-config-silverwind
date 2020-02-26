@@ -323,7 +323,7 @@ rules:
   import/named: [2]
   import/namespace: [0]
   import/newline-after-import: [0]
-  import/no-absolute-path: [2]
+  import/no-absolute-path: [0]
   import/no-amd: [0]
   import/no-anonymous-default-export: [0]
   import/no-commonjs: [0]

@@ -14,18 +14,15 @@ update:
 	npx updates -cu
 	$(MAKE) deps
 
-patch:
-	$(MAKE) test
+patch: test
 	npx versions -Cc 'node build.js' patch
 	$(MAKE) publish
 
-minor:
-	$(MAKE) test
+minor: test
 	npx versions -Cc 'node build.js' minor
 	$(MAKE) publish
 
-major:
-	$(MAKE) test
+major: test
 	npx versions -Cc 'node build.js' major
 	$(MAKE) publish
 

@@ -281,7 +281,7 @@ rules:
   unicorn/no-abusive-eslint-disable: [0]
   unicorn/no-array-instanceof: [0]
   unicorn/no-console-spaces: [0]
-  unicorn/no-fn-reference-in-iterator: [2]
+  unicorn/no-fn-reference-in-iterator: [0]
   unicorn/no-for-loop: [2]
   unicorn/no-hex-escape: [2]
   unicorn/no-keyword-prefix: [0]

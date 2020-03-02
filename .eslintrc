@@ -283,7 +283,7 @@ rules:
   unicorn/no-array-instanceof: [0]
   unicorn/no-console-spaces: [0]
   unicorn/no-fn-reference-in-iterator: [0]
-  unicorn/no-for-loop: [2]
+  unicorn/no-for-loop: [0]
   unicorn/no-hex-escape: [2]
   unicorn/no-keyword-prefix: [0]
   unicorn/no-nested-ternary: [0]

@@ -1,5 +1,5 @@
 test:
-	npx eslint --ignore-pattern *.min.js *.js
+	yarn -s run eslint .
 	node -p 'process.exit(typeof require(".").parserOptions.ecmaVersion === "number" ? 0 : 1)'
 
 publish:
@@ -8,22 +8,22 @@ publish:
 
 deps:
 	rm -rf node_modules
-	npm i
+	yarn
 
 update:
-	npx updates -cu
+	yarn -s run updates -cu
 	$(MAKE) deps
 
 patch: test
-	npx versions -Cc 'node build.js' patch
+	yarn -s run versions -Cc 'node build.js' patch
 	$(MAKE) publish
 
 minor: test
-	npx versions -Cc 'node build.js' minor
+	yarn -s run versions -Cc 'node build.js' minor
 	$(MAKE) publish
 
 major: test
-	npx versions -Cc 'node build.js' major
+	yarn -s run versions -Cc 'node build.js' major
 	$(MAKE) publish
 
 .PHONY: test publish deps update patch minor major

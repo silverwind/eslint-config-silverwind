@@ -272,7 +272,7 @@ rules:
   yoda: [2, never]
   unicorn/better-regex: [0]
   unicorn/catch-error-name: [0]
-  unicorn/consistent-function-scoping: [0]
+  unicorn/consistent-function-scoping: [2]
   unicorn/custom-error-definition: [0]
   unicorn/error-message: [0]
   unicorn/escape-case: [2]

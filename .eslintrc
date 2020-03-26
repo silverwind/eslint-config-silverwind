@@ -7,7 +7,6 @@ parserOptions:
 plugins:
   - unicorn
   - import
-  - no-use-extend-native
   - sonarjs
 
 rules:
@@ -381,7 +380,6 @@ rules:
   sonarjs/prefer-object-literal: [2]
   sonarjs/prefer-single-boolean-return: [0]
   sonarjs/prefer-while: [2]
-  no-use-extend-native/no-use-extend-native: [2]
 
 env:
   browser: true

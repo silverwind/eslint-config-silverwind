@@ -246,7 +246,7 @@ rules:
   rest-spread-spacing: [2, never]
   semi-spacing: [2, {before: false, after: true}]
   semi-style: [2, last]
-  semi: [2, always, {omitLastInOneLineBlock: true}]
+  semi: [2, always]
   sort-imports: [0]
   sort-keys: [0]
   sort-vars: [0]

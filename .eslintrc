@@ -298,7 +298,7 @@ rules:
   unicorn/no-unsafe-regex: [0]
   unicorn/no-unused-properties: [2]
   unicorn/no-zero-fractions: [2]
-  unicorn/number-literal-case: [2]
+  unicorn/number-literal-case: [0]
   unicorn/prefer-add-event-listener: [2]
   unicorn/prefer-dataset: [2]
   unicorn/prefer-event-key: [2]

@@ -298,7 +298,7 @@ rules:
   unicorn/no-unreadable-array-destructuring: [0]
   unicorn/no-unsafe-regex: [0]
   unicorn/no-unused-properties: [2]
-  unicorn/no-useless-undefined: [2]
+  unicorn/no-useless-undefined: [0]
   unicorn/no-zero-fractions: [2]
   unicorn/number-literal-case: [0]
   unicorn/prefer-add-event-listener: [2]

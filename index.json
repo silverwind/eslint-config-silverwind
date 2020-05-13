@@ -2,6 +2,7 @@
   "root": true,
   "reportUnusedDisableDirectives": true,
   "parserOptions": {
+    "sourceType": "module",
     "ecmaVersion": 2020
   },
   "plugins": [

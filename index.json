@@ -25,11 +25,6 @@
       ],
       "env": {
         "worker": true
-      },
-      "rules": {
-        "no-restricted-globals": [
-          0
-        ]
       }
     }
   ],
@@ -568,6 +563,9 @@
     ],
     "no-regex-spaces": [
       2
+    ],
+    "no-restricted-globals": [
+      0
     ],
     "no-restricted-imports": [
       0

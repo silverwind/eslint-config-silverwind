@@ -17,8 +17,6 @@ overrides:
   - files: ["**/*.worker.js"]
     env:
       worker: true
-    rules:
-      no-restricted-globals: [0]
 
 env:
   browser: true
@@ -187,6 +185,7 @@ rules:
   no-prototype-builtins: [2]
   no-redeclare: [2]
   no-regex-spaces: [2]
+  no-restricted-globals: [0]
   no-restricted-imports: [0]
   no-restricted-modules: [0]
   no-restricted-syntax: [2, WithStatement, ForInStatement, LabeledStatement]

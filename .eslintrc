@@ -13,6 +13,17 @@ overrides:
   - files: ["**/*test.js"]
     env:
       jest: true
+  - files: ["**/*.worker.js"]
+    env:
+      worker: true
+    rules:
+      no-restricted-globals: [0]
+
+env:
+  browser: true
+  commonjs: true
+  es6: true
+  node: true
 
 rules:
   accessor-pairs: [2]
@@ -393,9 +404,3 @@ rules:
   sonarjs/prefer-object-literal: [2]
   sonarjs/prefer-single-boolean-return: [0]
   sonarjs/prefer-while: [2]
-
-env:
-  browser: true
-  commonjs: true
-  es6: true
-  node: true

@@ -9,6 +9,16 @@
     "import",
     "sonarjs"
   ],
+  "overrides": [
+    {
+      "files": [
+        "**/*test.js"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
   "rules": {
     "accessor-pairs": [
       2

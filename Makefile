@@ -15,15 +15,15 @@ update:
 	$(MAKE) deps
 
 patch: test
-	yarn -s run versions -Cc 'node build.js' patch
+	yarn -s run versions -Cac 'node build.js' patch
 	$(MAKE) publish
 
 minor: test
-	yarn -s run versions -Cc 'node build.js' minor
+	yarn -s run versions -Cac 'node build.js' minor
 	$(MAKE) publish
 
 major: test
-	yarn -s run versions -Cc 'node build.js' major
+	yarn -s run versions -Cac 'node build.js' major
 	$(MAKE) publish
 
 .PHONY: test publish deps update patch minor major

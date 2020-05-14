@@ -11,7 +11,7 @@ plugins:
   - sonarjs
 
 overrides:
-  - files: ["**/*test.js"]
+  - files: ["**/test.js", "**/*.test.js"]
     env:
       jest: true
   - files: ["**/*.worker.js"]

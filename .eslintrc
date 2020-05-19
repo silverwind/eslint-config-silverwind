@@ -293,7 +293,7 @@ rules:
   unicorn/consistent-function-scoping: [2]
   unicorn/custom-error-definition: [0]
   unicorn/error-message: [0]
-  unicorn/escape-case: [2]
+  unicorn/escape-case: [0]
   unicorn/expiring-todo-comments: [0]
   unicorn/explicit-length-check: [0]
   unicorn/filename-case: [0]

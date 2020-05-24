@@ -120,11 +120,11 @@
     "curly": [
       0
     ],
-    "default-case": [
-      0
-    ],
     "default-case-last": [
       2
+    ],
+    "default-case": [
+      0
     ],
     "default-param-last": [
       0
@@ -177,7 +177,7 @@
       2
     ],
     "guard-for-in": [
-      2
+      0
     ],
     "handle-callback-err": [
       0
@@ -423,12 +423,6 @@
     "no-implicit-globals": [
       0
     ],
-    "no-useless-backreference": [
-      0
-    ],
-    "no-restricted-exports": [
-      0
-    ],
     "no-implied-eval": [
       2
     ],
@@ -567,6 +561,9 @@
     "no-regex-spaces": [
       2
     ],
+    "no-restricted-exports": [
+      0
+    ],
     "no-restricted-globals": [
       0
     ],
@@ -688,6 +685,9 @@
     "no-use-before-define": [
       2,
       "nofunc"
+    ],
+    "no-useless-backreference": [
+      0
     ],
     "no-useless-call": [
       2

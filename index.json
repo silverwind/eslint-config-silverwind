@@ -468,6 +468,9 @@
     "no-loop-func": [
       0
     ],
+    "no-loss-of-precision": [
+      2
+    ],
     "no-magic-numbers": [
       0
     ],

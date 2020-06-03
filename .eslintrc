@@ -369,7 +369,7 @@ rules:
   unicorn/no-new-buffer: [0]
   unicorn/no-null: [0]
   unicorn/no-process-exit: [0]
-  unicorn/no-reduce: [2]
+  unicorn/no-reduce: [0]
   unicorn/no-unreadable-array-destructuring: [0]
   unicorn/no-unsafe-regex: [0]
   unicorn/no-unused-properties: [2]

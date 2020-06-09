@@ -74,9 +74,6 @@
         "allowSingleLine": true
       }
     ],
-    "callback-return": [
-      0
-    ],
     "camelcase": [
       0
     ],
@@ -170,16 +167,10 @@
     "getter-return": [
       2
     ],
-    "global-require": [
-      0
-    ],
     "grouped-accessor-pairs": [
       2
     ],
     "guard-for-in": [
-      0
-    ],
-    "handle-callback-err": [
       0
     ],
     "id-blacklist": [
@@ -597,9 +588,6 @@
     "no-mixed-operators": [
       0
     ],
-    "no-mixed-requires": [
-      0
-    ],
     "no-mixed-spaces-and-tabs": [
       2
     ],
@@ -639,9 +627,6 @@
     "no-new-object": [
       2
     ],
-    "no-new-require": [
-      0
-    ],
     "no-new-symbol": [
       2
     ],
@@ -663,16 +648,7 @@
     "no-param-reassign": [
       0
     ],
-    "no-path-concat": [
-      0
-    ],
     "no-plusplus": [
-      0
-    ],
-    "no-process-env": [
-      0
-    ],
-    "no-process-exit": [
       0
     ],
     "no-proto": [
@@ -694,9 +670,6 @@
       0
     ],
     "no-restricted-imports": [
-      0
-    ],
-    "no-restricted-modules": [
       0
     ],
     "no-restricted-syntax": [
@@ -737,9 +710,6 @@
     ],
     "no-sparse-arrays": [
       2
-    ],
-    "no-sync": [
-      0
     ],
     "no-tabs": [
       2

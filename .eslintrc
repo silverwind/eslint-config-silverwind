@@ -14,7 +14,7 @@ overrides:
   - files: ["**/*test.js"]
     env:
       jest: true
-  - files: ["**/*.worker.js"]
+  - files: ["**/*worker.js"]
     env:
       worker: true
 

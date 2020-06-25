@@ -651,6 +651,9 @@
     "no-plusplus": [
       0
     ],
+    "no-promise-executor-return": [
+      0
+    ],
     "no-proto": [
       2
     ],
@@ -754,6 +757,9 @@
       0
     ],
     "no-unreachable": [
+      2
+    ],
+    "no-unreachable-loop": [
       2
     ],
     "no-unsafe-finally": [

@@ -21,7 +21,7 @@
     },
     {
       "files": [
-        "**/*.worker.js"
+        "**/*worker.js"
       ],
       "env": {
         "worker": true

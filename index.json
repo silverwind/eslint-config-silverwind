@@ -13,10 +13,75 @@
   "overrides": [
     {
       "files": [
-        "**/*.worker.js"
+        "**/*worker.js"
       ],
       "env": {
         "worker": true
+      },
+      "rules": {
+        "no-restricted-globals": [
+          2,
+          "addEventListener",
+          "blur",
+          "close",
+          "closed",
+          "confirm",
+          "defaultStatus",
+          "defaultstatus",
+          "error",
+          "event",
+          "external",
+          "find",
+          "focus",
+          "frameElement",
+          "frames",
+          "history",
+          "innerHeight",
+          "innerWidth",
+          "isFinite",
+          "isNaN",
+          "length",
+          "location",
+          "locationbar",
+          "menubar",
+          "moveBy",
+          "moveTo",
+          "name",
+          "onblur",
+          "onerror",
+          "onfocus",
+          "onload",
+          "onresize",
+          "onunload",
+          "open",
+          "opener",
+          "opera",
+          "outerHeight",
+          "outerWidth",
+          "pageXOffset",
+          "pageYOffset",
+          "parent",
+          "print",
+          "removeEventListener",
+          "resizeBy",
+          "resizeTo",
+          "screen",
+          "screenLeft",
+          "screenTop",
+          "screenX",
+          "screenY",
+          "scroll",
+          "scrollbars",
+          "scrollBy",
+          "scrollTo",
+          "scrollX",
+          "scrollY",
+          "status",
+          "statusbar",
+          "stop",
+          "toolbar",
+          "top"
+        ]
       }
     }
   ],
@@ -179,7 +244,7 @@
       0
     ],
     "import/default": [
-      0
+      2
     ],
     "import/dynamic-import-chunkname": [
       0
@@ -212,7 +277,7 @@
       0
     ],
     "import/no-absolute-path": [
-      0
+      2
     ],
     "import/no-amd": [
       0
@@ -644,6 +709,9 @@
     "no-plusplus": [
       0
     ],
+    "no-promise-executor-return": [
+      0
+    ],
     "no-proto": [
       2
     ],
@@ -660,7 +728,68 @@
       0
     ],
     "no-restricted-globals": [
-      0
+      2,
+      "addEventListener",
+      "blur",
+      "close",
+      "closed",
+      "confirm",
+      "defaultStatus",
+      "defaultstatus",
+      "error",
+      "event",
+      "external",
+      "find",
+      "focus",
+      "frameElement",
+      "frames",
+      "history",
+      "innerHeight",
+      "innerWidth",
+      "isFinite",
+      "isNaN",
+      "length",
+      "location",
+      "locationbar",
+      "menubar",
+      "moveBy",
+      "moveTo",
+      "name",
+      "onblur",
+      "onerror",
+      "onfocus",
+      "onload",
+      "onresize",
+      "onunload",
+      "open",
+      "opener",
+      "opera",
+      "outerHeight",
+      "outerWidth",
+      "pageXOffset",
+      "pageYOffset",
+      "parent",
+      "print",
+      "removeEventListener",
+      "resizeBy",
+      "resizeTo",
+      "screen",
+      "screenLeft",
+      "screenTop",
+      "screenX",
+      "screenY",
+      "scroll",
+      "scrollbars",
+      "self",
+      "scrollBy",
+      "scrollTo",
+      "scrollX",
+      "scrollY",
+      "status",
+      "statusbar",
+      "stop",
+      "toolbar",
+      "top"
     ],
     "no-restricted-imports": [
       0
@@ -747,6 +876,9 @@
       0
     ],
     "no-unreachable": [
+      2
+    ],
+    "no-unreachable-loop": [
       2
     ],
     "no-unsafe-finally": [

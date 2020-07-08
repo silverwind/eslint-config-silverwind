@@ -1,4 +1,5 @@
 test:
+	node build.js
 	yarn -s run eslint .
 	node -p 'process.exit(typeof require(".").parserOptions.ecmaVersion === "number" ? 0 : 1)'
 

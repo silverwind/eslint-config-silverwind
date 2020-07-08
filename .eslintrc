@@ -11,10 +11,11 @@ plugins:
   - sonarjs
 
 overrides:
-  - files: ["**/*.worker.js"]
+  - files: ["**/*worker.js"]
     env:
       worker: true
-
+    rules:
+      no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, location, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top]
 env:
   browser: true
   commonjs: true
@@ -67,7 +68,7 @@ rules:
   id-length: [0]
   id-match: [0]
   implicit-arrow-linebreak: [0]
-  import/default: [0]
+  import/default: [2]
   import/dynamic-import-chunkname: [0]
   import/export: [2]
   import/exports-last: [0]
@@ -78,7 +79,7 @@ rules:
   import/named: [2]
   import/namespace: [0]
   import/newline-after-import: [0]
-  import/no-absolute-path: [0]
+  import/no-absolute-path: [2]
   import/no-amd: [0]
   import/no-anonymous-default-export: [0]
   import/no-commonjs: [0]
@@ -210,12 +211,13 @@ rules:
   no-octal: [2]
   no-param-reassign: [0]
   no-plusplus: [0]
+  no-promise-executor-return: [0]
   no-proto: [2]
   no-prototype-builtins: [2]
   no-redeclare: [2]
   no-regex-spaces: [2]
   no-restricted-exports: [0]
-  no-restricted-globals: [0]
+  no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, location, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, self, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top]
   no-restricted-imports: [0]
   no-restricted-syntax: [2, WithStatement, ForInStatement, LabeledStatement]
   no-return-assign: [0]
@@ -242,6 +244,7 @@ rules:
   no-unmodified-loop-condition: [2]
   no-unneeded-ternary: [0]
   no-unreachable: [2]
+  no-unreachable-loop: [2]
   no-unsafe-finally: [2]
   no-unsafe-negation: [2]
   no-unused-expressions: [2]

@@ -13,14 +13,6 @@
   "overrides": [
     {
       "files": [
-        "**/*test.js"
-      ],
-      "env": {
-        "jest": true
-      }
-    },
-    {
-      "files": [
         "**/*.worker.js"
       ],
       "env": {
@@ -32,7 +24,8 @@
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "rules": {
     "accessor-pairs": [

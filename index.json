@@ -1266,6 +1266,9 @@
     "unicorn/no-null": [
       0
     ],
+    "unicorn/no-object-as-default-parameter": [
+      2
+    ],
     "unicorn/no-process-exit": [
       0
     ],

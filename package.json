@@ -18,12 +18,12 @@
   "dependencies": {
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-sonarjs": "^0.5.0",
-    "eslint-plugin-unicorn": "^20.1.0"
+    "eslint-plugin-unicorn": "^21.0.0"
   },
   "devDependencies": {
-    "eslint": "7.4.0",
+    "eslint": "7.5.0",
     "js-yaml": "3.14.0",
-    "updates": "10.2.15",
+    "updates": "10.3.0",
     "versions": "8.4.2"
   },
   "keywords": [

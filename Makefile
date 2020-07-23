@@ -1,6 +1,7 @@
 test:
 	node build.js
 	yarn -s run eslint .
+	# yarn -s run eslint-find-rules -u .eslintrc
 	node -p 'process.exit(typeof require(".").parserOptions.ecmaVersion === "number" ? 0 : 1)'
 
 publish:

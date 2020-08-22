@@ -91,6 +91,9 @@
     "node": true,
     "jest": true
   },
+  "globals": {
+    "BigInt": true
+  },
   "rules": {
     "accessor-pairs": [
       2

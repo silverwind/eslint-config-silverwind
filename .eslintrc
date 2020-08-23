@@ -1,13 +1,20 @@
 root: true
 reportUnusedDisableDirectives: true
 
+plugins:
+  - unicorn
+  - import
+
 parserOptions:
   sourceType: module
   ecmaVersion: 2020
 
-plugins:
-  - unicorn
-  - import
+env:
+  browser: true
+  commonjs: true
+  es2020: true
+  jest: true
+  node: true
 
 overrides:
   - files: ["**/*worker.js"]
@@ -15,14 +22,6 @@ overrides:
       worker: true
     rules:
       no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, location, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top]
-
-env:
-  es2020: true
-  browser: true
-  commonjs: true
-  es6: true
-  node: true
-  jest: true
 
 rules:
   # default-case-last: [2]

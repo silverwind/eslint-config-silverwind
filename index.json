@@ -1,14 +1,21 @@
 {
   "root": true,
   "reportUnusedDisableDirectives": true,
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2020
-  },
   "plugins": [
     "unicorn",
     "import"
   ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2020": true,
+    "jest": true,
+    "node": true
+  },
   "overrides": [
     {
       "files": [
@@ -84,14 +91,6 @@
       }
     }
   ],
-  "env": {
-    "es2020": true,
-    "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true,
-    "jest": true
-  },
   "rules": {
     "accessor-pairs": [
       2

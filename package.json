@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-unicorn": "^21.0.0"
+    "eslint-plugin-unicorn": "^22.0.0"
   },
   "devDependencies": {
     "eslint": "7.9.0",
     "eslint-find-rules": "^3.6.1",
     "js-yaml": "3.14.0",
-    "updates": "10.3.6",
+    "updates": "11.1.4",
     "versions": "8.4.3"
   },
   "keywords": [

@@ -328,6 +328,7 @@ rules:
   unicorn/explicit-length-check: [0]
   unicorn/filename-case: [0]
   unicorn/import-index: [0]
+  unicorn/import-style: [0]
   unicorn/new-for-builtins: [2]
   unicorn/no-abusive-eslint-disable: [0]
   unicorn/no-array-instanceof: [0]

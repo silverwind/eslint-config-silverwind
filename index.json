@@ -354,7 +354,10 @@
       }
     ],
     "import/no-unused-modules": [
-      0
+      2,
+      {
+        "unusedExports": true
+      }
     ],
     "import/no-useless-path-segments": [
       2,

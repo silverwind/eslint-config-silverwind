@@ -291,7 +291,10 @@
       0
     ],
     "import/no-cycle": [
-      0
+      2,
+      {
+        "ignoreExternal": true
+      }
     ],
     "import/no-default-export": [
       0

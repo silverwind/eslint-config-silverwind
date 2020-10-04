@@ -665,8 +665,7 @@
       {
         "ignoreEOLComments": true,
         "exceptions": {
-          "Property": true,
-          "VariableDeclarator": true
+          "Property": true
         }
       }
     ],

@@ -15,7 +15,7 @@ publish: node_modules
 	npm publish
 
 update: node_modules
-	node updates -cu
+	yarn -s run  updates -cu
 	@touch yarn.lock
 	@$(MAKE) --no-print-directory deps
 

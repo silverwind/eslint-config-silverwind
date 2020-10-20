@@ -1240,6 +1240,9 @@
     "unicorn/number-literal-case": [
       0
     ],
+    "unicorn/numeric-separators-style": [
+      2
+    ],
     "unicorn/prefer-add-event-listener": [
       2
     ],
@@ -1256,6 +1259,9 @@
       2
     ],
     "unicorn/prefer-includes": [
+      2
+    ],
+    "unicorn/prefer-math-trunc": [
       2
     ],
     "unicorn/prefer-modern-dom-apis": [
@@ -1295,6 +1301,9 @@
       2
     ],
     "unicorn/prefer-string-slice": [
+      0
+    ],
+    "unicorn/prefer-ternary": [
       0
     ],
     "unicorn/prefer-text-content": [

@@ -349,7 +349,7 @@ rules:
   unicorn/no-useless-undefined: [0]
   unicorn/no-zero-fractions: [2]
   unicorn/number-literal-case: [0]
-  unicorn/numeric-separators-style: [2]
+  unicorn/numeric-separators-style: [0]
   unicorn/prefer-add-event-listener: [2]
   unicorn/prefer-array-find: [2]
   unicorn/prefer-dataset: [2]

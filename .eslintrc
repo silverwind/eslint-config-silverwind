@@ -24,9 +24,7 @@ overrides:
       no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, location, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top]
 
 rules:
-  # default-case-last: [2]
-  # no-loss-of-precision: [2]
-  # no-unreachable-loop: [2]
+  default-case-last: [2]
   accessor-pairs: [2]
   array-bracket-newline: [0]
   array-bracket-spacing: [2, never]
@@ -195,6 +193,7 @@ rules:
   no-lone-blocks: [2]
   no-lonely-if: [0]
   no-loop-func: [0]
+  no-loss-of-precision: [2]
   no-magic-numbers: [0]
   no-misleading-character-class: [2]
   no-mixed-operators: [0]
@@ -248,6 +247,7 @@ rules:
   no-unexpected-multiline: [2]
   no-unmodified-loop-condition: [2]
   no-unneeded-ternary: [0]
+  no-unreachable-loop: [2]
   no-unreachable: [2]
   no-unsafe-finally: [2]
   no-unsafe-negation: [2]

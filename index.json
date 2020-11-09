@@ -1127,13 +1127,7 @@
       2
     ],
     "spaced-comment": [
-      2,
-      "always",
-      {
-        "markers": [
-          "!"
-        ]
-      }
+      0
     ],
     "strict": [
       0

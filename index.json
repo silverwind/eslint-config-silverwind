@@ -707,6 +707,9 @@
     "no-new": [
       0
     ],
+    "no-nonoctal-decimal-escape": [
+      2
+    ],
     "no-obj-calls": [
       2
     ],

@@ -1201,8 +1201,14 @@
     "unicorn/no-abusive-eslint-disable": [
       0
     ],
+    "unicorn/no-array-for-each": [
+      2
+    ],
     "unicorn/no-array-instanceof": [
       0
+    ],
+    "unicorn/no-array-push-push": [
+      2
     ],
     "unicorn/no-console-spaces": [
       0
@@ -1242,6 +1248,9 @@
     ],
     "unicorn/no-reduce": [
       0
+    ],
+    "unicorn/no-this-assignment": [
+      2
     ],
     "unicorn/no-unreadable-array-destructuring": [
       0

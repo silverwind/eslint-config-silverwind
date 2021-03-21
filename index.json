@@ -1249,6 +1249,9 @@
     "unicorn/no-reduce": [
       0
     ],
+    "unicorn/no-static-only-class": [
+      2
+    ],
     "unicorn/no-this-assignment": [
       2
     ],
@@ -1277,6 +1280,9 @@
       2
     ],
     "unicorn/prefer-array-find": [
+      2
+    ],
+    "unicorn/prefer-array-flat": [
       2
     ],
     "unicorn/prefer-array-index-of": [

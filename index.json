@@ -262,10 +262,7 @@
     ],
     "import/extensions": [
       2,
-      "always",
-      {
-        "ignorePackages": true
-      }
+      "always"
     ],
     "import/first": [
       2

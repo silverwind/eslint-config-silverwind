@@ -101,6 +101,16 @@
           0
         ]
       }
+    },
+    {
+      "files": [
+        "**/*.config.js"
+      ],
+      "rules": {
+        "import/no-unused-modules": [
+          0
+        ]
+      }
     }
   ],
   "rules": {

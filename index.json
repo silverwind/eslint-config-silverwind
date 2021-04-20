@@ -1376,6 +1376,9 @@
     "unicorn/prefer-string-slice": [
       0
     ],
+    "unicorn/prefer-switch": [
+      0
+    ],
     "unicorn/prefer-ternary": [
       0
     ],

@@ -26,6 +26,9 @@ overrides:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
+  - files: ["**/*.config.js"]
+    rules:
+      import/no-unused-modules: [0]
 
 rules:
   accessor-pairs: [2]

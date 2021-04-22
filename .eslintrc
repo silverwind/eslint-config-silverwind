@@ -30,6 +30,9 @@ overrides:
     rules:
       import/no-unused-modules: [0]
 
+ignorePatterns:
+  - "/try.js"
+
 rules:
   accessor-pairs: [2]
   array-bracket-newline: [0]

@@ -113,6 +113,9 @@
       }
     }
   ],
+  "ignorePatterns": [
+    "/try.js"
+  ],
   "rules": {
     "accessor-pairs": [
       2

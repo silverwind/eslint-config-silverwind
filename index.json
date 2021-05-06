@@ -1337,10 +1337,16 @@
     "unicorn/prefer-modern-dom-apis": [
       0
     ],
+    "unicorn/prefer-module": [
+      0
+    ],
     "unicorn/prefer-negative-index": [
       2
     ],
     "unicorn/prefer-node-append": [
+      0
+    ],
+    "unicorn/prefer-node-protocol": [
       0
     ],
     "unicorn/prefer-node-remove": [

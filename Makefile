@@ -5,7 +5,7 @@ node_modules: package-lock.json
 deps: node_modules
 
 build: node_modules
-	node build.js
+	node build.mjs
 
 test: node_modules build
 	npx eslint .

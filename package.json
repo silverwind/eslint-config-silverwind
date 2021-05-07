@@ -6,6 +6,7 @@
   "repository": "silverwind/eslint-config-silverwind",
   "license": "BSD-2-Clause",
   "main": "index.json",
+  "type": "module",
   "files": [
     "index.json"
   ],

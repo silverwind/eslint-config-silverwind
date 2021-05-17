@@ -13,9 +13,9 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-unicorn": "^32.0.0"
+    "eslint-plugin-unicorn": "^32.0.1"
   },
   "devDependencies": {
     "eslint": "7.26.0",

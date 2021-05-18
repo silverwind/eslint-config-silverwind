@@ -830,7 +830,12 @@
       "top"
     ],
     "no-restricted-imports": [
-      0
+      2,
+      {
+        "patterns": [
+          "*.json"
+        ]
+      }
     ],
     "no-restricted-properties": [
       0

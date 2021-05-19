@@ -826,7 +826,9 @@
       "statusbar",
       "stop",
       "toolbar",
-      "top"
+      "top",
+      "__dirname",
+      "__filename"
     ],
     "no-restricted-imports": [
       2,

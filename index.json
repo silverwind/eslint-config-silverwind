@@ -1313,10 +1313,10 @@
     "unicorn/prefer-array-find": [
       2
     ],
-    "unicorn/prefer-array-flat": [
+    "unicorn/prefer-array-flat-map": [
       2
     ],
-    "unicorn/prefer-array-flat-map": [
+    "unicorn/prefer-array-flat": [
       2
     ],
     "unicorn/prefer-array-index-of": [
@@ -1367,7 +1367,13 @@
     "unicorn/prefer-number-properties": [
       0
     ],
+    "unicorn/prefer-object-has-own": [
+      0
+    ],
     "unicorn/prefer-optional-catch-binding": [
+      2
+    ],
+    "unicorn/prefer-prototype-methods": [
       2
     ],
     "unicorn/prefer-query-selector": [
@@ -1412,23 +1418,17 @@
     "unicorn/prevent-abbreviations": [
       0
     ],
-    "unicorn/string-content": [
-      0
-    ],
-    "unicorn/throw-new-error": [
-      2
-    ],
     "unicorn/require-array-join-separator": [
       2
     ],
     "unicorn/require-number-to-fixed-digits-argument": [
       2
     ],
-    "unicorn/prefer-prototype-methods": [
-      2
-    ],
-    "unicorn/prefer-object-has-own": [
+    "unicorn/string-content": [
       0
+    ],
+    "unicorn/throw-new-error": [
+      2
     ],
     "use-isnan": [
       2

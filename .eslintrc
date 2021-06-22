@@ -389,7 +389,7 @@ rules:
   unicorn/prefer-number-properties: [0]
   unicorn/prefer-object-has-own: [0]
   unicorn/prefer-optional-catch-binding: [2]
-  unicorn/prefer-prototype-methods: [2]
+  unicorn/prefer-prototype-methods: [0]
   unicorn/prefer-query-selector: [0]
   unicorn/prefer-reflect-apply: [0]
   unicorn/prefer-regexp-test: [2]

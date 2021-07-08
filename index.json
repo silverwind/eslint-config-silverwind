@@ -1235,6 +1235,9 @@
     "unicorn/no-array-instanceof": [
       0
     ],
+    "unicorn/no-array-method-this-argument": [
+      2
+    ],
     "unicorn/no-array-push-push": [
       2
     ],
@@ -1325,6 +1328,9 @@
     "unicorn/prefer-array-some": [
       2
     ],
+    "unicorn/prefer-at": [
+      0
+    ],
     "unicorn/prefer-dataset": [
       2
     ],
@@ -1409,6 +1415,9 @@
     "unicorn/prefer-text-content": [
       2
     ],
+    "unicorn/prefer-top-level-await": [
+      0
+    ],
     "unicorn/prefer-trim-start-end": [
       2
     ],
@@ -1422,6 +1431,9 @@
       2
     ],
     "unicorn/require-number-to-fixed-digits-argument": [
+      2
+    ],
+    "unicorn/require-post-message-target-origin": [
       2
     ],
     "unicorn/string-content": [

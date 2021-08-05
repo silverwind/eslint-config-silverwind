@@ -1298,6 +1298,12 @@
     "unicorn/no-unused-properties": [
       2
     ],
+    "unicorn/no-useless-length-check": [
+      2
+    ],
+    "unicorn/no-useless-spread": [
+      2
+    ],
     "unicorn/no-useless-undefined": [
       0
     ],
@@ -1372,6 +1378,9 @@
     ],
     "unicorn/prefer-number-properties": [
       0
+    ],
+    "unicorn/prefer-object-from-entries": [
+      2
     ],
     "unicorn/prefer-object-has-own": [
       0

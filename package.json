@@ -13,7 +13,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-unicorn": "^35.0.0"
   },
   "devDependencies": {

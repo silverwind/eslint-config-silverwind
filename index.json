@@ -318,7 +318,8 @@
     "import/no-cycle": [
       2,
       {
-        "ignoreExternal": true
+        "ignoreExternal": true,
+        "maxDepth": 1
       }
     ],
     "import/no-default-export": [
@@ -1262,6 +1263,9 @@
     "unicorn/no-hex-escape": [
       0
     ],
+    "unicorn/no-invalid-remove-event-listener": [
+      2
+    ],
     "unicorn/no-keyword-prefix": [
       0
     ],
@@ -1302,6 +1306,9 @@
       0
     ],
     "unicorn/no-unused-properties": [
+      2
+    ],
+    "unicorn/no-useless-fallback-in-spread": [
       2
     ],
     "unicorn/no-useless-length-check": [

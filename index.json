@@ -17,7 +17,8 @@
   "overrides": [
     {
       "files": [
-        "**/*worker.js"
+        "**/*worker.js",
+        "**/*worker.jsx"
       ],
       "env": {
         "worker": true
@@ -90,7 +91,8 @@
     },
     {
       "files": [
-        "**/*test.js"
+        "**/*test.js",
+        "**/*test.jsx"
       ],
       "env": {
         "jest": true
@@ -838,12 +840,7 @@
       "__filename"
     ],
     "no-restricted-imports": [
-      2,
-      {
-        "patterns": [
-          "*.json"
-        ]
-      }
+      0
     ],
     "no-restricted-properties": [
       0

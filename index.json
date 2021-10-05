@@ -285,7 +285,7 @@
     ],
     "import/extensions": [
       2,
-      "always"
+      "ignorePackages"
     ],
     "import/first": [
       2

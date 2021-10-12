@@ -1463,6 +1463,9 @@
     "unicorn/string-content": [
       0
     ],
+    "unicorn/template-indent": [
+      2
+    ],
     "unicorn/throw-new-error": [
       2
     ],

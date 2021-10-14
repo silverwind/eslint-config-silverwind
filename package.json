@@ -13,14 +13,14 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-unicorn": "^37.0.1"
   },
   "devDependencies": {
-    "eslint": "8.0.0",
+    "eslint": "8.0.1",
     "js-yaml": "4.1.0",
     "updates": "12.2.1",
-    "versions": "9.0.1"
+    "versions": "9.1.0"
   },
   "keywords": [
     "eslint",

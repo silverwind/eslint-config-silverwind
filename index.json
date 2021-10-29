@@ -3,7 +3,8 @@
   "reportUnusedDisableDirectives": true,
   "plugins": [
     "unicorn",
-    "import"
+    "import",
+    "github"
   ],
   "parserOptions": {
     "sourceType": "module",
@@ -249,6 +250,54 @@
     ],
     "getter-return": [
       2
+    ],
+    "github/array-foreach": [
+      0
+    ],
+    "github/async-currenttarget": [
+      2
+    ],
+    "github/async-preventdefault": [
+      0
+    ],
+    "github/authenticity-token": [
+      0
+    ],
+    "github/get-attribute": [
+      2
+    ],
+    "github/js-class-name": [
+      0
+    ],
+    "github/no-blur": [
+      0
+    ],
+    "github/no-d-none": [
+      0
+    ],
+    "github/no-dataset": [
+      2
+    ],
+    "github/no-implicit-buggy-globals": [
+      0
+    ],
+    "github/no-inner-html": [
+      0
+    ],
+    "github/no-then": [
+      2
+    ],
+    "github/no-useless-passive": [
+      2
+    ],
+    "github/prefer-observers": [
+      0
+    ],
+    "github/require-passive-events": [
+      2
+    ],
+    "github/unescaped-html-literal": [
+      0
     ],
     "grouped-accessor-pairs": [
       2

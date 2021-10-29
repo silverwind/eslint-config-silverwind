@@ -13,7 +13,7 @@
     "node": ">=10.0.0"
   },
   "dependencies": {
-    "eslint-plugin-github": "4.3.3",
+    "eslint-plugin-github": "^4.3.3",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-unicorn": "^37.0.1"
   },

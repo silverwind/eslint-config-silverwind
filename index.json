@@ -952,6 +952,9 @@
     "no-unused-labels": [
       2
     ],
+    "no-unused-private-class-members": [
+      2
+    ],
     "no-unused-vars": [
       2,
       {
@@ -1056,7 +1059,8 @@
     "prefer-const": [
       2,
       {
-        "destructuring": "all"
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": true
       }
     ],
     "prefer-destructuring": [

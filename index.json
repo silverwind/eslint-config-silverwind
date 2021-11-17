@@ -284,6 +284,9 @@
     "github/no-inner-html": [
       0
     ],
+    "github/no-innerText": [
+      2
+    ],
     "github/no-then": [
       2
     ],
@@ -1309,6 +1312,9 @@
     "unicorn/no-document-cookie": [
       2
     ],
+    "unicorn/no-empty-file": [
+      2
+    ],
     "unicorn/no-fn-reference-in-iterator": [
       0
     ],
@@ -1415,6 +1421,9 @@
       0
     ],
     "unicorn/prefer-event-key": [
+      2
+    ],
+    "unicorn/prefer-export-from": [
       2
     ],
     "unicorn/prefer-flat-map": [

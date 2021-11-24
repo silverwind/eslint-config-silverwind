@@ -15,10 +15,10 @@
   "dependencies": {
     "eslint-plugin-github": "^4.3.5",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-unicorn": "^38.0.1"
+    "eslint-plugin-unicorn": "^39.0.0"
   },
   "devDependencies": {
-    "eslint": "8.2.0",
+    "eslint": "8.3.0",
     "js-yaml": "4.1.0",
     "updates": "12.2.2",
     "versions": "9.1.0"

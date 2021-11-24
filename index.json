@@ -252,7 +252,7 @@
       2
     ],
     "github/array-foreach": [
-      2
+      0
     ],
     "github/async-currenttarget": [
       2
@@ -1306,6 +1306,9 @@
     "unicorn/no-array-push-push": [
       2
     ],
+    "unicorn/no-await-expression-member": [
+      0
+    ],
     "unicorn/no-console-spaces": [
       0
     ],
@@ -1410,6 +1413,9 @@
     ],
     "unicorn/prefer-at": [
       0
+    ],
+    "unicorn/prefer-code-point": [
+      2
     ],
     "unicorn/prefer-dataset": [
       2

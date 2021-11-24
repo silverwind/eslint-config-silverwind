@@ -70,7 +70,7 @@ rules:
   function-paren-newline: [0]
   generator-star-spacing: [0]
   getter-return: [2]
-  github/array-foreach: [2]
+  github/array-foreach: [0]
   github/async-currenttarget: [2]
   github/async-preventdefault: [0]
   github/authenticity-token: [0]

@@ -82,7 +82,7 @@ rules:
   github/no-implicit-buggy-globals: [0]
   github/no-inner-html: [0]
   github/no-innerText: [2]
-  github/no-then: [2]
+  github/no-then: [0]
   github/no-useless-passive: [2]
   github/prefer-observers: [0]
   github/require-passive-events: [2]

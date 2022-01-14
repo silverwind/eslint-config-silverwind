@@ -1075,6 +1075,9 @@
     "prefer-numeric-literals": [
       2
     ],
+    "prefer-object-has-own": [
+      0
+    ],
     "prefer-object-spread": [
       0
     ],
@@ -1308,6 +1311,9 @@
     "unicorn/no-static-only-class": [
       2
     ],
+    "unicorn/no-thenable": [
+      2
+    ],
     "unicorn/no-this-assignment": [
       2
     ],
@@ -1324,6 +1330,9 @@
       2
     ],
     "unicorn/no-useless-length-check": [
+      2
+    ],
+    "unicorn/no-useless-promise-resolve-reject": [
       2
     ],
     "unicorn/no-useless-spread": [
@@ -1385,6 +1394,9 @@
     ],
     "unicorn/prefer-includes": [
       2
+    ],
+    "unicorn/prefer-json-parse-buffer": [
+      0
     ],
     "unicorn/prefer-math-trunc": [
       2
@@ -1466,6 +1478,9 @@
     ],
     "unicorn/prevent-abbreviations": [
       0
+    ],
+    "unicorn/relative-url-style": [
+      2
     ],
     "unicorn/require-array-join-separator": [
       2

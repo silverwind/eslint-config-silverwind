@@ -387,7 +387,7 @@ rules:
   unicorn/prefer-array-index-of: [2]
   unicorn/prefer-array-some: [2]
   unicorn/prefer-at: [0]
-  unicorn/prefer-code-point: [2]
+  unicorn/prefer-code-point: [0]
   unicorn/prefer-dataset: [2]
   unicorn/prefer-date-now: [2]
   unicorn/prefer-default-parameters: [0]

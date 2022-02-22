@@ -11,7 +11,7 @@
   },
   "env": {
     "browser": true,
-    "es2021": true,
+    "es2022": true,
     "node": true
   },
   "overrides": [
@@ -1496,6 +1496,9 @@
     ],
     "unicorn/template-indent": [
       2
+    ],
+    "unicorn/text-encoding-identifier-case": [
+      0
     ],
     "unicorn/throw-new-error": [
       2

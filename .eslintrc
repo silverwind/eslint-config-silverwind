@@ -14,6 +14,9 @@ env:
   es2022: true
   node: true
 
+settings:
+  import/extensions: [".js", ".jsx"]
+
 overrides:
   - files: ["**/*worker.js", "**/*worker.jsx"]
     env:

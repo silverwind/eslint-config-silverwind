@@ -390,7 +390,10 @@
     "import/no-unresolved": [
       2,
       {
-        "commonjs": true
+        "commonjs": true,
+        "ignore": [
+          "\\?.+$"
+        ]
       }
     ],
     "import/no-unused-modules": [

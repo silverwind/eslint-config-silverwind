@@ -546,6 +546,9 @@
     "no-const-assign": [
       2
     ],
+    "no-constant-binary-expression": [
+      2
+    ],
     "no-constant-condition": [
       0
     ],
@@ -1330,6 +1333,9 @@
     "unicorn/no-unreadable-array-destructuring": [
       0
     ],
+    "unicorn/no-unreadable-iife": [
+      2
+    ],
     "unicorn/no-unsafe-regex": [
       0
     ],
@@ -1346,6 +1352,9 @@
       2
     ],
     "unicorn/no-useless-spread": [
+      2
+    ],
+    "unicorn/no-useless-switch-case": [
       2
     ],
     "unicorn/no-useless-undefined": [
@@ -1414,8 +1423,14 @@
     "unicorn/prefer-modern-dom-apis": [
       0
     ],
+    "unicorn/prefer-modern-math-apis": [
+      2
+    ],
     "unicorn/prefer-module": [
       0
+    ],
+    "unicorn/prefer-native-coercion-functions": [
+      2
     ],
     "unicorn/prefer-negative-index": [
       2

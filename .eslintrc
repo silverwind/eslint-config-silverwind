@@ -17,6 +17,9 @@ env:
 settings:
   import/extensions: [".js", ".jsx"]
 
+ignorePatterns:
+  - "**/vendor/**"
+
 overrides:
   - files: ["**/*worker.js", "**/*worker.jsx"]
     env:

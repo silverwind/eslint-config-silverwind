@@ -17,7 +17,7 @@
     "eslint-plugin-unicorn": "^42.0.0"
   },
   "devDependencies": {
-    "eslint": "8.14.0",
+    "eslint": "8.16.0",
     "js-yaml": "4.1.0",
     "updates": "13.0.5",
     "versions": "9.2.3"

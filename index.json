@@ -983,7 +983,12 @@
     ],
     "no-use-before-define": [
       2,
-      "nofunc"
+      {
+        "functions": false,
+        "classes": true,
+        "variables": true,
+        "allowNamedExports": true
+      }
     ],
     "no-useless-backreference": [
       0

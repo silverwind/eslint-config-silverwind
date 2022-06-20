@@ -174,7 +174,7 @@ rules:
   no-dupe-else-if: [2]
   no-dupe-keys: [2]
   no-duplicate-case: [2]
-  no-duplicate-imports: [2]
+  no-duplicate-imports: [0] # handled by import/no-duplicates
   no-else-return: [0]
   no-empty-character-class: [2]
   no-empty-function: [0]

@@ -1413,6 +1413,9 @@
     "unicorn/prefer-event-key": [
       2
     ],
+    "unicorn/prefer-event-target": [
+      2
+    ],
     "unicorn/prefer-export-from": [
       2
     ],
@@ -1424,6 +1427,9 @@
     ],
     "unicorn/prefer-json-parse-buffer": [
       0
+    ],
+    "unicorn/prefer-logical-operator-over-ternary": [
+      2
     ],
     "unicorn/prefer-math-trunc": [
       2

@@ -540,6 +540,7 @@
       1,
       {
         "allow": [
+          "debug",
           "info",
           "warn",
           "error"

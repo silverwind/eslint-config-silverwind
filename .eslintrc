@@ -159,7 +159,7 @@ rules:
   no-compare-neg-zero: [2]
   no-cond-assign: [2, except-parens]
   no-confusing-arrow: [0]
-  no-console: [1, {allow: [info, warn, error]}]
+  no-console: [1, {allow: [debug, info, warn, error]}]
   no-const-assign: [2]
   no-constant-binary-expression: [2]
   no-constant-condition: [0]

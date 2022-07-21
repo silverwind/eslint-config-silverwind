@@ -2,8 +2,9 @@
   "root": true,
   "reportUnusedDisableDirectives": true,
   "plugins": [
-    "unicorn",
-    "import"
+    "eslint-plugin-unicorn",
+    "eslint-plugin-import",
+    "eslint-plugin-sonarjs"
   ],
   "parserOptions": {
     "sourceType": "module",

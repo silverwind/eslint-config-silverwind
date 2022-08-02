@@ -94,7 +94,8 @@
           "statusbar",
           "stop",
           "toolbar",
-          "top"
+          "top",
+          "window"
         ]
       }
     },

@@ -14,13 +14,13 @@
   },
   "dependencies": {
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-sonarjs": "0.14.0",
+    "eslint-plugin-sonarjs": "0.15.0",
     "eslint-plugin-unicorn": "^43.0.2"
   },
   "devDependencies": {
-    "eslint": "8.20.0",
+    "eslint": "8.22.0",
     "js-yaml": "4.1.0",
-    "updates": "13.1.2",
+    "updates": "13.1.4",
     "versions": "9.3.0"
   },
   "keywords": [

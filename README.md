@@ -4,7 +4,8 @@
 # Installation
 
 ``` bash
-npm i -D eslint eslint-config-silverwind && echo 'extends: silverwind' > .eslintrc
+npm i -D eslint eslint-config-silverwind
+echo 'extends: silverwind' > .eslintrc.yaml
 ```
 
 © [silverwind](https://github.com/silverwind), distributed under BSD licence.

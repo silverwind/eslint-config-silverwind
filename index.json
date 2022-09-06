@@ -976,11 +976,12 @@
       2,
       {
         "args": "all",
+        "caughtErrors": "all",
+        "ignoreRestSiblings": false,
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_",
         "caughtErrorsIgnorePattern": "^_",
-        "destructuredArrayIgnorePattern": "^_",
-        "ignoreRestSiblings": false
+        "destructuredArrayIgnorePattern": "^_"
       }
     ],
     "no-use-before-define": [

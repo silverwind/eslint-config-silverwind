@@ -272,7 +272,7 @@ rules:
   no-unused-expressions: [2]
   no-unused-labels: [2]
   no-unused-private-class-members: [2]
-  no-unused-vars: [2, {args: all, argsIgnorePattern: ^_, varsIgnorePattern: ^_, caughtErrorsIgnorePattern: ^_, destructuredArrayIgnorePattern: ^_, ignoreRestSiblings: false}]
+  no-unused-vars: [2, {args: all, caughtErrors: all, ignoreRestSiblings: false, argsIgnorePattern: ^_, varsIgnorePattern: ^_, caughtErrorsIgnorePattern: ^_, destructuredArrayIgnorePattern: ^_}]
   no-use-before-define: [2, {functions: false, classes: true, variables: true, allowNamedExports: true}]
   no-useless-backreference: [0]
   no-useless-call: [2]

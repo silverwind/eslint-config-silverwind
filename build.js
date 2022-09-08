@@ -3,4 +3,4 @@ import {readFileSync, writeFileSync} from "fs";
 
 const input = new URL(".eslintrc.yaml", import.meta.url);
 const output = new URL("index.json", import.meta.url);
-writeFileSync(output, JSON.stringify(load(readFileSync(input, "utf8")), null, 2));
+writeFileSync(output, JSON.stringify(load(readFileSync(input, "utf8"))));

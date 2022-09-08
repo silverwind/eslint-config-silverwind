@@ -136,7 +136,10 @@
       "never"
     ],
     "array-callback-return": [
-      0
+      2,
+      {
+        "checkForEach": true
+      }
     ],
     "array-element-newline": [
       0

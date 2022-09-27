@@ -20,10 +20,10 @@
     "eslint-plugin-unicorn": "^43.0.2"
   },
   "devDependencies": {
-    "eslint": "8.23.0",
+    "eslint": "8.24.0",
     "js-yaml": "4.1.0",
-    "updates": "13.1.5",
-    "versions": "9.3.0"
+    "updates": "13.1.8",
+    "versions": "9.3.3"
   },
   "keywords": [
     "eslint",

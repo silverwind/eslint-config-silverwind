@@ -134,6 +134,7 @@ rules:
   linebreak-style: [2, unix]
   lines-around-comment: [0]
   lines-between-class-members: [0]
+  logical-assignment-operators: [0]
   max-classes-per-file: [0]
   max-depth: [0]
   max-len: [0]

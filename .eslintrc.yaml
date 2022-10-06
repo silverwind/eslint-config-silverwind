@@ -476,7 +476,7 @@ rules:
   unicorn/require-number-to-fixed-digits-argument: [2]
   unicorn/require-post-message-target-origin: [0]
   unicorn/string-content: [0]
-  unicorn/switch-case-braces: [2]
+  unicorn/switch-case-braces: [0]
   unicorn/template-indent: [2]
   unicorn/text-encoding-identifier-case: [0]
   unicorn/throw-new-error: [2]

@@ -17,10 +17,10 @@
   "dependencies": {
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-sonarjs": "0.15.0",
-    "eslint-plugin-unicorn": "^44.0.1"
+    "eslint-plugin-unicorn": "^44.0.2"
   },
   "devDependencies": {
-    "eslint": "8.24.0",
+    "eslint": "8.25.0",
     "js-yaml": "4.1.0",
     "updates": "13.1.8",
     "versions": "9.3.3"

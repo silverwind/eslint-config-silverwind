@@ -26,16 +26,16 @@ update: node_modules
 
 .PHONY: patch
 patch: node_modules test
-	npx versions -Cac 'node build.js' patch
+	npx versions -c 'node build.js' patch package.json package-lock.json
 	$(MAKE) --no-print-directory publish
 
 .PHONY: minor
 minor: node_modules test
-	npx versions -Cac 'node build.js' minor
+	npx versions -c 'node build.js' minor package.json package-lock.json
 	$(MAKE) --no-print-directory publish
 
 .PHONY: major
 major: node_modules test
-	npx versions -Cac 'node build.js' major
+	npx versions -c 'node build.js' major package.json package-lock.json
 	$(MAKE) --no-print-directory publish
 

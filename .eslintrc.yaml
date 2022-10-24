@@ -290,7 +290,7 @@ rules:
   no-whitespace-before-property: [2]
   no-with: [0]
   nonblock-statement-body-position: [2]
-  object-curly-newline: [2, {consistent: true}]
+  object-curly-newline: [0]
   object-curly-spacing: [2, never]
   object-property-newline: [0]
   object-shorthand: [2, always]

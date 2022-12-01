@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-silverwind",
   "version": "64.0.0",
-  "description": "Personal ESLint configuration",
+  "description": "Exhaustive ESLint configuration",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/eslint-config-silverwind",
   "license": "BSD-2-Clause",
@@ -11,9 +11,6 @@
   "files": [
     "index.json"
   ],
-  "engines": {
-    "node": ">=14"
-  },
   "dependencies": {
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-sonarjs": "0.16.0",
@@ -24,10 +21,5 @@
     "js-yaml": "4.1.0",
     "updates": "13.2.2",
     "versions": "10.3.0"
-  },
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "silverwind"
-  ]
+  }
 }

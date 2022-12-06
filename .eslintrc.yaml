@@ -207,7 +207,7 @@ rules:
   no-irregular-whitespace: [2]
   no-iterator: [2]
   no-label-var: [2]
-  no-labels: [0]
+  no-labels: [0] # handled by no-restricted-syntax
   no-lone-blocks: [2]
   no-lonely-if: [0]
   no-loop-func: [0]
@@ -290,7 +290,7 @@ rules:
   no-void: [2]
   no-warning-comments: [0]
   no-whitespace-before-property: [2]
-  no-with: [0]
+  no-with: [0] # handled by no-restricted-syntax
   nonblock-statement-body-position: [2]
   object-curly-newline: [0]
   object-curly-spacing: [2, never]

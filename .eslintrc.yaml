@@ -453,7 +453,7 @@ rules:
   unicorn/prefer-native-coercion-functions: [2]
   unicorn/prefer-negative-index: [2]
   unicorn/prefer-node-append: [0]
-  unicorn/prefer-node-protocol: [0]
+  unicorn/prefer-node-protocol: [2]
   unicorn/prefer-node-remove: [0]
   unicorn/prefer-number-properties: [0]
   unicorn/prefer-object-from-entries: [2]

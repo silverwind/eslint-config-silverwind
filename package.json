@@ -14,7 +14,7 @@
   "dependencies": {
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-sonarjs": "0.18.0",
-    "eslint-plugin-unicorn": "45.0.2"
+    "eslint-plugin-unicorn": "46.0.0"
   },
   "devDependencies": {
     "eslint": "8.35.0",

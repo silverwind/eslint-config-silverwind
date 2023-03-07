@@ -1,5 +1,5 @@
 node_modules: package-lock.json
-	npm i --no-save
+	npm install --no-save
 	@touch node_modules
 
 .PHONY: deps
@@ -22,7 +22,8 @@ publish: node_modules
 update: node_modules
 	npx updates -cu
 	@touch package-lock.json
-	@$(MAKE) --no-print-directory deps
+	npm install
+	@touch node_modules
 
 .PHONY: patch
 patch: node_modules test

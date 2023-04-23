@@ -34,7 +34,7 @@ overrides:
       unicorn/consistent-function-scoping: [0]
   - files: ["**/*.config.js", "**/*.config.ts"]
     rules:
-      import/no-unused-modules: [2, {unusedExports: false}]
+      import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
 
 rules:
   accessor-pairs: [2]

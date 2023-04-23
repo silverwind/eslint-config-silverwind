@@ -16,23 +16,23 @@ env:
   node: true
 
 settings:
-  import/extensions: [".js", ".jsx"]
+  import/extensions: [".js", ".jsx", ".ts", ".tsx"]
 
 ignorePatterns:
   - "**/vendor/**"
 
 overrides:
-  - files: ["**/*worker.js", "**/*worker.jsx"]
+  - files: ["**/*worker.js", "**/*worker.jsx", "**/*worker.ts", "**/*worker.tsx"]
     env:
       worker: true
     rules:
       no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top, window]
-  - files: ["**/*test.js", "**/*test.jsx"]
+  - files: ["**/*test.js", "**/*test.jsx", "**/*test.ts", "**/*test.tsx"]
     env:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
-  - files: ["**/*.config.js"]
+  - files: ["**/*.config.js", "**/*.config.ts"]
     rules:
       import/no-unused-modules: [2, {unusedExports: false}]
 

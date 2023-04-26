@@ -32,7 +32,7 @@ overrides:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
-  - files: ["**/*.config.js", "**/*.config.ts"]
+  - files: ["**/*.config.js", "**/*.config.ts", "**/*.stories.*"]
     rules:
       import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
 

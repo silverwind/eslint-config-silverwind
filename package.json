@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "eslint": "8.38.0",
+    "eslint-plugin-regexp": "1.14.0",
     "js-yaml": "4.1.0",
     "updates": "14.0.1",
     "versions": "11.0.0"

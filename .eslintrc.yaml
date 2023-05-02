@@ -392,7 +392,7 @@ rules:
   regexp/sort-alternatives: [0]
   regexp/sort-character-class-elements: [0]
   regexp/sort-flags: [0]
-  regexp/strict: [2]
+  regexp/strict: [0]
   regexp/unicode-escape: [0]
   regexp/use-ignore-case: [0]
   require-atomic-updates: [0]

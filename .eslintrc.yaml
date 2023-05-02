@@ -28,7 +28,7 @@ overrides:
       worker: true
     rules:
       no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top, window]
-  - files: ["**/*test.js", "**/*test.jsx", "**/*test.ts", "**/*test.tsx"]
+  - files: ["**/*test.js", "**/*test.jsx", "**/*test.ts", "**/*test.tsx", "vitest.setup.js", "vitest.setup.ts"]
     env:
       jest: true
     rules:

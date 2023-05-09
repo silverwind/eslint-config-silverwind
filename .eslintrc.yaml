@@ -358,7 +358,7 @@ rules:
   regexp/no-unused-capturing-group: [0]
   regexp/no-useless-assertions: [2]
   regexp/no-useless-backreference: [2]
-  regexp/no-useless-character-class: [2]
+  regexp/no-useless-character-class: [0]
   regexp/no-useless-dollar-replacements: [2]
   regexp/no-useless-escape: [2]
   regexp/no-useless-flag: [2]

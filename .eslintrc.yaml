@@ -424,7 +424,7 @@ rules:
   sonarjs/no-nested-template-literals: [0]
   sonarjs/no-one-iteration-loop: [2]
   sonarjs/no-redundant-boolean: [2]
-  sonarjs/no-redundant-jump: [2]
+  sonarjs/no-redundant-jump: [0]
   sonarjs/no-same-line-conditional: [2]
   sonarjs/no-small-switch: [0]
   sonarjs/no-unused-collection: [2]

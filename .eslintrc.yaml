@@ -325,7 +325,7 @@ rules:
   regexp/control-character-escape: [2]
   regexp/hexadecimal-escape: [0]
   regexp/letter-case: [0]
-  regexp/match-any: [2]
+  regexp/match-any: [0]
   regexp/negation: [2]
   regexp/no-contradiction-with-assertion: [0]
   regexp/no-control-character: [0]

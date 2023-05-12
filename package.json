@@ -12,6 +12,7 @@
     "index.json"
   ],
   "dependencies": {
+    "eslint-plugin-eslint-comments": "3.2.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-regexp": "1.15.0",
     "eslint-plugin-sonarjs": "0.19.0",

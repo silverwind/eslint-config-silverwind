@@ -35,9 +35,12 @@ overrides:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
-  - files: ["**/*.config.js", "**/*.config.ts", "**/*.stories.*", "**/.storybook/**"]
+  - files: ["**/*.config.js", "**/*.config.ts", "**/*.stories.*"]
     rules:
       import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
+  - files: ["**/.storybook/**"]
+    rules:
+      import/no-unused-modules: [0]
 
 rules:
   accessor-pairs: [2]

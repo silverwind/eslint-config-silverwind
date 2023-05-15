@@ -2,7 +2,7 @@ root: true
 reportUnusedDisableDirectives: true
 
 plugins:
-  - "@eslint-community/eslint-comments"
+  - "@eslint-community/eslint-plugin-eslint-comments"
   - eslint-plugin-unicorn
   - eslint-plugin-import
   - eslint-plugin-sonarjs

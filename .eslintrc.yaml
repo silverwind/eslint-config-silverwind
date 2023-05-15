@@ -22,6 +22,7 @@ settings:
 
 ignorePatterns:
   - "**/vendor/**"
+  - "!.storybook"
 
 overrides:
   - files: ["**/*worker.js", "**/*worker.jsx", "**/*worker.ts", "**/*worker.tsx"]
@@ -34,7 +35,7 @@ overrides:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
-  - files: ["**/*.config.js", "**/*.config.ts", "**/*.stories.*"]
+  - files: ["**/*.config.js", "**/*.config.ts", "**/*.stories.*", "**/.storybook/**"]
     rules:
       import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
 

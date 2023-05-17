@@ -7,6 +7,7 @@ plugins:
   - eslint-plugin-import
   - eslint-plugin-sonarjs
   - eslint-plugin-regexp
+  - eslint-plugin-no-use-extend-native
 
 parserOptions:
   sourceType: module
@@ -294,6 +295,7 @@ rules:
   no-unused-private-class-members: [2]
   no-unused-vars: [2, {vars: all, args: all, caughtErrors: all, ignoreRestSiblings: false, argsIgnorePattern: ^_, varsIgnorePattern: "^_[^_]*$", caughtErrorsIgnorePattern: ^_, destructuredArrayIgnorePattern: ^_}]
   no-use-before-define: [2, {functions: false, classes: true, variables: true, allowNamedExports: true}]
+  no-use-extend-native/no-use-extend-native: [2]
   no-useless-backreference: [2]
   no-useless-call: [2]
   no-useless-catch: [2]

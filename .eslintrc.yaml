@@ -3,11 +3,12 @@ reportUnusedDisableDirectives: true
 
 plugins:
   - "@eslint-community/eslint-plugin-eslint-comments"
-  - eslint-plugin-unicorn
+  - eslint-plugin-array-func
   - eslint-plugin-import
-  - eslint-plugin-sonarjs
-  - eslint-plugin-regexp
   - eslint-plugin-no-use-extend-native
+  - eslint-plugin-regexp
+  - eslint-plugin-sonarjs
+  - eslint-plugin-unicorn
 
 parserOptions:
   sourceType: module
@@ -58,6 +59,12 @@ rules:
   array-bracket-spacing: [2, never]
   array-callback-return: [2, {checkForEach: true}]
   array-element-newline: [0]
+  array-func/avoid-reverse: [2]
+  array-func/from-map: [2]
+  array-func/no-unnecessary-this-arg: [2]
+  array-func/prefer-array-from: [2]
+  array-func/prefer-flat-map: [0]
+  array-func/prefer-flat: [0]
   arrow-body-style: [0]
   arrow-parens: [0]
   arrow-spacing: [2, {before: true, after: true}]

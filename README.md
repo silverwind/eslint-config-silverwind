@@ -8,7 +8,7 @@ In your `.eslintrc.yaml`:
 
 ```yaml
 extends:
-  - silverwind
+  - eslint-config-silverwind
 ```
 
 ## Related

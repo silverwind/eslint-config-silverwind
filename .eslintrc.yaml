@@ -1,4 +1,4 @@
-goot: true
+root: true
 reportUnusedDisableDirectives: true
 
 plugins:

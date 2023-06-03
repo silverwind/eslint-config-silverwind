@@ -1,4 +1,4 @@
-root: true
+goot: true
 reportUnusedDisableDirectives: true
 
 plugins:
@@ -27,17 +27,17 @@ ignorePatterns:
   - "!.storybook"
 
 overrides:
-  - files: ["**/*worker.js", "**/*worker.jsx", "**/*worker.ts", "**/*worker.tsx"]
+  - files: ["**/*.worker.*"]
     env:
       worker: true
     rules:
       no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top, window]
-  - files: ["**/*test.js", "**/*test.jsx", "**/*test.ts", "**/*test.tsx", "vitest.setup.js", "vitest.setup.ts"]
+  - files: ["**/*.test.*", "vitest.setup.*"]
     env:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
-  - files: ["**/*.config.js", "**/*.config.ts", "**/*.stories.*"]
+  - files: ["**/*.config.*", "**/*.stories.*"]
     rules:
       import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
   - files: ["**/.storybook/**"]

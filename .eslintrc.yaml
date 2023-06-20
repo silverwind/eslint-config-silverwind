@@ -27,7 +27,7 @@ ignorePatterns:
   - "!.storybook"
 
 overrides:
-  - files: ["**/*.worker.*"]
+  - files: ["**/*worker.*"]
     env:
       worker: true
     rules:

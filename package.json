@@ -9,7 +9,7 @@
   "main": "./index.json",
   "exports": "./index.json",
   "files": [
-    "index.json"
+    "./index.json"
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "3.2.1",

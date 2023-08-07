@@ -32,12 +32,12 @@ overrides:
       worker: true
     rules:
       no-restricted-globals: [2, addEventListener, blur, close, closed, confirm, defaultStatus, defaultstatus, error, event, external, find, focus, frameElement, frames, history, innerHeight, innerWidth, isFinite, isNaN, length, locationbar, menubar, moveBy, moveTo, name, onblur, onerror, onfocus, onload, onresize, onunload, open, opener, opera, outerHeight, outerWidth, pageXOffset, pageYOffset, parent, print, removeEventListener, resizeBy, resizeTo, screen, screenLeft, screenTop, screenX, screenY, scroll, scrollbars, scrollBy, scrollTo, scrollX, scrollY, status, statusbar, stop, toolbar, top, window]
-  - files: ["**/*.test.*", "vitest.setup.*", "vitest.global.*"]
+  - files: ["**/*.test.*", "vitest.setup.*"]
     env:
       jest: true
     rules:
       unicorn/consistent-function-scoping: [0]
-  - files: ["**/*.config.*", "**/*.stories.*"]
+  - files: ["**/*.config.*", "**/*.stories.*", "vitest.global.*"]
     rules:
       import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
   - files: ["**/.storybook/**"]

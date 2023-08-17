@@ -25,6 +25,7 @@ settings:
 ignorePatterns:
   - "**/vendor/**"
   - "!.storybook"
+  - "**/*.snap"
 
 overrides:
   - files: ["**/*worker.*"]

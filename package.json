@@ -23,7 +23,7 @@
   "devDependencies": {
     "eslint": "8.48.0",
     "js-yaml": "4.1.0",
-    "updates": "14.4.0",
+    "updates": "15.0.0",
     "versions": "11.1.0"
   }
 }

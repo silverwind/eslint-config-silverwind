@@ -9,8 +9,7 @@
   "main": "./index.json",
   "exports": "./index.json",
   "files": [
-    "./index.json",
-    "./tsconfig.json"
+    "./index.json"
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.1.0",

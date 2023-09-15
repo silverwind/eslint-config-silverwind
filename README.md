@@ -11,24 +11,6 @@ extends:
   - eslint-config-silverwind
 ```
 
-To enable TS-dependant rules and the slower TS parser, add `tsconfig.json`:
-
-```bash
-curl -sO https://raw.githubusercontent.com/silverwind/eslint-config-silverwind/master/tsconfig.json
-```
-
-And add these configs:
-
-```yaml
-parser: "@typescript-eslint/parser"
-
-parserOptions:
-  project: true
-
-rules:
-  etc/no-deprecated: [2]
-```
-
 ## Related
 
 - [eslint-config-silverwind-react](https://github.com/silverwind/eslint-config-silverwind-react)

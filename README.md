@@ -14,7 +14,7 @@ extends:
 Add a `tsconfig.json`:
 
 ```bash
-curl -sO https://github.com/silverwind/eslint-config-silverwind/blob/master/tsconfig.json
+curl -sO https://raw.githubusercontent.com/silverwind/eslint-config-silverwind/master/tsconfig.json
 ```
 
 ## Related

@@ -9,10 +9,14 @@ plugins:
   - eslint-plugin-regexp
   - eslint-plugin-sonarjs
   - eslint-plugin-unicorn
+  - eslint-plugin-etc
+
+parser: "@typescript-eslint/parser"
 
 parserOptions:
   sourceType: module
   ecmaVersion: latest
+  project: ./tsconfig.json
 
 env:
   browser: true
@@ -91,6 +95,7 @@ rules:
   dot-notation: [0]
   eol-last: [2]
   eqeqeq: [2]
+  etc/no-deprecated: [2]
   for-direction: [2]
   func-call-spacing: [2, never]
   func-name-matching: [2]

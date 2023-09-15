@@ -11,6 +11,12 @@ extends:
   - eslint-config-silverwind
 ```
 
+Add a `tsconfig.json`:
+
+```bash
+curl -sO https://github.com/silverwind/eslint-config-silverwind/blob/master/tsconfig.json
+```
+
 ## Related
 
 - [eslint-config-silverwind-react](https://github.com/silverwind/eslint-config-silverwind-react)

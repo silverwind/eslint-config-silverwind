@@ -11,10 +11,20 @@ extends:
   - eslint-config-silverwind
 ```
 
-Add a `tsconfig.json`:
+To enable TS-dependant rules, add `tsconfig.json`:
 
 ```bash
 curl -sO https://raw.githubusercontent.com/silverwind/eslint-config-silverwind/master/tsconfig.json
+```
+
+And add these configs:
+
+```yaml
+parserOptions:
+  project: true
+
+rules:
+  etc/no-deprecated: [2]
 ```
 
 ## Related

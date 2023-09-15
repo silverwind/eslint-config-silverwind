@@ -11,7 +11,7 @@ plugins:
   - eslint-plugin-unicorn
   - eslint-plugin-etc
 
-parser: "@typescript-eslint/parser"
+parser: espree
 
 parserOptions:
   sourceType: module

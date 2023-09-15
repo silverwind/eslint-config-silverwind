@@ -11,7 +11,7 @@ extends:
   - eslint-config-silverwind
 ```
 
-To enable TS-dependant rules, add `tsconfig.json`:
+To enable TS-dependant rules and the slower TS parser, add `tsconfig.json`:
 
 ```bash
 curl -sO https://raw.githubusercontent.com/silverwind/eslint-config-silverwind/master/tsconfig.json
@@ -20,6 +20,8 @@ curl -sO https://raw.githubusercontent.com/silverwind/eslint-config-silverwind/m
 And add these configs:
 
 ```yaml
+parser: "@typescript-eslint/parser"
+
 parserOptions:
   project: true
 

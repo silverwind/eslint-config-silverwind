@@ -16,7 +16,7 @@ parser: "@typescript-eslint/parser"
 parserOptions:
   sourceType: module
   ecmaVersion: latest
-  project: true
+  project: "./node_modules/eslint-config-silverwind/tsconfig.json"
 
 env:
   browser: true

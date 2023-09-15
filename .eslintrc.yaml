@@ -18,8 +18,8 @@ parserOptions:
   ecmaVersion: latest
   projectFolderIgnoreList: []
   project:
-    - "./tsconfig.json"
     - "./node_modules/eslint-config-silverwind/tsconfig.json"
+    - "./tsconfig.json"
 
 env:
   browser: true

@@ -94,7 +94,6 @@ rules:
   dot-notation: [0]
   eol-last: [2]
   eqeqeq: [2]
-  etc/no-deprecated: [0]
   for-direction: [2]
   func-call-spacing: [2, never]
   func-name-matching: [2]

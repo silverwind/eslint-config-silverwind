@@ -22,7 +22,7 @@
     "eslint-plugin-vitest-globals": "1.4.0"
   },
   "devDependencies": {
-    "eslint": "8.49.0",
+    "eslint": "8.50.0",
     "js-yaml": "4.1.0",
     "updates": "15.0.2",
     "versions": "11.1.0"

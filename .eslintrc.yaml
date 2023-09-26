@@ -11,8 +11,6 @@ plugins:
   - eslint-plugin-unicorn
   - eslint-plugin-vitest-globals
 
-parser: espree
-
 parserOptions:
   sourceType: module
   ecmaVersion: latest

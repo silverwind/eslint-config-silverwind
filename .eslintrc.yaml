@@ -128,7 +128,7 @@ rules:
   import/no-commonjs: [2, {allowConditionalRequire: false}]
   import/no-cycle: [2, {ignoreExternal: true, maxDepth: 1}]
   import/no-default-export: [0]
-  import/no-deprecated: [2]
+  import/no-deprecated: [0] # slow
   import/no-duplicates: [2]
   import/no-dynamic-require: [0]
   import/no-empty-named-blocks: [2]

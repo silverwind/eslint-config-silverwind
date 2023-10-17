@@ -16,13 +16,13 @@
     "eslint-plugin-array-func": "4.0.0",
     "eslint-plugin-import": "2.28.1",
     "eslint-plugin-no-use-extend-native": "0.5.0",
-    "eslint-plugin-regexp": "1.15.0",
+    "eslint-plugin-regexp": "2.0.0",
     "eslint-plugin-sonarjs": "0.21.0",
     "eslint-plugin-unicorn": "48.0.1",
     "eslint-plugin-vitest-globals": "1.4.0"
   },
   "devDependencies": {
-    "eslint": "8.50.0",
+    "eslint": "8.51.0",
     "js-yaml": "4.1.0",
     "updates": "15.0.2",
     "versions": "11.1.0"

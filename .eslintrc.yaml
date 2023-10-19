@@ -71,7 +71,7 @@ overrides:
       vitest/prefer-expect-resolves: [0]
       vitest/prefer-hooks-in-order: [0]
       vitest/prefer-hooks-on-top: [2]
-      vitest/prefer-lowercase-title: [2]
+      vitest/prefer-lowercase-title: [0]
       vitest/prefer-mock-promise-shorthand: [0]
       vitest/prefer-snapshot-hint: [0]
       vitest/prefer-spy-on: [0]

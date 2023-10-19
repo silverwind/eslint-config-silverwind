@@ -41,7 +41,7 @@ overrides:
     rules:
       unicorn/consistent-function-scoping: [0]
       vitest/consistent-test-filename: [0]
-      vitest/consistent-test-it: [2]
+      vitest/consistent-test-it: [0]
       vitest/expect-expect: [2]
       vitest/max-expects: [0]
       vitest/max-nested-describe: [0]

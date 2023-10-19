@@ -4,7 +4,7 @@ reportUnusedDisableDirectives: true
 plugins:
   - "@eslint-community/eslint-plugin-eslint-comments"
   - eslint-plugin-array-func
-  - eslint-plugin-import
+  - eslint-plugin-i
   - eslint-plugin-no-use-extend-native
   - eslint-plugin-regexp
   - eslint-plugin-sonarjs
@@ -21,7 +21,7 @@ env:
   node: true
 
 settings:
-  import/extensions: [".js", ".jsx", ".ts", ".tsx"]
+  i/extensions: [".js", ".jsx", ".ts", ".tsx"]
 
 ignorePatterns:
   - "**/vendor/**"
@@ -41,10 +41,10 @@ overrides:
       unicorn/consistent-function-scoping: [0]
   - files: ["**/*.config.*", "**/*.stories.*", "vitest.global.*"]
     rules:
-      import/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
+      i/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
   - files: ["**/.storybook/**"]
     rules:
-      import/no-unused-modules: [0]
+      i/no-unused-modules: [0]
 
 rules:
   "@eslint-community/eslint-comments/disable-enable-pair": [2, {allowWholeFile: true}]
@@ -108,50 +108,50 @@ rules:
   id-length: [0]
   id-match: [0]
   implicit-arrow-linebreak: [0]
-  import/consistent-type-specifier-style: [0]
-  import/default: [2]
-  import/dynamic-import-chunkname: [0]
-  import/export: [2]
-  import/exports-last: [0]
-  import/extensions: [2, ignorePackages]
-  import/first: [2]
-  import/group-exports: [0]
-  import/max-dependencies: [0]
-  import/named: [2]
-  import/namespace: [0]
-  import/newline-after-import: [0]
-  import/no-absolute-path: [2]
-  import/no-amd: [2]
-  import/no-anonymous-default-export: [0]
-  import/no-commonjs: [2, {allowConditionalRequire: false}]
-  import/no-cycle: [2, {ignoreExternal: true, maxDepth: 1}]
-  import/no-default-export: [0]
-  import/no-deprecated: [0] # slow
-  import/no-duplicates: [2]
-  import/no-dynamic-require: [0]
-  import/no-empty-named-blocks: [2]
-  import/no-extraneous-dependencies: [2]
-  import/no-import-module-exports: [0]
-  import/no-internal-modules: [0]
-  import/no-mutable-exports: [0]
-  import/no-named-as-default-member: [0]
-  import/no-named-as-default: [2]
-  import/no-named-default: [0]
-  import/no-named-export: [0]
-  import/no-namespace: [0]
-  import/no-nodejs-modules: [0]
-  import/no-relative-packages: [0]
-  import/no-relative-parent-imports: [0]
-  import/no-restricted-paths: [0]
-  import/no-self-import: [2]
-  import/no-unassigned-import: [0]
-  import/no-unresolved: [2, {commonjs: true, ignore: ["\\?.+$", ^vitest/]}]
-  import/no-unused-modules: [2, {unusedExports: true}]
-  import/no-useless-path-segments: [2, {commonjs: true}]
-  import/no-webpack-loader-syntax: [2]
-  import/order: [0]
-  import/prefer-default-export: [0]
-  import/unambiguous: [0]
+  i/consistent-type-specifier-style: [0]
+  i/default: [2]
+  i/dynamic-import-chunkname: [0]
+  i/export: [2]
+  i/exports-last: [0]
+  i/extensions: [2, ignorePackages]
+  i/first: [2]
+  i/group-exports: [0]
+  i/max-dependencies: [0]
+  i/named: [2]
+  i/namespace: [0]
+  i/newline-after-import: [0]
+  i/no-absolute-path: [2]
+  i/no-amd: [2]
+  i/no-anonymous-default-export: [0]
+  i/no-commonjs: [2, {allowConditionalRequire: false}]
+  i/no-cycle: [2, {ignoreExternal: true, maxDepth: 1}]
+  i/no-default-export: [0]
+  i/no-deprecated: [0] # slow
+  i/no-duplicates: [2]
+  i/no-dynamic-require: [0]
+  i/no-empty-named-blocks: [2]
+  i/no-extraneous-dependencies: [2]
+  i/no-import-module-exports: [0]
+  i/no-internal-modules: [0]
+  i/no-mutable-exports: [0]
+  i/no-named-as-default-member: [0]
+  i/no-named-as-default: [2]
+  i/no-named-default: [0]
+  i/no-named-export: [0]
+  i/no-namespace: [0]
+  i/no-nodejs-modules: [0]
+  i/no-relative-packages: [0]
+  i/no-relative-parent-imports: [0]
+  i/no-restricted-paths: [0]
+  i/no-self-import: [2]
+  i/no-unassigned-import: [0]
+  i/no-unresolved: [2, {commonjs: true, ignore: ["\\?.+$", ^vitest/]}]
+  i/no-unused-modules: [2, {unusedExports: true}]
+  i/no-useless-path-segments: [2, {commonjs: true}]
+  i/no-webpack-loader-syntax: [2]
+  i/order: [0]
+  i/prefer-default-export: [0]
+  i/unambiguous: [0]
   indent: [2, 2, {ignoreComments: true, SwitchCase: 1}]
   init-declarations: [0]
   jsx-quotes: [2, prefer-double]
@@ -203,7 +203,7 @@ rules:
   no-dupe-else-if: [2]
   no-dupe-keys: [2]
   no-duplicate-case: [2]
-  no-duplicate-imports: [0] # handled by import/no-duplicates
+  no-duplicate-imports: [0] # handled by i/no-duplicates
   no-else-return: [0]
   no-empty-character-class: [2]
   no-empty-function: [0]

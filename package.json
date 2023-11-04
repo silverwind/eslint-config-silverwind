@@ -13,7 +13,8 @@
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.1.0",
-    "@stylistic/eslint-plugin": "1.0.0",
+    "@stylistic/eslint-plugin-js": "1.0.0",
+    "@stylistic/eslint-plugin-jsx": "1.0.0",
     "eslint-plugin-array-func": "4.0.0",
     "eslint-plugin-i": "2.29.0",
     "eslint-plugin-no-use-extend-native": "0.5.0",

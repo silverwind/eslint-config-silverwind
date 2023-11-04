@@ -3,7 +3,8 @@ reportUnusedDisableDirectives: true
 
 plugins:
   - "@eslint-community/eslint-plugin-eslint-comments"
-  - "@stylistic/eslint-plugin"
+  - "@stylistic/eslint-plugin-js"
+  - "@stylistic/eslint-plugin-jsx"
   - eslint-plugin-array-func
   - eslint-plugin-i
   - eslint-plugin-no-use-extend-native
@@ -107,92 +108,89 @@ rules:
   "@eslint-community/eslint-comments/no-unused-enable": [2]
   "@eslint-community/eslint-comments/no-use": [0]
   "@eslint-community/eslint-comments/require-description": [0]
-  "@stylistic/array-bracket-newline": [0]
-  "@stylistic/array-bracket-spacing": [2, never]
-  "@stylistic/array-element-newline": [0]
-  "@stylistic/arrow-parens": [0]
-  "@stylistic/arrow-spacing": [2, {before: true, after: true}]
-  "@stylistic/block-spacing": [0]
-  "@stylistic/brace-style": [2, 1tbs, {allowSingleLine: true}]
-  "@stylistic/comma-dangle": [2, only-multiline]
-  "@stylistic/comma-spacing": [2, {before: false, after: true}]
-  "@stylistic/comma-style": [2, last]
-  "@stylistic/computed-property-spacing": [2, never]
-  "@stylistic/dot-location": [2, property]
-  "@stylistic/eol-last": [2]
-  "@stylistic/func-call-spacing": [2, never]
-  "@stylistic/function-call-argument-newline": [0]
-  "@stylistic/function-paren-newline": [0]
-  "@stylistic/generator-star-spacing": [0]
-  "@stylistic/implicit-arrow-linebreak": [0]
-  "@stylistic/indent": [2, 2, {ignoreComments: true, SwitchCase: 1}]
-  "@stylistic/jsx-child-element-spacing": [0] # from react
-  "@stylistic/jsx-closing-bracket-location": [0] # from react
-  "@stylistic/jsx-closing-tag-location": [2] # from react
-  "@stylistic/jsx-curly-brace-presence": [0] # from react
-  "@stylistic/jsx-curly-newline": [2, consistent] # from react
-  "@stylistic/jsx-curly-spacing": [2, {when: never}] # from react
-  "@stylistic/jsx-equals-spacing": [2, never] # from react
-  "@stylistic/jsx-first-prop-new-line": [0] # from react
-  "@stylistic/jsx-indent": [2, 2, {checkAttributes: true, indentLogicalExpressions: true}] # from react
-  "@stylistic/jsx-indent-props": [2, 2] # from react
-  "@stylistic/jsx-max-props-per-line": [0] # from react
-  "@stylistic/jsx-newline": [0] # from react
-  "@stylistic/jsx-one-expression-per-line": [0] # from react
-  "@stylistic/jsx-props-no-multi-spaces": [2] # from react
-  "@stylistic/jsx-quotes": [2, prefer-double]
-  "@stylistic/jsx-self-closing-comp": [2] # from react
-  "@stylistic/jsx-sort-props": [0] # from react
-  "@stylistic/jsx-tag-spacing": [2, {beforeSelfClosing: never, beforeClosing: never}] # from react
-  "@stylistic/jsx-wrap-multilines": [2] # from react
-  "@stylistic/key-spacing": [2]
-  "@stylistic/keyword-spacing": [2]
-  "@stylistic/linebreak-style": [2, unix]
-  "@stylistic/lines-around-comment": [0]
-  "@stylistic/lines-between-class-members": [0]
-  "@stylistic/max-len": [0]
-  "@stylistic/max-statements-per-line": [0]
-  "@stylistic/member-delimiter-style": [0] # from typescript
-  "@stylistic/multiline-ternary": [0]
-  "@stylistic/new-parens": [2]
-  "@stylistic/newline-per-chained-call": [0]
-  "@stylistic/no-confusing-arrow": [0]
-  "@stylistic/no-extra-parens": [0]
-  "@stylistic/no-extra-semi": [2]
-  "@stylistic/no-floating-decimal": [0]
-  "@stylistic/no-mixed-operators": [0]
-  "@stylistic/no-mixed-spaces-and-tabs": [2]
-  "@stylistic/no-multi-spaces": [2, {ignoreEOLComments: true, exceptions: {Property: true}}]
-  "@stylistic/no-multiple-empty-lines": [2, {max: 1, maxEOF: 0, maxBOF: 0}]
-  "@stylistic/no-tabs": [2]
-  "@stylistic/no-trailing-spaces": [2]
-  "@stylistic/no-whitespace-before-property": [2]
-  "@stylistic/nonblock-statement-body-position": [2]
-  "@stylistic/object-curly-newline": [0]
-  "@stylistic/object-curly-spacing": [2, never]
-  "@stylistic/object-property-newline": [0]
-  "@stylistic/one-var-declaration-per-line": [0]
-  "@stylistic/operator-linebreak": [2, after]
-  "@stylistic/padded-blocks": [2, never]
-  "@stylistic/padding-line-between-statements": [0]
-  "@stylistic/quote-props": [0]
-  "@stylistic/quotes": [2, double, {avoidEscape: true, allowTemplateLiterals: true}]
-  "@stylistic/rest-spread-spacing": [2, never]
-  "@stylistic/semi": [2, always]
-  "@stylistic/semi-spacing": [2, {before: false, after: true}]
-  "@stylistic/semi-style": [2, last]
-  "@stylistic/space-before-blocks": [2, always]
-  "@stylistic/space-before-function-paren": [2, {anonymous: never, named: never, asyncArrow: always}]
-  "@stylistic/space-in-parens": [2, never]
-  "@stylistic/space-infix-ops": [2]
-  "@stylistic/space-unary-ops": [2]
-  "@stylistic/spaced-comment": [0]
-  "@stylistic/switch-colon-spacing": [2]
-  "@stylistic/template-curly-spacing": [2, never]
-  "@stylistic/type-annotation-spacing": [0] # from typescript
-  "@stylistic/wrap-iife": [2, inside]
-  "@stylistic/wrap-regex": [0]
-  "@stylistic/yield-star-spacing": [2, after]
+  "@stylistic/js/array-bracket-newline": [0]
+  "@stylistic/js/array-bracket-spacing": [2, never]
+  "@stylistic/js/array-element-newline": [0]
+  "@stylistic/js/arrow-parens": [0]
+  "@stylistic/js/arrow-spacing": [2, {before: true, after: true}]
+  "@stylistic/js/block-spacing": [0]
+  "@stylistic/js/brace-style": [2, 1tbs, {allowSingleLine: true}]
+  "@stylistic/js/comma-dangle": [2, only-multiline]
+  "@stylistic/js/comma-spacing": [2, {before: false, after: true}]
+  "@stylistic/js/comma-style": [2, last]
+  "@stylistic/js/computed-property-spacing": [2, never]
+  "@stylistic/js/dot-location": [2, property]
+  "@stylistic/js/eol-last": [2]
+  "@stylistic/js/func-call-spacing": [2, never]
+  "@stylistic/js/function-call-argument-newline": [0]
+  "@stylistic/js/function-paren-newline": [0]
+  "@stylistic/js/generator-star-spacing": [0]
+  "@stylistic/js/implicit-arrow-linebreak": [0]
+  "@stylistic/js/indent": [2, 2, {ignoreComments: true, SwitchCase: 1}]
+  "@stylistic/jsx/jsx-child-element-spacing": [0] # from react
+  "@stylistic/jsx/jsx-closing-bracket-location": [0] # from react
+  "@stylistic/jsx/jsx-closing-tag-location": [2] # from react
+  "@stylistic/jsx/jsx-curly-brace-presence": [0] # from react
+  "@stylistic/jsx/jsx-curly-newline": [2, consistent] # from react
+  "@stylistic/jsx/jsx-curly-spacing": [2, {when: never}] # from react
+  "@stylistic/jsx/jsx-equals-spacing": [2, never] # from react
+  "@stylistic/jsx/jsx-first-prop-new-line": [0] # from react
+  "@stylistic/jsx/jsx-indent": [2, 2, {checkAttributes: true, indentLogicalExpressions: true}] # from react
+  "@stylistic/jsx/jsx-indent-props": [2, 2] # from react
+  "@stylistic/jsx/jsx-max-props-per-line": [0] # from react
+  "@stylistic/jsx/jsx-newline": [0] # from react
+  "@stylistic/jsx/jsx-one-expression-per-line": [0] # from react
+  "@stylistic/jsx/jsx-props-no-multi-spaces": [2] # from react
+  "@stylistic/jsx/jsx-self-closing-comp": [2] # from react
+  "@stylistic/jsx/jsx-sort-props": [0] # from react
+  "@stylistic/jsx/jsx-tag-spacing": [2, {beforeSelfClosing: never, beforeClosing: never}] # from react
+  "@stylistic/jsx/jsx-wrap-multilines": [2] # from react
+  "@stylistic/js/key-spacing": [2]
+  "@stylistic/js/keyword-spacing": [2]
+  "@stylistic/js/linebreak-style": [2, unix]
+  "@stylistic/js/lines-around-comment": [0]
+  "@stylistic/js/lines-between-class-members": [0]
+  "@stylistic/js/max-len": [0]
+  "@stylistic/js/max-statements-per-line": [0]
+  "@stylistic/js/multiline-ternary": [0]
+  "@stylistic/js/new-parens": [2]
+  "@stylistic/js/newline-per-chained-call": [0]
+  "@stylistic/js/no-confusing-arrow": [0]
+  "@stylistic/js/no-extra-parens": [0]
+  "@stylistic/js/no-extra-semi": [2]
+  "@stylistic/js/no-floating-decimal": [0]
+  "@stylistic/js/no-mixed-operators": [0]
+  "@stylistic/js/no-mixed-spaces-and-tabs": [2]
+  "@stylistic/js/no-multi-spaces": [2, {ignoreEOLComments: true, exceptions: {Property: true}}]
+  "@stylistic/js/no-multiple-empty-lines": [2, {max: 1, maxEOF: 0, maxBOF: 0}]
+  "@stylistic/js/no-tabs": [2]
+  "@stylistic/js/no-trailing-spaces": [2]
+  "@stylistic/js/no-whitespace-before-property": [2]
+  "@stylistic/js/nonblock-statement-body-position": [2]
+  "@stylistic/js/object-curly-newline": [0]
+  "@stylistic/js/object-curly-spacing": [2, never]
+  "@stylistic/js/object-property-newline": [0]
+  "@stylistic/js/one-var-declaration-per-line": [0]
+  "@stylistic/js/operator-linebreak": [2, after]
+  "@stylistic/js/padded-blocks": [2, never]
+  "@stylistic/js/padding-line-between-statements": [0]
+  "@stylistic/js/quote-props": [0]
+  "@stylistic/js/quotes": [2, double, {avoidEscape: true, allowTemplateLiterals: true}]
+  "@stylistic/js/rest-spread-spacing": [2, never]
+  "@stylistic/js/semi": [2, always]
+  "@stylistic/js/semi-spacing": [2, {before: false, after: true}]
+  "@stylistic/js/semi-style": [2, last]
+  "@stylistic/js/space-before-blocks": [2, always]
+  "@stylistic/js/space-before-function-paren": [2, {anonymous: never, named: never, asyncArrow: always}]
+  "@stylistic/js/space-in-parens": [2, never]
+  "@stylistic/js/space-infix-ops": [2]
+  "@stylistic/js/space-unary-ops": [2]
+  "@stylistic/js/spaced-comment": [0]
+  "@stylistic/js/switch-colon-spacing": [2]
+  "@stylistic/js/template-curly-spacing": [2, never]
+  "@stylistic/js/wrap-iife": [2, inside]
+  "@stylistic/js/wrap-regex": [0]
+  "@stylistic/js/yield-star-spacing": [2, after]
   accessor-pairs: [2]
   array-callback-return: [2, {checkForEach: true}]
   array-func/avoid-reverse: [2]

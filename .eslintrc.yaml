@@ -169,6 +169,7 @@ rules:
   "@stylistic/js/spaced-comment": [0]
   "@stylistic/js/switch-colon-spacing": [2]
   "@stylistic/js/template-curly-spacing": [2, never]
+  "@stylistic/js/template-tag-spacing": [2, never]
   "@stylistic/js/wrap-iife": [2, inside]
   "@stylistic/js/wrap-regex": [0]
   "@stylistic/js/yield-star-spacing": [2, after]

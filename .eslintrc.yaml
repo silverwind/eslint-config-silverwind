@@ -531,7 +531,6 @@ rules:
   sort-vars: [0]
   strict: [0]
   symbol-description: [2]
-  template-tag-spacing: [2, never]
   unicode-bom: [2, never]
   unicorn/better-regex: [0]
   unicorn/catch-error-name: [0]

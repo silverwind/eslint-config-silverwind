@@ -534,7 +534,7 @@ rules:
   unicode-bom: [2, never]
   unicorn/better-regex: [0]
   unicorn/catch-error-name: [0]
-  unicorn/consistent-destructuring: [2]
+  unicorn/consistent-destructuring: [2] # TODO: disable? https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1230
   unicorn/consistent-function-scoping: [2]
   unicorn/custom-error-definition: [0]
   unicorn/empty-brace-spaces: [2]

@@ -14,6 +14,7 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.1.0",
     "@stylistic/eslint-plugin-js": "1.6.3",
+    "eslint-plugin-antfu": "2.1.2",
     "eslint-plugin-array-func": "4.0.0",
     "eslint-plugin-i": "2.29.1",
     "eslint-plugin-no-use-extend-native": "0.5.0",

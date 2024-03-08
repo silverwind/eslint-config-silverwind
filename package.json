@@ -8,11 +8,12 @@
   "type": "module",
   "main": "./index.json",
   "exports": {
-    "import": "./index.js",
-    "require": "./index.json"
+    ".": "./index.json",
+    "./flat": "./eslint.config.js"
   },
   "files": [
-    "./index.json"
+    "./index.json",
+    "./eslint.config.js"
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.1.0",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "eslint": "8.57.0",
+    "eslint-config-silverwind": "file:.",
     "js-yaml": "4.1.0",
     "updates": "15.1.2",
     "versions": "12.0.1",

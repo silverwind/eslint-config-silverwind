@@ -9,9 +9,13 @@ deps: node_modules
 build: node_modules
 	node build.js
 
+.PHONY: lint
+lint: node_modules build
+	ESLINT_USE_FLAT_CONFIG=false npx eslint .
+
 .PHONY: test
 test: node_modules build
-	npx eslint .
+	npx vitest
 
 .PHONY: publish
 publish: node_modules

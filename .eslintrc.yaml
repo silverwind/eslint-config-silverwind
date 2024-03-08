@@ -175,7 +175,7 @@ rules:
   "@stylistic/js/wrap-regex": [0]
   "@stylistic/js/yield-star-spacing": [2, after]
   accessor-pairs: [2]
-  antfu/consistent-list-newline: [2]
+  antfu/consistent-list-newline: [0]
   antfu/if-newline: [0]
   antfu/import-dedupe: [0]
   antfu/no-import-dist: [2]

@@ -94,7 +94,7 @@ overrides:
   - files: ["**/*.config.*", "**/*.stories.*", "vitest.global.*"]
     rules:
       i/no-unused-modules: [2, {missingExports: true, unusedExports: false}]
-  - files: ["**/.storybook/**"]
+  - files: ["**/.storybook/**", "**/*.config.test.*"]
     rules:
       i/no-unused-modules: [0]
 

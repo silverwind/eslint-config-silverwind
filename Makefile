@@ -13,6 +13,10 @@ build: node_modules
 lint: node_modules build
 	ESLINT_USE_FLAT_CONFIG=false npx eslint .
 
+.PHONY: lint-flat
+lint-flat: node_modules build
+	npx eslint .
+
 .PHONY: test
 test: node_modules build
 	npx vitest

@@ -18,7 +18,6 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.1.0",
     "@stylistic/eslint-plugin-js": "1.6.3",
-    "confusing-browser-globals": "1.0.11",
     "deepie-merge": "1.0.0",
     "eslint-config-silverwind": "file:",
     "eslint-plugin-antfu": "2.1.2",

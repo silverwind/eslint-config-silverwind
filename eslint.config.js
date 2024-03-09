@@ -12,7 +12,6 @@ import globals from "globals";
 import {load} from "js-yaml";
 import {readFileSync} from "node:fs";
 import {deepMerge} from "deepie-merge";
-import confusingBrowserGlobals from "confusing-browser-globals";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 
 const eslintrc = load(readFileSync(new URL(".eslintrc.yaml", import.meta.url), "utf8"));
@@ -60,7 +59,6 @@ for (const {files, rules} of eslintrc.overrides) {
 
   if (files.some(file => file.includes("worker"))) {
     conf.languageOptions.globals = {...conf.languageOptions.globals, ...globals.worker};
-    conf.rules["no-restricted-globals"] = [...confusingBrowserGlobals, "__dirname", "__filename"];
   } else if (files.some(file => file.includes("test"))) {
     conf.languageOptions.globals = {...conf.languageOptions.globals, ...vitestGlobals};
   } else if (files.some(file => file.includes("config"))) {
@@ -71,6 +69,9 @@ for (const {files, rules} of eslintrc.overrides) {
 
   confs.push(conf);
 }
+
+// const baseDirectory = dirname(fileURLToPath(import.meta.url));
+// export default (new FlatCompat({baseDirectory})).extends("eslint-config-silverwind");
 
 export default [
   deepMerge(common, {

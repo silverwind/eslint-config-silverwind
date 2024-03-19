@@ -28,6 +28,7 @@ settings:
 
 ignorePatterns:
   - "**/vendor/**"
+  - "**/dist/**"
   - "**/*.snap"
   - "!.storybook"
 

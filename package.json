@@ -25,9 +25,9 @@
     "eslint-plugin-i": "2.29.1",
     "eslint-plugin-no-use-extend-native": "0.5.0",
     "eslint-plugin-regexp": "2.4.0",
-    "eslint-plugin-sonarjs": "0.25.0",
-    "eslint-plugin-unicorn": "51.0.1",
-    "eslint-plugin-vitest": "0.4.0",
+    "eslint-plugin-sonarjs": "0.25.1",
+    "eslint-plugin-unicorn": "52.0.0",
+    "eslint-plugin-vitest": "0.4.1",
     "eslint-plugin-vitest-globals": "1.5.0",
     "globals": "15.0.0"
   },

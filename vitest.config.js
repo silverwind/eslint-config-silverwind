@@ -1,12 +1,6 @@
 import {defineConfig} from "vitest/config";
-import {backendTest} from "vitest-config-silverwind";
-import {stringPlugin} from "vite-string-plugin";
+import {backend} from "vitest-config-silverwind";
 
-export default defineConfig({
-  test: backendTest({
-    url: import.meta.url,
-  }),
-  plugins: [
-    stringPlugin(),
-  ],
-});
+export default defineConfig(backend({
+  url: import.meta.url,
+}));

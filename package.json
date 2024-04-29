@@ -29,15 +29,15 @@
     "eslint-plugin-unicorn": "52.0.0",
     "eslint-plugin-vitest": "0.4.1",
     "eslint-plugin-vitest-globals": "1.5.0",
-    "globals": "15.0.0"
+    "globals": "15.1.0"
   },
   "devDependencies": {
     "eslint": "8.57.0",
     "js-yaml": "4.1.0",
-    "typescript-config-silverwind": "1.2.0",
+    "typescript-config-silverwind": "3.0.4",
     "updates": "16.0.1",
     "versions": "12.0.1",
-    "vitest": "1.5.0",
+    "vitest": "1.5.2",
     "vitest-config-silverwind": "8.0.5"
   }
 }

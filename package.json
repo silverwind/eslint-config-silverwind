@@ -18,6 +18,7 @@
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.3.0",
     "@stylistic/eslint-plugin-js": "1.8.0",
+    "@typescript-eslint/parser": "7.8.0",
     "deepie-merge": "1.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-antfu": "2.1.2",

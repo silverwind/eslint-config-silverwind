@@ -25,6 +25,8 @@ env:
 
 settings:
   import/extensions: [".js", ".jsx", ".ts", ".tsx"] # https://github.com/un-es/eslint-plugin-i/issues/17
+  import/resolver:
+    typescript: true
 
 ignorePatterns:
   - "**/vendor/**"

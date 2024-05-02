@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.3.0",
-    "@stylistic/eslint-plugin-js": "1.7.2",
+    "@stylistic/eslint-plugin-js": "1.8.0",
     "deepie-merge": "1.1.0",
     "eslint-plugin-antfu": "2.1.2",
     "eslint-plugin-array-func": "4.0.0",
@@ -36,7 +36,7 @@
     "typescript-config-silverwind": "3.0.4",
     "updates": "16.0.1",
     "versions": "12.0.1",
-    "vitest": "1.5.2",
+    "vitest": "1.5.3",
     "vitest-config-silverwind": "8.0.5"
   }
 }

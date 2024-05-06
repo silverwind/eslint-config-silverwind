@@ -243,7 +243,7 @@ rules:
   i/no-internal-modules: [0]
   i/no-mutable-exports: [0]
   i/no-named-as-default-member: [0]
-  i/no-named-as-default: [2]
+  i/no-named-as-default: [0]
   i/no-named-default: [0]
   i/no-named-export: [0]
   i/no-namespace: [0]

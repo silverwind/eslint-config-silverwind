@@ -42,7 +42,7 @@
     "vitest-config-silverwind": "9.0.6"
   },
   "peerDependencies": {
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5"
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
   }
 }

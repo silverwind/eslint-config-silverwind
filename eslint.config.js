@@ -1,6 +1,5 @@
 import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import js from "@stylistic/eslint-plugin-js";
-import antfu from "eslint-plugin-antfu";
 import arrayFunc from "eslint-plugin-array-func";
 import i from "eslint-plugin-i";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
@@ -37,7 +36,6 @@ const common = {
   plugins: {
     comments,
     js,
-    antfu,
     arrayFunc,
     i,
     noUseExtendNative,

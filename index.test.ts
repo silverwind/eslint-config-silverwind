@@ -1,10 +1,10 @@
-import conf from "./index.ts";
+import configs from "./index.ts";
 import eslintrc from "./index.cjs";
 
-test("confs", () => {
-  expect(Array.isArray(conf)).toEqual(true);
-  for (const c of conf) {
-    expect(Array.isArray(c.files)).toEqual(true);
+test("flat", () => {
+  expect(Array.isArray(configs)).toEqual(true);
+  for (const config of configs) {
+    expect(Array.isArray(config.files)).toEqual(true);
   }
 });
 

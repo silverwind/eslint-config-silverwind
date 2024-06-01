@@ -12,8 +12,6 @@ import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 import eslintrc from "./index.cjs";
 
-console.log(eslintrc);
-
 const vitestGlobals = vitestGlobalsPlugin.environments.env.globals;
 
 const common = {

@@ -1,3 +1,6 @@
+SOURCE_FILES := index.ts
+DIST_FILES := dist/index.js
+
 node_modules: package-lock.json
 	npm install --no-save
 	@touch node_modules
@@ -5,25 +8,35 @@ node_modules: package-lock.json
 .PHONY: deps
 deps: node_modules
 
-.PHONY: build
-build: node_modules
-	node build.js
-
 .PHONY: lint
-lint: node_modules build
-	ESLINT_USE_FLAT_CONFIG=false npx eslint .
+lint: node_modules
+	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color .
+# 	npx tsc
 
-.PHONY: lint-flat
-lint-flat: node_modules build
-	npx eslint .
+.PHONY: lint-fix
+lint-fix: node_modules
+	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color . --fix
+# 	npx tsc
 
 .PHONY: test
 test: node_modules build
 	npx vitest
 
+.PHONY: test-update
+test-update: node_modules build
+	npx vitest -u
+
+.PHONY: build
+build: node_modules $(DIST_FILES)
+	bun build.ts
+
+$(DIST_FILES): $(SOURCE_FILES) package-lock.json vite.config.ts
+	npx vite build
+	chmod +x $(DIST_FILES)
+
 .PHONY: publish
 publish: node_modules
-	if git ls-remote --exit-code origin &>/dev/null; then git push -u -f --tags origin master; fi
+	git push -u --tags origin master
 	npm publish
 
 .PHONY: update
@@ -33,18 +46,17 @@ update: node_modules
 	npm install
 	@touch node_modules
 
-.PHONY: patch
-patch: node_modules test
-	npx versions -c 'node build.js' patch package.json package-lock.json
-	$(MAKE) --no-print-directory publish
+.PHONY: path
+patch: node_modules lint test build
+	npx versions patch package.json package-lock.json
+	@$(MAKE) --no-print-directory publish
 
 .PHONY: minor
-minor: node_modules test
-	npx versions -c 'node build.js' minor package.json package-lock.json
-	$(MAKE) --no-print-directory publish
+minor: node_modules lint test build
+	npx versions minor package.json package-lock.json
+	@$(MAKE) --no-print-directory publish
 
 .PHONY: major
-major: node_modules test
-	npx versions -c 'node build.js' major package.json package-lock.json
-	$(MAKE) --no-print-directory publish
-
+major: node_modules lint test build
+	npx versions major package.json package-lock.json
+	@$(MAKE) --no-print-directory publish

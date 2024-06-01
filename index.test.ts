@@ -1,5 +1,5 @@
-import conf from "./eslint.config.js";
-import eslintrc from "./index.json";
+import conf from "./index.ts";
+import eslintrc from "./dist/index.json";
 
 test("confs", () => {
   expect(Array.isArray(conf)).toEqual(true);

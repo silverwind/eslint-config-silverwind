@@ -25,7 +25,7 @@ env:
 settings:
   import/extensions: [".js", ".jsx", ".ts", ".tsx"]
   import/parsers:
-    "@typescript-eslint/parser": [".ts", ".tsx"]
+    "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"]
   import/resolver:
     typescript: true
 

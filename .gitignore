@@ -1,6 +1,4 @@
+/.vscode
+/dist
 /node_modules
 /npm-debug.log*
-/yarn.lock
-/yarn-error.log
-.DS_Store
-/index.json

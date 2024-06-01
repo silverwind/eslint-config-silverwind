@@ -17,6 +17,12 @@ const vitestGlobals = vitestGlobalsPlugin.environments.env.globals;
 
 const common: Linter.FlatConfig = {
   ignores: [
+    "**/.git/**",
+    "**/.venv/**",
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/persistent/**",
+    "**/ui/build/**",
     "**/vendor/**",
     "**/*.snap",
     "!.storybook",

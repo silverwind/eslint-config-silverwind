@@ -1,3 +1,5 @@
+import {restrictedGlobals, restrictedWorkerGlobals} from "./globals.ts";
+
 export default {
   "root": true,
   "reportUnusedDisableDirectives": true,
@@ -49,7 +51,7 @@ export default {
         "worker": true,
       },
       "rules": {
-        "no-restricted-globals": [2, "addEventListener", "blur", "close", "closed", "confirm", "defaultStatus", "defaultstatus", "error", "event", "external", "find", "focus", "frameElement", "frames", "history", "innerHeight", "innerWidth", "isFinite", "isNaN", "length", "locationbar", "menubar", "moveBy", "moveTo", "name", "onblur", "onerror", "onfocus", "onload", "onresize", "onunload", "open", "opener", "opera", "outerHeight", "outerWidth", "pageXOffset", "pageYOffset", "parent", "print", "removeEventListener", "resizeBy", "resizeTo", "screen", "screenLeft", "screenTop", "screenX", "screenY", "scroll", "scrollbars", "scrollBy", "scrollTo", "scrollX", "scrollY", "status", "statusbar", "stop", "toolbar", "top", "window"]
+        "no-restricted-globals": [2, ...restrictedWorkerGlobals],
       },
     },
     {
@@ -384,7 +386,7 @@ export default {
     "no-redeclare": [2],
     "no-regex-spaces": [2],
     "no-restricted-exports": [0],
-    "no-restricted-globals": [2, "addEventListener", "blur", "close", "closed", "confirm", "defaultStatus", "defaultstatus", "error", "event", "external", "find", "focus", "frameElement", "frames", "history", "innerHeight", "innerWidth", "isFinite", "isNaN", "length", "location", "locationbar", "menubar", "moveBy", "moveTo", "name", "onblur", "onerror", "onfocus", "onload", "onresize", "onunload", "open", "opener", "opera", "outerHeight", "outerWidth", "pageXOffset", "pageYOffset", "parent", "print", "removeEventListener", "resizeBy", "resizeTo", "screen", "screenLeft", "screenTop", "screenX", "screenY", "scroll", "scrollbars", "self", "scrollBy", "scrollTo", "scrollX", "scrollY", "status", "statusbar", "stop", "toolbar", "top", "__dirname", "__filename"],
+    "no-restricted-globals": [2, restrictedGlobals],
     "no-restricted-imports": [2, "punycode", "assert"],
     "no-restricted-properties": [0],
     "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "LabeledStatement", "SequenceExpression"],

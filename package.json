@@ -6,10 +6,10 @@
   "repository": "silverwind/eslint-config-silverwind",
   "license": "BSD-2-Clause",
   "type": "module",
-  "main": "./dist/eslintrc.cjs",
+  "main": "./dist/index.json",
   "exports": {
-    "import": "./dist/index.cjs",
-    "require": "./dist/eslintrc.js"
+    "import": "./dist/index.js",
+    "require": "./dist/index.json"
   },
   "files": [
     "dist"

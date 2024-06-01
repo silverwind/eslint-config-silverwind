@@ -10,7 +10,7 @@ import vitest from "eslint-plugin-vitest";
 import globals from "globals";
 import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
-import eslintrc from "./index.cjs";
+import eslintrc from "./eslintrc.js";
 
 const vitestGlobals = vitestGlobalsPlugin.environments.env.globals;
 

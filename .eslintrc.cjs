@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "./index.cjs",
+  extends: "./dist/index.json",
   rules: {
     "i/no-commonjs": [0],
   },

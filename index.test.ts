@@ -1,5 +1,5 @@
 import configs from "./index.ts";
-import eslintrc from "./index.cjs";
+import eslintrc from "./dist/index.json";
 
 test("flat", () => {
   expect(Array.isArray(configs)).toEqual(true);

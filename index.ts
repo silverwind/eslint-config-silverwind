@@ -59,9 +59,7 @@ for (const {files, rules} of eslintrc.overrides) {
     conf.languageOptions.globals = {...conf.languageOptions.globals, ...globals.worker};
   } else if (files.some(file => file.includes("test"))) {
     conf.languageOptions.globals = {...conf.languageOptions.globals, ...vitestGlobals};
-  } else if (files.some(file => file.includes("config"))) {
-    conf.rules["i/no-unused-modules"] = [2, {missingExports: true, unusedExports: false}];
-  } else if (files.some(file => file.includes("storybook"))) {
+  } else if (files.some(file => file.includes("config") || file.includes("storybook"))) {
     conf.rules["i/no-unused-modules"] = [0, {missingExports: true, unusedExports: false}];
   }
 

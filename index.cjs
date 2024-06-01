@@ -121,7 +121,7 @@ module.exports = {
       },
     },
     {
-      "files": ["tests/e2e/**"],
+      "files": ["tests/**"],
       "extends": "plugin:playwright/recommended",
       "rules": {
         "playwright/expect-expect": [0],

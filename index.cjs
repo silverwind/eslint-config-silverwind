@@ -120,6 +120,13 @@ module.exports = {
         "i/no-unused-modules": [0],
       },
     },
+    {
+      "files": "tests/e2e/**",
+      "extends": "plugin:playwright/recommended",
+      "rules": {
+        "playwright/expect-expect": [0],
+      },
+    },
   ],
   "rules": {
     "@eslint-community/eslint-comments/disable-enable-pair": [2, {"allowWholeFile": true}],

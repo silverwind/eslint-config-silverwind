@@ -1,7 +1,7 @@
 import comments from "@eslint-community/eslint-plugin-eslint-comments";
-import js from "@stylistic/eslint-plugin-js";
+import stylisticJs from "@stylistic/eslint-plugin-js";
 import arrayFunc from "eslint-plugin-array-func";
-import i from "eslint-plugin-i";
+import importPlugin from "eslint-plugin-i";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import * as regexp from "eslint-plugin-regexp";
 import * as sonarjs from "eslint-plugin-sonarjs";
@@ -11,10 +11,11 @@ import globals from "globals";
 import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 import eslintrc from "./eslintrc.js";
+import type {Linter} from "eslint";
 
 const vitestGlobals = vitestGlobalsPlugin.environments.env.globals;
 
-const common = {
+const common: Linter.FlatConfig = {
   ignores: [
     "**/vendor/**",
     "**/*.snap",
@@ -33,23 +34,22 @@ const common = {
   },
   plugins: {
     comments,
-    js,
+    stylisticJs,
     arrayFunc,
-    i,
+    importPlugin,
     noUseExtendNative,
     regexp,
     sonarjs,
     unicorn,
     vitest,
     vitestGlobals,
-    globals,
   },
   settings: {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
   },
 };
 
-const confs = [];
+const confs: Linter.FlatConfig[] = [];
 for (const {files, rules} of eslintrc.overrides) {
   const conf = deepMerge(common, {files, rules});
 
@@ -64,9 +64,6 @@ for (const {files, rules} of eslintrc.overrides) {
   confs.push(conf);
 }
 
-// const baseDirectory = dirname(fileURLToPath(import.meta.url));
-// export default (new FlatCompat({baseDirectory})).extends("eslint-config-silverwind");
-
 export default [
   deepMerge(common, {
     files: [
@@ -78,4 +75,4 @@ export default [
     rules: eslintrc.rules,
   }),
   ...confs,
-];
+] as Linter.FlatConfig;

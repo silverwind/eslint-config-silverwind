@@ -33,12 +33,12 @@
   },
   "devDependencies": {
     "@types/eslint": "8.56.10",
-    "@types/js-yaml": "4.0.9",
     "@types/node": "20.13.0",
     "eslint": "8.57.0",
     "eslint-config-silverwind-typescript": "3.2.8",
     "typescript": "5.4.5",
     "typescript-config-silverwind": "5.0.0",
+    "typescript-eslint": "7.11.0",
     "updates": "16.2.0",
     "versions": "12.1.2",
     "vite": "5.2.12",

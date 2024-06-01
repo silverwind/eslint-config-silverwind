@@ -1,10 +1,11 @@
 import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylisticJsx from "@stylistic/eslint-plugin-jsx";
 import arrayFunc from "eslint-plugin-array-func";
 import importPlugin from "eslint-plugin-i";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
-import * as regexp from "eslint-plugin-regexp";
-import * as sonarjs from "eslint-plugin-sonarjs";
+import regexp from "eslint-plugin-regexp";
+import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "eslint-plugin-vitest";
 import playwright from "eslint-plugin-playwright";
@@ -13,6 +14,15 @@ import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 import eslintrc from "./eslintrc.js";
 import {restrictedWorkerGlobals} from "./globals.ts";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
+import reactConfig from "eslint-config-silverwind-react";
+import typescriptConfig from "eslint-config-silverwind-react";
+import typescriptPlugin from "typescript-eslint";
+import etc from "eslint-plugin-etc";
 import type {Linter} from "eslint";
 
 const baseRules: Linter.RulesRecord = eslintrc.rules;
@@ -29,26 +39,47 @@ const common: Linter.FlatConfig = {
     "**/*.snap",
     "!.storybook",
   ],
+
   languageOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
     globals: {...globals.browser, ...globals.node},
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+        impliedStrict: true,
+      },
+      project: true,
+      extraFileExtensions: [".html", ".vue", ".md"],
+    },
   },
   linterOptions: {
     reportUnusedDisableDirectives: "warn",
   },
   plugins: {
-    "@stylistic/js": stylisticJs,
     "@eslint-community/eslint-comments": comments,
+    "@stylistic/js": stylisticJs,
+    "@stylistic/jsx": stylisticJsx,
+    "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
+    "etc": etc,
     "i": importPlugin,
+    "jsx-a11y": jsxA11y,
     "no-use-extend-native": noUseExtendNative,
+    "react": react,
+    "react-hooks": reactHooks,
+    "react-refresh": reactRefresh,
     "regexp": regexp,
     "sonarjs": sonarjs,
     "unicorn": unicorn,
+    "validate-jsx-nesting": validateJsxNesting,
   },
   settings: {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {"@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"]},
+    "import/resolver": "typescript",
+    "linkComponents": [{name: "Link", linkAttribute: "href"}],
+    "react": {version: "detect"},
   },
 };
 
@@ -60,8 +91,12 @@ export default [
       "**/*.ts",
       "**/*.tsx",
     ],
-    rules: baseRules,
-  } as Linter.FlatConfig),
+    rules: {
+      ...baseRules,
+      ...reactConfig.rules,
+      ...typescriptConfig.rules,
+    },
+  } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*worker.*"
@@ -71,7 +106,7 @@ export default [
       ...baseRules,
       "no-restricted-globals": [2, ...restrictedWorkerGlobals],
     },
-  } as Linter.FlatConfig),
+  } as Linter.FlatConfig, {arrayExtend: true}),
   // @ts-ignore
   deepMerge(common, {
     "files": [
@@ -83,7 +118,7 @@ export default [
     },
     languageOptions: {
       globals: {
-        ...vitestGlobalsPlugin.environments.env.globals
+        ...vitestGlobalsPlugin.environments.env.globals,
       }
     },
     rules: {
@@ -139,7 +174,7 @@ export default [
       "vitest/valid-expect": [2],
       "vitest/valid-title": [2],
     },
-  } as Linter.FlatConfig),
+  } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*.config.*",
@@ -150,7 +185,7 @@ export default [
       ...baseRules,
       "i/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
     },
-  } as Linter.FlatConfig),
+  } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/.storybook/**",
@@ -161,7 +196,7 @@ export default [
       ...baseRules,
       "i/no-unused-modules": [0],
     },
-  } as Linter.FlatConfig),
+  } as Linter.FlatConfig, {arrayExtend: true}),
   // @ts-ignore
   deepMerge(common, {
     ...playwright.configs['flat/recommended'],
@@ -176,5 +211,5 @@ export default [
       ...playwright.configs['flat/recommended'].rules,
       "playwright/expect-expect": [0],
     },
-  } as Linter.FlatConfig),
+  } as Linter.FlatConfig, {arrayExtend: true}),
 ] as Linter.FlatConfig[];

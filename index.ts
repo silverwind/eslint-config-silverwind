@@ -8,12 +8,12 @@ import * as sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "eslint-plugin-vitest";
 import globals from "globals";
-import {load} from "js-yaml";
-import {readFileSync} from "node:fs";
 import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
+import eslintrc from "./index.cjs";
 
-const eslintrc = load(readFileSync(new URL(".eslintrc.yaml", import.meta.url), "utf8"));
+console.log(eslintrc);
+
 const vitestGlobals = vitestGlobalsPlugin.environments.env.globals;
 
 const common = {

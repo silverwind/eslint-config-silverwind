@@ -1,5 +1,5 @@
 import conf from "./index.ts";
-import eslintrc from "./dist/index.json";
+import eslintrc from "./index.cjs";
 
 test("confs", () => {
   expect(Array.isArray(conf)).toEqual(true);

@@ -6,10 +6,10 @@
   "repository": "silverwind/eslint-config-silverwind",
   "license": "BSD-2-Clause",
   "type": "module",
-  "main": "./index.json",
+  "main": "./dist/eslintrc.js",
   "exports": {
     "import": "./dist/index.js",
-    "require": "./dist/index.json"
+    "require": "./dist/eslintrc.js"
   },
   "files": [
     "dist"
@@ -36,7 +36,6 @@
     "@types/node": "20.13.0",
     "eslint": "8.57.0",
     "eslint-config-silverwind-typescript": "3.2.8",
-    "js-yaml": "4.1.0",
     "typescript": "5.4.5",
     "typescript-config-silverwind": "5.0.0",
     "updates": "16.2.0",

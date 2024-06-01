@@ -10,12 +10,12 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules
-	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color .
+	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx,cjs --color .
 # 	npx tsc
 
 .PHONY: lint-fix
 lint-fix: node_modules
-	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color . --fix
+	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx,cjs --color . --fix
 # 	npx tsc
 
 .PHONY: test
@@ -28,7 +28,7 @@ test-update: node_modules build
 
 .PHONY: build
 build: node_modules $(DIST_FILES)
-	bun build.ts
+	cp index.cjs dist/eslintrc.js
 
 $(DIST_FILES): $(SOURCE_FILES) package-lock.json vite.config.ts
 	npx vite build

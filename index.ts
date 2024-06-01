@@ -22,8 +22,10 @@ import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import reactConfig from "eslint-config-silverwind-react";
 import typescriptConfig from "eslint-config-silverwind-react";
 import typescriptPlugin from "typescript-eslint";
+import typescriptParser from "@typescript-eslint/parser";
 import etc from "eslint-plugin-etc";
 import type {Linter} from "eslint";
+import type {ParserOptions} from "@typescript-eslint/parser";
 
 const baseRules: Linter.RulesRecord = eslintrc.rules;
 
@@ -44,7 +46,9 @@ const common: Linter.FlatConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
     globals: {...globals.browser, ...globals.node},
+    parser: typescriptParser,
     parserOptions: {
+      sourceType: "module",
       ecmaFeatures: {
         jsx: true,
         impliedStrict: true,

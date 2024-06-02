@@ -11,6 +11,7 @@ export default {
     "eslint-plugin-no-use-extend-native",
     "eslint-plugin-regexp",
     "eslint-plugin-sonarjs",
+    "eslint-plugin-storybook",
     "eslint-plugin-unicorn",
     "eslint-plugin-vitest",
     "eslint-plugin-vitest-globals",
@@ -131,6 +132,10 @@ export default {
       "rules": {
         "playwright/expect-expect": [0],
       },
+    },
+    {
+      "files": ["**/*.stories.*"],
+      "extends": "plugin:storybook/recommended",
     },
   ],
   "rules": {

@@ -87,7 +87,7 @@ const common: Linter.FlatConfig = {
 };
 
 // TODOs:
-// - storybook: https://github.com/storybookjs/eslint-plugin-storybook/issues/135
+// - storybook: https://github.com/storybookjs/eslint-plugin-storybook/pull/156
 export default [
   deepMerge(common, {
     files: [

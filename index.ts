@@ -2,7 +2,7 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylisticJs from "@stylistic/eslint-plugin-js";
 import stylisticJsx from "@stylistic/eslint-plugin-jsx";
 import arrayFunc from "eslint-plugin-array-func";
-import importPlugin from "eslint-plugin-import-x";
+import importPlugin from "eslint-plugin-import";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
@@ -186,7 +186,7 @@ export default [
     ],
     rules: {
       ...baseRules,
-      "import-x/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
+      "import/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
@@ -197,7 +197,7 @@ export default [
     ],
     rules: {
       ...baseRules,
-      "import-x/no-unused-modules": [0],
+      "import/no-unused-modules": [0],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
   // @ts-ignore

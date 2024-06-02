@@ -29,7 +29,7 @@ declare module "eslint-plugin-sonarjs" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
-declare module "eslint-plugin-import-x" {
+declare module "eslint-plugin-import" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
   export = plugin;

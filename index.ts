@@ -26,7 +26,10 @@ import typescriptParser from "@typescript-eslint/parser";
 import etc from "eslint-plugin-etc";
 import type {Linter} from "eslint";
 
-const baseRules: Record<string, any> = eslintrc.rules;
+type Rules = Record<string, any>;
+type Overrides = {rules?: Rules, [other: string]: any};
+const baseRules: Rules = eslintrc.rules;
+const overrides: Overrides = eslintrc.overrides;
 
 const common: Linter.FlatConfig = {
   ignores: [
@@ -44,7 +47,10 @@ const common: Linter.FlatConfig = {
   languageOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    globals: {...globals.browser, ...globals.node},
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+    },
     parser: typescriptParser,
     parserOptions: {
       sourceType: "module",
@@ -112,7 +118,6 @@ export default [
       "no-restricted-globals": [2, ...restrictedWorkerGlobals],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
-  // @ts-ignore
   deepMerge(common, {
     "files": [
       "**/*.test.*",
@@ -124,60 +129,11 @@ export default [
     languageOptions: {
       globals: {
         ...vitestGlobalsPlugin.environments.env.globals,
-      }
+      },
     },
     rules: {
       ...baseRules,
-      "unicorn/consistent-function-scoping": [0],
-      "vitest/consistent-test-filename": [0],
-      "vitest/consistent-test-it": [0],
-      "vitest/expect-expect": [0],
-      "vitest/max-expects": [0],
-      "vitest/max-nested-describe": [0],
-      "vitest/no-alias-methods": [0],
-      "vitest/no-commented-out-tests": [0],
-      "vitest/no-conditional-expect": [0],
-      "vitest/no-conditional-in-test": [0],
-      "vitest/no-conditional-tests": [0],
-      "vitest/no-disabled-tests": [0],
-      "vitest/no-done-callback": [0],
-      "vitest/no-duplicate-hooks": [0],
-      "vitest/no-focused-tests": [0],
-      "vitest/no-hooks": [0],
-      "vitest/no-identical-title": [2],
-      "vitest/no-interpolation-in-snapshots": [0],
-      "vitest/no-large-snapshots": [0],
-      "vitest/no-mocks-import": [0],
-      "vitest/no-restricted-matchers": [0],
-      "vitest/no-restricted-vi-methods": [0],
-      "vitest/no-standalone-expect": [0],
-      "vitest/no-test-prefixes": [0],
-      "vitest/no-test-return-statement": [0],
-      "vitest/prefer-called-with": [0],
-      "vitest/prefer-comparison-matcher": [0],
-      "vitest/prefer-each": [0],
-      "vitest/prefer-equality-matcher": [0],
-      "vitest/prefer-expect-resolves": [0],
-      "vitest/prefer-hooks-in-order": [0],
-      "vitest/prefer-hooks-on-top": [2],
-      "vitest/prefer-lowercase-title": [0],
-      "vitest/prefer-mock-promise-shorthand": [0],
-      "vitest/prefer-snapshot-hint": [0],
-      "vitest/prefer-spy-on": [0],
-      "vitest/prefer-strict-equal": [0],
-      "vitest/prefer-to-be": [0],
-      "vitest/prefer-to-be-falsy": [0],
-      "vitest/prefer-to-be-object": [0],
-      "vitest/prefer-to-be-truthy": [0],
-      "vitest/prefer-to-contain": [0],
-      "vitest/prefer-to-have-length": [0],
-      "vitest/prefer-todo": [0],
-      "vitest/require-hook": [0],
-      "vitest/require-to-throw-message": [0],
-      "vitest/require-top-level-describe": [0],
-      "vitest/valid-describe-callback": [2],
-      "vitest/valid-expect": [2],
-      "vitest/valid-title": [2],
+      ...overrides[1].rules,
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {

@@ -44,6 +44,11 @@ declare module "eslint-plugin-unicorn" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
+declare module "eslint-plugin-vitest" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
 declare module "eslint-plugin-vitest-globals" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;

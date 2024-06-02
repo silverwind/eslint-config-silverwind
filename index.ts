@@ -158,7 +158,6 @@ export default [
       "import/no-unused-modules": [0],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
-  // @ts-ignore
   deepMerge(common, {
     ...playwright.configs["flat/recommended"],
     files: [

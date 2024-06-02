@@ -102,7 +102,7 @@ export default [
   } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
-      "**/*worker.*"
+      "**/*.worker.*"
     ],
     languageOptions: {globals: {...globals.worker}},
     rules: {

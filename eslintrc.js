@@ -47,7 +47,7 @@ export default {
   ],
   "overrides": [
     {
-      "files": ["**/*worker.*"],
+      "files": ["**/*.worker.*"],
       "env": {
         "worker": true,
       },

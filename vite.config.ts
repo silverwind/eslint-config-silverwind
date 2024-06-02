@@ -1,9 +1,14 @@
 import {defineConfig} from "vite";
-import {nodeCli} from "vite-config-silverwind";
+import {nodeLib} from "vite-config-silverwind";
 
-export default defineConfig(nodeCli({
+export default defineConfig(nodeLib({
   url: import.meta.url,
   build: {
     target: "node18",
   },
+  dtsExcludes: [
+    "build.js",
+    "eslintrc.js",
+    "globals.js",
+  ],
 }));

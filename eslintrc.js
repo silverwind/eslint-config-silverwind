@@ -280,7 +280,7 @@ export default {
     "i/no-restricted-paths": [0],
     "i/no-self-import": [2],
     "i/no-unassigned-import": [0],
-    "i/no-unresolved": [2, {"commonjs": true, "ignore": ["\\?.+$", "^vitest/"]}],
+    "i/no-unresolved": [2, {"commonjs": true, "ignore": ["\\?.+$"]}],
     "i/no-unused-modules": [2, {"unusedExports": true}],
     "i/no-useless-path-segments": [2, {"commonjs": true}],
     "i/no-webpack-loader-syntax": [2],

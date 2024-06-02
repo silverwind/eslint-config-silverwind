@@ -2,7 +2,7 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylisticJs from "@stylistic/eslint-plugin-js";
 import stylisticJsx from "@stylistic/eslint-plugin-jsx";
 import arrayFunc from "eslint-plugin-array-func";
-import importPlugin from "eslint-plugin-i";
+import importPlugin from "eslint-plugin-import-x";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
@@ -19,8 +19,8 @@ import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
-import reactConfig from "eslint-config-silverwind-react";
-import typescriptConfig from "eslint-config-silverwind-typescript";
+import reactConfig from "eslint-config-silverwind-react" with {type: "json"};
+import typescriptConfig from "eslint-config-silverwind-typescript" with {type: "json"};
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import etc from "eslint-plugin-etc";
@@ -186,7 +186,7 @@ export default [
     ],
     rules: {
       ...baseRules,
-      "i/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
+      "import-x/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
@@ -197,7 +197,7 @@ export default [
     ],
     rules: {
       ...baseRules,
-      "i/no-unused-modules": [0],
+      "import-x/no-unused-modules": [0],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),
   // @ts-ignore

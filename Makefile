@@ -9,14 +9,14 @@ node_modules: package-lock.json
 deps: node_modules
 
 .PHONY: lint
-lint: node_modules
+lint: node_modules build
 	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color .
-# 	npx tsc
+	npx tsc
 
 .PHONY: lint-fix
 lint-fix: node_modules
 	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color . --fix
-# 	npx tsc
+	npx tsc
 
 .PHONY: test
 test: node_modules build

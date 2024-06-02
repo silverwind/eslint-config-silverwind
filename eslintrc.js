@@ -1,4 +1,4 @@
-import {restrictedGlobals, restrictedWorkerGlobals} from "./globals.ts";
+import {restrictedGlobals, restrictedWorkerGlobals} from "./globals.js";
 
 export default {
   "root": true,
@@ -15,6 +15,7 @@ export default {
     "eslint-plugin-vitest",
     "eslint-plugin-vitest-globals",
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": "latest",
@@ -386,7 +387,7 @@ export default {
     "no-redeclare": [2],
     "no-regex-spaces": [2],
     "no-restricted-exports": [0],
-    "no-restricted-globals": [2, restrictedGlobals],
+    "no-restricted-globals": [2, ...restrictedGlobals],
     "no-restricted-imports": [2, "punycode", "assert"],
     "no-restricted-properties": [0],
     "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "LabeledStatement", "SequenceExpression"],

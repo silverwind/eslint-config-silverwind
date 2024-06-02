@@ -13,21 +13,20 @@ import globals from "globals";
 import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 import eslintrc from "./eslintrc.js";
-import {restrictedWorkerGlobals} from "./globals.ts";
+import {restrictedWorkerGlobals} from "./globals.js";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import reactConfig from "eslint-config-silverwind-react";
-import typescriptConfig from "eslint-config-silverwind-react";
+import typescriptConfig from "eslint-config-silverwind-typescript";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import etc from "eslint-plugin-etc";
 import type {Linter} from "eslint";
-import type {ParserOptions} from "@typescript-eslint/parser";
 
-const baseRules: Linter.RulesRecord = eslintrc.rules;
+const baseRules: Record<string, any> = eslintrc.rules;
 
 const common: Linter.FlatConfig = {
   ignores: [
@@ -66,16 +65,16 @@ const common: Linter.FlatConfig = {
     "@stylistic/jsx": stylisticJsx,
     "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
-    "etc": etc,
+    etc,
     "i": importPlugin,
     "jsx-a11y": jsxA11y,
     "no-use-extend-native": noUseExtendNative,
-    "react": react,
+    react,
     "react-hooks": reactHooks,
     "react-refresh": reactRefresh,
-    "regexp": regexp,
-    "sonarjs": sonarjs,
-    "unicorn": unicorn,
+    regexp,
+    sonarjs,
+    unicorn,
     "validate-jsx-nesting": validateJsxNesting,
   },
   settings: {
@@ -118,7 +117,7 @@ export default [
       "vitest.setup.*",
     ],
     plugins: {
-      "vitest": vitest,
+      vitest,
     },
     languageOptions: {
       globals: {
@@ -203,16 +202,16 @@ export default [
   } as Linter.FlatConfig, {arrayExtend: true}),
   // @ts-ignore
   deepMerge(common, {
-    ...playwright.configs['flat/recommended'],
+    ...playwright.configs["flat/recommended"],
     files: [
       "tests/**",
     ],
     "plugins": {
-      "playwright": playwright.configs['flat/recommended'].plugins.playwright,
+      "playwright": playwright.configs["flat/recommended"].plugins.playwright,
     },
     rules: {
       ...baseRules,
-      ...playwright.configs['flat/recommended'].rules,
+      ...playwright.configs["flat/recommended"].rules,
       "playwright/expect-expect": [0],
     },
   } as Linter.FlatConfig, {arrayExtend: true}),

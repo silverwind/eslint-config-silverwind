@@ -45,7 +45,7 @@
     "eslint-plugin-react-refresh": "0.4.7",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "typescript": "5.4.5",
-    "typescript-config-silverwind": "5.0.0",
+    "typescript-config-silverwind": "5.0.1",
     "typescript-eslint": "7.11.0",
     "updates": "16.2.0",
     "versions": "12.1.2",

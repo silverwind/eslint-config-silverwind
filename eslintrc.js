@@ -56,6 +56,7 @@ export default {
       "files": [
         "**/*.test.*",
         "vitest.setup.*",
+        "integration/**",
       ],
       "env": {
         "vitest-globals/env": true,

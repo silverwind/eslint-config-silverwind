@@ -122,6 +122,7 @@ export default [
     "files": [
       "**/*.test.*",
       "vitest.setup.*",
+      "integration/**",
     ],
     plugins: {
       vitest,

@@ -14,7 +14,7 @@
       "jest-extended",
       "vite/client",
       "vitest/globals",
-      "./index.d.ts",
+      "./types.d.ts",
     ],
   }
 }

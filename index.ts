@@ -27,7 +27,11 @@ import etc from "eslint-plugin-etc";
 import type {Linter} from "eslint";
 
 type Rules = Record<string, any>;
-type Overrides = {rules?: Rules, [other: string]: any};
+type Overrides = {
+  rules?: Rules,
+  [prop: string]: any,
+};
+
 const baseRules: Rules = eslintrc.rules;
 const overrides: Overrides = eslintrc.overrides;
 
@@ -107,7 +111,7 @@ export default [
       ...reactConfig.rules,
       ...typescriptConfig.rules,
     },
-  } as Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*.worker.*"
@@ -117,7 +121,7 @@ export default [
       ...baseRules,
       "no-restricted-globals": [2, ...restrictedWorkerGlobals],
     },
-  } as Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     "files": [
       "**/*.test.*",
@@ -136,7 +140,7 @@ export default [
       ...baseRules,
       ...overrides[1].rules,
     },
-  } as Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*.config.*",
@@ -147,7 +151,7 @@ export default [
       ...baseRules,
       "import/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
     },
-  } as Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/.storybook/**",
@@ -158,7 +162,7 @@ export default [
       ...baseRules,
       "import/no-unused-modules": [0],
     },
-  } as Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     ...playwright.configs["flat/recommended"],
     files: [
@@ -172,5 +176,5 @@ export default [
       ...playwright.configs["flat/recommended"].rules,
       "playwright/expect-expect": [0],
     },
-  } as Linter.FlatConfig, {arrayExtend: true}),
-] as Linter.FlatConfig[];
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+] satisfies Linter.FlatConfig[];

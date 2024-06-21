@@ -23,7 +23,7 @@ import reactConfig from "eslint-config-silverwind-react" with {type: "json"};
 import typescriptConfig from "eslint-config-silverwind-typescript" with {type: "json"};
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
-import etc from "eslint-plugin-etc";
+import deprecation from "eslint-plugin-deprecation";
 import type {Linter} from "eslint";
 
 type Rules = Record<string, any>;
@@ -75,7 +75,7 @@ const common: Linter.FlatConfig = {
     "@stylistic/jsx": stylisticJsx,
     "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
-    etc,
+    deprecation: deprecation,
     "i": importPlugin,
     "jsx-a11y": jsxA11y,
     "no-use-extend-native": noUseExtendNative,

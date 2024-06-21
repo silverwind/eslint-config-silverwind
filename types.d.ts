@@ -54,6 +54,11 @@ declare module "eslint-plugin-vitest-globals" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
+declare module "eslint-plugin-deprecation" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
 declare module "eslint-config-silverwind-react" {
   const config: Record<string, any>;
   export = config

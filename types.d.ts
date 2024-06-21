@@ -59,6 +59,31 @@ declare module "eslint-plugin-deprecation" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
+declare module "eslint-plugin-jsx-a11y" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
+declare module "eslint-plugin-react" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
+declare module "eslint-plugin-react-hooks" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
+declare module "eslint-plugin-react-refresh" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
+declare module "eslint-plugin-validate-jsx-nesting" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
 declare module "eslint-config-silverwind-react" {
   const config: Record<string, any>;
   export = config

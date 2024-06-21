@@ -35,6 +35,10 @@ type Overrides = {
 const baseRules: Rules = eslintrc.rules;
 const overrides: Overrides = eslintrc.overrides;
 
+const jsExts = [".js", ".jsx", ".mjs", ".cjs"] as const;
+const tsExts = [".ts", ".tsx", ".mts", ".cts"] as const;
+const otherExts = [".html", ".vue", ".md"] as const;
+
 const common: Linter.FlatConfig = {
   ignores: [
     "**/.git/**",
@@ -63,7 +67,7 @@ const common: Linter.FlatConfig = {
         impliedStrict: true,
       },
       project: true,
-      extraFileExtensions: [".html", ".vue", ".md"],
+      extraFileExtensions: otherExts,
     },
   },
   linterOptions: {
@@ -88,8 +92,8 @@ const common: Linter.FlatConfig = {
     "validate-jsx-nesting": validateJsxNesting,
   },
   settings: {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "import/parsers": {"@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"]},
+    "import/extensions": [...jsExts, tsExts],
+    "import/parsers": {"@typescript-eslint/parser": [...jsExts, tsExts]},
     "import/resolver": "typescript",
     "linkComponents": [{name: "Link", linkAttribute: "href"}],
     "react": {version: "detect"},
@@ -100,12 +104,7 @@ const common: Linter.FlatConfig = {
 // - storybook: https://github.com/storybookjs/eslint-plugin-storybook/pull/156
 export default [
   deepMerge(common, {
-    files: [
-      "**/*.js",
-      "**/*.jsx",
-      "**/*.ts",
-      "**/*.tsx",
-    ],
+    files: [...jsExts, tsExts].map(ext => `**/*${ext}`),
     rules: {
       ...baseRules,
       ...reactConfig.rules,

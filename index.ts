@@ -75,7 +75,7 @@ const common: Linter.FlatConfig = {
     "@stylistic/jsx": stylisticJsx,
     "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
-    deprecation: deprecation,
+    deprecation,
     "i": importPlugin,
     "jsx-a11y": jsxA11y,
     "no-use-extend-native": noUseExtendNative,

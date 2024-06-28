@@ -109,7 +109,7 @@ export default [
     rules: {
       ...baseRules,
       ...reactConfig.rules,
-      // no typescript rules for js
+      // no typescript rules for js, maybe remove later if it works - https://github.com/gund/eslint-plugin-deprecation/issues/78#issuecomment-2153190684
     },
   } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {

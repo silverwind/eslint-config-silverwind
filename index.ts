@@ -24,6 +24,7 @@ import typescriptConfig from "eslint-config-silverwind-typescript" with {type: "
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import deprecation from "eslint-plugin-deprecation";
+import {fixupPluginRules} from "@eslint/compat";
 import type {Linter} from "eslint";
 
 type Rules = Record<string, any>;
@@ -79,7 +80,7 @@ const common: Linter.FlatConfig = {
     "@stylistic/jsx": stylisticJsx,
     "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
-    deprecation,
+    deprecation: fixupPluginRules(deprecation), // https://github.com/gund/eslint-plugin-deprecation/issues/78
     "i": importPlugin,
     "jsx-a11y": jsxA11y,
     "no-use-extend-native": noUseExtendNative,
@@ -104,7 +105,15 @@ const common: Linter.FlatConfig = {
 // - storybook: https://github.com/storybookjs/eslint-plugin-storybook/pull/156
 export default [
   deepMerge(common, {
-    files: [...jsExts, tsExts].map(ext => `**/*${ext}`),
+    files: jsExts.map(ext => `**/*${ext}`),
+    rules: {
+      ...baseRules,
+      ...reactConfig.rules,
+      // no typescript rules for js
+    },
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  deepMerge(common, {
+    files: tsExts.map(ext => `**/*${ext}`),
     rules: {
       ...baseRules,
       ...reactConfig.rules,

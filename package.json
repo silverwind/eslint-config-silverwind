@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.3.0",
+    "@eslint/compat": "1.1.0",
     "@stylistic/eslint-plugin-js": "2.2.2",
     "@stylistic/eslint-plugin-jsx": "2.2.2",
     "@typescript-eslint/parser": "7.14.1",

@@ -104,16 +104,10 @@ const common: Linter.FlatConfig = {
 // TODOs:
 // - storybook: https://github.com/storybookjs/eslint-plugin-storybook/pull/156
 export default [
+  // run ts rules on js as well, may need to disable it for certain incompatible plugins like
+  // deprecation - https://github.com/gund/eslint-plugin-deprecation/issues/78#issuecomment-2153190684
   deepMerge(common, {
-    files: jsExts.map(ext => `**/*${ext}`),
-    rules: {
-      ...baseRules,
-      ...reactConfig.rules,
-      // no typescript rules for js, maybe remove later if it works - https://github.com/gund/eslint-plugin-deprecation/issues/78#issuecomment-2153190684
-    },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
-  deepMerge(common, {
-    files: tsExts.map(ext => `**/*${ext}`),
+    files: [...jsExts, tsExts].map(ext => `**/*${ext}`),
     rules: {
       ...baseRules,
       ...reactConfig.rules,

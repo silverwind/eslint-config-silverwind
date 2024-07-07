@@ -116,6 +116,16 @@ export default [
   } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
     files: [
+      "**/*.d.ts",
+    ],
+    rules: {
+      "import/no-unused-modules": [0],
+      "@typescript-eslint/consistent-type-definitions": [0],
+      "@typescript-eslint/consistent-type-imports": [0],
+    },
+  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  deepMerge(common, {
+    files: [
       "**/*.worker.*"
     ],
     languageOptions: {globals: {...globals.worker}},
@@ -158,7 +168,6 @@ export default [
     files: [
       "**/.storybook/**",
       "**/*.config.test.*",
-      "**/*.d.ts",
     ],
     rules: {
       ...baseRules,

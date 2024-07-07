@@ -121,9 +121,15 @@ export default {
       },
     },
     {
-      "files": ["**/.storybook/**", "**/*.config.test.*", "**/*.d.ts"],
+      "files": ["**/.storybook/**", "**/*.config.test.*"],
       "rules": {
         "import/no-unused-modules": [0],
+      },
+    },
+    {
+      "files": ["**/*.d.ts"],
+      "rules": {
+        "i/no-unused-modules": [0],
       },
     },
     {

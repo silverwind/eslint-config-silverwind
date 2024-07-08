@@ -129,7 +129,7 @@ export default {
     {
       "files": ["**/*.d.ts"],
       "rules": {
-        "i/no-unused-modules": [0],
+        "iimport/no-unused-modules": [0],
       },
     },
     {

@@ -400,7 +400,7 @@ export default {
     "no-restricted-globals": [2, ...restrictedGlobals],
     "no-restricted-imports": [2, "punycode", "assert"],
     "no-restricted-properties": [0],
-    "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "LabeledStatement", "SequenceExpression", {selector: "CallExpression[callee.property.name='eqDebug']", message: "eqDebug should be removed"}],
+    "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "SequenceExpression", {selector: "CallExpression[callee.property.name='eqDebug']", message: "eqDebug should be removed"}],
     "no-return-assign": [0],
     "no-script-url": [2],
     "no-self-assign": [2, {"props": true}],

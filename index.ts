@@ -119,7 +119,6 @@ export default [
       "**/*.d.ts",
     ],
     rules: {
-      "import/no-unused-modules": [0],
       "@typescript-eslint/consistent-type-definitions": [0],
       "@typescript-eslint/consistent-type-imports": [0],
     },
@@ -161,7 +160,6 @@ export default [
     ],
     rules: {
       ...baseRules,
-      "import/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
     },
   } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {
@@ -171,7 +169,6 @@ export default [
     ],
     rules: {
       ...baseRules,
-      "import/no-unused-modules": [0],
     },
   } satisfies Linter.FlatConfig, {arrayExtend: true}),
   deepMerge(common, {

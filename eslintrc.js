@@ -115,24 +115,6 @@ export default {
       },
     },
     {
-      "files": ["**/*.config.*", "**/*.stories.*", "vitest.global.*"],
-      "rules": {
-        "import/no-unused-modules": [2, {"missingExports": true, "unusedExports": false}],
-      },
-    },
-    {
-      "files": ["**/.storybook/**", "**/*.config.test.*"],
-      "rules": {
-        "import/no-unused-modules": [0],
-      },
-    },
-    {
-      "files": ["**/*.d.ts"],
-      "rules": {
-        "import/no-unused-modules": [0],
-      },
-    },
-    {
       "files": ["tests/**"],
       "plugins": ["eslint-plugin-playwright"],
       "extends": "plugin:playwright/recommended",
@@ -292,7 +274,7 @@ export default {
     "import/no-self-import": [2],
     "import/no-unassigned-import": [0],
     "import/no-unresolved": [2, {"commonjs": true, "ignore": ["\\?.+$"]}],
-    "import/no-unused-modules": [2, {"unusedExports": true}],
+    "import/no-unused-modules": [0],
     "import/no-useless-path-segments": [2, {"commonjs": true}],
     "import/no-webpack-loader-syntax": [2],
     "import/order": [0],

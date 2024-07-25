@@ -600,6 +600,7 @@ export default {
     "unicorn/no-invalid-fetch-options": [2],
     "unicorn/no-invalid-remove-event-listener": [2],
     "unicorn/no-keyword-prefix": [0],
+    "unicorn/no-length-as-slice-end": [2],
     "unicorn/no-lonely-if": [2],
     "unicorn/no-magic-array-flat-depth": [0],
     "unicorn/no-negated-condition": [0],

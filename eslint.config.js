@@ -1,2 +1,2 @@
-import config from "./dist/index.js"; // eslint-disable-line import/extensions
+import config from "./dist/index.js";
 export default config;

@@ -176,7 +176,7 @@ export default {
     "@stylistic/js/no-mixed-operators": [0],
     "@stylistic/js/no-mixed-spaces-and-tabs": [2],
     "@stylistic/js/no-multi-spaces": [2, {"ignoreEOLComments": true, "exceptions": {"Property": true}}],
-    "@stylistic/js/no-multiple-empty-lines": [2, {"max": 1, "maxEOF": 0, "maxBOF": 0}],
+    "@stylistic/js/no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 0, "maxBOF": 0}],
     "@stylistic/js/no-tabs": [2],
     "@stylistic/js/no-trailing-spaces": [2],
     "@stylistic/js/no-whitespace-before-property": [2],

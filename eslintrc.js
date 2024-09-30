@@ -274,7 +274,7 @@ export default {
     "import/no-self-import": [2],
     "import/no-unassigned-import": [0],
     "import/no-unresolved": [2, {"commonjs": true, "ignore": ["\\?.+$"]}],
-    "import/no-unused-modules": [0],
+    "import/no-unused-modules": [2, {"unusedExports": true, "ignoreUnusedTypeExports": true}],
     "import/no-useless-path-segments": [2, {"commonjs": true}],
     "import/no-webpack-loader-syntax": [2],
     "import/order": [0],

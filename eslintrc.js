@@ -115,6 +115,18 @@ export default {
       },
     },
     {
+      "files": [
+        "**/*.config.*",
+        "**/*.stories.*",
+        "**/.storybook/**",
+        "**/*.d.ts",
+        "vitest.global.*",
+      ],
+      "rules": {
+        "import/no-unused-modules": [0],
+      },
+    },
+    {
       "files": ["tests/**"],
       "plugins": ["eslint-plugin-playwright"],
       "extends": "plugin:playwright/recommended",

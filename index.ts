@@ -40,7 +40,7 @@ const jsExts = [".js", ".jsx", ".mjs", ".cjs"] as const;
 const tsExts = [".ts", ".tsx", ".mts", ".cts"] as const;
 const otherExts = [".html", ".vue", ".md"] as const;
 
-const common: Linter.FlatConfig = {
+const common: Linter.Config = {
   ignores: [
     "**/.git/**",
     "**/.venv/**",
@@ -113,7 +113,7 @@ export default [
       ...reactConfig.rules,
       ...typescriptConfig.rules,
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*.d.ts",
@@ -122,7 +122,7 @@ export default [
       "@typescript-eslint/consistent-type-definitions": [0],
       "@typescript-eslint/consistent-type-imports": [0],
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*.worker.*"
@@ -132,7 +132,7 @@ export default [
       ...baseRules,
       "no-restricted-globals": [2, ...restrictedWorkerGlobals],
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     "files": [
       "**/*.test.*",
@@ -151,7 +151,7 @@ export default [
       ...baseRules,
       ...overrides[1].rules,
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/*.config.*",
@@ -161,7 +161,7 @@ export default [
     rules: {
       ...baseRules,
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     files: [
       "**/.storybook/**",
@@ -170,19 +170,22 @@ export default [
     rules: {
       ...baseRules,
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
+  } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
+    // @ts-expect-error -- error in package types?
     ...playwright.configs["flat/recommended"],
     files: [
       "tests/**",
     ],
     "plugins": {
+      // @ts-expect-error -- error in package types?
       "playwright": playwright.configs["flat/recommended"].plugins.playwright,
     },
     rules: {
       ...baseRules,
+      // @ts-expect-error -- error in package types?
       ...playwright.configs["flat/recommended"].rules,
       "playwright/expect-expect": [0],
     },
-  } satisfies Linter.FlatConfig, {arrayExtend: true}),
-] satisfies Linter.FlatConfig[];
+  } satisfies Linter.Config, {arrayExtend: true}),
+] satisfies Linter.Config[];

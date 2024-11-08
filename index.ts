@@ -172,18 +172,12 @@ export default [
     },
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
-    // @ts-expect-error -- error in package types?
     ...playwright.configs["flat/recommended"],
     files: [
       "tests/**",
     ],
-    "plugins": {
-      // @ts-expect-error -- error in package types?
-      "playwright": playwright.configs["flat/recommended"].plugins.playwright,
-    },
     rules: {
       ...baseRules,
-      // @ts-expect-error -- error in package types?
       ...playwright.configs["flat/recommended"].rules,
       "playwright/expect-expect": [0],
     },

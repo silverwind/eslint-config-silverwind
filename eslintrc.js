@@ -452,7 +452,7 @@ export default {
     "prefer-object-has-own": [2],
     "prefer-object-spread": [2],
     "prefer-promise-reject-errors": [2, {"allowEmptyReject": false}],
-    "prefer-regex-literals": [2],
+    "prefer-regex-literals": [2, {disallowRedundantWrapping: true}],
     "prefer-rest-params": [2],
     "prefer-spread": [2],
     "prefer-template": [2],

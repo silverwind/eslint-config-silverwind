@@ -47,7 +47,7 @@ const common: Linter.Config = {
     "**/dist/**",
     "**/node_modules/**",
     "**/persistent/**",
-    "**/ui/build/**",
+    "**/build/**",
     "**/vendor/**",
     "**/*.snap",
     "!.storybook",

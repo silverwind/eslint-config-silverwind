@@ -37,7 +37,7 @@ export default {
     "**/dist/**",
     "**/node_modules/**",
     "**/persistent/**",
-    "**/ui/build/**",
+    "**/build/**",
     "**/vendor/**",
     "**/*.snap",
     "!.storybook",

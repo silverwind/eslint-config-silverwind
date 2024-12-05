@@ -24,11 +24,6 @@ declare module "eslint-plugin-array-func" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
-declare module "eslint-plugin-sonarjs" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
 declare module "eslint-plugin-import" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;

@@ -5,7 +5,6 @@ import arrayFunc from "eslint-plugin-array-func";
 import importPlugin from "eslint-plugin-import";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import regexp from "eslint-plugin-regexp";
-import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "eslint-plugin-vitest";
 import playwright from "eslint-plugin-playwright";
@@ -88,7 +87,6 @@ const common: Linter.Config = {
     "react-hooks": reactHooks,
     "react-refresh": reactRefresh,
     regexp,
-    sonarjs,
     unicorn,
     "validate-jsx-nesting": validateJsxNesting,
   },

@@ -44,6 +44,11 @@ declare module "eslint-plugin-unicorn" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
+declare module "eslint-plugin-github" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
 declare module "eslint-plugin-vitest" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
@@ -55,11 +60,6 @@ declare module "eslint-plugin-vitest-globals" {
   export = plugin;
 }
 declare module "eslint-plugin-deprecation" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
-declare module "eslint-plugin-jsx-a11y" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
   export = plugin;

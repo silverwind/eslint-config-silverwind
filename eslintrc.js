@@ -34,9 +34,6 @@ export default {
   },
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
-    "import/resolver": {
-      "typescript": true,
-    },
     "import/parsers": {
       "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"],
     },
@@ -68,6 +65,11 @@ export default {
         "no-unused-vars": [0],
         "no-use-before-define": [0],
         "require-await": [0],
+      },
+      settings: {
+        "import/resolver": {
+          "typescript": true,
+        },
       }
     },
     {

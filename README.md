@@ -11,9 +11,4 @@ extends:
   - eslint-config-silverwind
 ```
 
-## Related
-
-- [eslint-config-silverwind-react](https://github.com/silverwind/eslint-config-silverwind-react)
-- [eslint-config-silverwind-typescript](https://github.com/silverwind/eslint-config-silverwind-typescript)
-
 © [silverwind](https://github.com/silverwind), distributed under BSD licence.

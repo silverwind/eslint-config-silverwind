@@ -532,7 +532,7 @@ export default {
     "id-length": [0],
     "id-match": [0],
     "import/consistent-type-specifier-style": [0],
-    "import/default": [2],
+    "import/default": [0], // has bugs, at least with monaco-editor package
     "import/dynamic-import-chunkname": [0],
     "import/export": [2],
     "import/exports-last": [0],

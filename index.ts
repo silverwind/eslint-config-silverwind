@@ -9,32 +9,36 @@ import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "eslint-plugin-vitest";
 import playwright from "eslint-plugin-playwright";
+// import storybook from "eslint-plugin-storybook";
 import github from "eslint-plugin-github";
 import globals from "globals";
 import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 import eslintrc from "./eslintrc.js";
-import {restrictedWorkerGlobals} from "./globals.js";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
-import reactConfig from "eslint-config-silverwind-react" with {type: "json"};
-import typescriptConfig from "eslint-config-silverwind-typescript" with {type: "json"};
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
-import deprecation from "eslint-plugin-deprecation";
-import {fixupPluginRules} from "@eslint/compat";
 import type {Linter} from "eslint";
 
 type Rules = Record<string, any>;
-type Overrides = {
+type Overrides = Array<{
   rules?: Rules,
   [prop: string]: any,
+}>;
+
+const baseRules: Rules = {
+  ...eslintrc.rules,
+  "no-use-extend-native/no-use-extend-native": [2],
+  "array-func/avoid-reverse": [2],
+  "array-func/from-map": [2],
+  "array-func/no-unnecessary-this-arg": [2],
+  "array-func/prefer-array-from": [2],
 };
 
-const baseRules: Rules = eslintrc.rules;
 const overrides: Overrides = eslintrc.overrides;
 
 const jsExts = [".js", ".jsx", ".mjs", ".cjs"] as const;
@@ -73,17 +77,14 @@ const common: Linter.Config = {
     },
   },
   linterOptions: {
-    reportUnusedDisableDirectives: "warn",
+    reportUnusedDisableDirectives: 2,
   },
   plugins: {
     "@eslint-community/eslint-comments": comments,
     "@stylistic/js": stylisticJs,
-    "@stylistic/jsx": stylisticJsx,
     "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
-    deprecation: fixupPluginRules(deprecation), // https://github.com/gund/eslint-plugin-deprecation/issues/78
     "i": importPlugin,
-    "jsx-a11y": jsxA11y,
     "no-use-extend-native": noUseExtendNative,
     react,
     "react-hooks": reactHooks,
@@ -92,7 +93,6 @@ const common: Linter.Config = {
     sonarjs,
     unicorn,
     github,
-    "validate-jsx-nesting": validateJsxNesting,
   },
   settings: {
     "import/extensions": [...jsExts, tsExts],
@@ -103,85 +103,62 @@ const common: Linter.Config = {
   },
 };
 
-// TODOs:
-// - storybook: https://github.com/storybookjs/eslint-plugin-storybook/pull/156
+const [
+  tsOverride,
+  dtsOverride,
+  workerOverride,
+  testOverride,
+  configOverride,
+  playwrightOverride,
+  _storybookOverride,
+  jsxOverride,
+] = overrides;
+
 export default [
-  // run ts rules on js as well, may need to disable it for certain incompatible plugins like
-  // deprecation - https://github.com/gund/eslint-plugin-deprecation/issues/78#issuecomment-2153190684
   deepMerge(common, {
-    files: [...jsExts, tsExts].map(ext => `**/*${ext}`),
-    rules: {
-      ...baseRules,
-      ...reactConfig.rules,
-      ...typescriptConfig.rules,
-    },
+    files: [...jsExts, ...tsExts].map(ext => `**/*${ext}`),
+    rules: baseRules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
-    files: [
-      "**/*.d.ts",
-    ],
-    rules: {
-      "@typescript-eslint/consistent-type-definitions": [0],
-      "@typescript-eslint/consistent-type-imports": [0],
-    },
+    files: tsOverride.files,
+    rules: tsOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
-    files: [
-      "**/*.worker.*"
-    ],
+    files: dtsOverride.files,
+    rules: dtsOverride.rules,
+  } satisfies Linter.Config, {arrayExtend: true}),
+  deepMerge(common, {
+    files: workerOverride.files,
     languageOptions: {globals: {...globals.worker}},
-    rules: {
-      ...baseRules,
-      "no-restricted-globals": [2, ...restrictedWorkerGlobals],
-    },
+    rules: workerOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
-    "files": [
-      "**/*.test.*",
-      "vitest.setup.*",
-      "integration/**",
-    ],
-    plugins: {
-      vitest,
-    },
-    languageOptions: {
-      globals: {
-        ...vitestGlobalsPlugin.environments.env.globals,
-      },
-    },
-    rules: {
-      ...baseRules,
-      ...overrides[1].rules,
-    },
+    plugins: {vitest},
+    files: testOverride.files,
+    languageOptions: {globals: {...vitestGlobalsPlugin.environments.env.globals}},
+    rules: testOverride.files,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
-    files: [
-      "**/*.config.*",
-      "**/*.stories.*",
-      "vitest.global.*",
-    ],
-    rules: {
-      ...baseRules,
-    },
-  } satisfies Linter.Config, {arrayExtend: true}),
-  deepMerge(common, {
-    files: [
-      "**/.storybook/**",
-      "**/*.config.test.*",
-    ],
-    rules: {
-      ...baseRules,
-    },
+    files: configOverride.files,
+    rules: configOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     ...playwright.configs["flat/recommended"],
-    files: [
-      "tests/**",
-    ],
-    rules: {
-      ...baseRules,
-      ...playwright.configs["flat/recommended"].rules,
-      "playwright/expect-expect": [0],
+    files: playwrightOverride.files,
+    rules: playwrightOverride.rules,
+  } satisfies Linter.Config, {arrayExtend: true}),
+  // deepMerge(common, {
+  //   plugins: {storybook},
+  //   files: storybookOverride.files,
+  //   rules: storybookOverride.rules,
+  // } satisfies Linter.Config, {arrayExtend: true}),
+  deepMerge(common, {
+    plugins: {
+      "@stylistic/jsx": stylisticJsx,
+      "jsx-a11y": jsxA11y,
+      "validate-jsx-nesting": validateJsxNesting,
     },
+    files: jsxOverride.files,
+    rules: jsxOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
 ] satisfies Linter.Config[];

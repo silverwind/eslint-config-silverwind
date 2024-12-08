@@ -10,11 +10,13 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules build
+	npx eslint --color
 	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color .
 	npx tsc
 
 .PHONY: lint-fix
 lint-fix: node_modules
+	npx eslint --color
 	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color . --fix
 	npx tsc
 

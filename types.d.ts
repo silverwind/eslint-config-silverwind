@@ -49,17 +49,17 @@ declare module "eslint-plugin-github" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
+declare module "eslint-plugin-storybook" {
+  import type {Eslint} from "eslint";
+  const plugin: Eslint.Plugin;
+  export = plugin;
+}
 declare module "eslint-plugin-vitest" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
   export = plugin;
 }
 declare module "eslint-plugin-vitest-globals" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
-declare module "eslint-plugin-deprecation" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
   export = plugin;

@@ -10,7 +10,7 @@ import unicorn from "eslint-plugin-unicorn";
 import vitest from "eslint-plugin-vitest";
 import playwright from "eslint-plugin-playwright";
 // import storybook from "eslint-plugin-storybook";
-import github from "eslint-plugin-github";
+// import github from "eslint-plugin-github";
 import globals from "globals";
 import {deepMerge} from "deepie-merge";
 import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
@@ -92,7 +92,7 @@ const common: Linter.Config = {
     regexp,
     sonarjs,
     unicorn,
-    github,
+    // github,
   },
   settings: {
     "import/extensions": [...jsExts, tsExts],

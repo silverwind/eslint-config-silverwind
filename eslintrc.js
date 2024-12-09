@@ -532,7 +532,7 @@ export default {
     "import/no-amd": [2],
     "import/no-anonymous-default-export": [0],
     "import/no-commonjs": [2, {"allowConditionalRequire": false}],
-    "import/no-cycle": [2, {"ignoreExternal": true, "maxDepth": 1}],
+    "import/no-cycle": [2, {"ignoreExternal": true, "maxDepth": 1, disableScc: true}], // disableScc is a massive speed gain
     "import/no-default-export": [0],
     "import/no-deprecated": [0],
     "import/no-duplicates": [2],

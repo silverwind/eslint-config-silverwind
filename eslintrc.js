@@ -37,10 +37,9 @@ export default {
     "import/parsers": {
       "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"],
     },
-    // avoid warning when react dependency is not there
-    // "react": { // used by eslint-plugin-react
-    //   version: "detect",
-    // },
+    "react": { // used by eslint-plugin-react
+      version: "19",
+    },
     "linkComponents": [ // used by eslint-plugin-react
       {name: "Link", linkAttribute: "href"},
     ],

@@ -104,7 +104,6 @@ const common: Linter.Config = {
 };
 
 const [
-  tsOverride,
   dtsOverride,
   workerOverride,
   testOverride,
@@ -118,10 +117,6 @@ export default [
   deepMerge(common, {
     files: [...jsExts, ...tsExts].map(ext => `**/*${ext}`),
     rules: baseRules,
-  } satisfies Linter.Config, {arrayExtend: true}),
-  deepMerge(common, {
-    files: tsOverride.files,
-    rules: tsOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     files: dtsOverride.files,

@@ -37,6 +37,7 @@ export default {
     "import/parsers": {
       "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"],
     },
+    "import/resolver": "typescript",
     "react": { // used by eslint-plugin-react
       version: "19",
     },
@@ -56,22 +57,6 @@ export default {
     "!.storybook",
   ],
   "overrides": [
-    {
-      files: ["**/*.ts"],
-      rules: {
-        "no-array-constructor": [0],
-        "no-implied-eval": [0],
-        "no-redeclare": [0], // for overloads
-        "no-unused-vars": [0],
-        "no-use-before-define": [0],
-        "require-await": [0],
-      },
-      settings: {
-        "import/resolver": {
-          "typescript": true,
-        },
-      }
-    },
     {
       files: ["**/*.d.ts"],
       rules: {
@@ -588,7 +573,7 @@ export default {
     "multiline-comment-style": [0],
     "new-cap": [0],
     "no-alert": [0],
-    "no-array-constructor": [2],
+    "no-array-constructor": [0],
     "no-async-promise-executor": [0],
     "no-await-in-loop": [0],
     "no-bitwise": [0],
@@ -632,7 +617,7 @@ export default {
     "no-global-assign": [2],
     "no-implicit-coercion": [2],
     "no-implicit-globals": [0],
-    "no-implied-eval": [2],
+    "no-implied-eval": [0],
     "no-import-assign": [2],
     "no-inline-comments": [0],
     "no-inner-declarations": [2],
@@ -667,7 +652,7 @@ export default {
     "no-promise-executor-return": [0],
     "no-proto": [2],
     "no-prototype-builtins": [2],
-    "no-redeclare": [2],
+    "no-redeclare": [0],
     "no-regex-spaces": [2],
     "no-restricted-exports": [0],
     "no-restricted-globals": [2, ...restrictedGlobals],
@@ -702,8 +687,8 @@ export default {
     "no-unused-expressions": [2],
     "no-unused-labels": [2],
     "no-unused-private-class-members": [2],
-    "no-unused-vars": [2, {"vars": "all", "args": "all", "caughtErrors": "all", "ignoreRestSiblings": false, "argsIgnorePattern": "^_", "varsIgnorePattern": "^_[^_]*$", "caughtErrorsIgnorePattern": "^_", "destructuredArrayIgnorePattern": "^_"}],
-    "no-use-before-define": [2, {"functions": false, "classes": true, "variables": true, "allowNamedExports": true}],
+    "no-unused-vars": [0],
+    "no-use-before-define": [0],
     "no-useless-backreference": [2],
     "no-useless-call": [2],
     "no-useless-catch": [2],

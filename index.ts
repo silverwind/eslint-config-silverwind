@@ -2,7 +2,7 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylisticJs from "@stylistic/eslint-plugin-js";
 import stylisticJsx from "@stylistic/eslint-plugin-jsx";
 import arrayFunc from "eslint-plugin-array-func";
-import importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import-x";
 import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
@@ -84,7 +84,8 @@ const common: Linter.Config = {
     "@stylistic/js": stylisticJs,
     "@typescript-eslint": typescriptPlugin.plugin,
     "array-func": arrayFunc,
-    "i": importPlugin,
+    // @ts-expect-error - https://github.com/un-ts/eslint-plugin-import-x/issues/203
+    "import-x": importPlugin,
     "no-use-extend-native": noUseExtendNative,
     react,
     "react-hooks": reactHooks,
@@ -95,9 +96,9 @@ const common: Linter.Config = {
     // github,
   },
   settings: {
-    "import/extensions": [...jsExts, tsExts],
-    "import/parsers": {"@typescript-eslint/parser": [...jsExts, tsExts]},
-    "import/resolver": "typescript",
+    "import-x/extensions": [...jsExts, tsExts],
+    "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, tsExts]},
+    "import-x/resolver": {"typescript": true},
     "linkComponents": [{name: "Link", linkAttribute: "href"}],
     "react": {version: "detect"},
   },

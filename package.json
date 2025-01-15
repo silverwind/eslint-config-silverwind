@@ -44,7 +44,7 @@
     "@types/eslint": "9.6.1",
     "@types/eslint-plugin-jsx-a11y": "6.10.0",
     "@types/node": "22.10.5",
-    "eslint": "9.18.0",
+    "eslint": "8.57.1",
     "typescript": "5.7.3",
     "typescript-config-silverwind": "6.2.1",
     "updates": "16.4.1",

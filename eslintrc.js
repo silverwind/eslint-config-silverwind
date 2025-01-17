@@ -536,7 +536,7 @@ export default {
     "import-x/no-commonjs": [2, {"allowConditionalRequire": false}],
     "import-x/no-cycle": [2, {"ignoreExternal": true, "maxDepth": 1}], // disableScc is a massive speed gain for eslint-plugin-import
     "import-x/no-default-export": [0],
-    "import-x/no-deprecated": [0],
+    "import-x/no-deprecated": [0], // handled by @typescript-eslint/no-deprecated
     "import-x/no-duplicates": [2],
     "import-x/no-dynamic-require": [0],
     "import-x/no-empty-named-blocks": [2],
@@ -744,7 +744,7 @@ export default {
     "react/no-children-prop": [2],
     "react/no-danger": [0],
     "react/no-danger-with-children": [0],
-    "react/no-deprecated": [2],
+    "react/no-deprecated": [0], // handlded by @typescript-eslint/no-deprecated
     "react/no-did-mount-set-state": [0],
     "react/no-did-update-set-state": [0],
     "react/no-direct-mutation-state": [0], // slow

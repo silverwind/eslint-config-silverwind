@@ -660,7 +660,16 @@ export default {
     "no-restricted-globals": [2, ...restrictedGlobals],
     "no-restricted-imports": [2, "punycode", "assert"],
     "no-restricted-properties": [0],
-    "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "SequenceExpression", "TSEnumDeclaration", "TSNamespaceExportDeclaration", "TSParameterProperty", {selector: "CallExpression[callee.property.name='eqDebug']", message: "eqDebug should be removed"}], // namespace is covered by @typescript-eslint/no-namespace
+    "no-restricted-syntax": [2,
+      "WithStatement", // legacy
+      "ForInStatement", // legacy
+      "SequenceExpression", // legacy
+      "TSEnumDeclaration", // not compatible with type stripping, TODO: erasableSyntaxOnly
+      "TSNamespaceExportDeclaration", // not compatible with type stripping, TODO: erasableSyntaxOnly
+      "TSParameterProperty", // not compatible with type stripping, TODO: erasableSyntaxOnly
+      // "Decorator", // TODO: check that this only affects the nonstandard TS decorator
+      // namespace is covered by @typescript-eslint/no-namespace
+    ],
     "no-return-assign": [0],
     "no-script-url": [2],
     "no-self-assign": [2, {"props": true}],

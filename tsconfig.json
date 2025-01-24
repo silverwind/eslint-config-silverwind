@@ -1,6 +1,7 @@
 {
   "extends": "typescript-config-silverwind",
   "compilerOptions": {
+    "experimentalDecorators": true,
     "strict": true,
     "types": [
       "jest-extended",

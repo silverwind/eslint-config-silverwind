@@ -1,5 +1,7 @@
 // @ts-expect-error
 import foo from "./test"; // eslint-disable-line import-x/extensions,import-x/no-self-import
+// @ts-expect-error
+import type bar from "./test"; // eslint-disable-line import-x/extensions,import-x/no-self-import,@typescript-eslint/no-unused-vars
 
 // @ts-expect-error
 let a = 0;

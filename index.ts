@@ -39,7 +39,7 @@ const baseRules: Rules = {
   "array-func/prefer-array-from": [2],
 };
 
-const overrides: Overrides = eslintrc.overrides;
+const overrides: Overrides = eslintrc.overrides!;
 
 const jsExts = [".js", ".jsx", ".mjs", ".cjs"] as const;
 const tsExts = [".ts", ".tsx", ".mts", ".cts"] as const;

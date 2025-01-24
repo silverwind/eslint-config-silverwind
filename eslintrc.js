@@ -1,6 +1,7 @@
 import {restrictedGlobals, restrictedWorkerGlobals} from "./globals.js";
+import {defineConfig} from "eslint-define-config";
 
-export default {
+export default defineConfig({
   "root": true,
   "reportUnusedDisableDirectives": true,
   "plugins": [
@@ -523,7 +524,7 @@ export default {
     "import-x/dynamic-import-chunkname": [0],
     "import-x/export": [2],
     "import-x/exports-last": [0],
-    "import-x/extensions": [2, "ignorePackages"],
+    "import-x/extensions": [2, "ignorePackages", {"checkTypeImports": true}],
     "import-x/first": [2],
     "import-x/group-exports": [0],
     "import-x/max-dependencies": [0],
@@ -1044,4 +1045,4 @@ export default {
     "vars-on-top": [0],
     "yoda": [2, "never"],
   },
-};
+});

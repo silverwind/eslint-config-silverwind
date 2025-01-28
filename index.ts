@@ -9,6 +9,7 @@ import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "eslint-plugin-vitest";
 import playwright from "eslint-plugin-playwright";
+import tsdoc from "eslint-plugin-tsdoc";
 // import storybook from "eslint-plugin-storybook";
 // import github from "eslint-plugin-github";
 import globals from "globals";
@@ -91,6 +92,7 @@ const common: Linter.Config = {
     "react-hooks": reactHooks,
     "react-refresh": reactRefresh,
     regexp,
+    tsdoc,
     sonarjs,
     unicorn,
     // github,

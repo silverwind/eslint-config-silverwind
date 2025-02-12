@@ -7,14 +7,13 @@ import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
-import vitest from "eslint-plugin-vitest";
+import vitest from "@vitest/eslint-plugin";
 import playwright from "eslint-plugin-playwright";
 import tsdoc from "eslint-plugin-tsdoc";
 // import storybook from "eslint-plugin-storybook";
 // import github from "eslint-plugin-github";
 import globals from "globals";
 import {deepMerge} from "deepie-merge";
-import vitestGlobalsPlugin from "eslint-plugin-vitest-globals";
 import eslintrc from "./eslintrc.js";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import react from "eslint-plugin-react";
@@ -133,7 +132,7 @@ export default [
   deepMerge(common, {
     plugins: {vitest},
     files: testOverride.files,
-    languageOptions: {globals: {...vitestGlobalsPlugin.environments.env.globals}},
+    languageOptions: {globals: {...globals.vitest}},
     rules: testOverride.files,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {

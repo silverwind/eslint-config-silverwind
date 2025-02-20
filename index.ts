@@ -94,7 +94,7 @@ const common: Linter.Config = {
     tsdoc,
     sonarjs,
     unicorn,
-    // github,
+    // github, // causes peerDependency error with eslint 8 - https://github.com/github/eslint-plugin-github/issues/585
   },
   settings: {
     "import-x/extensions": [...jsExts, tsExts],

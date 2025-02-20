@@ -57,7 +57,6 @@ const common: Linter.Config = {
     "**/*.snap",
     "!.storybook",
   ],
-
   languageOptions: {
     ecmaVersion: "latest",
     sourceType: "module",

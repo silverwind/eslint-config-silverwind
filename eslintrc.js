@@ -737,7 +737,7 @@ export default defineConfig({
     "react/button-has-type": [0],
     "react/default-props-match-prop-types": [0],
     "react/destructuring-assignment": [0],
-    "react/display-name": [2],
+    "react/display-name": [0],
     "react/forbid-component-props": [0],
     "react/forbid-dom-props": [0],
     "react/forbid-elements": [0],

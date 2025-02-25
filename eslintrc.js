@@ -102,7 +102,7 @@ export default defineConfig({
         "@vitest/no-disabled-tests": [0],
         "@vitest/no-done-callback": [0],
         "@vitest/no-duplicate-hooks": [0],
-        "@vitest/no-focused-tests": [0],
+        "@vitest/no-focused-tests": [2],
         "@vitest/no-hooks": [0],
         "@vitest/no-identical-title": [2],
         "@vitest/no-interpolation-in-snapshots": [0],

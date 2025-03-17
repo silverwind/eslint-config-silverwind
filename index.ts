@@ -129,7 +129,6 @@ export default [
     rules: workerOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
-    // @ts-expect-error - unknown
     plugins: {vitest},
     files: testOverride.files,
     languageOptions: {globals: {...globals.vitest}},

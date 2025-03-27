@@ -38,6 +38,9 @@ export default defineConfig({
     "import-x/parsers": {
       "@typescript-eslint/parser": [".js", ".jsx", ".ts", ".tsx"],
     },
+    "import-x/resolver": {
+      "typescript": true,
+    },
     "react": { // used by eslint-plugin-react
       version: "19",
     },

@@ -98,7 +98,6 @@ const common: Linter.Config = {
   settings: {
     "import-x/extensions": [...jsExts, tsExts],
     "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, tsExts]},
-    "import-x/resolver": {"typescript": true},
     "linkComponents": [{name: "Link", linkAttribute: "href"}],
     "react": {version: "detect"},
   },

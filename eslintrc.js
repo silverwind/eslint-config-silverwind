@@ -158,6 +158,7 @@ export default defineConfig({
       "extends": "plugin:playwright/recommended",
       "rules": {
         "playwright/expect-expect": [0],
+        "playwright/no-networkidle": [0],
       },
     },
     {

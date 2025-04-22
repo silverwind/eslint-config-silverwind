@@ -12,6 +12,5 @@ export default {
     "@stylistic/eslint-plugin-jsx", // needs eslint 9
     "@stylistic/eslint-plugin-ts", // needs eslint 9
     "eslint-plugin-unicorn", // needs flat config and eslint 9
-    "eslint-import-resolver-typescript", // https://github.com/import-js/eslint-import-resolver-typescript/issues/429
   ],
 };

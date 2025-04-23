@@ -112,6 +112,7 @@ const [
   playwrightOverride,
   _storybookOverride,
   jsxOverride,
+  openapiOverride,
 ] = overrides;
 
 export default [
@@ -156,5 +157,9 @@ export default [
     },
     files: jsxOverride.files,
     rules: jsxOverride.rules,
+  } satisfies Linter.Config, {arrayExtend: true}),
+  deepMerge(common, {
+    files: openapiOverride.files,
+    rules: openapiOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
 ] satisfies Linter.Config[];

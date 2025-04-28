@@ -10,5 +10,7 @@ export default defineConfig(nodeLib({
     "build.js",
     "eslintrc.cjs",
     "globals.js",
+    "test.ts",
+    "test2.ts",
   ],
 }));

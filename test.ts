@@ -1,7 +1,7 @@
 // @ts-expect-error
-import foo from "./test"; // eslint-disable-line import-x/extensions,import-x/no-self-import
+import {foo} from "./test2"; // eslint-disable-line import-x/extensions
 // @ts-expect-error
-import type bar from "./test"; // eslint-disable-line import-x/extensions,import-x/no-self-import,@typescript-eslint/no-unused-vars
+import type bar from "./test2"; // eslint-disable-line import-x/extensions,@typescript-eslint/no-unused-vars
 
 // @ts-expect-error
 let a = 0;
@@ -20,4 +20,4 @@ class C { // eslint-disable-line @typescript-eslint/no-unused-vars
   method() {}
 }
 
-export default true;
+export default true; // eslint-disable-line import-x/no-unused-modules

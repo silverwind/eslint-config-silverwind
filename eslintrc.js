@@ -89,6 +89,7 @@ export default defineConfig({
       "globals": Object.fromEntries(Object.keys(globals.vitest).map(e => [e, true])),
       "rules": {
         "unicorn/consistent-function-scoping": [0],
+        "@stylistic/js/no-tabs": [0], // allow in test fixtures
         "@vitest/consistent-test-filename": [0],
         "@vitest/consistent-test-it": [0],
         "@vitest/expect-expect": [0],

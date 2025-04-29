@@ -89,7 +89,6 @@ export default defineConfig({
       "globals": Object.fromEntries(Object.keys(globals.vitest).map(e => [e, true])),
       "rules": {
         "unicorn/consistent-function-scoping": [0],
-        "@stylistic/js/no-tabs": [0], // allow in test fixtures
         "@vitest/consistent-test-filename": [0],
         "@vitest/consistent-test-it": [0],
         "@vitest/expect-expect": [0],
@@ -325,7 +324,7 @@ export default defineConfig({
     "@stylistic/js/no-mixed-spaces-and-tabs": [2],
     "@stylistic/js/no-multi-spaces": [2, {"ignoreEOLComments": true, "exceptions": {"Property": true}}],
     "@stylistic/js/no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 1, "maxBOF": 0}],
-    "@stylistic/js/no-tabs": [2],
+    "@stylistic/js/no-tabs": [0], // start if line is covered by indent
     "@stylistic/js/no-trailing-spaces": [2],
     "@stylistic/js/no-whitespace-before-property": [2],
     "@stylistic/js/nonblock-statement-body-position": [2],

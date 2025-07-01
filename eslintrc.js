@@ -174,6 +174,7 @@ export default defineConfig({
         "storybook/story-exports": [2],
         "storybook/use-storybook-expect": [2],
         "storybook/use-storybook-testing-library": [2],
+        "sonarjs/no-identical-functions": [0],
       }
     },
     {

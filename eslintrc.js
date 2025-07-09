@@ -689,7 +689,7 @@ export default defineConfig({
     "no-shadow": [0],
     "no-shadow-restricted-names": [2],
     "no-sparse-arrays": [2],
-    "no-template-curly-in-string": [0],
+    "no-template-curly-in-string": [2],
     "no-ternary": [0],
     "no-this-before-super": [2],
     "no-throw-literal": [2],

@@ -650,7 +650,7 @@ export default defineConfig({
     "no-negated-condition": [0],
     "no-nested-ternary": [0],
     "no-new": [0],
-    "no-new-func": [2],
+    "no-new-func": [0], // covered by @typescript-eslint/no-implied-eval
     "no-new-native-nonconstructor": [2],
     "no-new-symbol": [2],
     "no-new-wrappers": [2],

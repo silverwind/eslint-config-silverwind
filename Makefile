@@ -1,5 +1,5 @@
 SOURCE_FILES := index.ts
-DIST_FILES := dist/index.js
+DIST_FILES := dist/index.js dist/index.json
 
 node_modules: package-lock.json
 	npm install --no-save
@@ -30,11 +30,11 @@ test-update: node_modules build
 	npx vitest -u
 
 .PHONY: build
-build: node_modules $(DIST_FILES)
-	node build.js > dist/index.json
+build: $(DIST_FILES)
 
 $(DIST_FILES): $(SOURCE_FILES) package-lock.json vite.config.ts
 	npx vite build
+	node build.js > dist/index.json
 	chmod +x $(DIST_FILES)
 
 .PHONY: publish

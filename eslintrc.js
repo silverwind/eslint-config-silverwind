@@ -668,7 +668,13 @@ export default defineConfig({
     "no-regex-spaces": [2],
     "no-restricted-exports": [0],
     "no-restricted-globals": [2, ...restrictedGlobals],
-    "no-restricted-imports": [2, "punycode", "assert"],
+    "no-restricted-imports": [2, {
+      paths: [
+        {name: "punycode"},
+        {name: "assert"},
+        {name: "react", importNames: ["forwardRef"], message: "Use ref-as-prop instead - https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop"}
+      ],
+    }],
     "no-restricted-properties": [0],
     "no-restricted-syntax": [2,
       "WithStatement", // legacy

@@ -146,7 +146,8 @@ export default defineConfig({
         "**/*.stories.*",
         "**/.storybook/**",
         "**/*.d.ts",
-        "vitest.global.*",
+        "**/vitest.setup.*",
+        "**/vitest.global.*",
       ],
       "rules": {
         "import-x/no-unused-modules": [0],

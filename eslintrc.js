@@ -208,7 +208,7 @@ export default defineConfig({
         "jsx-a11y/alt-text": [0],
         "jsx-a11y/anchor-ambiguous-text": [2],
         "jsx-a11y/anchor-has-content": [2],
-        "jsx-a11y/anchor-is-valid": [2],
+        "jsx-a11y/anchor-is-valid": [0],
         "jsx-a11y/aria-activedescendant-has-tabindex": [2],
         "jsx-a11y/aria-props": [2],
         "jsx-a11y/aria-proptypes": [2],

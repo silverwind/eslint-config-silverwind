@@ -13,7 +13,6 @@ if (foo) { // eslint-disable-line sonarjs/no-all-duplicated-branches
   a = 1; // eslint-disable-line @typescript-eslint/no-unused-vars
 }
 
-/** ` */ // eslint-disable-line tsdoc/syntax
 function logged(_foo: any, _bar: any, _baz: any) {}
 
 // @ts-expect-error

@@ -9,7 +9,6 @@ import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "@vitest/eslint-plugin";
 import playwright from "eslint-plugin-playwright";
-import tsdoc from "eslint-plugin-tsdoc";
 // import storybook from "eslint-plugin-storybook";
 // import github from "eslint-plugin-github";
 import globals from "globals";
@@ -90,7 +89,6 @@ const common: Linter.Config = {
     "react-hooks": reactHooks,
     "react-refresh": reactRefresh,
     regexp,
-    tsdoc,
     sonarjs,
     unicorn,
     // github, // causes peerDependency error with eslint 8 - https://github.com/github/eslint-plugin-github/issues/585

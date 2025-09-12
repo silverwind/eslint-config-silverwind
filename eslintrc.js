@@ -475,6 +475,10 @@ export default defineConfig({
     "@typescript-eslint/unified-signatures": [2],
     "accessor-pairs": [2],
     "array-callback-return": [2, {"checkForEach": true}],
+    "array-func/avoid-reverse": [2],
+    "array-func/from-map": [2],
+    "array-func/no-unnecessary-this-arg": [2],
+    "array-func/prefer-array-from": [2],
     "array-func/prefer-flat": [0],
     "array-func/prefer-flat-map": [0],
     "arrow-body-style": [0],
@@ -497,29 +501,6 @@ export default defineConfig({
     "func-names": [0],
     "func-style": [0],
     "getter-return": [2],
-    // "github/a11y-aria-label-is-well-formatted": [0],
-    // "github/a11y-no-title-attribute": [0],
-    // "github/a11y-no-visually-hidden-interactive-element": [0],
-    // "github/a11y-role-supports-aria-props": [0],
-    // "github/a11y-svg-has-accessible-name": [0],
-    // "github/array-foreach": [0],
-    // "github/async-currenttarget": [2],
-    // "github/async-preventdefault": [2],
-    // "github/authenticity-token": [0],
-    // "github/get-attribute": [0],
-    // "github/js-class-name": [0],
-    // "github/no-blur": [0],
-    // "github/no-d-none": [0],
-    // "github/no-dataset": [2],
-    // "github/no-dynamic-script-tag": [2],
-    // "github/no-implicit-buggy-globals": [2],
-    // "github/no-inner-html": [0],
-    // "github/no-innerText": [2],
-    // "github/no-then": [0],
-    // "github/no-useless-passive": [2],
-    // "github/prefer-observers": [0],
-    // "github/require-passive-events": [2],
-    // "github/unescaped-html-literal": [0],
     "grouped-accessor-pairs": [2],
     "guard-for-in": [0],
     "id-blacklist": [0],
@@ -666,24 +647,9 @@ export default defineConfig({
     "no-regex-spaces": [2],
     "no-restricted-exports": [0],
     "no-restricted-globals": [2, ...restrictedGlobals],
-    "no-restricted-imports": [2, {
-      paths: [
-        {name: "punycode"},
-        {name: "assert"},
-        {name: "react", importNames: ["forwardRef"], message: "Use ref-as-prop instead - https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop"}
-      ],
-    }],
+    "no-restricted-imports": [2, {paths: [{name: "punycode"}, {name: "assert"}, {name: "react", importNames: ["forwardRef"], message: "Use ref-as-prop instead - https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop"}]}],
     "no-restricted-properties": [0],
-    "no-restricted-syntax": [2,
-      "WithStatement", // legacy
-      "ForInStatement", // legacy
-      "SequenceExpression", // legacy
-      "TSEnumDeclaration", // not compatible with type stripping, TODO: erasableSyntaxOnly
-      "TSNamespaceExportDeclaration", // not compatible with type stripping, TODO: erasableSyntaxOnly
-      "TSParameterProperty", // not compatible with type stripping, TODO: erasableSyntaxOnly
-      // "Decorator", // TODO: check that this only affects the nonstandard TS decorator
-      // namespace is covered by @typescript-eslint/no-namespace
-    ],
+    "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "SequenceExpression"],
     "no-return-assign": [0],
     "no-script-url": [2],
     "no-self-assign": [2, {"props": true}],
@@ -714,6 +680,7 @@ export default defineConfig({
     "no-unused-private-class-members": [2],
     "no-unused-vars": [0],
     "no-use-before-define": [0],
+    "no-use-extend-native/no-use-extend-native": [2],
     "no-useless-backreference": [2],
     "no-useless-call": [2],
     "no-useless-catch": [2],

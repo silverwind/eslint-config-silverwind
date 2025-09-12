@@ -27,15 +27,6 @@ type Overrides = Array<{
   [prop: string]: any,
 }>;
 
-const baseRules: Rules = {
-  ...eslintrc.rules,
-  "no-use-extend-native/no-use-extend-native": [2],
-  "array-func/avoid-reverse": [2],
-  "array-func/from-map": [2],
-  "array-func/no-unnecessary-this-arg": [2],
-  "array-func/prefer-array-from": [2],
-};
-
 const overrides: Overrides = eslintrc.overrides;
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
@@ -113,7 +104,7 @@ const [
 export default [
   deepMerge(common, {
     files: [`**/*${[...jsExts, ...tsExts].join(",")}`],
-    rules: baseRules,
+    rules: eslintrc.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     files: dtsOverride.files,

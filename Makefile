@@ -23,10 +23,12 @@ lint-flat: node_modules build
 
 .PHONY: test
 test: node_modules build
+	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color test.ts
 	npx vitest
 
 .PHONY: test-update
 test-update: node_modules build
+	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color test.ts
 	npx vitest -u
 
 .PHONY: build

@@ -22,3 +22,6 @@ class C { // eslint-disable-line @typescript-eslint/no-unused-vars
 }
 
 export default true; // eslint-disable-line import-x/no-unused-modules
+
+["1", "2"].reverse().reduce((p, c) => p + c, ""); // eslint-disable-line sonarjs/no-ignored-return,array-func/avoid-reverse
+Array.from([]).map((t) => t); // eslint-disable-line sonarjs/no-ignored-return,array-func/from-map

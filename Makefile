@@ -10,12 +10,12 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules build
-	npx eslint --color .
+	npx eslint -c dist/index.js --color .
 	npx tsc
 
 .PHONY: lint-fix
-lint-fix: node_modules
-	npx eslint --color --fix .
+lint-fix: node_modules build
+	npx eslint -c dist/index.js --color --fix .
 	npx tsc
 
 .PHONY: test

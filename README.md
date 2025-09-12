@@ -4,11 +4,13 @@ Exhaustive ESLint configuration
 
 ## Usage
 
-In your `.eslintrc.yaml`:
+In your `eslint.config.ts`:
 
-```yaml
-extends:
-  - eslint-config-silverwind
+```ts
+import silverwind from "eslint-config-silverwind";
+import {defineConfig} from "eslint/config";
+
+export default defineConfig(...silverwind);
 ```
 
 © [silverwind](https://github.com/silverwind), distributed under BSD licence.

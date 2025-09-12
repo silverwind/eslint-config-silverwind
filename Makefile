@@ -1,5 +1,5 @@
 SOURCE_FILES := index.ts
-DIST_FILES := dist/index.js dist/index.json
+DIST_FILES := dist/index.js
 
 node_modules: package-lock.json
 	npm install --no-save
@@ -10,25 +10,21 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules build
-	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color .
+	npx eslint --color .
 	npx tsc
 
 .PHONY: lint-fix
 lint-fix: node_modules
-	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color . --fix
+	npx eslint --color --fix .
 	npx tsc
-
-lint-flat: node_modules build
-	npx eslint --color
 
 .PHONY: test
 test: node_modules build
-	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color test.ts
+	npx eslint -c dist/index.js --color test.ts
 	npx vitest
 
 .PHONY: test-update
 test-update: node_modules build
-	ESLINT_USE_FLAT_CONFIG=false npx eslint --ext js,jsx,ts,tsx --color test.ts
 	npx vitest -u
 
 .PHONY: build
@@ -36,7 +32,6 @@ build: $(DIST_FILES)
 
 $(DIST_FILES): $(SOURCE_FILES) package-lock.json vite.config.ts
 	npx vite build
-	node build.js > dist/index.json
 	chmod +x $(DIST_FILES)
 
 .PHONY: publish

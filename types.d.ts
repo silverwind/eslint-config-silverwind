@@ -80,9 +80,9 @@ declare module "eslint-plugin-validate-jsx-nesting" {
 }
 declare module "eslint-config-silverwind-react" {
   const config: Record<string, any>;
-  export = config
+  export = config;
 }
 declare module "eslint-config-silverwind-typescript" {
   const config: Record<string, any>;
-  export = config
+  export = config;
 }

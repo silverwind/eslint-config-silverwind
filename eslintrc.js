@@ -10,7 +10,6 @@ export default defineConfig({
     "@stylistic/eslint-plugin-js",
     "@typescript-eslint/eslint-plugin",
     "eslint-plugin-array-func",
-    // "eslint-plugin-github", // causes peerDependency error with eslint 8 - https://github.com/github/eslint-plugin-github/issues/585
     "eslint-plugin-import-x",
     "eslint-plugin-no-use-extend-native",
     "eslint-plugin-react",

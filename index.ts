@@ -9,8 +9,6 @@ import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "@vitest/eslint-plugin";
 import playwright from "eslint-plugin-playwright";
-// import storybook from "eslint-plugin-storybook";
-// import github from "eslint-plugin-github";
 import globals from "globals";
 import {deepMerge} from "deepie-merge";
 import eslintrc from "./eslintrc.js";
@@ -40,9 +38,9 @@ const baseRules: Rules = {
 
 const overrides: Overrides = eslintrc.overrides;
 
-const jsExts = [".js", ".jsx", ".mjs", ".cjs"] as const;
-const tsExts = [".ts", ".tsx", ".mts", ".cts"] as const;
-const otherExts = [".html", ".vue", ".md"] as const;
+const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
+const tsExts = ["ts", "tsx", "mts", "cts"] as const;
+const otherExts = ["html", "vue", "md"] as const;
 
 const common: Linter.Config = {
   ignores: [
@@ -71,7 +69,7 @@ const common: Linter.Config = {
         impliedStrict: true,
       },
       project: true,
-      extraFileExtensions: otherExts,
+      extraFileExtensions: otherExts.map(ext => `.${ext}`),
     },
   },
   linterOptions: {
@@ -91,11 +89,10 @@ const common: Linter.Config = {
     regexp,
     sonarjs,
     unicorn,
-    // github, // causes peerDependency error with eslint 8 - https://github.com/github/eslint-plugin-github/issues/585
   },
   settings: {
-    "import-x/extensions": [...jsExts, tsExts],
-    "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, tsExts]},
+    "import-x/extensions": [...jsExts, ...tsExts].map(ext => `.${ext}`),
+    "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, ...tsExts].map(ext => `.${ext}`)},
     "import-x/resolver": {"typescript": true},
     "linkComponents": [{name: "Link", linkAttribute: "href"}],
     "react": {version: "detect"},
@@ -115,7 +112,7 @@ const [
 
 export default [
   deepMerge(common, {
-    files: [...jsExts, ...tsExts].map(ext => `**/*${ext}`),
+    files: [`**/*${[...jsExts, ...tsExts].join(",")}`],
     rules: baseRules,
   } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
@@ -143,11 +140,6 @@ export default [
     files: playwrightOverride.files,
     rules: playwrightOverride.rules,
   } satisfies Linter.Config, {arrayExtend: true}),
-  // deepMerge(common, {
-  //   plugins: {storybook},
-  //   files: storybookOverride.files,
-  //   rules: storybookOverride.rules,
-  // } satisfies Linter.Config, {arrayExtend: true}),
   deepMerge(common, {
     plugins: {
       "@stylistic/jsx": stylisticJsx,

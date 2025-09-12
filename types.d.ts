@@ -1,4 +1,3 @@
-// TODO: Maybe investigate https://github.com/eslint-types/eslint-define-config
 declare module "@eslint-community/eslint-plugin-eslint-comments" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
@@ -40,11 +39,6 @@ declare module "eslint-plugin-no-use-extend-native" {
   export = plugin;
 }
 declare module "eslint-plugin-unicorn" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
-declare module "eslint-plugin-github" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;
   export = plugin;

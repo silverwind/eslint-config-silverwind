@@ -55,6 +55,7 @@ export default defineConfig([
       parser: typescriptParser,
       parserOptions: {
         sourceType: "module",
+        ecmaVersion: "latest",
         ecmaFeatures: {
           jsx: true,
           impliedStrict: true,

@@ -53,6 +53,7 @@
     "vitest-config-silverwind": "10.2.0"
   },
   "peerDependencies": {
-    "typescript": ">= 5.9.2"
+    "typescript": ">= 5.9.2",
+    "jiti": ">= 2.5.1"
   }
 }

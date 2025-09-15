@@ -704,7 +704,7 @@ export default defineConfig([
       "sonarjs/no-gratuitous-expressions": [2],
       "sonarjs/no-identical-conditions": [2],
       "sonarjs/no-identical-expressions": [2],
-      "sonarjs/no-identical-functions": [2, 5],
+      "sonarjs/no-identical-functions": [0], // has bugs with identical react hooks
       "sonarjs/no-ignored-return": [2],
       "sonarjs/no-inverted-boolean-check": [2],
       "sonarjs/no-nested-switch": [0],

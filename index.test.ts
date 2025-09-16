@@ -1,4 +1,4 @@
-import configs from "./index.ts";
+import configs from "./eslint.config.ts";
 
 test("config", () => {
   expect(Array.isArray(configs)).toEqual(true);

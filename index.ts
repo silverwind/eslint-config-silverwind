@@ -44,7 +44,6 @@ export default defineConfig([
   ]),
   {
     files: [`**/*.{${[...jsExts, ...tsExts].join(",")}}`],
-    ignores: ["dist/*"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",

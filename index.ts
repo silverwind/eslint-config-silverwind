@@ -513,7 +513,7 @@ export default defineConfig([
       "no-unused-vars": [0],
       "no-use-before-define": [0],
       "no-use-extend-native/no-use-extend-native": [2],
-      "no-useless-assignment": [2],
+      "no-useless-assignment": [0], // too many false-positives
       "no-useless-backreference": [2],
       "no-useless-call": [2],
       "no-useless-catch": [2],

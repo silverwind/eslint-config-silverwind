@@ -17,7 +17,7 @@ import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 // import storybook from "eslint-plugin-storybook";
-import {defineConfig, globalIgnores} from "eslint/config";
+import {defineConfig} from "eslint/config";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
 const tsExts = ["ts", "tsx", "mts", "cts"] as const;
@@ -31,17 +31,19 @@ export const restrictedWorkerGlobals = [...browserGlobals, ...nodeGlobals, "wind
 export const restrictedGlobals = [...browserGlobals, ...nodeGlobals, "self"];
 
 export default defineConfig([
-  globalIgnores([
-    "**/!.storybook/",
-    "**/*.snap",
-    "**/.git/",
-    "**/.venv/",
-    "**/build/",
-    "**/dist/",
-    "**/node_modules/",
-    "**/persistent/",
-    "**/vendor/",
-  ]),
+  {
+    ignores: [
+      "**/!.storybook/",
+      "**/*.snap",
+      "**/.git/",
+      "**/.venv/",
+      "**/build/",
+      "**/dist/",
+      "**/node_modules/",
+      "**/persistent/",
+      "**/vendor/",
+    ],
+  },
   {
     files: [`**/*.{${[...jsExts, ...tsExts].join(",")}}`],
     languageOptions: {

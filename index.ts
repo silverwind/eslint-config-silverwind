@@ -24,12 +24,6 @@ const tsExts = ["ts", "tsx", "mts", "cts"] as const;
 const jsxExts = ["jsx", "tsx"] as const;
 const otherExts = ["html", "vue", "md"] as const;
 
-const browserGlobals = ["addEventListener", "blur", "close", "closed", "confirm", "defaultStatus", "defaultstatus", "error", "event", "external", "find", "focus", "frameElement", "frames", "history", "innerHeight", "innerWidth", "isFinite", "isNaN", "length", "locationbar", "menubar", "moveBy", "moveTo", "name", "onblur", "onerror", "onfocus", "onload", "onresize", "onunload", "open", "opener", "opera", "outerHeight", "outerWidth", "pageXOffset", "pageYOffset", "parent", "print", "removeEventListener", "resizeBy", "resizeTo", "screen", "screenLeft", "screenTop", "screenX", "screenY", "scroll", "scrollbars", "scrollBy", "scrollTo", "scrollX", "scrollY", "status", "statusbar", "stop", "toolbar", "top"];
-const nodeGlobals = ["__dirname", "__filename"];
-
-export const restrictedWorkerGlobals = [...browserGlobals, ...nodeGlobals, "window"];
-export const restrictedGlobals = [...browserGlobals, ...nodeGlobals, "self"];
-
 export default defineConfig([
   {
     ignores: [
@@ -480,7 +474,7 @@ export default defineConfig([
       "no-redeclare": [0],
       "no-regex-spaces": [2],
       "no-restricted-exports": [0],
-      "no-restricted-globals": [2, ...restrictedGlobals],
+      "no-restricted-globals": [2, "self"],
       "no-restricted-imports": [2, {paths: [{name: "punycode"}, {name: "assert"}, {name: "react", importNames: ["forwardRef"], message: "Use ref-as-prop instead - https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop"}]}],
       "no-restricted-properties": [0],
       "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "SequenceExpression"],
@@ -892,7 +886,7 @@ export default defineConfig([
       globals: globals.worker,
     },
     rules: {
-      "no-restricted-globals": [2, ...restrictedWorkerGlobals],
+      "no-restricted-globals": [2, "window"],
     },
   },
   {

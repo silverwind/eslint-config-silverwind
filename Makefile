@@ -20,7 +20,7 @@ lint-fix: node_modules build
 
 .PHONY: test
 test: node_modules build
-	npx eslint -c dist/index.js --color fixtures/test.ts
+	npx eslint -c dist/index.js --color tests/test.tsx
 	npx vitest
 
 .PHONY: test-update

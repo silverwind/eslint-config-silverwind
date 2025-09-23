@@ -3,6 +3,7 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "strict": true,
+    "jsx": "react-jsx",
     "types": [
       "jest-extended",
       "vite/client",

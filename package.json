@@ -47,8 +47,5 @@
     "versions": "13.1.1",
     "vitest": "3.2.4",
     "vitest-config-silverwind": "10.2.0"
-  },
-  "peerDependencies": {
-    "typescript": ">= 5.9.2"
   }
 }

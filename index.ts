@@ -80,7 +80,7 @@ export default defineConfig([
     settings: {
       "import-x/extensions": [...jsExts, ...tsExts].map(ext => `.${ext}`),
       "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, ...tsExts].map(ext => `.${ext}`)},
-      "import-x/resolver": {"typescript": true},
+      "import-x/resolver": {"eslint-import-resolver-typescript": true},
       "linkComponents": [{name: "Link", linkAttribute: "href"}],
       "react": {version: "19"},
     },

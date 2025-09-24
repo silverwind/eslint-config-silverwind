@@ -1,6 +1,4 @@
-import {type UserConfig} from "tsdown";
+import {nodeLib} from "tsdown-config-silverwind";
+import {defineConfig} from "tsdown";
 
-export default {
-  entry: "index.ts",
-  platform: "node",
-} satisfies UserConfig;
+export default defineConfig(nodeLib({url: import.meta.url}));

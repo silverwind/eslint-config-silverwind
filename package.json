@@ -40,6 +40,7 @@
     "globals": "16.4.0",
     "react": "19.1.1",
     "tsdown": "0.15.4",
+    "tsdown-config-silverwind": "1.0.3",
     "typescript": "5.9.2",
     "typescript-config-silverwind": "10.0.2",
     "updates": "16.7.2",

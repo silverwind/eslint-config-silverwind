@@ -30,7 +30,7 @@ test-update: node_modules build
 .PHONY: build
 build: $(DIST_FILES)
 
-$(DIST_FILES): $(SOURCE_FILES) package-lock.json tsdown.config.ts
+$(DIST_FILES): $(SOURCE_FILES) package-lock.json package.json tsdown.config.ts
 	npx tsdown
 	chmod +x $(DIST_FILES)
 

@@ -12,7 +12,7 @@
     "dist"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "8.44.1",
+    "@typescript-eslint/parser": "8.45.0",
     "@vitest/eslint-plugin": "1.3.13",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.1",
@@ -20,13 +20,13 @@
     "eslint-plugin-sonarjs": "3.0.5",
     "eslint-plugin-unicorn": "61.0.2",
     "jiti": "2.6.0",
-    "typescript-eslint": "8.44.1"
+    "typescript-eslint": "8.45.0"
   },
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.5.0",
     "@stylistic/eslint-plugin": "5.4.0",
     "@types/eslint": "9.6.1",
-    "@types/node": "24.5.2",
+    "@types/node": "24.6.0",
     "@types/react": "19.1.15",
     "eslint": "9.36.0",
     "eslint-plugin-array-func": "5.1.0",
@@ -40,11 +40,11 @@
     "globals": "16.4.0",
     "react": "19.1.1",
     "tsdown": "0.15.5",
-    "tsdown-config-silverwind": "1.1.0",
+    "tsdown-config-silverwind": "1.4.0",
     "typescript": "5.9.2",
-    "typescript-config-silverwind": "10.0.2",
-    "updates": "16.7.2",
-    "versions": "13.1.2",
+    "typescript-config-silverwind": "11.0.0",
+    "updates": "16.7.4",
+    "versions": "13.2.1",
     "vitest": "3.2.4",
     "vitest-config-silverwind": "10.2.0"
   }

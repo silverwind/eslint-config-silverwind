@@ -32,7 +32,10 @@ build: $(DIST_FILES)
 
 $(DIST_FILES): $(SOURCE_FILES) package-lock.json package.json tsdown.config.ts
 	npx tsdown
-	chmod +x $(DIST_FILES)
+
+.PHONY: watch
+watch:
+	npx tsdown --watch
 
 .PHONY: publish
 publish: node_modules

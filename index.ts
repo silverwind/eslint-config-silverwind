@@ -83,6 +83,7 @@ export default defineConfig([
       "import-x/resolver": {"eslint-import-resolver-typescript": true},
       "linkComponents": [{name: "Link", linkAttribute: "href"}],
       "react": {version: "19"},
+      "react-hooks": {"additionalEffectHooks": "^(useEffectOnce|useLayoutEffectOnce)$"}
     },
     rules: {
       "@eslint-community/eslint-comments/disable-enable-pair": [2, {"allowWholeFile": true}],

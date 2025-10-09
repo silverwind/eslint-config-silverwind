@@ -152,7 +152,7 @@ export default defineConfig([
       "@stylistic/semi-spacing": [2, {"before": false, "after": true}],
       "@stylistic/semi-style": [2, "last"],
       "@stylistic/space-before-blocks": [2, "always"],
-      "@stylistic/space-before-function-paren": [2, {"anonymous": "never", "named": "never", "asyncArrow": "always"}],
+      "@stylistic/space-before-function-paren": [0],
       "@stylistic/space-in-parens": [2, "never"],
       "@stylistic/space-infix-ops": [2],
       "@stylistic/space-unary-ops": [2],

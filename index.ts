@@ -29,7 +29,10 @@ export default defineConfig([
     ignores: [
       "**/!.storybook/",
       "**/*.snap",
+      "**/.air/",
       "**/.git/",
+      "**/.ruff_cache/",
+      "**/.swc/",
       "**/.venv/",
       "**/build/",
       "**/dist/",

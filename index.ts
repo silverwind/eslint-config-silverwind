@@ -90,7 +90,8 @@ export default defineConfig([
       "import-x/extensions": [...jsExts, ...tsExts].map(ext => `.${ext}`),
       "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, ...tsExts].map(ext => `.${ext}`)},
       "import-x/resolver": {"eslint-import-resolver-typescript": true},
-      "linkComponents": [{name: "Link", linkAttribute: "href"}],
+      // eslint-react currently does not support this, maybe in the future it will
+      // "linkComponents": [{name: "Link", linkAttribute: "href"}],
       "react-hooks": {"additionalEffectHooks": "^(useEffectOnce|useLayoutEffectOnce)$"}
     },
     rules: {

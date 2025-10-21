@@ -546,7 +546,7 @@ export default defineConfig([
       "radix": [2, "as-needed"],
       "react-hooks/component-hook-factories": [0], // rule is slow and people who use factories know how to use them right
       "react-hooks/config": [0],
-      "react-hooks/error-boundaries": [2],
+      "react-hooks/error-boundaries": [0], // rule is slow and often not really useful
       "react-hooks/exhaustive-deps": [2],
       "react-hooks/gating": [0],
       "react-hooks/globals": [2],

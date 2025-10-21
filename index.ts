@@ -1046,7 +1046,7 @@ export default defineConfig([
       "@eslint-react/jsx-no-duplicate-props": [2],
       "@eslint-react/jsx-no-iife": [0],
       "@eslint-react/jsx-no-undef": [2],
-      "@eslint-react/jsx-shorthand-boolean": [2],
+      "@eslint-react/jsx-shorthand-boolean": [2, -1],
       "@eslint-react/jsx-shorthand-fragment": [2, -1],
       "@eslint-react/jsx-uses-react": [0],
       "@eslint-react/jsx-uses-vars": [2],

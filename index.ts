@@ -579,7 +579,7 @@ export default defineConfig([
       "react/no-adjacent-inline-elements": [0],
       "react/no-array-index-key": [0],
       "react/no-arrow-function-lifecycle": [2],
-      "react/no-children-prop": [2],
+      "react/no-children-prop": [0],
       "react/no-danger": [0],
       "react/no-danger-with-children": [0],
       "react/no-deprecated": [0], // handlded by @typescript-eslint/no-deprecated

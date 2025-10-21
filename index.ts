@@ -544,7 +544,7 @@ export default defineConfig([
       "prefer-spread": [2],
       "prefer-template": [2],
       "radix": [2, "as-needed"],
-      "react-hooks/component-hook-factories": [2],
+      "react-hooks/component-hook-factories": [0], // rule is slow and people who use factories know how to use them right
       "react-hooks/config": [0],
       "react-hooks/error-boundaries": [2],
       "react-hooks/exhaustive-deps": [2],

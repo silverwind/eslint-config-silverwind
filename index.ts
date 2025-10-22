@@ -170,7 +170,7 @@ export default defineConfig([
       "@eslint-react/no-unsafe-component-will-update": [0],
       "@eslint-react/no-unstable-context-value": [2],
       "@eslint-react/no-unstable-default-props": [2],
-      "@eslint-react/no-unused-class-component-members": [2],
+      "@eslint-react/no-unused-class-component-members": [0], // false-positives
       "@eslint-react/no-unused-props": [2],
       "@eslint-react/no-unused-state": [2],
       "@eslint-react/no-use-context": [0],

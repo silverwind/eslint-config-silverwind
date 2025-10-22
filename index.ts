@@ -180,10 +180,10 @@ export default defineConfig([
       "@eslint-react/prefer-namespace-import": [0],
       "@eslint-react/prefer-read-only-props": [0],
       "@eslint-react/prefer-use-state-lazy-initialization": [0],
-      "@eslint-react/web-api/no-leaked-event-listener": [0],
-      "@eslint-react/web-api/no-leaked-interval": [0],
-      "@eslint-react/web-api/no-leaked-resize-observer": [0],
-      "@eslint-react/web-api/no-leaked-timeout": [0],
+      "@eslint-react/web-api/no-leaked-event-listener": [0], // too many false-positives
+      "@eslint-react/web-api/no-leaked-interval": [0], // too many false-positives
+      "@eslint-react/web-api/no-leaked-resize-observer": [0], // too many false-positives
+      "@eslint-react/web-api/no-leaked-timeout": [0], // too many false-positives
       "@stylistic/array-bracket-newline": [0],
       "@stylistic/array-bracket-spacing": [2, "never"],
       "@stylistic/array-element-newline": [0],

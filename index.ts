@@ -148,7 +148,7 @@ export default defineConfig([
       "@eslint-react/no-forbidden-props": [0],
       "@eslint-react/no-forward-ref": [2],
       "@eslint-react/no-implicit-key": [2],
-      "@eslint-react/no-leaked-conditional-rendering": [2],
+      "@eslint-react/no-leaked-conditional-rendering": [0], // false-positives with ReactNode
       "@eslint-react/no-missing-component-display-name": [0],
       "@eslint-react/no-missing-context-display-name": [0],
       "@eslint-react/no-missing-key": [2],

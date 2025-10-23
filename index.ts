@@ -464,7 +464,7 @@ const config: Array<Config> = [
       "import-x/no-self-import": [2],
       "import-x/no-unassigned-import": [0],
       "import-x/no-unresolved": [2, {"commonjs": true, "ignore": ["\\?.+$"]}],
-      "import-x/no-unused-modules": [0, {"unusedExports": true, "ignoreUnusedTypeExports": true}],
+      "import-x/no-unused-modules": [0, {"unusedExports": true, "ignoreUnusedTypeExports": true}], // https://github.com/un-ts/eslint-plugin-import-x/pull/358
       "import-x/no-useless-path-segments": [2, {"commonjs": true}],
       "import-x/no-webpack-loader-syntax": [2],
       "import-x/order": [0],

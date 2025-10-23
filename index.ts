@@ -20,14 +20,14 @@ import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 // import storybook from "eslint-plugin-storybook";
-import {defineConfig} from "eslint/config";
+import type {Config} from "eslint/config";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
 const tsExts = ["ts", "tsx", "mts", "cts"] as const;
 const jsxExts = ["jsx", "tsx"] as const;
 const otherExts = ["html", "vue", "md"] as const;
 
-export default defineConfig([
+const config: Array<Config> = [
   {
     ignores: [
       "**/!.storybook/",
@@ -1099,4 +1099,5 @@ export default defineConfig([
       "@typescript-eslint/no-redundant-type-constituents": [0],
     }
   },
-]);
+];
+export default config;

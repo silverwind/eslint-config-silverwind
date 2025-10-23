@@ -48,7 +48,7 @@
     "typescript-config-silverwind": "12.0.0",
     "updates": "16.8.1",
     "versions": "14.0.1",
-    "vitest": "3.2.4",
+    "vitest": "4.0.1",
     "vitest-config-silverwind": "10.3.1"
   }
 }

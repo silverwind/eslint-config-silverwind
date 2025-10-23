@@ -67,6 +67,7 @@ const config: Array<Config> = [
     },
     linterOptions: {
       reportUnusedDisableDirectives: 2,
+      reportUnusedInlineConfigs: 2,
     },
     plugins: {
       "@eslint-community/eslint-comments": comments,

@@ -805,7 +805,7 @@ const config: Array<Config> = [
       "unicorn/no-empty-file": [0],
       "unicorn/no-for-loop": [0],
       "unicorn/no-hex-escape": [0],
-      "unicorn/no-immediate-mutation": [2],
+      "unicorn/no-immediate-mutation": [0], // in some cases it makes the code less readable
       "unicorn/no-instanceof-array": [0],
       "unicorn/no-instanceof-builtins": [2],
       "unicorn/no-invalid-fetch-options": [2],

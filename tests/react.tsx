@@ -7,11 +7,11 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
   // @ts-expect-error
   const _x = (
     <div>
-      <Fragment>{/* eslint-disable-line @eslint-react/no-useless-fragment */}
+      <Fragment>
         <button/>
         <button/>
       </Fragment>
     </div>
   );
-  return <><button disabled={true}>{value}</button></>; // eslint-disable-line @eslint-react/no-useless-fragment,@eslint-react/jsx-shorthand-fragment
+  return <><button disabled={true}>{value}</button></>; // eslint-disable-line @eslint-react/jsx-shorthand-fragment
 }

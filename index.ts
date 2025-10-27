@@ -176,7 +176,7 @@ const config: Array<Config> = [
       "@eslint-react/no-unused-state": [2],
       "@eslint-react/no-use-context": [0],
       "@eslint-react/no-useless-forward-ref": [0],
-      "@eslint-react/no-useless-fragment": [2, {allowExpressions: false}],
+      "@eslint-react/no-useless-fragment": [0],
       "@eslint-react/prefer-destructuring-assignment": [0],
       "@eslint-react/prefer-namespace-import": [0],
       "@eslint-react/prefer-read-only-props": [0],

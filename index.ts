@@ -27,6 +27,22 @@ const tsExts = ["ts", "tsx", "mts", "cts"] as const;
 const jsxExts = ["jsx", "tsx"] as const;
 const otherExts = ["html", "vue", "md"] as const;
 
+const noRestrictedSyntax = [
+  "WithStatement",
+  "ForInStatement",
+  // "LabeledStatement", // consider enabling later, in use
+  "SequenceExpression",
+  // avoid typescript inferring `any` when `strictNullChecks` is false
+  {
+    selector: "CallExpression[callee.name='useRef']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
+    message: "A type parameter is required for 'useRef()'. Please specify the type of the ref.",
+  },
+  {
+    selector: "CallExpression[callee.property.name='useRef']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
+    message: "A type parameter is required for 'useRef()'. Please specify the type of the ref.",
+  }
+];
+
 const config: Array<Config> = [
   {
     ignores: [
@@ -568,7 +584,7 @@ const config: Array<Config> = [
       "no-restricted-globals": [2, "self"],
       "no-restricted-imports": [2, {paths: [{name: "punycode"}, {name: "assert"}, {name: "react", importNames: ["forwardRef"], message: "Use ref-as-prop instead - https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop"}]}],
       "no-restricted-properties": [0],
-      "no-restricted-syntax": [2, "WithStatement", "ForInStatement", "SequenceExpression"],
+      "no-restricted-syntax": [2, ...noRestrictedSyntax],
       "no-return-assign": [0],
       "no-script-url": [2],
       "no-self-assign": [2, {"props": true}],

@@ -1036,6 +1036,7 @@ const config: Array<Config> = [
     rules: {
       "playwright/expect-expect": [0],
       "playwright/no-networkidle": [0],
+      "playwright/no-conditional-in-test": [0],
     },
   },
   // wait for v10

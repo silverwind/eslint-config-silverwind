@@ -11,6 +11,7 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
     <div>
       <Fragment>
         <button/>
+        ${"foo"}{/* eslint-disable-line @eslint-react/jsx-dollar */}
         <button/>
       </Fragment>
     </div>

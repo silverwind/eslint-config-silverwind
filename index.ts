@@ -87,6 +87,7 @@ const config: Array<Config> = [
     },
     plugins: {
       "@eslint-community/eslint-comments": comments,
+      // @ts-expect-error
       "@stylistic": stylistic,
       "@typescript-eslint": typescriptPlugin.plugin,
       "array-func": arrayFunc,
@@ -99,6 +100,7 @@ const config: Array<Config> = [
       "@eslint-react/naming-convention": reactNamingConvention,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      // @ts-expect-error
       regexp,
       sonarjs,
       unicorn,
@@ -1030,6 +1032,7 @@ const config: Array<Config> = [
       "import-x/no-unused-modules": [0],
     },
   },
+  // @ts-expect-error
   {
     ...playwright.configs["flat/recommended"],
     files: ["tests/**"],
@@ -1063,6 +1066,7 @@ const config: Array<Config> = [
     },
     files: [`**/*.{${jsxExts.join(",")}}`],
     rules: {
+      "@eslint-react/jsx-dollar": [2],
       "@eslint-react/jsx-key-before-spread": [2],
       "@eslint-react/jsx-no-comment-textnodes": [2],
       "@eslint-react/jsx-no-duplicate-props": [2],

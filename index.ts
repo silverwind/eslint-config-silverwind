@@ -87,7 +87,6 @@ const config: Array<Config> = [
     },
     plugins: {
       "@eslint-community/eslint-comments": comments,
-      // @ts-expect-error
       "@stylistic": stylistic,
       "@typescript-eslint": typescriptPlugin.plugin,
       "array-func": arrayFunc,
@@ -100,7 +99,6 @@ const config: Array<Config> = [
       "@eslint-react/naming-convention": reactNamingConvention,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
-      // @ts-expect-error
       regexp,
       sonarjs,
       unicorn,
@@ -958,7 +956,6 @@ const config: Array<Config> = [
     },
   },
   {
-    // @ts-expect-error - https://github.com/vitest-dev/eslint-plugin-vitest/issues/737
     plugins: {vitest},
     files: [
       "**/*.test.*",
@@ -1032,7 +1029,6 @@ const config: Array<Config> = [
       "import-x/no-unused-modules": [0],
     },
   },
-  // @ts-expect-error
   {
     ...playwright.configs["flat/recommended"],
     files: ["tests/**"],

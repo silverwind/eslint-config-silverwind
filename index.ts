@@ -38,9 +38,9 @@ const noRestrictedSyntax = [
     message: "A type parameter is required for 'useRef()'. Please specify the type of the ref.",
   },
   {
-    selector: "CallExpression[callee.property.name='useRef']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
-    message: "A type parameter is required for 'useRef()'. Please specify the type of the ref.",
-  }
+    selector: "CallExpression[callee.name='useState']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
+    message: "A type parameter is required for 'useState()'. Please specify the type of the state variable.",
+  },
 ];
 
 const config: Array<Config> = [

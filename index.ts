@@ -252,7 +252,7 @@ const config: Array<Config> = [
       "@stylistic/newline-per-chained-call": [0],
       "@stylistic/no-confusing-arrow": [0],
       "@stylistic/no-extra-parens": [0],
-      "@stylistic/no-extra-semi": [0], // annoying when turning function expression to function definitions
+      "@stylistic/no-extra-semi": [2],
       "@stylistic/no-floating-decimal": [0],
       "@stylistic/no-mixed-operators": [0],
       "@stylistic/no-mixed-spaces-and-tabs": [2],

@@ -2,7 +2,8 @@
   "extends": "typescript-config-silverwind",
   "compilerOptions": {
     "experimentalDecorators": true,
-    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
     "types": [
       "jest-extended",
       "vite/client",

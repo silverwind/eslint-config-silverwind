@@ -320,7 +320,7 @@ const config: Array<Config> = [
       "@typescript-eslint/consistent-indexed-object-style": [0],
       "@typescript-eslint/consistent-return": [0],
       "@typescript-eslint/consistent-type-assertions": [2, {assertionStyle: "as", objectLiteralTypeAssertions: "allow"}],
-      "@typescript-eslint/consistent-type-definitions": [2, "type"],
+      "@typescript-eslint/consistent-type-definitions": [0],
       "@typescript-eslint/consistent-type-exports": [2, {fixMixedExportsWithInlineTypeSpecifier: false}],
       "@typescript-eslint/consistent-type-imports": [2, {prefer: "type-imports", fixStyle: "separate-type-imports", disallowTypeAnnotations: true}],
       "@typescript-eslint/default-param-last": [0],

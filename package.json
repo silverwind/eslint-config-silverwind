@@ -22,8 +22,8 @@
     "@stylistic/eslint-plugin": "5.5.0",
     "@types/eslint": "9.6.1",
     "@types/node": "24.10.1",
-    "@types/react": "19.2.4",
-    "@vitest/eslint-plugin": "1.4.2",
+    "@types/react": "19.2.5",
+    "@vitest/eslint-plugin": "1.4.3",
     "eslint": "9.39.1",
     "eslint-plugin-array-func": "5.1.0",
     "eslint-plugin-jsx-a11y-x": "0.1.1",
@@ -41,14 +41,14 @@
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "16.5.0",
     "react": "19.2.0",
-    "tsdown": "0.16.4",
+    "tsdown": "0.16.5",
     "tsdown-config-silverwind": "1.5.2",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.4",
     "typescript-config-silverwind": "13.0.2",
     "updates": "16.9.1",
     "versions": "14.0.2",
-    "vitest": "4.0.8",
+    "vitest": "4.0.9",
     "vitest-config-silverwind": "10.4.2"
   }
 }

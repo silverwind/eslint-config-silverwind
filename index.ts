@@ -57,11 +57,6 @@ const noRestrictedImports = {
   paths: [
     {name: "punycode"},
     {name: "assert"},
-    {
-      name: "react",
-      importNames: ["forwardRef"],
-      message: "Use ref-as-prop instead - https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop",
-    }
   ],
 };
 

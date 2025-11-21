@@ -1,5 +1,5 @@
 // @ts-expect-error
-import {forwardRef} from "react"; // eslint-disable-line no-restricted-imports,@typescript-eslint/no-unused-vars
+import {forwardRef} from "react"; // eslint-disable-line @typescript-eslint/no-unused-vars
 // @ts-expect-error
 import {foo} from "./test2"; // eslint-disable-line import-x/extensions
 // @ts-expect-error

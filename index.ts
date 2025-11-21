@@ -387,6 +387,7 @@ const config: Array<Config> = [
       "@typescript-eslint/no-unsafe-return": [0],
       "@typescript-eslint/no-unsafe-unary-minus": [2],
       "@typescript-eslint/no-unused-expressions": [0],
+      "@typescript-eslint/no-unused-private-class-members": [2],
       "@typescript-eslint/no-unused-vars": [2, {vars: "all", args: "all", caughtErrors: "all", ignoreRestSiblings: false, argsIgnorePattern: "^_", varsIgnorePattern: "^_[^_]*$", caughtErrorsIgnorePattern: "^_", destructuredArrayIgnorePattern: "^_"}],
       "@typescript-eslint/no-use-before-define": [2, {"functions": false, "classes": true, "variables": true, "allowNamedExports": true, "typedefs": false, "enums": false, "ignoreTypeReferences": true}],
       "@typescript-eslint/no-useless-constructor": [0],
@@ -629,7 +630,7 @@ const config: Array<Config> = [
       "no-unsafe-optional-chaining": [2],
       "no-unused-expressions": [2],
       "no-unused-labels": [2],
-      "no-unused-private-class-members": [2],
+      "no-unused-private-class-members": [0], // replaced by @typescript-eslint/no-unused-private-class-members
       "no-unused-vars": [0],
       "no-use-before-define": [0],
       "no-use-extend-native/no-use-extend-native": [2],

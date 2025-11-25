@@ -2,7 +2,6 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
 import arrayFunc from "eslint-plugin-array-func";
 import importPlugin from "eslint-plugin-import-x";
-import noUseExtendNative from "eslint-plugin-no-use-extend-native";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
@@ -109,7 +108,6 @@ const config: Array<Config> = [
       "array-func": arrayFunc,
       // @ts-expect-error
       "import-x": importPlugin,
-      "no-use-extend-native": noUseExtendNative,
       "@eslint-react": reactX,
       "@eslint-react/dom": reactDom,
       "@eslint-react/web-api": reactWebApi,
@@ -633,7 +631,6 @@ const config: Array<Config> = [
       "no-unused-private-class-members": [0], // replaced by @typescript-eslint/no-unused-private-class-members
       "no-unused-vars": [0],
       "no-use-before-define": [0],
-      "no-use-extend-native/no-use-extend-native": [2],
       "no-useless-assignment": [0], // too many false-positives
       "no-useless-backreference": [2],
       "no-useless-call": [2],

@@ -12,7 +12,7 @@
     "dist"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "8.47.0",
+    "@typescript-eslint/parser": "8.48.0",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.1",
     "jiti": "2.6.1"
@@ -22,8 +22,8 @@
     "@stylistic/eslint-plugin": "5.6.1",
     "@types/eslint": "9.6.1",
     "@types/node": "24.10.1",
-    "@types/react": "19.2.6",
-    "@vitest/eslint-plugin": "1.4.3",
+    "@types/react": "19.2.7",
+    "@vitest/eslint-plugin": "1.5.0",
     "eslint": "9.39.1",
     "eslint-plugin-array-func": "5.1.0",
     "eslint-plugin-jsx-a11y-x": "0.1.1",
@@ -41,14 +41,14 @@
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "16.5.0",
     "react": "19.2.0",
-    "tsdown": "0.16.6",
+    "tsdown": "0.16.7",
     "tsdown-config-silverwind": "1.5.3",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.47.0",
-    "typescript-config-silverwind": "13.0.2",
+    "typescript-eslint": "8.48.0",
+    "typescript-config-silverwind": "14.0.0",
     "updates": "16.9.1",
     "versions": "14.0.3",
-    "vitest": "4.0.12",
+    "vitest": "4.0.14",
     "vitest-config-silverwind": "10.4.2"
   }
 }

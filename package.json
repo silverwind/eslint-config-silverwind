@@ -36,6 +36,7 @@
     "eslint-plugin-react-x": "2.3.7",
     "eslint-plugin-regexp": "2.10.0",
     "eslint-plugin-sonarjs": "3.0.5",
+    "eslint-plugin-storybook": "10.0.8",
     "eslint-plugin-unicorn": "62.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "16.5.0",

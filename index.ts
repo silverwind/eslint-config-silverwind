@@ -18,7 +18,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
-// import storybook from "eslint-plugin-storybook";
+import storybook from "eslint-plugin-storybook";
 import type {Config} from "eslint/config";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
@@ -1059,23 +1059,22 @@ const config: Array<Config> = [
       "playwright/no-conditional-in-test": [0],
     },
   },
-  // wait for v10
-  // {
-  //   files: ["**/*.stories.*"],
-  //   plugins: {storybook},
-  //   rules: {
-  //     "storybook/await-interactions": [2],
-  //     "storybook/context-in-play-function": [2],
-  //     "storybook/default-exports": [2],
-  //     "storybook/hierarchy-separator": [2],
-  //     "storybook/no-redundant-story-name": [2],
-  //     "storybook/prefer-pascal-case": [2],
-  //     "storybook/story-exports": [2],
-  //     "storybook/use-storybook-expect": [2],
-  //     "storybook/use-storybook-testing-library": [2],
-  //     "sonarjs/no-identical-functions": [0],
-  //   },
-  // },
+  {
+    files: ["**/*.stories.*"],
+    plugins: {storybook},
+    rules: {
+      "storybook/await-interactions": [2],
+      "storybook/context-in-play-function": [2],
+      "storybook/default-exports": [2],
+      "storybook/hierarchy-separator": [2],
+      "storybook/no-redundant-story-name": [2],
+      "storybook/prefer-pascal-case": [2],
+      "storybook/story-exports": [2],
+      "storybook/use-storybook-expect": [2],
+      "storybook/use-storybook-testing-library": [2],
+      "sonarjs/no-identical-functions": [0],
+    },
+  },
   {
     plugins: {
       "jsx-a11y": jsxA11y,

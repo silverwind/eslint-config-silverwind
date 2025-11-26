@@ -59,7 +59,7 @@ const noRestrictedImports = {
   ],
 };
 
-const config: Array<Config> = [
+export default [
   {
     ignores: [
       "**/!.storybook/",
@@ -1140,5 +1140,4 @@ const config: Array<Config> = [
       "@typescript-eslint/no-redundant-type-constituents": [0],
     }
   },
-];
-export default config;
+] satisfies Array<Config>;

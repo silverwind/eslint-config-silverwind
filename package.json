@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-silverwind",
-  "version": "111.2.0",
+  "version": "112.0.0",
   "description": "Exhaustive ESLint configuration",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/eslint-config-silverwind",

@@ -32,12 +32,12 @@ function noRestrictedSyntax(language: string) {
     "ForInStatement",
     // "LabeledStatement", // consider enabling later, in use
     "SequenceExpression",
-    // avoid typescript inferring `any` when `strictNullChecks` is false
   ];
 
   if (language === "ts") {
     opts = [
       ...opts,
+      // avoid typescript inferring `any` when `strictNullChecks` is false
       {
         selector: "CallExpression[callee.name='useRef']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
         message: "A type parameter is required for 'useRef()'. Please specify the type of the ref.",

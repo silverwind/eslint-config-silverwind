@@ -310,7 +310,7 @@ const config: Array<Config> = [
       "@typescript-eslint/class-literal-property-style": [0],
       "@typescript-eslint/class-methods-use-this": [0],
       "@typescript-eslint/consistent-generic-constructors": [2, "constructor"],
-      "@typescript-eslint/consistent-indexed-object-style": [2, "record"],
+      "@typescript-eslint/consistent-indexed-object-style": [0],
       "@typescript-eslint/consistent-return": [0],
       "@typescript-eslint/consistent-type-assertions": [2, {assertionStyle: "as", objectLiteralTypeAssertions: "allow"}],
       "@typescript-eslint/consistent-type-definitions": [0],

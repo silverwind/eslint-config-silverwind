@@ -360,7 +360,7 @@ export default [
       "@typescript-eslint/no-non-null-asserted-optional-chain": [2],
       "@typescript-eslint/no-non-null-assertion": [0],
       "@typescript-eslint/no-redeclare": [0],
-      "@typescript-eslint/no-redundant-type-constituents": [2],
+      "@typescript-eslint/no-redundant-type-constituents": [0], // too many bugs, https://github.com/typescript-eslint/typescript-eslint/issues/11811
       "@typescript-eslint/no-require-imports": [2],
       "@typescript-eslint/no-restricted-imports": [0],
       "@typescript-eslint/no-restricted-types": [0],

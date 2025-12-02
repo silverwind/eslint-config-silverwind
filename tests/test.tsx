@@ -7,6 +7,11 @@ import type bar from "./test2"; // eslint-disable-line import-x/extensions,@type
 // @ts-expect-error
 import nonexist from "./nonexist"; // eslint-disable-line import-x/extensions,@typescript-eslint/no-unused-vars,import-x/no-unresolved
 
+type Foo = Record<string, any>;
+type Bar = Foo & {bar?: string};
+// @ts-expect-error
+type Baz = Bar & {baz?: string}; // eslint-disable-line @typescript-eslint/no-unused-vars
+
 // @ts-expect-error
 let a = 0;
 if (foo) { // eslint-disable-line sonarjs/no-all-duplicated-branches

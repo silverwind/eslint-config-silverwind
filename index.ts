@@ -844,7 +844,7 @@ const config: Array<Config> = [
       "unicorn/no-unnecessary-array-flat-depth": [2],
       "unicorn/no-unnecessary-array-splice-count": [2],
       "unicorn/no-unnecessary-await": [2],
-      "unicorn/no-unnecessary-polyfills": [2],
+      "unicorn/no-unnecessary-polyfills": [0],
       "unicorn/no-unreadable-array-destructuring": [0],
       "unicorn/no-unreadable-iife": [2],
       "unicorn/no-unused-properties": [2],

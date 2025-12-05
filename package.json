@@ -42,7 +42,7 @@
     "globals": "16.5.0",
     "react": "19.2.1",
     "tsdown": "0.17.0",
-    "tsdown-config-silverwind": "1.5.5",
+    "tsdown-config-silverwind": "1.6.0",
     "typescript": "5.9.3",
     "typescript-config-silverwind": "14.0.0",
     "typescript-eslint": "8.48.1",

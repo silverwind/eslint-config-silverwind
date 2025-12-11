@@ -781,7 +781,7 @@ const config: Array<Config> = [
       "sort-keys": [0],
       "sort-vars": [0],
       "strict": [0],
-      "symbol-description": [2],
+      "symbol-description": [0],
       "unicode-bom": [2, "never"],
       "unicorn/better-regex": [0],
       "unicorn/catch-error-name": [0],

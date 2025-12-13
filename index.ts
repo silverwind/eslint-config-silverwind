@@ -353,7 +353,7 @@ const config: Array<Config> = [
       "@typescript-eslint/no-unnecessary-parameter-property-assignment": [2],
       "@typescript-eslint/no-unnecessary-qualifier": [0],
       "@typescript-eslint/no-unnecessary-template-expression": [0],
-      "@typescript-eslint/no-unnecessary-type-arguments": [0],
+      "@typescript-eslint/no-unnecessary-type-arguments": [2],
       "@typescript-eslint/no-unnecessary-type-assertion": [2], // previously had typesToIgnore: [HTMLElement, NodeListOf<HTMLElement>]
       "@typescript-eslint/no-unnecessary-type-constraint": [2],
       "@typescript-eslint/no-unnecessary-type-conversion": [0], // TODO: evaluate

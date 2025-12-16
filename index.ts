@@ -660,6 +660,7 @@ const config: Array<Config> = [
       "react-hooks/set-state-in-effect": [2],
       "react-hooks/set-state-in-render": [2],
       "react-hooks/static-components": [2],
+      "react-hooks/todo": [0], // debug rule for compiler bugs
       "react-hooks/unsupported-syntax": [2],
       "react-hooks/use-memo": [2],
       "react-refresh/only-export-components": [2, {allowConstantExport: true}],

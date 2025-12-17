@@ -26,30 +26,13 @@ const tsExts = ["ts", "tsx", "mts", "cts"] as const;
 const jsxExts = ["jsx", "tsx"] as const;
 const otherExts = ["html", "vue", "md"] as const;
 
-function noRestrictedSyntax(language: string) {
-  let opts: Array<any> = [
+function noRestrictedSyntax() {
+  return [
     "WithStatement",
     "ForInStatement",
     // "LabeledStatement", // consider enabling later, in use
     "SequenceExpression",
   ];
-
-  if (language === "ts") {
-    opts = [
-      ...opts,
-      // avoid typescript inferring `any` when `strictNullChecks` is false
-      {
-        selector: "CallExpression[callee.name='useRef']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
-        message: "A type parameter is required for 'useRef()'. Please specify the type of the ref.",
-      },
-      {
-        selector: "CallExpression[callee.name='useState']:not(:has(TSTypeParameterInstantiation))[arguments.0.value='null']",
-        message: "A type parameter is required for 'useState()'. Please specify the type of the state variable.",
-      },
-    ];
-  }
-
-  return opts;
 }
 
 const noRestrictedImports = {
@@ -583,7 +566,7 @@ const config: Array<Config> = [
       "no-restricted-globals": [2, "self"],
       "no-restricted-imports": [2, noRestrictedImports],
       "no-restricted-properties": [0],
-      "no-restricted-syntax": [2, ...noRestrictedSyntax("ts")],
+      "no-restricted-syntax": [2, ...noRestrictedSyntax()],
       "no-return-assign": [0],
       "no-script-url": [2],
       "no-self-assign": [2, {"props": true}],
@@ -938,7 +921,7 @@ const config: Array<Config> = [
   { // overrides for js
     files: [`**/*.{${jsExts.join(",")}}`],
     rules: {
-      "no-restricted-syntax": [2, ...noRestrictedSyntax("js")],
+      "no-restricted-syntax": [2, ...noRestrictedSyntax()],
     },
   },
   {

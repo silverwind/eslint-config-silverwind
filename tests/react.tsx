@@ -4,8 +4,8 @@ import {Fragment, useRef, useState} from "react";
 function Component() { // eslint-disable-line react-refresh/only-export-components,@typescript-eslint/no-unused-vars
   const ref = useRef(0);
   // @ts-expect-error
-  const _ref2 = useRef(null); // eslint-disable-line no-restricted-syntax
-  const [_val, _setVal] = useState(null); // eslint-disable-line no-restricted-syntax,@eslint-react/naming-convention/use-state
+  const _ref2 = useRef(null);
+  const [_val, _setVal] = useState(null); // eslint-disable-line @eslint-react/naming-convention/use-state
   const value = ref.current; // eslint-disable-line react-hooks/refs
   // @ts-expect-error
   const _x = (

@@ -141,7 +141,7 @@ const config: Array<Config> = [
       "@eslint-react/naming-convention/context-name": [0],
       "@eslint-react/naming-convention/filename": [0],
       "@eslint-react/naming-convention/filename-extension": [0],
-      "@eslint-react/naming-convention/use-state": [2],
+      "@eslint-react/naming-convention/use-state": [2, {enforceAssignment: true, enforceSetterName: true}],
       "@eslint-react/no-access-state-in-setstate": [0],
       "@eslint-react/no-array-index-key": [0],
       "@eslint-react/no-children-count": [0],

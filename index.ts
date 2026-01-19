@@ -177,7 +177,7 @@ const config: Array<Config> = [
       "@eslint-react/no-set-state-in-component-did-update": [0],
       "@eslint-react/no-set-state-in-component-will-update": [0],
       "@eslint-react/no-string-refs": [2],
-      "@eslint-react/no-unnecessary-key": [2],
+      "@eslint-react/no-unnecessary-key": [0], // unsure if Array<ReactNode> with key is safe
       "@eslint-react/no-unnecessary-use-callback": [2],
       "@eslint-react/no-unnecessary-use-memo": [2],
       "@eslint-react/no-unnecessary-use-prefix": [0],

@@ -181,7 +181,7 @@ const config: Array<Config> = [
       "@eslint-react/no-unnecessary-use-callback": [2],
       "@eslint-react/no-unnecessary-use-memo": [2],
       "@eslint-react/no-unnecessary-use-prefix": [0],
-      "@eslint-react/no-unnecessary-use-ref": [2],
+      "@eslint-react/no-unnecessary-use-ref": [0], // https://github.com/Rel1cx/eslint-react/issues/1417
       "@eslint-react/no-unsafe-component-will-mount": [0],
       "@eslint-react/no-unsafe-component-will-receive-props": [0],
       "@eslint-react/no-unsafe-component-will-update": [0],

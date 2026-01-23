@@ -66,7 +66,7 @@ const config: Array<Config> = [
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.node,
+        ...globals.nodeBuiltin, // esm only
       },
       parser: typescriptParser,
       parserOptions: {

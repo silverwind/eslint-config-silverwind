@@ -14,7 +14,7 @@ type Baz = Bar & {baz?: string}; // eslint-disable-line @typescript-eslint/no-un
 
 // @ts-expect-error
 let a = 0;
-if (foo) { // eslint-disable-line sonarjs/no-all-duplicated-branches
+if (foo) {
   a = 1;
 } else {
   a = 1; // eslint-disable-line @typescript-eslint/no-unused-vars
@@ -30,7 +30,7 @@ class C { // eslint-disable-line @typescript-eslint/no-unused-vars
 
 // export default true; // eslint-disable-line import-x/no-unused-modules
 
-["1", "2"].reverse().reduce((p, c) => p + c, ""); // eslint-disable-line sonarjs/no-ignored-return,array-func/avoid-reverse
-Array.from([]).map((t) => t); // eslint-disable-line sonarjs/no-ignored-return,array-func/from-map
+["1", "2"].reverse().reduce((p, c) => p + c, ""); // eslint-disable-line array-func/avoid-reverse
+Array.from([]).map((t) => t); // eslint-disable-line array-func/from-map
 
 export const button = <button role="button"/>; // eslint-disable-line jsx-a11y/no-redundant-roles

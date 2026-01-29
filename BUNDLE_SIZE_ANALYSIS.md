@@ -32,7 +32,7 @@ Based on `node_modules` analysis:
 
 ## Optimizations Implemented
 
-### 1. Explicit Tree-Shaking
+### 1. Explicit tree-shaking
 **Change:** Added `treeshake: true` to `tsdown.config.ts`
 ```typescript
 export default defineConfig(nodeLib({
@@ -42,7 +42,7 @@ export default defineConfig(nodeLib({
   treeshake: true, // Added for better dead code elimination
 }));
 ```
-**Result:** No significant size reduction (tree-shaking already enabled by default in rolldown)
+**Result:** No significant size reduction (tree-shaking already enabled by default in tsdown)
 
 ### 2. Shims Investigation
 **Test:** Tried disabling `shims: false` to remove __dirname/__filename polyfills

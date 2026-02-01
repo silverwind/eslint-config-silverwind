@@ -834,7 +834,7 @@ const config: Array<Config> = [
       "unicorn/no-unnecessary-await": [2],
       "unicorn/no-unnecessary-polyfills": [0],
       "unicorn/no-unreadable-array-destructuring": [0],
-      "unicorn/no-unreadable-iife": [2],
+      "unicorn/no-unreadable-iife": [0],
       "unicorn/no-unused-properties": [2],
       "unicorn/no-useless-collection-argument": [2],
       "unicorn/no-useless-error-capture-stack-trace": [2],

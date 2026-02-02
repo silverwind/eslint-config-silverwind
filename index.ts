@@ -14,7 +14,7 @@ import reactDom from "eslint-plugin-react-dom";
 import reactWebApi from "eslint-plugin-react-web-api";
 import reactNamingConvention from "eslint-plugin-react-naming-convention";
 import reactHooks from "eslint-plugin-react-hooks";
-// import reactRefresh from "eslint-plugin-react-refresh";
+import reactRefresh from "eslint-plugin-react-refresh";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
@@ -96,7 +96,7 @@ const config: Array<Config> = [
       "@eslint-react/web-api": reactWebApi,
       "@eslint-react/naming-convention": reactNamingConvention,
       "react-hooks": reactHooks,
-      // "react-refresh": reactRefresh,
+      "react-refresh": reactRefresh,
       regexp,
       sonarjs,
       unicorn,
@@ -649,7 +649,7 @@ const config: Array<Config> = [
       "react-hooks/todo": [0], // debug rule for compiler bugs
       "react-hooks/unsupported-syntax": [2],
       "react-hooks/use-memo": [2],
-      // "react-refresh/only-export-components": [2, {allowConstantExport: true}],
+      "react-refresh/only-export-components": [2, {allowConstantExport: true}],
       "regexp/confusing-quantifier": [2],
       "regexp/control-character-escape": [2],
       "regexp/hexadecimal-escape": [0],

@@ -1,7 +1,7 @@
 import {Fragment, useRef, useState} from "react";
 
 // @ts-expect-error
-function Component() { // eslint-disable-line @typescript-eslint/no-unused-vars
+function Component() { // eslint-disable-line react-refresh/only-export-components,@typescript-eslint/no-unused-vars
   const ref = useRef(0);
   // @ts-expect-error
   const _ref2 = useRef(null);

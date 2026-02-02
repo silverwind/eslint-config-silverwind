@@ -53,11 +53,11 @@ declare module "eslint-plugin-jsx-a11y-x" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
-declare module "eslint-plugin-react-refresh" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
+// declare module "eslint-plugin-react-refresh" {
+//   import type {Eslint} from "eslint";
+//   const plugin: Eslint.Plugin;
+//   export = plugin;
+// }
 declare module "eslint-plugin-validate-jsx-nesting" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;

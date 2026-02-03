@@ -433,7 +433,7 @@ const config: Array<Config> = [
       "import-x/first": [2],
       "import-x/group-exports": [0],
       "import-x/max-dependencies": [0],
-      "import-x/named": [2],
+      "import-x/named": [0], // slow
       "import-x/namespace": [0],
       "import-x/newline-after-import": [0],
       "import-x/no-absolute-path": [2],

@@ -560,7 +560,7 @@ const config: Array<Config> = [
       "no-promise-executor-return": [0],
       "no-proto": [2],
       "no-prototype-builtins": [2],
-      "no-redeclare": [0],
+      "no-redeclare": [2],
       "no-regex-spaces": [2],
       "no-restricted-exports": [0],
       "no-restricted-globals": [2, "self"],
@@ -924,13 +924,35 @@ const config: Array<Config> = [
       "no-restricted-syntax": [2, ...noRestrictedSyntax()],
     },
   },
+  { // rules handled by typescript
+    files: [`**/*.{${tsExts.join(",")}}`],
+    rules: {
+      "constructor-super": [0], // ts(2335) ts(2377)
+      "getter-return": [0], // ts(2378)
+      "no-const-assign": [0], // ts(2588)
+      "no-dupe-args": [0], // ts(2300)
+      "no-dupe-class-members": [0], // ts(2393) ts(2300)
+      "no-dupe-keys": [0], // ts(1117)
+      "no-func-assign": [0], // ts(2630)
+      "no-import-assign": [0], // ts(2632) ts(2540)
+      "no-new-native-nonconstructor": [0], // ts(7009)
+      "no-new-symbol": [0], // ts(7009)
+      "no-obj-calls": [0], // ts(2349)
+      "no-redeclare": [0], // ts(2451)
+      "no-setter-return": [0], // ts(2408)
+      "no-this-before-super": [0], // ts(2376) ts(17009)
+      "no-undef": [0], // ts(2304)
+      "no-unreachable": [0], // ts(7027)
+      "no-unsafe-negation": [0], // ts(2365) ts(2322) ts(2358)
+      "valid-typeof": [0], // ts(2367)
+    },
+  },
   {
     files: ["**/*.d.ts"],
     rules: {
       "@typescript-eslint/consistent-type-definitions": [0],
       "@typescript-eslint/consistent-type-imports": [0],
       "@typescript-eslint/no-unused-vars": [0],
-      "no-undef": [0],
       "no-var": [0],
     }
   },

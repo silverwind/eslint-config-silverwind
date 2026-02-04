@@ -630,7 +630,7 @@ const config: Array<Config> = [
       "radix": [2, "as-needed"],
       "react-hooks/component-hook-factories": [0], // rule too broad, factories can be used well without issue
       "react-hooks/config": [0],
-      "react-hooks/error-boundaries": [2],
+      "react-hooks/error-boundaries": [0],
       "react-hooks/exhaustive-deps": [2],
       "react-hooks/gating": [0],
       "react-hooks/globals": [2],
@@ -642,7 +642,7 @@ const config: Array<Config> = [
       "react-hooks/rules-of-hooks": [2],
       "react-hooks/set-state-in-effect": [2],
       "react-hooks/set-state-in-render": [2],
-      "react-hooks/static-components": [2],
+      "react-hooks/static-components": [0],
       "react-hooks/todo": [0], // debug rule for compiler bugs
       "react-hooks/unsupported-syntax": [2],
       "react-hooks/use-memo": [2],
@@ -1138,6 +1138,8 @@ const config: Array<Config> = [
       "jsx-a11y/role-supports-aria-props": [2],
       "jsx-a11y/scope": [0],
       "jsx-a11y/tabindex-no-positive": [2],
+      "react-hooks/error-boundaries": [2],
+      "react-hooks/static-components": [2],
       "validate-jsx-nesting/no-invalid-jsx-nesting": [2],
     }
   },

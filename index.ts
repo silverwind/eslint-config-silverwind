@@ -31,7 +31,6 @@ function noRestrictedSyntax() {
     "WithStatement",
     "ForInStatement",
     // "LabeledStatement", // consider enabling later, in use
-    "SequenceExpression",
   ];
 }
 
@@ -523,7 +522,7 @@ const config: Array<Config> = [
       "no-new": [0],
       "no-new-func": [0], // covered by @typescript-eslint/no-implied-eval
       "no-new-native-nonconstructor": [2],
-      "no-new-symbol": [2],
+      "no-new-symbol": [0], // handled by no-new-native-nonconstructor
       "no-new-wrappers": [2],
       "no-nonoctal-decimal-escape": [2],
       "no-obj-calls": [2],
@@ -554,7 +553,7 @@ const config: Array<Config> = [
       "no-template-curly-in-string": [2],
       "no-ternary": [0],
       "no-this-before-super": [2],
-      "no-throw-literal": [2],
+      "no-throw-literal": [0], // handled by @typescript-eslint/only-throw-error
       "no-undef": [2, {"typeof": true}],
       "no-undef-init": [2],
       "no-undefined": [0],
@@ -687,7 +686,7 @@ const config: Array<Config> = [
       "regexp/prefer-question-quantifier": [2],
       "regexp/prefer-range": [2],
       "regexp/prefer-regexp-exec": [2],
-      "regexp/prefer-regexp-test": [2],
+      "regexp/prefer-regexp-test": [0], // handled by unicorn/prefer-regexp-test
       "regexp/prefer-result-array-groups": [0],
       "regexp/prefer-set-operation": [2],
       "regexp/prefer-star-quantifier": [2],
@@ -718,7 +717,7 @@ const config: Array<Config> = [
       "sonarjs/no-empty-collection": [2],
       "sonarjs/no-extra-arguments": [2],
       "sonarjs/no-gratuitous-expressions": [2],
-      "sonarjs/no-identical-conditions": [2],
+      "sonarjs/no-identical-conditions": [0], // handled by no-dupe-else-if
       "sonarjs/no-identical-expressions": [2],
       "sonarjs/no-identical-functions": [0], // has bugs with identical react hooks in different components
       "sonarjs/no-ignored-return": [2],
@@ -731,7 +730,7 @@ const config: Array<Config> = [
       "sonarjs/no-small-switch": [0],
       "sonarjs/no-unused-collection": [2],
       "sonarjs/no-use-of-empty-return-value": [2],
-      "sonarjs/no-useless-catch": [2],
+      "sonarjs/no-useless-catch": [0], // handled by no-useless-catch
       "sonarjs/non-existent-operator": [2],
       "sonarjs/prefer-immediate-return": [0],
       "sonarjs/prefer-object-literal": [0],
@@ -820,7 +819,7 @@ const config: Array<Config> = [
       "unicorn/number-literal-case": [0],
       "unicorn/numeric-separators-style": [0],
       "unicorn/prefer-add-event-listener": [2],
-      "unicorn/prefer-array-find": [2],
+      "unicorn/prefer-array-find": [0], // handled by @typescript-eslint/prefer-find
       "unicorn/prefer-array-flat": [2],
       "unicorn/prefer-array-flat-map": [2],
       "unicorn/prefer-array-index-of": [2],
@@ -841,7 +840,7 @@ const config: Array<Config> = [
       "unicorn/prefer-export-from": [0],
       "unicorn/prefer-global-this": [0],
       "unicorn/prefer-import-meta-properties": [2],
-      "unicorn/prefer-includes": [2],
+      "unicorn/prefer-includes": [0], // handled by @typescript-eslint/prefer-includes
       "unicorn/prefer-json-parse-buffer": [0],
       "unicorn/prefer-keyboard-event-key": [2],
       "unicorn/prefer-logical-operator-over-ternary": [2],
@@ -868,7 +867,7 @@ const config: Array<Config> = [
       "unicorn/prefer-string-raw": [0],
       "unicorn/prefer-string-replace-all": [0],
       "unicorn/prefer-string-slice": [0],
-      "unicorn/prefer-string-starts-ends-with": [2],
+      "unicorn/prefer-string-starts-ends-with": [0], // handled by @typescript-eslint/prefer-string-starts-ends-with
       "unicorn/prefer-string-trim-start-end": [2],
       "unicorn/prefer-structured-clone": [2],
       "unicorn/prefer-switch": [0],
@@ -896,6 +895,7 @@ const config: Array<Config> = [
   { // overrides for js
     files: [`**/*.{${jsExts.join(",")}}`],
     rules: {
+      "@typescript-eslint/no-redeclare": [0], // handled by no-redeclare
       "no-restricted-syntax": [2, ...noRestrictedSyntax()],
     },
   },

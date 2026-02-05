@@ -1,8 +1,8 @@
 SOURCE_FILES := index.ts
 DIST_FILES := dist/index.js
 
-node_modules: package-lock.json
-	npm install --no-save
+node_modules: pnpm-lock.yaml
+	pnpm install
 	@touch node_modules
 
 .PHONY: deps
@@ -10,55 +10,55 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules build
-	npx eslint -c dist/index.js --color .
-	npx tsgo
+	pnpm exec eslint -c dist/index.js --color .
+	pnpm exec tsgo
 
 .PHONY: lint-fix
 lint-fix: node_modules build
-	npx eslint -c dist/index.js --color --fix .
-	npx tsgo
+	pnpm exec eslint -c dist/index.js --color --fix .
+	pnpm exec tsgo
 
 .PHONY: test
 test: node_modules build
-	npx eslint -c dist/index.js --color tests
-	npx vitest
+	pnpm exec eslint -c dist/index.js --color tests
+	pnpm exec vitest
 
 .PHONY: test-update
 test-update: node_modules build
-	npx vitest -u
+	pnpm exec vitest -u
 
 .PHONY: build
 build: $(DIST_FILES)
 
-$(DIST_FILES): $(SOURCE_FILES) package-lock.json package.json tsdown.config.ts
-	npx tsdown
+$(DIST_FILES): $(SOURCE_FILES) pnpm-lock.yaml package.json tsdown.config.ts
+	pnpm exec tsdown
 
 .PHONY: watch
 watch:
-	npx tsdown --watch
+	pnpm exec tsdown --watch
 
 .PHONY: update
 update: node_modules
-	npx updates -cu
-	rm -rf node_modules package-lock.json
-	npm install
+	pnpm exec updates -cu
+	rm -rf node_modules pnpm-lock.yaml
+	pnpm install
 	@touch node_modules
 
 .PHONY: publish
 publish: node_modules
-	npm publish
+	pnpm publish
 
 .PHONY: path
 patch: node_modules lint test
-	npx versions patch package.json package-lock.json
+	pnpm exec versions patch package.json pnpm-lock.yaml
 	git push -u --tags origin master
 
 .PHONY: minor
 minor: node_modules lint test
-	npx versions minor package.json package-lock.json
+	pnpm exec versions minor package.json pnpm-lock.yaml
 	git push -u --tags origin master
 
 .PHONY: major
 major: node_modules lint test
-	npx versions major package.json package-lock.json
+	pnpm exec versions major package.json pnpm-lock.yaml
 	git push -u --tags origin master

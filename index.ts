@@ -920,6 +920,7 @@ const config: Array<Config> = [
       "no-unreachable": [0], // ts(7027)
       "no-unsafe-negation": [0], // ts(2365) ts(2322) ts(2358)
       "valid-typeof": [0], // ts(2367)
+      "import-x/no-unresolved": [0], // handled by tsc
     },
   },
   {

@@ -5,7 +5,7 @@ import {foo} from "./test2"; // eslint-disable-line import-x/extensions
 // @ts-expect-error
 import type bar from "./test2"; // eslint-disable-line import-x/extensions,@typescript-eslint/no-unused-vars
 // @ts-expect-error
-import nonexist from "./nonexist"; // eslint-disable-line import-x/extensions,@typescript-eslint/no-unused-vars,import-x/no-unresolved
+import nonexist from "./nonexist"; // eslint-disable-line import-x/extensions,@typescript-eslint/no-unused-vars
 
 type Foo = Record<string, any>;
 type Bar = Foo & {bar?: string};

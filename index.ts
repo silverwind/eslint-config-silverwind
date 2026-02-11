@@ -921,6 +921,8 @@ const config: Array<Config> = [
       "no-unsafe-negation": [0], // ts(2365) ts(2322) ts(2358)
       "valid-typeof": [0], // ts(2367)
       "import-x/no-unresolved": [0], // handled by tsc
+      "sonarjs/no-extra-arguments": [0], // ts(2554)
+      "sonarjs/no-use-of-empty-return-value": [0], // ts(2322)
     },
   },
   {

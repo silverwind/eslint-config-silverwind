@@ -403,7 +403,7 @@ const config: Array<Config> = [
       "import-x/dynamic-import-chunkname": [0],
       "import-x/export": [2],
       "import-x/exports-last": [0],
-      "import-x/extensions": [2, "ignorePackages", {"checkTypeImports": true}],
+      "import-x/extensions": [2, "ignorePackages", {"checkTypeImports": true, "js": "always"}],
       "import-x/first": [2],
       "import-x/group-exports": [0],
       "import-x/max-dependencies": [0],

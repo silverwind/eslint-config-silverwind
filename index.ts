@@ -154,7 +154,6 @@ const config: Array<Config> = [
       "@eslint-react/no-unnecessary-use-callback": [2],
       "@eslint-react/no-unnecessary-use-memo": [2],
       "@eslint-react/no-unnecessary-use-prefix": [0],
-      "@eslint-react/no-unnecessary-use-ref": [0], // https://github.com/Rel1cx/eslint-react/issues/1417
       "@eslint-react/no-unsafe-component-will-mount": [0],
       "@eslint-react/no-unsafe-component-will-receive-props": [0],
       "@eslint-react/no-unsafe-component-will-update": [0],
@@ -759,6 +758,7 @@ const config: Array<Config> = [
       "unicorn/filename-case": [0],
       "unicorn/import-index": [0],
       "unicorn/import-style": [0],
+      "unicorn/isolated-functions": [2, {functions: []}],
       "unicorn/new-for-builtins": [2],
       "unicorn/no-abusive-eslint-disable": [0],
       "unicorn/no-accessor-recursion": [2],

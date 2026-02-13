@@ -26,8 +26,8 @@
     "@stylistic/eslint-plugin": "5.8.0",
     "@types/eslint": "9.6.1",
     "@types/node": "25.2.3",
-    "@types/react": "19.2.13",
-    "@typescript/native-preview": "7.0.0-dev.20260211.1",
+    "@types/react": "19.2.14",
+    "@typescript/native-preview": "7.0.0-dev.20260213.1",
     "@vitest/eslint-plugin": "1.6.7",
     "eslint": "9.39.2",
     "eslint-plugin-array-func": "5.1.0",
@@ -39,7 +39,7 @@
     "eslint-plugin-react-web-api": "2.12.4",
     "eslint-plugin-react-x": "2.12.4",
     "eslint-plugin-regexp": "3.0.0",
-    "eslint-plugin-sonarjs": "3.0.6",
+    "eslint-plugin-sonarjs": "3.0.7",
     "eslint-plugin-storybook": "10.2.8",
     "eslint-plugin-unicorn": "63.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
@@ -48,13 +48,13 @@
     "tsdown": "0.20.3",
     "tsdown-config-silverwind": "1.7.5",
     "typescript": "5.9.3",
-    "typescript-config-silverwind": "14.0.1",
+    "typescript-config-silverwind": "15.0.0",
     "typescript-eslint": "8.55.0",
-    "updates": "17.4.0",
+    "updates": "17.5.1",
     "updates-config-silverwind": "1.0.3",
     "versions": "14.1.2",
     "vitest": "4.0.18",
     "vitest-config-silverwind": "10.6.3"
   },
-  "packageManager": "pnpm@10.29.2"
+  "packageManager": "pnpm@10.29.3"
 }

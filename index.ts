@@ -64,7 +64,7 @@ const config: Array<Linter.Config> = [
       sourceType: "module",
       globals: {
         ...globals.browser,
-        ...globals.nodeBuiltin, // esm only
+        ...globals.node,
       },
       parser: typescriptParser,
       parserOptions: {

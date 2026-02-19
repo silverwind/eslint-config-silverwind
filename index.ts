@@ -942,7 +942,7 @@ const config: Array<Linter.Config> = [
   },
   {
     ...playwright.configs["flat/recommended"],
-    files: ["tests/**"],
+    files: [`**/e2e/**.test.${[...jsExts, ...tsExts].join(",")}`],
     rules: {
       "playwright/expect-expect": [0],
       "playwright/no-networkidle": [0],

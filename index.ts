@@ -858,7 +858,7 @@ const config: Array<Linter.Config> = [
     }
   },
   {
-    files: ["**/*.worker.*"],
+    files: ["**/*.worker.*", "**/*.sharedworker.*"],
     languageOptions: {
       globals: globals.worker,
     },

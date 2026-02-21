@@ -19,6 +19,7 @@ import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import storybook from "eslint-plugin-storybook";
+import {env} from "node:process";
 import type {Linter} from "eslint";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
@@ -206,7 +207,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-base-to-string": [0],
       "@typescript-eslint/no-confusing-non-null-assertion": [2],
       "@typescript-eslint/no-confusing-void-expression": [0],
-      "@typescript-eslint/no-deprecated": [2],
+      "@typescript-eslint/no-deprecated": [env.CI ? 2 : 0],
       "@typescript-eslint/no-dupe-class-members": [0],
       "@typescript-eslint/no-duplicate-enum-values": [2],
       "@typescript-eslint/no-duplicate-type-constituents": [2, {ignoreUnions: true}],
@@ -351,7 +352,7 @@ const config: Array<Linter.Config> = [
       "import-x/no-amd": [2],
       "import-x/no-anonymous-default-export": [0],
       "import-x/no-commonjs": [2, {"allowConditionalRequire": false}],
-      "import-x/no-cycle": [2, {"ignoreExternal": true, "maxDepth": 1}], // disableScc is a massive speed gain for eslint-plugin-import
+      "import-x/no-cycle": [env.CI ? 2 : 0, {"ignoreExternal": true, "maxDepth": 1}],
       "import-x/no-default-export": [0],
       "import-x/no-deprecated": [0], // handled by @typescript-eslint/no-deprecated
       "import-x/no-duplicates": [2],

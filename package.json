@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-silverwind",
-  "version": "121.1.4",
+  "version": "121.1.5",
   "description": "Exhaustive ESLint configuration",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/eslint-config-silverwind",
@@ -23,12 +23,12 @@
     "jiti": "2.6.1"
   },
   "devDependencies": {
-    "@eslint-community/eslint-plugin-eslint-comments": "4.7.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "4.7.1",
     "@stylistic/eslint-plugin": "5.9.0",
     "@types/eslint": "9.6.1",
     "@types/node": "25.3.3",
     "@types/react": "19.2.14",
-    "@typescript/native-preview": "7.0.0-dev.20260301.1",
+    "@typescript/native-preview": "7.0.0-dev.20260302.1",
     "@vitest/eslint-plugin": "1.6.9",
     "eslint": "9.39.3",
     "eslint-plugin-array-func": "5.1.0",
@@ -41,7 +41,7 @@
     "eslint-plugin-react-x": "2.13.0",
     "eslint-plugin-regexp": "3.0.0",
     "eslint-plugin-sonarjs": "4.0.0",
-    "eslint-plugin-storybook": "10.2.13",
+    "eslint-plugin-storybook": "10.2.14",
     "eslint-plugin-unicorn": "63.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "17.4.0",

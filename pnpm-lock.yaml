@@ -17,6 +17,9 @@ importers:
       eslint-plugin-import-x:
         specifier: 4.16.1
         version: 4.16.1(@typescript-eslint/utils@8.56.1(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.3(jiti@2.6.1))
+      jiti:
+        specifier: 2.6.1
+        version: 2.6.1
     devDependencies:
       '@eslint-community/eslint-plugin-eslint-comments':
         specifier: 4.7.1
@@ -90,9 +93,6 @@ importers:
       globals:
         specifier: 17.4.0
         version: 17.4.0
-      jiti:
-        specifier: 2.6.1
-        version: 2.6.1
       react:
         specifier: 19.2.4
         version: 19.2.4

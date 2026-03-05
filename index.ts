@@ -219,7 +219,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-extra-non-null-assertion": [2],
       "@typescript-eslint/no-extraneous-class": [0],
       "@typescript-eslint/no-floating-promises": [0],
-      "@typescript-eslint/no-for-in-array": [2],
+      "@typescript-eslint/no-for-in-array": [0], // handled by no-restricted-syntax banning ForInStatement
       "@typescript-eslint/no-implied-eval": [2],
       "@typescript-eslint/no-import-type-side-effects": [0], // dupe with consistent-type-imports
       "@typescript-eslint/no-inferrable-types": [0],
@@ -332,7 +332,6 @@ const config: Array<Linter.Config> = [
       "getter-return": [2],
       "grouped-accessor-pairs": [2],
       "guard-for-in": [0],
-      "id-blacklist": [0],
       "id-denylist": [0],
       "id-length": [0],
       "id-match": [0],
@@ -425,7 +424,7 @@ const config: Array<Linter.Config> = [
       "no-empty-function": [0],
       "no-empty-pattern": [2],
       "no-empty-static-block": [2],
-      "no-eq-null": [2],
+      "no-eq-null": [0], // handled by eqeqeq
       "no-eval": [2],
       "no-ex-assign": [2],
       "no-extend-native": [2],
@@ -540,8 +539,6 @@ const config: Array<Linter.Config> = [
       "prefer-spread": [2],
       "prefer-template": [2],
       "radix": [2, "as-needed"],
-      "react-hooks/exhaustive-deps": [2],
-      "react-hooks/rules-of-hooks": [2],
       "regexp/confusing-quantifier": [2],
       "regexp/control-character-escape": [2],
       "regexp/hexadecimal-escape": [0],

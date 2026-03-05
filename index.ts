@@ -250,7 +250,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-unnecessary-type-arguments": [2],
       "@typescript-eslint/no-unnecessary-type-assertion": [2], // previously had typesToIgnore: [HTMLElement, NodeListOf<HTMLElement>]
       "@typescript-eslint/no-unnecessary-type-constraint": [2],
-      "@typescript-eslint/no-unnecessary-type-conversion": [0], // TODO: evaluate
+      "@typescript-eslint/no-unnecessary-type-conversion": [2],
       "@typescript-eslint/no-unsafe-argument": [0],
       "@typescript-eslint/no-unsafe-assignment": [0],
       "@typescript-eslint/no-unsafe-call": [0],
@@ -547,7 +547,7 @@ const config: Array<Linter.Config> = [
       "regexp/letter-case": [0],
       "regexp/match-any": [0],
       "regexp/negation": [2],
-      "regexp/no-contradiction-with-assertion": [0],
+      "regexp/no-contradiction-with-assertion": [2],
       "regexp/no-control-character": [0],
       "regexp/no-dupe-characters-character-class": [2],
       "regexp/no-dupe-disjunctions": [2],
@@ -563,8 +563,8 @@ const config: Array<Linter.Config> = [
       "regexp/no-invisible-character": [2],
       "regexp/no-lazy-ends": [2],
       "regexp/no-legacy-features": [2],
-      "regexp/no-misleading-capturing-group": [0],
-      "regexp/no-misleading-unicode-character": [0],
+      "regexp/no-misleading-capturing-group": [2],
+      "regexp/no-misleading-unicode-character": [2],
       "regexp/no-missing-g-flag": [2],
       "regexp/no-non-standard-flag": [2],
       "regexp/no-obscure-range": [2],

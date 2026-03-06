@@ -112,8 +112,8 @@ importers:
         specifier: 8.56.1
         version: 8.56.1(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3)
       updates:
-        specifier: 17.8.1
-        version: 17.8.1
+        specifier: 17.8.2
+        version: 17.8.2
       updates-config-silverwind:
         specifier: 1.0.3
         version: 1.0.3(prettier@3.8.1)
@@ -2148,8 +2148,8 @@ packages:
     peerDependencies:
       prettier: '*'
 
-  updates@17.8.1:
-    resolution: {integrity: sha512-FdVxtIWPdF/AHXCvsH75WGlYWg2J/ItBHBgdUVYEKmqlOxsiD5jB2aqZbfgNg8BHIDcGFcVZZlTUCorHVeNqtw==}
+  updates@17.8.2:
+    resolution: {integrity: sha512-GTqgl0BcO5/VWniegsFGaRfpuFr0y0ANep6lKa6dRC2KH23+cjjn+JFsiCmYFayHnunQqAbjPtVnjZs/9UNLTg==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -4230,7 +4230,7 @@ snapshots:
     dependencies:
       prettier: 3.8.1
 
-  updates@17.8.1: {}
+  updates@17.8.2: {}
 
   uri-js@4.4.1:
     dependencies:

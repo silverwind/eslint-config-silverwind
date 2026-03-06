@@ -9,7 +9,7 @@
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
   "bin": {
-    "eslint-silverwind": "bin/eslint-silverwind.js"
+    "eslint-silverwind": "bin/eslint-silverwind.ts"
   },
   "files": [
     "bin",

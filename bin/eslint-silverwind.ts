@@ -6,14 +6,20 @@ import {join} from "node:path";
 import {argv, cwd, exit, platform} from "node:process";
 
 const pwd = cwd();
-const configRe = /^eslint\.config\.\w+$/;
+const args = argv.slice(2);
 
 let hash = "";
 try {
   const h = createHash("sha1");
-  for (const file of readdirSync(pwd).sort()) {
-    if (configRe.test(file)) {
-      h.update(readFileSync(join(pwd, file)));
+  const cIndex = args.indexOf("-c");
+  if (cIndex !== -1 && args[cIndex + 1]) {
+    h.update(readFileSync(join(pwd, args[cIndex + 1])));
+  } else {
+    const configRe = /^eslint\.config\.\w+$/;
+    for (const file of readdirSync(pwd).sort()) {
+      if (configRe.test(file)) {
+        h.update(readFileSync(join(pwd, file)));
+      }
     }
   }
   for (const lockfile of ["pnpm-lock.yaml", "package-lock.json"]) {
@@ -35,16 +41,17 @@ if (hash) {
     "--cache-strategy", "content",
   );
 }
-eslintArgs.push("--flag", "unstable_native_nodejs_ts_config", ...argv.slice(2));
+eslintArgs.push("--flag", "unstable_native_nodejs_ts_config", ...args);
 
 try {
   execFileSync(platform === "win32" ? "pnpm.cmd" : "pnpm", eslintArgs, {
     stdio: "inherit",
   });
-} catch (err) {
-  if (err?.status === undefined || err?.status === null) {
-    console.error(err?.message ?? err);
+} catch (err: unknown) {
+  const {status} = err as {status?: number | null};
+  if (status === undefined || status === null) {
+    console.error(err instanceof Error ? err.message : err);
     exit(1);
   }
-  exit(err.status);
+  exit(status);
 }

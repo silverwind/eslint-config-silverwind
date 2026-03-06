@@ -3,7 +3,7 @@ import {execFileSync} from "node:child_process";
 import {createHash} from "node:crypto";
 import {readFileSync, readdirSync} from "node:fs";
 import {join} from "node:path";
-import {argv, cwd} from "node:process";
+import {argv, cwd, exit, platform} from "node:process";
 
 const pwd = cwd();
 const configRe = /^eslint\.config\.\w+$/;
@@ -11,7 +11,7 @@ const configRe = /^eslint\.config\.\w+$/;
 let hash = "";
 try {
   const h = createHash("sha1");
-  for (const file of readdirSync(pwd)) {
+  for (const file of readdirSync(pwd).sort()) {
     if (configRe.test(file)) {
       h.update(readFileSync(join(pwd, file)));
     }
@@ -35,8 +35,8 @@ const defaultFlags = [
 try {
   execFileSync("pnpm", ["exec", "eslint", ...defaultFlags, ...argv.slice(2)], {
     stdio: "inherit",
-    shell: process.platform === "win32",
+    shell: platform === "win32",
   });
 } catch (err) {
-  process.exit(err?.status ?? 1);
+  exit(err?.status ?? 1);
 }

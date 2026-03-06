@@ -25,15 +25,14 @@ try {
   hash = h.digest("hex").slice(0, 12);
 } catch {}
 
-const defaultFlags = [
-  "--cache",
-  "--cache-location", `node_modules/.cache/eslint/${hash}/`,
-  "--cache-strategy", "content",
-  "--flag", "unstable_native_nodejs_ts_config",
-];
-
 try {
-  execFileSync("pnpm", ["exec", "eslint", ...defaultFlags, ...argv.slice(2)], {
+  execFileSync("pnpm", ["exec", "eslint",
+    "--cache",
+    "--cache-location", `node_modules/.cache/eslint/${hash}/`,
+    "--cache-strategy", "content",
+    "--flag", "unstable_native_nodejs_ts_config",
+    ...argv.slice(2),
+  ], {
     stdio: "inherit",
     shell: platform === "win32",
   });

@@ -36,6 +36,6 @@ try {
   execFileSync("pnpm", ["exec", "eslint", ...defaultFlags, ...argv.slice(2)], {
     stdio: "inherit",
   });
-} catch (err: unknown) {
-  process.exit((err as {status?: number}).status ?? 1);
+} catch (err) {
+  process.exit(err?.status ?? 1);
 }

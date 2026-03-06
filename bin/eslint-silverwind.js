@@ -3,7 +3,7 @@ import {execFileSync} from "node:child_process";
 import {createHash} from "node:crypto";
 import {readFileSync, readdirSync} from "node:fs";
 import {join} from "node:path";
-import {argv, cwd, versions} from "node:process";
+import {argv, cwd} from "node:process";
 
 const pwd = cwd();
 const configRe = /^eslint\.config\.\w+$/;
@@ -29,11 +29,8 @@ const defaultFlags = [
   "--cache",
   "--cache-location", `node_modules/.cache/eslint/${hash}/`,
   "--cache-strategy", "content",
+  "--flag", "unstable_native_nodejs_ts_config",
 ];
-
-if (Number(versions.node.split(".")[0]) >= 22) {
-  defaultFlags.push("--flag", "unstable_native_nodejs_ts_config");
-}
 
 try {
   execFileSync("pnpm", ["exec", "eslint", ...defaultFlags, ...argv.slice(2)], {

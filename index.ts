@@ -207,7 +207,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-base-to-string": [0],
       "@typescript-eslint/no-confusing-non-null-assertion": [2],
       "@typescript-eslint/no-confusing-void-expression": [0],
-      "@typescript-eslint/no-deprecated": [env.CI ? 2 : 0],
+      "@typescript-eslint/no-deprecated": [2],
       "@typescript-eslint/no-dupe-class-members": [0],
       "@typescript-eslint/no-duplicate-enum-values": [2],
       "@typescript-eslint/no-duplicate-type-constituents": [2, {ignoreUnions: true}],

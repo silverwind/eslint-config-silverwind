@@ -30,6 +30,9 @@ importers:
       '@types/react':
         specifier: 19.2.14
         version: 19.2.14
+      '@typescript-eslint/parser':
+        specifier: 8.56.1
+        version: 8.56.1(eslint@9.39.3(jiti@2.6.1))(typescript@5.9.3)
       '@typescript-eslint/types':
         specifier: 8.56.1
         version: 8.56.1

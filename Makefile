@@ -1,4 +1,4 @@
-SOURCE_FILES := index.ts
+SOURCE_FILES := index.ts eslint-silverwind.ts
 DIST_FILES := dist/index.js
 
 node_modules: pnpm-lock.yaml
@@ -10,17 +10,17 @@ deps: node_modules
 
 .PHONY: lint
 lint: node_modules build
-	./bin/eslint-silverwind.ts -c dist/index.js --color .
+	./eslint-silverwind.ts -c dist/index.js --color .
 	pnpm exec tsgo
 
 .PHONY: lint-fix
 lint-fix: node_modules build
-	./bin/eslint-silverwind.ts -c dist/index.js --color --fix .
+	./eslint-silverwind.ts -c dist/index.js --color --fix .
 	pnpm exec tsgo
 
 .PHONY: test
 test: node_modules build
-	./bin/eslint-silverwind.ts -c dist/index.js --color tests
+	./eslint-silverwind.ts -c dist/index.js --color tests
 	pnpm exec vitest
 
 .PHONY: test-update

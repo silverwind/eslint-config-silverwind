@@ -6,10 +6,9 @@
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/eslint-config-silverwind",
   "bin": {
-    "eslint-silverwind": "bin/eslint-silverwind.ts"
+    "eslint-silverwind": "dist/eslint-silverwind.js"
   },
   "files": [
-    "bin",
     "dist"
   ],
   "type": "module",

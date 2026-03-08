@@ -46,6 +46,7 @@ eslintArgs.push("--flag", "unstable_native_nodejs_ts_config", ...args);
 try {
   execFileSync(platform === "win32" ? "pnpm.cmd" : "pnpm", eslintArgs, {
     stdio: "inherit",
+    ...(platform === "win32" && {shell: true}),
   });
 } catch (err: unknown) {
   const {status} = err as {status?: number | null};

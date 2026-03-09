@@ -250,7 +250,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-unnecessary-type-arguments": [2],
       "@typescript-eslint/no-unnecessary-type-assertion": [2], // previously had typesToIgnore: [HTMLElement, NodeListOf<HTMLElement>]
       "@typescript-eslint/no-unnecessary-type-constraint": [2],
-      "@typescript-eslint/no-unnecessary-type-conversion": [2],
+      "@typescript-eslint/no-unnecessary-type-conversion": [0], // too noisy and unnecessary
       "@typescript-eslint/no-unsafe-argument": [0],
       "@typescript-eslint/no-unsafe-assignment": [0],
       "@typescript-eslint/no-unsafe-call": [0],

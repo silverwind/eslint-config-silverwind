@@ -773,7 +773,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-native-coercion-functions": [2],
       "unicorn/prefer-negative-index": [2],
       "unicorn/prefer-node-protocol": [2],
-      "unicorn/prefer-number-properties": [2],
+      "unicorn/prefer-number-properties": [0],
       "unicorn/prefer-object-from-entries": [2],
       "unicorn/prefer-object-has-own": [0],
       "unicorn/prefer-optional-catch-binding": [2],

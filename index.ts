@@ -630,7 +630,7 @@ const config: Array<Linter.Config> = [
       "sonarjs/max-switch-cases": [0],
       "sonarjs/no-all-duplicated-branches": [2],
       "sonarjs/no-collapsible-if": [0],
-      "sonarjs/no-collection-size-mischeck": [0], // prevents bundling of typescript-eslint parser
+      "sonarjs/no-collection-size-mischeck": [2],
       "sonarjs/no-duplicate-string": [0],
       "sonarjs/no-duplicated-branches": [0],
       "sonarjs/no-element-overwrite": [2],
@@ -640,7 +640,7 @@ const config: Array<Linter.Config> = [
       "sonarjs/no-identical-conditions": [0], // handled by no-dupe-else-if
       "sonarjs/no-identical-expressions": [2],
       "sonarjs/no-identical-functions": [0], // has bugs with identical react hooks in different components
-      "sonarjs/no-ignored-return": [0], // prevents bundling of typescript-eslint parser
+      "sonarjs/no-ignored-return": [2],
       "sonarjs/no-inverted-boolean-check": [2],
       "sonarjs/no-nested-switch": [0],
       "sonarjs/no-nested-template-literals": [0],

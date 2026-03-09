@@ -4,10 +4,11 @@ import {argv, exit, platform} from "node:process";
 
 const args = argv.slice(2);
 
-const eslintArgs = ["exec", "eslint", "--flag", "unstable_native_nodejs_ts_config", ...args];
-
 try {
-  execFileSync("pnpm", eslintArgs, {
+  execFileSync("pnpm", ["exec", "eslint", ...Object.entries({
+    "--flag": "unstable_native_nodejs_ts_config",
+    "--concurrency": "3",
+  }).filter(([flag]) => !args.includes(flag)).flat(), ...args], {
     stdio: "inherit",
     ...(platform === "win32" && {shell: true}),
   });

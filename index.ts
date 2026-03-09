@@ -672,7 +672,7 @@ const config: Array<Linter.Config> = [
       "unicorn/consistent-function-scoping": [2],
       "unicorn/custom-error-definition": [0],
       "unicorn/empty-brace-spaces": [2],
-      "unicorn/error-message": [2],
+      "unicorn/error-message": [0],
       "unicorn/escape-case": [0],
       "unicorn/expiring-todo-comments": [0],
       "unicorn/explicit-length-check": [0],

@@ -39,7 +39,7 @@
     "eslint-plugin-react-web-api": "2.13.0",
     "eslint-plugin-react-x": "2.13.0",
     "eslint-plugin-regexp": "3.1.0",
-    "eslint-plugin-sonarjs": "4.0.1",
+    "eslint-plugin-sonarjs": "4.0.2",
     "eslint-plugin-storybook": "10.2.17",
     "eslint-plugin-unicorn": "63.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",

@@ -76,8 +76,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(eslint@9.39.4)
       eslint-plugin-sonarjs:
-        specifier: 4.0.1
-        version: 4.0.1(eslint@9.39.4)
+        specifier: 4.0.2
+        version: 4.0.2(eslint@9.39.4)
       eslint-plugin-storybook:
         specifier: 10.2.17
         version: 10.2.17(eslint@9.39.4)(storybook@10.2.17(@testing-library/dom@10.4.1)(prettier@3.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
@@ -1434,8 +1434,8 @@ packages:
     peerDependencies:
       eslint: '>=9.38.0'
 
-  eslint-plugin-sonarjs@4.0.1:
-    resolution: {integrity: sha512-lmqzFTrw0/zpHQMRmwdgdEEw50s3md0c8RE23JqNom9ovsGQxC/azZ9H00aGKVDkxIXywfcxwzyFJ9Sm3bp2ng==}
+  eslint-plugin-sonarjs@4.0.2:
+    resolution: {integrity: sha512-BTcT1zr1iTbmJtVlcesISwnXzh+9uhf9LEOr+RRNf4kR8xA0HQTPft4oiyOCzCOGKkpSJxjR8ZYF6H7VPyplyw==}
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0 || ^10.0.0
 
@@ -3503,7 +3503,7 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-sonarjs@4.0.1(eslint@9.39.4):
+  eslint-plugin-sonarjs@4.0.2(eslint@9.39.4):
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       builtin-modules: 3.3.0

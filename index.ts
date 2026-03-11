@@ -295,7 +295,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/prefer-namespace-keyword": [0],
       "@typescript-eslint/prefer-nullish-coalescing": [0],
       "@typescript-eslint/prefer-optional-chain": [2, {requireNullish: true}],
-      "@typescript-eslint/prefer-promise-reject-errors": [0],
+      "@typescript-eslint/prefer-promise-reject-errors": [2],
       "@typescript-eslint/prefer-readonly": [0],
       "@typescript-eslint/prefer-readonly-parameter-types": [0],
       "@typescript-eslint/prefer-reduce-type-parameter": [0],
@@ -553,7 +553,7 @@ const config: Array<Linter.Config> = [
       "prefer-numeric-literals": [2],
       "prefer-object-has-own": [2],
       "prefer-object-spread": [2],
-      "prefer-promise-reject-errors": [2, {"allowEmptyReject": false}],
+      "prefer-promise-reject-errors": [0], // handled by @typescript-eslint/prefer-promise-reject-errors
       "prefer-regex-literals": [2, {disallowRedundantWrapping: true}],
       "prefer-rest-params": [2],
       "prefer-spread": [2],

@@ -910,7 +910,7 @@ const config: Array<Linter.Config> = [
       "vitest/max-nested-describe": [0],
       "vitest/no-alias-methods": [0],
       "vitest/no-commented-out-tests": [0],
-      "vitest/no-conditional-expect": [2],
+      "vitest/no-conditional-expect": [0],
       "vitest/no-conditional-in-test": [0],
       "vitest/no-conditional-tests": [0],
       "vitest/no-disabled-tests": [0],

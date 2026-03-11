@@ -13,4 +13,11 @@ import {defineConfig} from "eslint/config";
 export default defineConfig(...silverwind);
 ```
 
+Run via the included `eslint-silverwind` wrapper CLI. All arguments are passed through to `eslint`.
+
+```bash
+eslint-silverwind .
+eslint-silverwind --fix .
+```
+
 © [silverwind](https://github.com/silverwind), distributed under BSD licence.

@@ -379,7 +379,7 @@ const config: Array<Linter.Config> = [
       "import-x/no-import-module-exports": [0],
       "import-x/no-internal-modules": [0],
       "import-x/no-mutable-exports": [0],
-      "import-x/no-named-as-default": [2],
+      "import-x/no-named-as-default": [0], // too noisy
       "import-x/no-named-as-default-member": [0],
       "import-x/no-named-default": [0],
       "import-x/no-named-export": [0],

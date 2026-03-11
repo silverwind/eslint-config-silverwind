@@ -740,7 +740,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-process-exit": [0],
       "unicorn/no-single-promise-in-promise-methods": [2],
       "unicorn/no-static-only-class": [2],
-      "unicorn/no-thenable": [2],
+      "unicorn/no-thenable": [0],
       "unicorn/no-this-assignment": [2],
       "unicorn/no-typeof-undefined": [2],
       "unicorn/no-unnecessary-array-flat-depth": [2],

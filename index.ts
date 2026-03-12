@@ -1,6 +1,7 @@
 import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
 import arrayFunc from "eslint-plugin-array-func";
+import deMorgan from "eslint-plugin-de-morgan";
 import importPlugin from "eslint-plugin-import-x";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
@@ -85,6 +86,7 @@ const config: Array<Linter.Config> = [
       "@stylistic": stylistic,
       "@typescript-eslint": typescriptPlugin.plugin,
       "array-func": arrayFunc,
+      "de-morgan": deMorgan,
       // @ts-expect-error
       "import-x": importPlugin,
       "react-hooks": reactHooks,
@@ -337,6 +339,8 @@ const config: Array<Linter.Config> = [
       "consistent-this": [0],
       "constructor-super": [2],
       "curly": [0],
+      "de-morgan/no-negated-conjunction": [2],
+      "de-morgan/no-negated-disjunction": [2],
       "default-case": [0],
       "default-case-last": [2],
       "default-param-last": [0],

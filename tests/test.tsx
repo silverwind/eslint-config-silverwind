@@ -34,3 +34,5 @@ class C { // eslint-disable-line @typescript-eslint/no-unused-vars
 Array.from([]).map((t) => t); // eslint-disable-line array-func/from-map, sonarjs/no-ignored-return
 
 export const button = <button role="button"/>; // eslint-disable-line jsx-a11y/no-redundant-roles
+
+const _c = !(button && foo); // eslint-disable-line de-morgan/no-negated-conjunction

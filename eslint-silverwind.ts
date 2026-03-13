@@ -7,7 +7,7 @@ const args = argv.slice(2);
 try {
   execFileSync("pnpm", ["exec", "eslint", ...Object.entries({
     "--flag": "unstable_native_nodejs_ts_config",
-    "--concurrency": "3",
+    "--concurrency": "2",
   }).filter(([flag]) => !args.includes(flag)).flat(), ...args], {
     stdio: "inherit",
     ...(platform === "win32" && {shell: true}),

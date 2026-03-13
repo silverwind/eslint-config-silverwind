@@ -87,7 +87,6 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint": typescriptPlugin.plugin,
       "array-func": arrayFunc,
       "de-morgan": deMorgan,
-      // @ts-expect-error
       "import-x": importPlugin,
       "react-hooks": reactHooks,
       regexp,

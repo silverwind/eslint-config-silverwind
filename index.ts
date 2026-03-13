@@ -500,7 +500,7 @@ const config: Array<Linter.Config> = [
       "no-restricted-exports": [0],
       "no-restricted-globals": [2, "self"],
       "no-restricted-imports": [2, noRestrictedImports],
-      "no-restricted-properties": [0],
+      "no-restricted-properties": [2, {object: "document", property: "all"}],
       "no-restricted-syntax": [2, ...noRestrictedSyntax()],
       "no-return-assign": [0],
       "no-script-url": [2],

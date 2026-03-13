@@ -35,4 +35,5 @@ Array.from([]).map((t) => t); // eslint-disable-line array-func/from-map, sonarj
 
 export const button = <button role="button"/>; // eslint-disable-line jsx-a11y/no-redundant-roles
 
+// @ts-expect-error
 const _c = !(button && foo); // eslint-disable-line de-morgan/no-negated-conjunction

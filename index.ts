@@ -372,7 +372,7 @@ const config: Array<Linter.Config> = [
       "import-x/no-amd": [2],
       "import-x/no-anonymous-default-export": [0],
       "import-x/no-commonjs": [2, {"allowConditionalRequire": false}],
-      "import-x/no-cycle": [env.CI ? 2 : 0, {"ignoreExternal": true, "maxDepth": 1}],
+      "import-x/no-cycle": [2, {"ignoreExternal": true, "maxDepth": 1}],
       "import-x/no-default-export": [0],
       "import-x/no-deprecated": [0], // handled by @typescript-eslint/no-deprecated
       "import-x/no-duplicates": [2],

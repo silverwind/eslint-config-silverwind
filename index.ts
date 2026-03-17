@@ -20,7 +20,6 @@ import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import storybook from "eslint-plugin-storybook";
-import {env} from "node:process";
 import type {Linter} from "eslint";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;

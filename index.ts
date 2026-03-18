@@ -592,7 +592,7 @@ const config: Array<Linter.Config> = [
       "regexp/no-optional-assertion": [2],
       "regexp/no-potentially-useless-backreference": [2],
       "regexp/no-standalone-backslash": [2],
-      "regexp/no-super-linear-backtracking": [2],
+      "regexp/no-super-linear-backtracking": [0],
       "regexp/no-super-linear-move": [0],
       "regexp/no-trivially-nested-assertion": [2],
       "regexp/no-trivially-nested-quantifier": [2],

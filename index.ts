@@ -896,7 +896,6 @@ const config: Array<Linter.Config> = [
     ],
     languageOptions: {globals: globals.vitest},
     rules: {
-      "react/error-boundaries": [0],
       "unicorn/consistent-function-scoping": [0],
       "vitest/consistent-each-for": [0],
       "vitest/consistent-test-filename": [0],
@@ -1245,6 +1244,12 @@ const config: Array<Linter.Config> = [
       "react-refresh/only-export-components": [2, {allowConstantExport: true}],
       "validate-jsx-nesting/no-invalid-jsx-nesting": [2],
     }
+  },
+  {
+    files: ["**/*.test.*"],
+    rules: {
+      "react/error-boundaries": [0],
+    },
   },
   {
     files: ["**/*.stories.*"],

@@ -43,11 +43,6 @@ declare module "eslint-plugin-react" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
-declare module "eslint-plugin-jsx-a11y-x" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
 declare module "eslint-plugin-react-refresh" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;

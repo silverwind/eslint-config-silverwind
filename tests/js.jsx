@@ -5,17 +5,17 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
   const ref = useRef(0);
   // @ts-expect-error
   const _ref2 = useRef(null);
-  const [_val, _setVal] = useState(null); // eslint-disable-line @eslint-react/naming-convention/use-state
-  const value = ref.current; // eslint-disable-line react-hooks/refs
+  const [_val, _setVal] = useState(null); // eslint-disable-line react/use-state
+  const value = ref.current; // eslint-disable-line react/refs
   // @ts-expect-error
   const _x = (
     <div>
       <Fragment>
         <button/>
-        ${"foo"}{/* eslint-disable-line @eslint-react/jsx-dollar */}
+        ${"foo"}{/* eslint-disable-line react/jsx-dollar */}
         <button/>
       </Fragment>
     </div>
   );
-  return <><button disabled={true}>{value}</button></>; // eslint-disable-line @eslint-react/jsx-shorthand-fragment
+  return <><button disabled={true}>{value}</button></>; // eslint-disable-line react/jsx-shorthand-fragment
 }

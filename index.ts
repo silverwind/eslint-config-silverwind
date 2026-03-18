@@ -512,6 +512,7 @@ const config: Array<Linter.Config> = [
       "no-throw-literal": [0], // handled by @typescript-eslint/only-throw-error
       "no-undef": [2, {"typeof": true}],
       "no-undef-init": [2],
+      "no-unassigned-vars": [2],
       "no-undefined": [0],
       "no-underscore-dangle": [0],
       "no-unexpected-multiline": [2],
@@ -557,6 +558,7 @@ const config: Array<Linter.Config> = [
       "prefer-rest-params": [2],
       "prefer-spread": [2],
       "prefer-template": [2],
+      "preserve-caught-error": [0],
       "radix": [0],
       "regexp/confusing-quantifier": [2],
       "regexp/control-character-escape": [2],

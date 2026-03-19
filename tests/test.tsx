@@ -37,3 +37,6 @@ Array.from([]).map((t) => t); // eslint-disable-line array-func/from-map, sonarj
 
 // @ts-expect-error
 const _c = !(button && foo); // eslint-disable-line de-morgan/no-negated-conjunction
+
+// @ts-expect-error
+const _d = document.all; // eslint-disable-line @typescript-eslint/no-deprecated

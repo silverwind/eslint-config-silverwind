@@ -1119,7 +1119,7 @@ const config: Array<Linter.Config> = [
       "react/component-hook-factories": [0], // replaces react-hooks/component-hook-factories
       "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
       "react/exhaustive-deps": [2, {additionalHooks: "^(useEffectOnce|useLayoutEffectOnce)$"}], // replaces react-hooks/exhaustive-deps
-      "react/immutability": [2], // replaces react-hooks/immutability
+      "react/immutability": [0], // https://github.com/Rel1cx/eslint-react/issues/1626
       "react/jsx-dollar": [2],
       "react/jsx-key-before-spread": [2],
       "react/jsx-no-comment-textnodes": [2],

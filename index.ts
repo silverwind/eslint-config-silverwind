@@ -19,6 +19,7 @@ import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import storybook from "eslint-plugin-storybook";
+import testingLibrary from "eslint-plugin-testing-library";
 import type {Linter} from "eslint";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
@@ -1251,6 +1252,41 @@ const config: Array<Linter.Config> = [
     files: ["**/*.test.*"],
     rules: {
       "react/error-boundaries": [0],
+    },
+  },
+  {
+    files: ["**/*.test.*"],
+    plugins: {"testing-library": testingLibrary},
+    rules: {
+      "testing-library/await-async-events": [2, {eventModule: "userEvent"}],
+      "testing-library/await-async-queries": [2],
+      "testing-library/await-async-utils": [2],
+      "testing-library/consistent-data-testid": [0],
+      "testing-library/no-await-sync-events": [2, {eventModules: ["fire-event"]}],
+      "testing-library/no-await-sync-queries": [2],
+      "testing-library/no-container": [0],
+      "testing-library/no-debugging-utils": [2],
+      "testing-library/no-dom-import": [2, "react"],
+      "testing-library/no-global-regexp-flag-in-query": [2],
+      "testing-library/no-manual-cleanup": [2],
+      "testing-library/no-node-access": [0],
+      "testing-library/no-promise-in-fire-event": [2],
+      "testing-library/no-render-in-lifecycle": [2],
+      "testing-library/no-test-id-queries": [0],
+      "testing-library/no-unnecessary-act": [2],
+      "testing-library/no-wait-for-multiple-assertions": [2],
+      "testing-library/no-wait-for-side-effects": [2],
+      "testing-library/no-wait-for-snapshot": [2],
+      "testing-library/prefer-explicit-assert": [0],
+      "testing-library/prefer-find-by": [2],
+      "testing-library/prefer-implicit-assert": [0],
+      "testing-library/prefer-presence-queries": [2],
+      "testing-library/prefer-query-by-disappearance": [2],
+      "testing-library/prefer-query-matchers": [0],
+      "testing-library/prefer-screen-queries": [2],
+      "testing-library/prefer-user-event": [0],
+      "testing-library/prefer-user-event-setup": [0],
+      "testing-library/render-result-naming-convention": [2],
     },
   },
   {

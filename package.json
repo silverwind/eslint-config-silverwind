@@ -16,7 +16,7 @@
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
   "dependencies": {
-    "@typescript-eslint/parser": "8.57.1",
+    "@typescript-eslint/parser": "8.57.2",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.2"
   },
@@ -26,8 +26,8 @@
     "@types/eslint": "9.6.1",
     "@types/node": "25.5.0",
     "@types/react": "19.2.14",
-    "@typescript-eslint/types": "8.57.1",
-    "@typescript/native-preview": "7.0.0-dev.20260323.1",
+    "@typescript-eslint/types": "8.57.2",
+    "@typescript/native-preview": "7.0.0-dev.20260326.1",
     "@vitest/eslint-plugin": "1.6.13",
     "eslint": "10.1.0",
     "eslint-plugin-array-func": "5.1.1",
@@ -40,25 +40,25 @@
     "eslint-plugin-react-x": "3.0.0",
     "eslint-plugin-regexp": "3.1.0",
     "eslint-plugin-sonarjs": "4.0.2",
-    "eslint-plugin-storybook": "10.3.2",
+    "eslint-plugin-storybook": "10.3.3",
     "eslint-plugin-testing-library": "7.16.2",
     "eslint-plugin-unicorn": "63.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "17.4.0",
     "react": "19.2.4",
-    "tsdown": "0.21.4",
-    "tsdown-config-silverwind": "2.0.2",
+    "tsdown": "0.21.5",
+    "tsdown-config-silverwind": "2.0.3",
     "typescript": "5.9.3",
-    "typescript-config-silverwind": "16.0.0",
-    "typescript-eslint": "8.57.1",
-    "updates": "17.10.1",
-    "updates-config-silverwind": "2.0.0",
-    "versions": "14.2.4",
-    "vitest": "4.1.0",
-    "vitest-config-silverwind": "10.6.5"
+    "typescript-config-silverwind": "16.1.0",
+    "typescript-eslint": "8.57.2",
+    "updates": "17.12.0",
+    "updates-config-silverwind": "2.0.1",
+    "versions": "14.2.6",
+    "vitest": "4.1.2",
+    "vitest-config-silverwind": "11.0.2"
   },
   "peerDependencies": {
     "eslint": "*"
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@10.33.0"
 }

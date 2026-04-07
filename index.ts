@@ -11,6 +11,7 @@ import playwright from "eslint-plugin-playwright";
 import globals from "globals";
 // import jsxA11y from "eslint-plugin-jsx-a11y-x";
 import reactX from "eslint-plugin-react-x";
+import reactJsx from "eslint-plugin-react-jsx";
 import reactDom from "eslint-plugin-react-dom";
 import reactWebApi from "eslint-plugin-react-web-api";
 import reactNamingConvention from "eslint-plugin-react-naming-convention";
@@ -1099,6 +1100,7 @@ const config: Array<Linter.Config> = [
   {
     plugins: {
       "react": reactX,
+      "react-jsx": reactJsx,
       "react-dom": reactDom,
       "react-web-api": reactWebApi,
       "react-naming-convention": reactNamingConvention,
@@ -1115,7 +1117,6 @@ const config: Array<Linter.Config> = [
       "react-dom/no-hydrate": [0],
       "react-dom/no-missing-button-type": [0],
       "react-dom/no-missing-iframe-sandbox": [0],
-      "react-dom/no-namespace": [2],
       "react-dom/no-render": [2],
       "react-dom/no-render-return-value": [2],
       "react-dom/no-script-url": [2],
@@ -1126,6 +1127,14 @@ const config: Array<Linter.Config> = [
       "react-dom/no-use-form-state": [0],
       "react-dom/no-void-elements-with-children": [2],
       "react-dom/prefer-namespace-import": [0],
+      "react-jsx/no-children-prop": [0],
+      "react-jsx/no-children-prop-with-children": [2],
+      "react-jsx/no-comment-textnodes": [2],
+      "react-jsx/no-key-after-spread": [2],
+      "react-jsx/no-leaked-dollar": [2],
+      "react-jsx/no-leaked-semicolon": [2],
+      "react-jsx/no-namespace": [2],
+      "react-jsx/no-useless-fragment": [0],
       // react-hooks rules with no react-x equivalent (require eslint-plugin-react-hooks)
       // "react-hooks/automatic-effect-dependencies": [0],
       // "react-hooks/capitalized-calls": [0],
@@ -1156,18 +1165,12 @@ const config: Array<Linter.Config> = [
       "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
       "react/exhaustive-deps": [2, {additionalHooks: "^(useEffectOnce|useLayoutEffectOnce)$"}], // replaces react-hooks/exhaustive-deps
       "react/immutability": [0], // https://github.com/Rel1cx/eslint-react/issues/1626
-      "react/jsx-dollar": [2],
-      "react/jsx-key-before-spread": [2],
-      "react/jsx-no-comment-textnodes": [2],
-      "react/jsx-shorthand-boolean": [2, -1],
-      "react/jsx-shorthand-fragment": [2, -1],
       "react/no-access-state-in-setstate": [2],
       "react/no-array-index-key": [0],
       "react/no-children-count": [0],
       "react/no-children-for-each": [0],
       "react/no-children-map": [0],
       "react/no-children-only": [0],
-      "react/no-children-prop": [0],
       "react/no-children-to-array": [0],
       "react/no-class-component": [0],
       "react/no-clone-element": [0],
@@ -1205,7 +1208,6 @@ const config: Array<Linter.Config> = [
       "react/no-unused-props": [2],
       "react/no-unused-state": [2],
       "react/no-use-context": [0],
-      "react/no-useless-fragment": [0],
       "react/prefer-destructuring-assignment": [0],
       "react/prefer-namespace-import": [0],
       "react/purity": [2], // replaces react-hooks/purity
@@ -1213,8 +1215,6 @@ const config: Array<Linter.Config> = [
       "react/rules-of-hooks": [2], // replaces react-hooks/rules-of-hooks
       "react/set-state-in-effect": [0], // replaces react-hooks/set-state-in-effect
       "react/set-state-in-render": [2], // replaces react-hooks/set-state-in-render
-      "react/unstable-rules-of-props": [0],
-      "react/unstable-rules-of-state": [0],
       "react/unsupported-syntax": [2], // replaces react-hooks/unsupported-syntax
       "react/use-memo": [2], // replaces react-hooks/use-memo
       "react/use-state": [2, {enforceAssignment: true, enforceSetterName: true}],

@@ -12,10 +12,10 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
     <div>
       <Fragment>
         <button/>
-        ${"foo"}{/* eslint-disable-line react/jsx-dollar */}
+        ${"foo"}{/* eslint-disable-line react-jsx/no-leaked-dollar */}
         <button/>
       </Fragment>
     </div>
   );
-  return <><button disabled={true}>{value}</button></>; // eslint-disable-line react/jsx-shorthand-fragment
+  return <Fragment><button disabled={true}>{value}</button></Fragment>;
 }

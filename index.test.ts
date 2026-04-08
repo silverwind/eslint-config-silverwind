@@ -1,19 +1,8 @@
-import configs, {defineConfig, globalIgnores} from "./eslint.config.ts";
+import configs from "./eslint.config.ts";
 import {ESLint} from "eslint";
 
 test("config", () => {
   expect(Array.isArray(configs)).toEqual(true);
-});
-
-test("defineConfig", () => {
-  expect(typeof defineConfig).toEqual("function");
-  expect(Array.isArray(defineConfig(...configs))).toEqual(true);
-});
-
-test("globalIgnores", () => {
-  expect(typeof globalIgnores).toEqual("function");
-  const result = globalIgnores(["node_modules"]);
-  expect(result).toHaveProperty("ignores");
 });
 
 test("lint and format results", async () => {

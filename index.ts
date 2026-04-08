@@ -1321,8 +1321,3 @@ const config: Array<Linter.Config> = [
   },
 ];
 export default config;
-
-// https://github.com/eslint/rewrite/issues/425
-const eslintConfig = await import("eslint/config") as any;
-export const defineConfig: any = eslintConfig.defineConfig;
-export const globalIgnores: any = eslintConfig.globalIgnores;

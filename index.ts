@@ -266,7 +266,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-unsafe-assignment": [0],
       "@typescript-eslint/no-unsafe-call": [0],
       "@typescript-eslint/no-unsafe-declaration-merging": [2],
-      "@typescript-eslint/no-unsafe-enum-comparison": [2],
+      "@typescript-eslint/no-unsafe-enum-comparison": [0],
       "@typescript-eslint/no-unsafe-function-type": [2],
       "@typescript-eslint/no-unsafe-member-access": [0],
       "@typescript-eslint/no-unsafe-return": [0],

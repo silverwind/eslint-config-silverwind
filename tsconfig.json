@@ -5,7 +5,6 @@
     "types": [
       "node",
       "jest-extended",
-      "vite/client",
       "vitest/globals",
       "./types.d.ts",
     ],

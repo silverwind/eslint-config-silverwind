@@ -675,7 +675,7 @@ const config: Array<Linter.Config> = [
       "sonarjs/no-unused-collection": [2],
       "sonarjs/no-use-of-empty-return-value": [2],
       "sonarjs/no-useless-catch": [0], // handled by no-useless-catch
-      "sonarjs/non-existent-operator": [2],
+      "sonarjs/non-existent-operator": [0], // handled by @stylistic/space-infix-ops
       "sonarjs/prefer-immediate-return": [0],
       "sonarjs/prefer-object-literal": [0],
       "sonarjs/prefer-single-boolean-return": [0],

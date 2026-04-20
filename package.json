@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-silverwind",
-  "version": "131.0.4",
+  "version": "131.0.5",
   "description": "Exhaustive ESLint configuration",
   "license": "BSD-2-Clause",
   "author": "silverwind <me@silverwind.io>",

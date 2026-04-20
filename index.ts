@@ -848,6 +848,11 @@ const config: Array<Linter.Config> = [
     rules: {
       "@typescript-eslint/no-redeclare": [0], // handled by no-redeclare
       "no-restricted-syntax": [2, ...noRestrictedSyntax()],
+      // type-aware rules that force narrowing of `unknown` catch vars;
+      // impractical in .js where types aren't written
+      "@typescript-eslint/no-base-to-string": [0],
+      "@typescript-eslint/only-throw-error": [0],
+      "@typescript-eslint/restrict-template-expressions": [0],
     },
   },
   { // rules handled by typescript

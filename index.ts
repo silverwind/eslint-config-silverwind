@@ -1038,8 +1038,12 @@ const config: Array<Linter.Config> = [
     },
   },
   {
-    files: [`**/e2e/**.test.${[...jsExts, ...tsExts].join(",")}`],
+    files: [
+      `**/e2e/**.test.${[...jsExts, ...tsExts].join(",")}`,
+      `**/*.e2e.${[...jsExts, ...tsExts].join(",")}`,
+    ],
     plugins: {playwright},
+    languageOptions: {globals: {...globals.nodeBuiltin, ...globals.browser}},
     rules: {
       "no-empty-pattern": [0],
       "playwright/consistent-spacing-between-blocks": [2],

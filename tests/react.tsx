@@ -6,8 +6,8 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
   // @ts-expect-error
   const _ref2 = useRef(null);
   // @ts-expect-error
-  const [_val, set_val] = useState(null); // eslint-disable-line @typescript-eslint/no-unused-vars
-  const [_val2] = useState(null);
+  const [_val, set_val] = useState(null); // eslint-disable-line @typescript-eslint/no-unused-vars,react/no-unused-state
+  const [_val2] = useState(null); // eslint-disable-line react/no-unused-state
   const value = ref.current; // eslint-disable-line react/refs
   // @ts-expect-error
   const _x = (

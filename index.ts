@@ -1122,21 +1122,20 @@ const config: Array<Linter.Config> = [
       "react-dom/no-dangerously-set-innerhtml": [0],
       "react-dom/no-dangerously-set-innerhtml-with-children": [2],
       "react-dom/no-find-dom-node": [2],
-      "react-dom/no-flush-sync": [0],
-      "react-dom/no-hydrate": [0],
+      "react-dom/no-flush-sync": [2],
+      "react-dom/no-hydrate": [2],
       "react-dom/no-missing-button-type": [0],
-      "react-dom/no-missing-iframe-sandbox": [0],
+      "react-dom/no-missing-iframe-sandbox": [2],
       "react-dom/no-render": [2],
       "react-dom/no-render-return-value": [2],
       "react-dom/no-script-url": [2],
       "react-dom/no-string-style-prop": [2],
       "react-dom/no-unknown-property": [2, {ignore: ["css"], requireDataLowercase: true}],
       "react-dom/no-unsafe-iframe-sandbox": [2],
-      "react-dom/no-unsafe-target-blank": [0],
-      "react-dom/no-use-form-state": [0],
+      "react-dom/no-unsafe-target-blank": [2],
+      "react-dom/no-use-form-state": [2],
       "react-dom/no-void-elements-with-children": [2],
-      "react-dom/prefer-namespace-import": [0],
-      "react-jsx/no-children-prop": [0],
+      "react-jsx/no-children-prop": [2],
       "react-jsx/no-children-prop-with-children": [2],
       "react-jsx/no-comment-textnodes": [2],
       "react-jsx/no-key-after-spread": [2],
@@ -1151,7 +1150,6 @@ const config: Array<Linter.Config> = [
       // "react-hooks/fbt": [0],
       // "react-hooks/fire": [0],
       // "react-hooks/gating": [0],
-      // "react-hooks/globals": [2],
       // "react-hooks/hooks": [0],
       // "react-hooks/incompatible-library": [2],
       // "react-hooks/invariant": [0],
@@ -1159,7 +1157,6 @@ const config: Array<Linter.Config> = [
       // "react-hooks/no-deriving-state-in-effects": [0],
       // "react-hooks/preserve-manual-memoization": [2],
       // "react-hooks/rule-suppression": [0],
-      // "react-hooks/static-components": [2],
       // "react-hooks/syntax": [0],
       // "react-hooks/todo": [0],
       // "react-hooks/void-use-memo": [0],
@@ -1167,28 +1164,29 @@ const config: Array<Linter.Config> = [
       "react-naming-convention/id-name": [0],
       "react-naming-convention/ref-name": [0],
       "react-web-api/no-leaked-event-listener": [0], // too many false-positives
-      "react-web-api/no-leaked-interval": [0], // too many false-positives
-      "react-web-api/no-leaked-resize-observer": [0], // too many false-positives
+      "react-web-api/no-leaked-fetch": [0], // experimental
+      "react-web-api/no-leaked-interval": [2],
+      "react-web-api/no-leaked-resize-observer": [2],
       "react-web-api/no-leaked-timeout": [0], // too many false-positives
-      "react/component-hook-factories": [0], // replaces react-hooks/component-hook-factories
       "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
       "react/exhaustive-deps": [2, {additionalHooks: "^(useEffectOnce|useLayoutEffectOnce)$"}], // replaces react-hooks/exhaustive-deps
-      "react/immutability": [0], // https://github.com/Rel1cx/eslint-react/issues/1626
-      "react/no-access-state-in-setstate": [2],
+      "react/globals": [0], // experimental
+      "react/immutability": [2],
+      "react/no-access-state-in-setstate": [0], // covered by no-class-component
       "react/no-array-index-key": [0],
       "react/no-children-count": [0],
       "react/no-children-for-each": [0],
       "react/no-children-map": [0],
       "react/no-children-only": [0],
       "react/no-children-to-array": [0],
-      "react/no-class-component": [0],
+      "react/no-class-component": [2],
       "react/no-clone-element": [0],
-      "react/no-component-will-mount": [2],
-      "react/no-component-will-receive-props": [2],
-      "react/no-component-will-update": [2],
-      "react/no-context-provider": [0],
+      "react/no-component-will-mount": [0], // covered by no-class-component
+      "react/no-component-will-receive-props": [0], // covered by no-class-component
+      "react/no-component-will-update": [0], // covered by no-class-component
+      "react/no-context-provider": [2],
       "react/no-create-ref": [2],
-      "react/no-direct-mutation-state": [2],
+      "react/no-direct-mutation-state": [0], // covered by no-class-component
       "react/no-duplicate-key": [2],
       "react/no-forward-ref": [2],
       "react/no-implicit-children": [0],
@@ -1196,34 +1194,30 @@ const config: Array<Linter.Config> = [
       "react/no-implicit-ref": [0],
       "react/no-leaked-conditional-rendering": [0], // false-positives with ReactNode
       "react/no-missing-component-display-name": [0],
-      "react/no-missing-context-display-name": [0],
+      "react/no-missing-context-display-name": [2],
       "react/no-missing-key": [2],
-      "react/no-misused-capture-owner-stack": [0],
+      "react/no-misused-capture-owner-stack": [2],
       "react/no-nested-component-definitions": [2],
       "react/no-nested-lazy-component-declarations": [2],
-      "react/no-redundant-should-component-update": [2],
-      "react/no-set-state-in-component-did-mount": [0],
-      "react/no-set-state-in-component-did-update": [0],
-      "react/no-set-state-in-component-will-update": [0],
-      "react/no-unnecessary-use-callback": [2],
-      "react/no-unnecessary-use-memo": [2],
-      "react/no-unnecessary-use-prefix": [0],
-      "react/no-unsafe-component-will-mount": [0],
-      "react/no-unsafe-component-will-receive-props": [0],
-      "react/no-unsafe-component-will-update": [0],
+      "react/no-set-state-in-component-did-mount": [0], // covered by no-class-component
+      "react/no-set-state-in-component-did-update": [0], // covered by no-class-component
+      "react/no-set-state-in-component-will-update": [0], // covered by no-class-component
+      "react/no-unnecessary-use-prefix": [2],
+      "react/no-unsafe-component-will-mount": [0], // covered by no-class-component
+      "react/no-unsafe-component-will-receive-props": [0], // covered by no-class-component
+      "react/no-unsafe-component-will-update": [0], // covered by no-class-component
       "react/no-unstable-context-value": [2],
       "react/no-unstable-default-props": [2],
-      "react/no-unused-class-component-members": [0], // false-positives
+      "react/no-unused-class-component-members": [0], // covered by no-class-component
       "react/no-unused-props": [2],
       "react/no-unused-state": [2],
-      "react/no-use-context": [0],
-      "react/prefer-destructuring-assignment": [0],
-      "react/prefer-namespace-import": [0],
+      "react/no-use-context": [2],
       "react/purity": [2], // replaces react-hooks/purity
       "react/refs": [2], // replaces react-hooks/refs
       "react/rules-of-hooks": [2], // replaces react-hooks/rules-of-hooks
       "react/set-state-in-effect": [0], // replaces react-hooks/set-state-in-effect
       "react/set-state-in-render": [2], // replaces react-hooks/set-state-in-render
+      "react/static-components": [0], // experimental
       "react/unsupported-syntax": [2], // replaces react-hooks/unsupported-syntax
       "react/use-memo": [2], // replaces react-hooks/use-memo
       "react/use-state": [2, {enforceAssignment: true, enforceSetterName: true}],

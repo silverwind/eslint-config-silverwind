@@ -48,6 +48,7 @@ const config: Array<Linter.Config> = [
       "**/!.storybook/",
       "**/*.snap",
       "**/.air/",
+      "**/.claude/",
       "**/.git/",
       "**/.playwright-mcp/",
       "**/.ruff_cache/",

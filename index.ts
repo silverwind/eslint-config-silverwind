@@ -699,7 +699,7 @@ const config: Array<Linter.Config> = [
       "unicorn/consistent-json-file-read": [2],
       "unicorn/consistent-template-literal-escape": [2],
       "unicorn/custom-error-definition": [0],
-      "unicorn/dom-node-dataset": [0],
+      "unicorn/dom-node-dataset": [2, {preferAttributes: true}],
       "unicorn/empty-brace-spaces": [2],
       "unicorn/error-message": [0],
       "unicorn/escape-case": [0],

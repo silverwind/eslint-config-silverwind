@@ -687,7 +687,7 @@ const config: Array<Linter.Config> = [
       "strict": [0],
       "symbol-description": [2],
       "unicode-bom": [2, "never"],
-      "unicorn/better-dom-traversing": [2],
+      "unicorn/better-dom-traversing": [0], // false-positives on non-DOM `.children` access
       "unicorn/catch-error-name": [0],
       "unicorn/consistent-assert": [0],
       "unicorn/consistent-compound-words": [0], // too opinionated
@@ -809,7 +809,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-https": [0], // false-positives on namespace and schema URIs
       "unicorn/prefer-import-meta-properties": [2],
       "unicorn/prefer-includes": [0], // handled by @typescript-eslint/prefer-includes
-      "unicorn/prefer-includes-over-repeated-comparisons": [2],
+      "unicorn/prefer-includes-over-repeated-comparisons": [0], // too opinionated
       "unicorn/prefer-iterator-concat": [0], // too opinionated
       "unicorn/prefer-iterator-to-array-at-end": [2],
       "unicorn/prefer-json-parse-buffer": [0],

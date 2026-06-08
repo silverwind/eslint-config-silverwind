@@ -838,7 +838,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-set-size": [2],
       "unicorn/prefer-simple-condition-first": [0],
       "unicorn/prefer-single-call": [0],
-      "unicorn/prefer-split-limit": [2],
+      "unicorn/prefer-split-limit": [0], // too opinionated
       "unicorn/prefer-spread": [0],
       "unicorn/prefer-string-match-all": [2],
       "unicorn/prefer-string-pad-start-end": [2],

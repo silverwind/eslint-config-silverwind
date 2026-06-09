@@ -54,7 +54,7 @@
     "typescript-config-silverwind": "20.0.0",
     "typescript-eslint": "8.61.0",
     "updates": "17.18.0",
-    "updates-config-silverwind": "3.0.2",
+    "updates-config-silverwind": "4.0.0",
     "versions": "15.1.1",
     "vitest": "4.1.8",
     "vitest-config-silverwind": "11.3.6"
@@ -63,5 +63,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@10.34.1"
+  "packageManager": "pnpm@11.5.2"
 }

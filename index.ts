@@ -800,7 +800,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-useless-iterator-to-array": [2],
       "unicorn/no-useless-length-check": [2],
       "unicorn/no-useless-promise-resolve-reject": [2],
-      "unicorn/no-useless-recursion": [2],
+      "unicorn/no-useless-recursion": [0], // recursion is often clearer than the equivalent loop
       "unicorn/no-useless-spread": [2],
       "unicorn/no-useless-switch-case": [2],
       "unicorn/no-useless-template-literals": [2],

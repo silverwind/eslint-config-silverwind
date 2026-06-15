@@ -909,7 +909,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prevent-abbreviations": [0],
       "unicorn/relative-url-style": [2],
       "unicorn/require-array-join-separator": [2],
-      "unicorn/require-array-sort-compare": [2],
+      "unicorn/require-array-sort-compare": [0], // default lexicographic sort is often intended
       "unicorn/require-css-escape": [2],
       "unicorn/require-module-attributes": [2],
       "unicorn/require-module-specifiers": [0],

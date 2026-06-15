@@ -725,7 +725,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-confusing-array-splice": [2],
       "unicorn/no-confusing-array-with": [2],
       "unicorn/no-console-spaces": [0],
-      "unicorn/no-declarations-before-early-exit": [2],
+      "unicorn/no-declarations-before-early-exit": [0], // hooks and pure pre-reads legitimately precede early returns
       "unicorn/no-document-cookie": [2],
       "unicorn/no-duplicate-loops": [2],
       "unicorn/no-duplicate-set-values": [2],

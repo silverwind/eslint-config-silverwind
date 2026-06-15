@@ -737,7 +737,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-global-object-property-assignment": [2],
       "unicorn/no-immediate-mutation": [0], // in some cases it makes the code less readable
       "unicorn/no-incorrect-query-selector": [2],
-      "unicorn/no-incorrect-template-string-interpolation": [2],
+      "unicorn/no-incorrect-template-string-interpolation": [0], // false-positives on intentional placeholder tokens
       "unicorn/no-instanceof-builtins": [2],
       "unicorn/no-invalid-argument-count": [2],
       "unicorn/no-invalid-fetch-options": [2],
@@ -776,15 +776,15 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-array-flat-depth": [2],
       "unicorn/no-unnecessary-array-splice-count": [2],
       "unicorn/no-unnecessary-await": [2],
-      "unicorn/no-unnecessary-global-this": [2],
+      "unicorn/no-unnecessary-global-this": [0], // strips globalThis from browser globals, breaks SSR/isomorphic code
       "unicorn/no-unnecessary-nested-ternary": [2],
       "unicorn/no-unnecessary-polyfills": [0],
       "unicorn/no-unnecessary-slice-end": [2],
       "unicorn/no-unnecessary-splice": [2],
       "unicorn/no-unreadable-array-destructuring": [0],
       "unicorn/no-unreadable-iife": [0],
-      "unicorn/no-unreadable-new-expression": [2],
-      "unicorn/no-unreadable-object-destructuring": [2],
+      "unicorn/no-unreadable-new-expression": [0], // too opinionated, flags idiomatic new X().prop
+      "unicorn/no-unreadable-object-destructuring": [0], // flags the standard computed-key rest-omit idiom
       "unicorn/no-unsafe-buffer-conversion": [2],
       "unicorn/no-unsafe-dom-html": [0],
       "unicorn/no-unsafe-property-key": [2],
@@ -861,7 +861,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-negative-index": [2],
       "unicorn/prefer-node-protocol": [2],
       "unicorn/prefer-number-coercion": [0],
-      "unicorn/prefer-number-is-safe-integer": [2],
+      "unicorn/prefer-number-is-safe-integer": [0], // changes integer-classification semantics
       "unicorn/prefer-number-properties": [0],
       "unicorn/prefer-object-define-properties": [2],
       "unicorn/prefer-object-destructuring-defaults": [2],

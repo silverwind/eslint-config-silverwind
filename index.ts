@@ -998,6 +998,7 @@ const config: Array<Linter.Config> = [
     languageOptions: {globals: globals.vitest},
     rules: {
       "unicorn/consistent-function-scoping": [0],
+      "unicorn/no-global-object-property-assignment": [0], // tests intentionally stub globals
       "vitest/consistent-each-for": [0],
       "vitest/consistent-test-filename": [0],
       "vitest/consistent-test-it": [0],

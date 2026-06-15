@@ -832,7 +832,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-dom-node-html-methods": [0],
       "unicorn/prefer-dom-node-remove": [2],
       "unicorn/prefer-dom-node-text-content": [2],
-      "unicorn/prefer-early-return": [2],
+      "unicorn/prefer-early-return": [0], // guard-clause vs wrapped if is a style choice, not a defect
       "unicorn/prefer-event-target": [2],
       "unicorn/prefer-export-from": [0],
       "unicorn/prefer-get-or-insert-computed": [2],

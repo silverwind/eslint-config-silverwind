@@ -787,7 +787,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unreadable-object-destructuring": [0], // flags the standard computed-key rest-omit idiom
       "unicorn/no-unsafe-buffer-conversion": [2],
       "unicorn/no-unsafe-dom-html": [0],
-      "unicorn/no-unsafe-property-key": [2],
+      "unicorn/no-unsafe-property-key": [0], // flags any computed key, false-positives on controlled keys
       "unicorn/no-unsafe-string-replacement": [0], // fires on any dynamic replacement, mostly false-positives
       "unicorn/no-unused-array-method-return": [2],
       "unicorn/no-unused-properties": [2],
@@ -853,7 +853,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-math-abs": [2],
       "unicorn/prefer-math-min-max": [2],
       "unicorn/prefer-math-trunc": [2],
-      "unicorn/prefer-minimal-ternary": [2],
+      "unicorn/prefer-minimal-ternary": [0], // computed-key rewrite reads worse than the explicit ternary
       "unicorn/prefer-modern-dom-apis": [0],
       "unicorn/prefer-modern-math-apis": [2],
       "unicorn/prefer-module": [0],

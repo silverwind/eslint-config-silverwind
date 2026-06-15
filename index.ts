@@ -788,7 +788,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unsafe-buffer-conversion": [2],
       "unicorn/no-unsafe-dom-html": [0],
       "unicorn/no-unsafe-property-key": [2],
-      "unicorn/no-unsafe-string-replacement": [2],
+      "unicorn/no-unsafe-string-replacement": [0], // fires on any dynamic replacement, mostly false-positives
       "unicorn/no-unused-array-method-return": [2],
       "unicorn/no-unused-properties": [2],
       "unicorn/no-useless-boolean-cast": [2],

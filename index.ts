@@ -869,7 +869,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-object-iterable-methods": [2],
       "unicorn/prefer-optional-catch-binding": [2],
       "unicorn/prefer-path2d": [2],
-      "unicorn/prefer-private-class-fields": [2],
+      "unicorn/prefer-private-class-fields": [0], // can't rename framework-mandated underscore methods like Node stream `_read`/`_write`/`_final`, and private class fields don't work with Proxy
       "unicorn/prefer-prototype-methods": [2],
       "unicorn/prefer-query-selector": [0],
       "unicorn/prefer-queue-microtask": [2],

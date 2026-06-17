@@ -742,7 +742,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-incorrect-query-selector": [2],
       "unicorn/no-incorrect-template-string-interpolation": [0], // false-positives on intentional placeholder tokens
       "unicorn/no-instanceof-builtins": [2],
-      "unicorn/no-invalid-argument-count": [2],
+      "unicorn/no-invalid-argument-count": [0], // redundant with TypeScript TS2554, and slow (~17% of lint time)
       "unicorn/no-invalid-fetch-options": [2],
       "unicorn/no-invalid-file-input-accept": [2],
       "unicorn/no-invalid-remove-event-listener": [2],

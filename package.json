@@ -43,7 +43,7 @@
     "eslint-plugin-sonarjs": "4.0.3",
     "eslint-plugin-storybook": "10.4.6",
     "eslint-plugin-testing-library": "7.16.2",
-    "eslint-plugin-unicorn": "67.0.0",
+    "eslint-plugin-unicorn": "68.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "17.6.0",
     "jest-extended": "7.0.0",

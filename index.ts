@@ -648,11 +648,13 @@ const config: Array<Linter.Config> = [
       "sonarjs/no-element-overwrite": [2],
       "sonarjs/no-empty-collection": [2],
       "sonarjs/no-extra-arguments": [2],
+      "sonarjs/no-floating-point-equality": [2],
       "sonarjs/no-gratuitous-expressions": [2],
       "sonarjs/no-identical-conditions": [0], // handled by no-dupe-else-if
       "sonarjs/no-identical-expressions": [2],
       "sonarjs/no-identical-functions": [0], // has bugs with identical react hooks in different components
       "sonarjs/no-ignored-return": [2],
+      "sonarjs/no-incompatible-assertion-types": [2],
       "sonarjs/no-inverted-boolean-check": [2],
       "sonarjs/no-nested-switch": [0],
       "sonarjs/no-nested-template-literals": [0],
@@ -660,6 +662,7 @@ const config: Array<Linter.Config> = [
       "sonarjs/no-redundant-jump": [0],
       "sonarjs/no-same-line-conditional": [2],
       "sonarjs/no-small-switch": [0],
+      "sonarjs/no-trivial-assertions": [2],
       "sonarjs/no-unused-collection": [2],
       "sonarjs/no-use-of-empty-return-value": [2],
       "sonarjs/no-useless-catch": [0], // handled by no-useless-catch

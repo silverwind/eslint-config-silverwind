@@ -722,7 +722,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-array-concat-in-loop": [2],
       "unicorn/no-array-fill-with-reference-type": [2],
       "unicorn/no-array-from-fill": [2],
-      "unicorn/no-array-front-mutation": [2],
+      "unicorn/no-array-front-mutation": [0],
       "unicorn/no-array-method-this-argument": [2],
       "unicorn/no-array-reduce": [0],
       "unicorn/no-array-reverse": [0],
@@ -771,7 +771,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-late-current-target-access": [2],
       "unicorn/no-late-event-control": [2],
       "unicorn/no-lonely-if": [2],
-      "unicorn/no-loop-iterable-mutation": [2],
+      "unicorn/no-loop-iterable-mutation": [0],
       "unicorn/no-magic-array-flat-depth": [0],
       "unicorn/no-manually-wrapped-comments": [0], // too opinionated
       "unicorn/no-mismatched-map-key": [2],
@@ -884,7 +884,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-dom-node-text-content": [2],
       "unicorn/prefer-early-return": [0], // guard-clause vs wrapped if is a style choice, not a defect
       "unicorn/prefer-else-if": [2],
-      "unicorn/prefer-error-is-error": [2],
+      "unicorn/prefer-error-is-error": [0],
       "unicorn/prefer-event-target": [2],
       "unicorn/prefer-export-from": [0],
       "unicorn/prefer-flat-math-min-max": [2],

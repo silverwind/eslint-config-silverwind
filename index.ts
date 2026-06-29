@@ -751,7 +751,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-duplicate-loops": [0], // flags legitimate chained array methods in for-of headers
       "unicorn/no-duplicate-set-values": [2],
       "unicorn/no-empty-file": [0],
-      "unicorn/no-error-property-assignment": [2],
+      "unicorn/no-error-property-assignment": [0], // no construction-time API for stack, reassigning it to synthesize or forward stacks is legitimate
       "unicorn/no-exports-in-scripts": [2],
       "unicorn/no-for-each": [2],
       "unicorn/no-for-loop": [0],
@@ -808,7 +808,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-array-flat-depth": [2],
       "unicorn/no-unnecessary-array-splice-count": [2],
       "unicorn/no-unnecessary-await": [2],
-      "unicorn/no-unnecessary-boolean-comparison": [2],
+      "unicorn/no-unnecessary-boolean-comparison": [0],
       "unicorn/no-unnecessary-global-this": [0], // strips globalThis from browser globals, breaks SSR/isomorphic code
       "unicorn/no-unnecessary-nested-ternary": [2],
       "unicorn/no-unnecessary-polyfills": [0],
@@ -872,7 +872,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-class-fields": [2],
       "unicorn/prefer-classlist-toggle": [2],
       "unicorn/prefer-code-point": [0],
-      "unicorn/prefer-continue": [2],
+      "unicorn/prefer-continue": [0],
       "unicorn/prefer-date-now": [2],
       "unicorn/prefer-default-parameters": [0],
       "unicorn/prefer-direct-iteration": [2],
@@ -934,7 +934,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-query-selector": [0],
       "unicorn/prefer-queue-microtask": [2],
       "unicorn/prefer-reflect-apply": [0],
-      "unicorn/prefer-regexp-escape": [2],
+      "unicorn/prefer-regexp-escape": [0],
       "unicorn/prefer-regexp-test": [2],
       "unicorn/prefer-response-static-json": [2],
       "unicorn/prefer-scoped-selector": [0],
@@ -963,7 +963,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-switch": [0],
       "unicorn/prefer-temporal": [0], // TODO: enable once Temporal is Baseline; currently Chrome/Edge 144+, Firefox 139+, no Safari
       "unicorn/prefer-ternary": [0],
-      "unicorn/prefer-toggle-attribute": [2],
+      "unicorn/prefer-toggle-attribute": [0],
       "unicorn/prefer-top-level-await": [0],
       "unicorn/prefer-type-error": [0],
       "unicorn/prefer-type-literal-last": [0],

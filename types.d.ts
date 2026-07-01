@@ -8,11 +8,6 @@ declare module "typescript-eslint" {
   const plugin: Eslint.Plugin;
   export = plugin;
 }
-declare module "eslint-plugin-array-func" {
-  import type {Eslint} from "eslint";
-  const plugin: Eslint.Plugin;
-  export = plugin;
-}
 declare module "eslint-plugin-sonarjs" {
   import type {Eslint} from "eslint";
   const plugin: Eslint.Plugin;

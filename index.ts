@@ -1,6 +1,5 @@
 import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
-import arrayFunc from "eslint-plugin-array-func";
 import importPlugin from "eslint-plugin-import-x";
 import regexp from "eslint-plugin-regexp";
 import sonarjs from "eslint-plugin-sonarjs";
@@ -86,7 +85,6 @@ const config: Array<Linter.Config> = [
       "@eslint-community/eslint-comments": comments,
       "@stylistic": stylistic,
       "@typescript-eslint": typescriptPlugin.plugin,
-      "array-func": arrayFunc,
       "import-x": importPlugin,
       regexp,
       sonarjs,
@@ -312,12 +310,6 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/use-unknown-in-catch-callback-variable": [0],
       "accessor-pairs": [2],
       "array-callback-return": [2, {"checkForEach": true}],
-      "array-func/avoid-reverse": [2],
-      "array-func/from-map": [2],
-      "array-func/no-unnecessary-this-arg": [2],
-      "array-func/prefer-array-from": [2],
-      "array-func/prefer-flat": [0],
-      "array-func/prefer-flat-map": [0],
       "arrow-body-style": [0],
       "block-scoped-var": [2],
       "camelcase": [0],

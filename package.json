@@ -30,7 +30,6 @@
     "@typescript/native-preview": "7.0.0-dev.20260701.1",
     "@vitest/eslint-plugin": "1.6.20",
     "eslint": "10.6.0",
-    "eslint-plugin-array-func": "5.1.1",
     "eslint-plugin-playwright": "2.10.4",
     "eslint-plugin-react-dom": "5.10.0",
     "eslint-plugin-react-jsx": "5.10.0",

@@ -939,7 +939,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-set-size": [2],
       "unicorn/prefer-short-arrow-method": [2],
       "unicorn/prefer-simple-condition-first": [0],
-      "unicorn/prefer-simple-sort-comparator": [2],
+      "unicorn/prefer-simple-sort-comparator": [0], // false-positives
       "unicorn/prefer-single-array-predicate": [2],
       "unicorn/prefer-single-call": [2],
       "unicorn/prefer-single-object-destructuring": [2],

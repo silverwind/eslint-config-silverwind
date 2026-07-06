@@ -936,7 +936,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-response-static-json": [2],
       "unicorn/prefer-scoped-selector": [0],
       "unicorn/prefer-set-has": [0],
-      "unicorn/prefer-set-methods": [2],
+      "unicorn/prefer-set-methods": [0], // requires es2024
       "unicorn/prefer-set-size": [2],
       "unicorn/prefer-short-arrow-method": [2],
       "unicorn/prefer-simple-condition-first": [0],

@@ -735,7 +735,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-declarations-before-early-exit": [0], // hooks and pure pre-reads legitimately precede early returns
       "unicorn/no-document-cookie": [2],
       "unicorn/no-double-comparison": [2],
-      "unicorn/no-duplicate-if-branches": [2],
+      "unicorn/no-duplicate-if-branches": [0],
       "unicorn/no-duplicate-logical-operands": [2],
       "unicorn/no-duplicate-loops": [0], // flags legitimate chained array methods in for-of headers
       "unicorn/no-duplicate-set-values": [2],

@@ -9,6 +9,7 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
   const [_val, set_val] = useState(null); // eslint-disable-line @typescript-eslint/no-unused-vars,react/no-unused-state
   const [_val2] = useState(null); // eslint-disable-line react/no-unused-state
   const value = ref.current; // eslint-disable-line react/refs
+  let mutated = 0;
   // @ts-expect-error
   const _x = (
     <div>
@@ -19,5 +20,5 @@ function Component() { // eslint-disable-line react-refresh/only-export-componen
       </Fragment>
     </div>
   );
-  return <Fragment><button disabled={true}>{value}</button></Fragment>;
+  return <Fragment><button disabled={true} onClick={() => { mutated = 1; }}>{value}{mutated}</button></Fragment>; // eslint-disable-line react/immutability
 }

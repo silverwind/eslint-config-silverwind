@@ -1036,6 +1036,7 @@ const config: Array<Linter.Config> = [
     plugins: {playwright},
     languageOptions: {globals: {...globals.nodeBuiltin, ...globals.browser}},
     rules: {
+      "@typescript-eslint/no-deprecated": [0], // type-aware and slow, low value here
       "no-empty-pattern": [0],
       "playwright/consistent-spacing-between-blocks": [2],
       "playwright/expect-expect": [0],
@@ -1285,7 +1286,7 @@ const config: Array<Linter.Config> = [
     ignores: [`**/e2e/**`],
     languageOptions: {globals: globals.vitest},
     rules: {
-      "@typescript-eslint/no-deprecated": [0], // type-aware and slow; deprecation warnings add little value in tests
+      "@typescript-eslint/no-deprecated": [0], // type-aware and slow, low value here
       "react/immutability": [0], // false-positives on values captured in test callbacks
       "unicorn/consistent-function-scoping": [0],
       "unicorn/no-global-object-property-assignment": [0], // tests intentionally stub globals
@@ -1411,6 +1412,7 @@ const config: Array<Linter.Config> = [
     files: ["**/*.stories.*"],
     plugins: {storybook},
     rules: {
+      "@typescript-eslint/no-deprecated": [0], // type-aware and slow, low value here
       "react/no-nested-component-definitions": [0],
       "storybook/await-interactions": [2],
       "storybook/context-in-play-function": [2],

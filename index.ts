@@ -1323,6 +1323,7 @@ const config: Array<Linter.Config> = [
     ignores: [`**/e2e/**`],
     languageOptions: {globals: globals.vitest},
     rules: {
+      "@typescript-eslint/no-deprecated": [0], // type-aware and slow; deprecation warnings add little value in tests
       "react/immutability": [0], // false-positives on values captured in test callbacks
       "unicorn/consistent-function-scoping": [0],
       "unicorn/no-global-object-property-assignment": [0], // tests intentionally stub globals

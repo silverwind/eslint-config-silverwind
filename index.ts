@@ -2,7 +2,6 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments";
 import stylistic from "@stylistic/eslint-plugin";
 import importPlugin from "eslint-plugin-import-x";
 import regexp from "eslint-plugin-regexp";
-import sonarjs from "eslint-plugin-sonarjs";
 import unicorn from "eslint-plugin-unicorn";
 import vitest from "@vitest/eslint-plugin";
 import playwright from "eslint-plugin-playwright";
@@ -87,7 +86,6 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint": typescriptPlugin.plugin,
       "import-x": importPlugin,
       regexp,
-      sonarjs,
       unicorn,
     },
     settings: {
@@ -625,40 +623,6 @@ const config: Array<Linter.Config> = [
       "require-await": [0],
       "require-unicode-regexp": [0],
       "require-yield": [2],
-      "sonarjs/cognitive-complexity": [0],
-      "sonarjs/elseif-without-else": [0],
-      "sonarjs/max-switch-cases": [0],
-      "sonarjs/no-all-duplicated-branches": [2],
-      "sonarjs/no-collapsible-if": [0],
-      "sonarjs/no-collection-size-mischeck": [2],
-      "sonarjs/no-duplicate-string": [0],
-      "sonarjs/no-duplicated-branches": [0],
-      "sonarjs/no-element-overwrite": [2],
-      "sonarjs/no-empty-collection": [2],
-      "sonarjs/no-extra-arguments": [2],
-      "sonarjs/no-floating-point-equality": [2],
-      "sonarjs/no-gratuitous-expressions": [2],
-      "sonarjs/no-identical-conditions": [0], // handled by no-dupe-else-if
-      "sonarjs/no-identical-expressions": [2],
-      "sonarjs/no-identical-functions": [0], // has bugs with identical react hooks in different components
-      "sonarjs/no-ignored-return": [2],
-      "sonarjs/no-incompatible-assertion-types": [2],
-      "sonarjs/no-inverted-boolean-check": [2],
-      "sonarjs/no-nested-switch": [0],
-      "sonarjs/no-nested-template-literals": [0],
-      "sonarjs/no-redundant-boolean": [2],
-      "sonarjs/no-redundant-jump": [0],
-      "sonarjs/no-same-line-conditional": [2],
-      "sonarjs/no-small-switch": [0],
-      "sonarjs/no-trivial-assertions": [2],
-      "sonarjs/no-unused-collection": [2],
-      "sonarjs/no-use-of-empty-return-value": [2],
-      "sonarjs/no-useless-catch": [0], // handled by no-useless-catch
-      "sonarjs/non-existent-operator": [0], // handled by @stylistic/space-infix-ops
-      "sonarjs/prefer-immediate-return": [0],
-      "sonarjs/prefer-object-literal": [0],
-      "sonarjs/prefer-single-boolean-return": [0],
-      "sonarjs/prefer-while": [2],
       "sort-imports": [0],
       "sort-keys": [0],
       "sort-vars": [0],
@@ -735,7 +699,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-declarations-before-early-exit": [0], // hooks and pure pre-reads legitimately precede early returns
       "unicorn/no-document-cookie": [2],
       "unicorn/no-double-comparison": [2],
-      "unicorn/no-duplicate-if-branches": [0],
+      "unicorn/no-duplicate-if-branches": [2], // replaces sonarjs/no-all-duplicated-branches (if-chain subset)
       "unicorn/no-duplicate-logical-operands": [2],
       "unicorn/no-duplicate-loops": [0], // flags legitimate chained array methods in for-of headers
       "unicorn/no-duplicate-set-values": [2],
@@ -798,7 +762,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-array-flat-map": [2],
       "unicorn/no-unnecessary-array-splice-count": [2],
       "unicorn/no-unnecessary-await": [2],
-      "unicorn/no-unnecessary-boolean-comparison": [0],
+      "unicorn/no-unnecessary-boolean-comparison": [0], // false-positives on nullable record lookups
       "unicorn/no-unnecessary-fetch-options": [0],
       "unicorn/no-unnecessary-global-this": [0], // strips globalThis from browser globals, breaks SSR/isomorphic code
       "unicorn/no-unnecessary-nested-ternary": [2],
@@ -1030,8 +994,6 @@ const config: Array<Linter.Config> = [
       "no-undef": [0], // ts(2304)
       "no-unreachable": [0], // ts(7027)
       "no-unsafe-negation": [0], // ts(2365) ts(2322) ts(2358)
-      "sonarjs/no-extra-arguments": [0], // ts(2554)
-      "sonarjs/no-use-of-empty-return-value": [0], // ts(2322)
       "valid-typeof": [0], // ts(2367)
     },
   },
@@ -1450,7 +1412,6 @@ const config: Array<Linter.Config> = [
     plugins: {storybook},
     rules: {
       "react/no-nested-component-definitions": [0],
-      "sonarjs/no-identical-functions": [0],
       "storybook/await-interactions": [2],
       "storybook/context-in-play-function": [2],
       "storybook/csf-component": [0],

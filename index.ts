@@ -729,6 +729,8 @@ const config: Array<Linter.Config> = [
       "unicorn/no-manually-wrapped-comments": [0], // too opinionated
       "unicorn/no-mismatched-map-key": [2],
       "unicorn/no-misrefactored-assignment": [2],
+      "unicorn/no-missing-local-resource": [0], // only applies to html/css/markdown languages
+      "unicorn/no-multiple-promise-resolver-calls": [2],
       "unicorn/no-named-default": [2],
       "unicorn/no-negated-array-predicate": [2],
       "unicorn/no-negated-comparison": [2],
@@ -747,6 +749,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-redundant-comparison": [2],
       "unicorn/no-return-array-push": [2],
       "unicorn/no-selector-as-dom-name": [2],
+      "unicorn/no-shorthand-property-overrides": [0], // only applies to css language
       "unicorn/no-single-promise-in-promise-methods": [2],
       "unicorn/no-static-only-class": [2],
       "unicorn/no-subtraction-comparison": [2],
@@ -755,6 +758,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-this-outside-of-class": [0], // false-positives on `this` in standalone functions
       "unicorn/no-top-level-assignment-in-function": [0],
       "unicorn/no-top-level-side-effects": [0],
+      "unicorn/no-transition-all": [2],
       "unicorn/no-typeof-undefined": [2],
       "unicorn/no-uncalled-method": [2],
       "unicorn/no-undeclared-class-members": [2],
@@ -769,6 +773,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-polyfills": [0],
       "unicorn/no-unnecessary-slice-end": [2],
       "unicorn/no-unnecessary-splice": [2],
+      "unicorn/no-unnecessary-string-trim": [2],
       "unicorn/no-unreadable-array-destructuring": [0],
       "unicorn/no-unreadable-for-of-expression": [0],
       "unicorn/no-unreadable-iife": [0],
@@ -796,6 +801,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-useless-logical-operand": [2],
       "unicorn/no-useless-override": [2],
       "unicorn/no-useless-promise-resolve-reject": [2],
+      "unicorn/no-useless-re-export": [2],
       "unicorn/no-useless-recursion": [0], // recursion is often clearer than the equivalent loop
       "unicorn/no-useless-spread": [2],
       "unicorn/no-useless-switch-case": [2],
@@ -845,6 +851,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-else-if": [2],
       "unicorn/prefer-error-is-error": [0],
       "unicorn/prefer-event-target": [2],
+      "unicorn/prefer-explicit-viewport-units": [0], // only applies to css language
       "unicorn/prefer-export-from": [0],
       "unicorn/prefer-flat-math-min-max": [2],
       "unicorn/prefer-get-or-insert-computed": [2],
@@ -925,6 +932,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-switch": [0],
       "unicorn/prefer-temporal": [0], // TODO: enable once Temporal is Baseline; currently Chrome/Edge 144+, Firefox 139+, no Safari
       "unicorn/prefer-ternary": [0],
+      "unicorn/prefer-then-catch": [2],
       "unicorn/prefer-toggle-attribute": [0],
       "unicorn/prefer-top-level-await": [0],
       "unicorn/prefer-type-error": [0],
@@ -941,6 +949,7 @@ const config: Array<Linter.Config> = [
       "unicorn/require-array-join-separator": [2],
       "unicorn/require-array-sort-compare": [0], // default lexicographic sort is often intended
       "unicorn/require-css-escape": [2],
+      "unicorn/require-frontmatter-fields": [0], // only applies to markdown language
       "unicorn/require-module-attributes": [2],
       "unicorn/require-module-specifiers": [0],
       "unicorn/require-number-to-fixed-digits-argument": [2],

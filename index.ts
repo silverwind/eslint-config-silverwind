@@ -29,6 +29,16 @@ function noRestrictedSyntax() {
     "WithStatement",
     "ForInStatement",
     // "LabeledStatement", // consider enabling later, in use
+    {
+      // value position (React.useState) and type position (React.ReactNode)
+      selector: "MemberExpression[object.name='React'], TSQualifiedName[left.name='React']",
+      message: "Import from 'react' by name instead of the React namespace.",
+    },
+    {
+      // explicit boolean props: `<C prop={true}/>` not the `<C prop/>` shorthand
+      selector: "JSXAttribute[value=null]",
+      message: "Set boolean JSX props explicitly, e.g. `prop={true}`.",
+    },
   ];
 }
 

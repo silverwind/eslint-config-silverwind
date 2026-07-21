@@ -225,7 +225,6 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-inferrable-types": [0],
       "@typescript-eslint/no-invalid-this": [0],
       "@typescript-eslint/no-invalid-void-type": [0],
-      "@typescript-eslint/no-loop-func": [0],
       "@typescript-eslint/no-magic-numbers": [0],
       "@typescript-eslint/no-meaningless-void-operator": [0],
       "@typescript-eslint/no-misused-new": [2],
@@ -239,7 +238,6 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-redeclare": [2],
       "@typescript-eslint/no-redundant-type-constituents": [0], // too many bugs, https://github.com/typescript-eslint/typescript-eslint/issues/11811
       "@typescript-eslint/no-require-imports": [2],
-      "@typescript-eslint/no-restricted-imports": [0],
       "@typescript-eslint/no-restricted-types": [0],
       "@typescript-eslint/no-shadow": [0],
       "@typescript-eslint/no-this-alias": [2],
@@ -944,7 +942,6 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-url-href": [2],
       "unicorn/prefer-url-search-parameters": [2],
       "unicorn/prefer-while-loop-condition": [2],
-      "unicorn/prevent-abbreviations": [0],
       "unicorn/relative-url-style": [2],
       "unicorn/require-array-join-separator": [2],
       "unicorn/require-array-sort-compare": [0], // default lexicographic sort is often intended

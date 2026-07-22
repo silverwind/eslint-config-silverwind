@@ -32,12 +32,12 @@
     "@vitest/eslint-plugin": "1.6.23",
     "eslint": "10.7.0",
     "eslint-plugin-playwright": "2.10.5",
-    "eslint-plugin-react-dom": "5.17.3",
-    "eslint-plugin-react-jsx": "5.17.3",
-    "eslint-plugin-react-naming-convention": "5.17.3",
+    "eslint-plugin-react-dom": "5.18.0",
+    "eslint-plugin-react-jsx": "5.18.0",
+    "eslint-plugin-react-naming-convention": "5.18.0",
     "eslint-plugin-react-refresh": "0.5.3",
-    "eslint-plugin-react-web-api": "5.17.3",
-    "eslint-plugin-react-x": "5.17.3",
+    "eslint-plugin-react-web-api": "5.18.0",
+    "eslint-plugin-react-x": "5.18.0",
     "eslint-plugin-regexp": "3.1.1",
     "eslint-plugin-storybook": "10.5.3",
     "eslint-plugin-testing-library": "7.16.2",
@@ -45,8 +45,8 @@
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "17.7.0",
     "jest-extended": "7.0.0",
-    "react": "19.2.7",
-    "tsdown": "0.22.12",
+    "react": "19.2.8",
+    "tsdown": "0.22.13",
     "tsdown-config-silverwind": "4.0.2",
     "typescript": "6.0.3",
     "typescript-config-silverwind": "20.0.1",
@@ -61,5 +61,5 @@
     "eslint": "*",
     "typescript": "*"
   },
-  "packageManager": "pnpm@11.15.1"
+  "packageManager": "pnpm@11.16.0"
 }

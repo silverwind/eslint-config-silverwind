@@ -31,6 +31,7 @@
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "@vitest/eslint-plugin": "1.6.23",
     "eslint": "10.7.0",
+    "eslint-plugin-jsx-a11y-x": "0.2.0",
     "eslint-plugin-playwright": "2.10.5",
     "eslint-plugin-react-dom": "5.18.0",
     "eslint-plugin-react-jsx": "5.18.0",

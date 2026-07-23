@@ -100,8 +100,8 @@ importers:
         specifier: 0.22.13
         version: 0.22.13(@typescript/native-preview@7.0.0-dev.20260707.2)(oxc-resolver@11.24.2)(typescript@6.0.3)
       tsdown-config-silverwind:
-        specifier: 4.0.2
-        version: 4.0.2(tsdown@0.22.13(@typescript/native-preview@7.0.0-dev.20260707.2)(oxc-resolver@11.24.2)(typescript@6.0.3))
+        specifier: 4.0.3
+        version: 4.0.3(tsdown@0.22.13(@typescript/native-preview@7.0.0-dev.20260707.2)(oxc-resolver@11.24.2)(typescript@6.0.3))
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -1463,9 +1463,9 @@ packages:
   birecord@0.1.2:
     resolution: {integrity: sha512-5PAPTTmMpMEb+GuMb5DebfBkipRGyIW9+gtwEBSoDA9xkhHILm04+hZQ702pMksu3d8YAuGkmgTzQWcKqTPScA==}
 
-  brace-expansion@5.0.7:
-    resolution: {integrity: sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==}
-    engines: {node: 18 || 20 || >=22}
+  brace-expansion@5.0.8:
+    resolution: {integrity: sha512-JZyDyq3D4AUifKTPOB7DELf6XsB3WdPuNxCtob1vFXPsSXhdAiHBWJ/tJ8HAc9aH84BK+5JFZLNkJKx3G9kzQg==}
+    engines: {node: 20 || >=22}
 
   browserslist@4.28.7:
     resolution: {integrity: sha512-JxV13hNrFxqjOc8alRbq9dK1MM79NEXYpma2B2J4wAtpWS5zIEIKqWPGCl7N4o7Uc7B7itylh7SuDujATRyyTw==}
@@ -2427,8 +2427,8 @@ packages:
   ts-pattern@5.9.0:
     resolution: {integrity: sha512-6s5V71mX8qBUmlgbrfL33xDUwO0fq48rxAu2LBE11WBeGdpCPOsXksQbZJHvHwhrd3QjUusd3mAOM5Gg0mFBLg==}
 
-  tsdown-config-silverwind@4.0.2:
-    resolution: {integrity: sha512-9QHB/reToBEfP24dTGn1QnBnREPoFQ11Ci2PDLYUuzhYgB6ofJ8R0eI1Npyh+l1YXPiYC/jtBG5/klYSpyZrAA==}
+  tsdown-config-silverwind@4.0.3:
+    resolution: {integrity: sha512-eoc+VVkDJE7SMMLW8JFwXE/gQ1nkzH2zQQqZibhShRHmqxFrEBS4Rg7suY+RPczlO2R2gV8S4s1n8qAFhtJr9g==}
     engines: {node: '>=22'}
     peerDependencies:
       tsdown: '*'
@@ -3736,7 +3736,7 @@ snapshots:
 
   birecord@0.1.2: {}
 
-  brace-expansion@5.0.7:
+  brace-expansion@5.0.8:
     dependencies:
       balanced-match: 4.0.4
 
@@ -4405,7 +4405,7 @@ snapshots:
 
   minimatch@10.2.5:
     dependencies:
-      brace-expansion: 5.0.7
+      brace-expansion: 5.0.8
 
   ms@2.1.3: {}
 
@@ -4736,7 +4736,7 @@ snapshots:
 
   ts-pattern@5.9.0: {}
 
-  tsdown-config-silverwind@4.0.2(tsdown@0.22.13(@typescript/native-preview@7.0.0-dev.20260707.2)(oxc-resolver@11.24.2)(typescript@6.0.3)):
+  tsdown-config-silverwind@4.0.3(tsdown@0.22.13(@typescript/native-preview@7.0.0-dev.20260707.2)(oxc-resolver@11.24.2)(typescript@6.0.3)):
     dependencies:
       tsdown: 0.22.13(@typescript/native-preview@7.0.0-dev.20260707.2)(oxc-resolver@11.24.2)(typescript@6.0.3)
 

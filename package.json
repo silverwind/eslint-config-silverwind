@@ -48,7 +48,7 @@
     "jest-extended": "7.0.0",
     "react": "19.2.8",
     "tsdown": "0.22.13",
-    "tsdown-config-silverwind": "4.0.2",
+    "tsdown-config-silverwind": "4.0.3",
     "typescript": "6.0.3",
     "typescript-config-silverwind": "20.0.1",
     "typescript-eslint": "8.65.0",

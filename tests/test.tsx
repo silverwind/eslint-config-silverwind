@@ -33,7 +33,7 @@ class C { // eslint-disable-line @typescript-eslint/no-unused-vars
 ["1", "2"].reverse().reduce((p, c) => p + c, ""); // eslint-disable-line unicorn/prefer-array-last-methods
 Array.from([]).map((t) => t); // eslint-disable-line unicorn/no-unused-array-method-return, unicorn/prefer-array-from-map
 
-// export const button = <button role="button"/>; // eslint-disable-line jsx-a11y/no-redundant-roles
+export const button = <button role="button"/>; // eslint-disable-line jsx-a11y/no-redundant-roles
 
 // @ts-expect-error
 const _d = document.all; // eslint-disable-line @typescript-eslint/no-deprecated

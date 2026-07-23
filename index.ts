@@ -1134,7 +1134,7 @@ const config: Array<Linter.Config> = [
       "react-dom/no-flush-sync": [2],
       "react-dom/no-hydrate": [2],
       "react-dom/no-missing-button-type": [0],
-      "react-dom/no-missing-iframe-sandbox": [2],
+      "react-dom/no-missing-iframe-sandbox": [0],
       "react-dom/no-render": [2],
       "react-dom/no-render-return-value": [2],
       "react-dom/no-script-url": [2],

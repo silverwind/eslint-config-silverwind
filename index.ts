@@ -1065,6 +1065,7 @@ const config: Array<Linter.Config> = [
       "playwright/no-skipped-test": [2],
       "playwright/no-slowed-test": [0],
       "playwright/no-standalone-expect": [2],
+      "playwright/no-unnecessary-assertions": [2],
       "playwright/no-unsafe-references": [2],
       "playwright/no-unused-locators": [2],
       "playwright/no-useless-await": [2],

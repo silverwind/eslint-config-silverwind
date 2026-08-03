@@ -289,7 +289,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/prefer-function-type": [2],
       "@typescript-eslint/prefer-includes": [2],
       "@typescript-eslint/prefer-literal-enum-member": [0],
-      "@typescript-eslint/prefer-namespace-keyword": [2],
+      "@typescript-eslint/prefer-namespace-keyword": [0], // handled by @typescript-eslint/no-namespace
       "@typescript-eslint/prefer-nullish-coalescing": [0],
       "@typescript-eslint/prefer-optional-chain": [2, {requireNullish: true}],
       "@typescript-eslint/prefer-promise-reject-errors": [2],
@@ -467,8 +467,8 @@ const config: Array<Linter.Config> = [
       "no-nonoctal-decimal-escape": [2],
       "no-obj-calls": [2],
       "no-object-constructor": [2],
-      "no-octal": [2],
-      "no-octal-escape": [2],
+      "no-octal": [0], // parse error under strict mode
+      "no-octal-escape": [0], // parse error under strict mode
       "no-param-reassign": [0],
       "no-plusplus": [0],
       "no-promise-executor-return": [0],

@@ -444,7 +444,7 @@ const config: Array<Linter.Config> = [
       "no-import-assign": [2],
       "no-inline-comments": [0],
       "no-inner-declarations": [2],
-      "no-invalid-regexp": [2],
+      "no-invalid-regexp": [0], // handled by regexp/no-invalid-regexp and regexp/no-non-standard-flag
       "no-invalid-this": [0],
       "no-irregular-whitespace": [2],
       "no-iterator": [2],
@@ -513,11 +513,11 @@ const config: Array<Linter.Config> = [
       "no-unused-vars": [0],
       "no-use-before-define": [0],
       "no-useless-assignment": [0], // too many false-positives
-      "no-useless-backreference": [2],
+      "no-useless-backreference": [0], // handled by regexp/no-useless-backreference
       "no-useless-call": [2],
       "no-useless-catch": [2],
       "no-useless-computed-key": [2],
-      "no-useless-concat": [2],
+      "no-useless-concat": [0], // handled by unicorn/no-useless-concat
       "no-useless-constructor": [2],
       "no-useless-escape": [2],
       "no-useless-rename": [2],
@@ -528,7 +528,7 @@ const config: Array<Linter.Config> = [
       "no-with": [0],
       "object-shorthand": [2, "always"],
       "one-var": [0],
-      "operator-assignment": [2, "always"],
+      "operator-assignment": [0], // handled by unicorn/operator-assignment
       "prefer-arrow-callback": [2, {"allowNamedFunctions": true, "allowUnboundThis": true}],
       "prefer-const": [2, {"destructuring": "all", "ignoreReadBeforeAssign": true}],
       "prefer-destructuring": [0],
@@ -1225,7 +1225,7 @@ const config: Array<Linter.Config> = [
       "@stylistic/jsx-equals-spacing": [2, "never"],
       "@stylistic/jsx-first-prop-new-line": [0],
       "@stylistic/jsx-function-call-newline": [0],
-      "@stylistic/jsx-indent-props": [2, 2],
+      "@stylistic/jsx-indent-props": [0], // handled by @stylistic/indent
       "@stylistic/jsx-max-props-per-line": [0],
       "@stylistic/jsx-newline": [0],
       "@stylistic/jsx-one-expression-per-line": [0],
@@ -1281,7 +1281,7 @@ const config: Array<Linter.Config> = [
       "vitest.setup.*",
       "integration/**",
     ],
-    ignores: [`**/e2e/**`],
+    ignores: [`**/e2e/**`, `**/*.e2e.*`],
     languageOptions: {globals: globals.vitest},
     rules: {
       "@typescript-eslint/no-deprecated": [0], // type-aware and slow, low value here

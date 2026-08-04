@@ -640,6 +640,7 @@ const config: Array<Linter.Config> = [
       "unicorn/catch-error-name": [0],
       "unicorn/class-reference-in-static-methods": [2],
       "unicorn/comment-content": [0],
+      "unicorn/consistent-arrow-return-style": [0],
       "unicorn/consistent-assert": [0],
       "unicorn/consistent-boolean-name": [0],
       "unicorn/consistent-class-member-order": [0],
@@ -669,6 +670,7 @@ const config: Array<Linter.Config> = [
       "unicorn/id-match": [2],
       "unicorn/import-style": [0],
       "unicorn/isolated-functions": [2, {functions: []}],
+      "unicorn/iteration-fallback-style": [2, "fallback"],
       "unicorn/logical-assignment-operators": [0],
       "unicorn/max-nested-calls": [0],
       "unicorn/name-replacements": [0],
@@ -692,6 +694,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-async-promise-finally": [2],
       "unicorn/no-await-expression-member": [0],
       "unicorn/no-await-in-promise-methods": [2],
+      "unicorn/no-barrel-files": [0], // syntax-only, cannot tell a package entry point from an internal barrel
       "unicorn/no-blob-to-file": [2],
       "unicorn/no-boolean-sort-comparator": [2],
       "unicorn/no-break-in-nested-loop": [0],
@@ -788,6 +791,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unreadable-object-destructuring": [0], // flags the standard computed-key rest-omit idiom
       "unicorn/no-unsafe-buffer-conversion": [2],
       "unicorn/no-unsafe-dom-html": [0],
+      "unicorn/no-unsafe-sqlite-interpolation": [2],
       "unicorn/no-unsafe-promise-all-settled-values": [2],
       "unicorn/no-unsafe-property-key": [0], // flags any computed key, false-positives on controlled keys
       "unicorn/no-unsafe-string-replacement": [0], // fires on any dynamic replacement, mostly false-positives
@@ -962,6 +966,7 @@ const config: Array<Linter.Config> = [
       "unicorn/require-passive-events": [2],
       "unicorn/require-post-message-target-origin": [0],
       "unicorn/require-proxy-trap-boolean-return": [2],
+      "unicorn/single-line-block-comment-style": [0],
       "unicorn/string-content": [0],
       "unicorn/switch-case-braces": [0],
       "unicorn/switch-case-break-position": [2],

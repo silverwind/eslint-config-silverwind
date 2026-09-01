@@ -22,6 +22,7 @@ import type {Linter} from "eslint";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
 const tsExts = ["ts", "tsx", "mts", "cts"] as const;
+const jsTsExts = [...jsExts, ...tsExts];
 const jsxExts = ["jsx", "tsx"] as const;
 
 const noRestrictedSyntax = [
@@ -47,6 +48,186 @@ const noRestrictedImports = {
   ],
 };
 
+const reactHookPlugins = {
+  "react": reactX,
+  "react-web-api": reactWebApi,
+};
+
+const reactHookRules: Linter.RulesRecord = {
+  // react-hooks rules with no react-x equivalent (require eslint-plugin-react-hooks)
+  // "react-hooks/automatic-effect-dependencies": [0],
+  // "react-hooks/capitalized-calls": [0],
+  // "react-hooks/config": [0],
+  // "react-hooks/fbt": [0],
+  // "react-hooks/fire": [0],
+  // "react-hooks/gating": [0],
+  // "react-hooks/hooks": [0],
+  // "react-hooks/incompatible-library": [2],
+  // "react-hooks/invariant": [0],
+  // "react-hooks/memoized-effect-dependencies": [0],
+  // "react-hooks/no-deriving-state-in-effects": [0],
+  // "react-hooks/preserve-manual-memoization": [2],
+  // "react-hooks/rule-suppression": [0],
+  // "react-hooks/syntax": [0],
+  // "react-hooks/todo": [0],
+  // "react-hooks/void-use-memo": [0],
+  "react-web-api/no-leaked-event-listener": [0], // too many false-positives
+  "react-web-api/no-leaked-fetch": [0], // experimental
+  "react-web-api/no-leaked-intersection-observer": [2],
+  "react-web-api/no-leaked-interval": [2],
+  "react-web-api/no-leaked-resize-observer": [2],
+  "react-web-api/no-leaked-timeout": [0], // too many false-positives
+  "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
+  "react/exhaustive-deps": [2], // replaces react-hooks/exhaustive-deps
+  "react/globals": [0], // experimental
+  "react/immutability": [2],
+  "react/no-create-ref": [2],
+  "react/no-missing-context-display-name": [2],
+  "react/no-misused-capture-owner-stack": [2],
+  "react/no-unnecessary-use-prefix": [2],
+  "react/no-unused-state": [2],
+  "react/no-use-context": [2],
+  "react/purity": [2], // replaces react-hooks/purity
+  "react/refs": [2], // replaces react-hooks/refs
+  "react/rules-of-hooks": [2], // replaces react-hooks/rules-of-hooks
+  "react/set-state-in-effect": [2], // replaces react-hooks/set-state-in-effect
+  "react/set-state-in-render": [2], // replaces react-hooks/set-state-in-render
+  "react/unsupported-syntax": [2], // replaces react-hooks/unsupported-syntax
+  "react/use-memo": [2], // replaces react-hooks/use-memo
+  "react/use-state": [2, {enforceAssignment: true, enforceSetterName: true}],
+};
+
+const jsxPlugins = {
+  "react-jsx": reactJsx,
+  "react-dom": reactDom,
+  "react-naming-convention": reactNamingConvention,
+  "react-refresh": reactRefresh,
+  "jsx-a11y": jsxA11y,
+  "validate-jsx-nesting": validateJsxNesting,
+};
+
+const jsxRules: Linter.RulesRecord = {
+  "react-dom/no-dangerously-set-innerhtml": [0],
+  "react-dom/no-dangerously-set-innerhtml-with-children": [2],
+  "react-dom/no-find-dom-node": [2],
+  "react-dom/no-flush-sync": [2],
+  "react-dom/no-hydrate": [2],
+  "react-dom/no-missing-button-type": [0],
+  "react-dom/no-missing-iframe-sandbox": [0],
+  "react-dom/no-render": [2],
+  "react-dom/no-render-return-value": [2],
+  "react-dom/no-script-url": [2],
+  "react-dom/no-string-style-prop": [2],
+  "react-dom/no-unknown-property": [2, {ignore: ["css"], requireDataLowercase: true}],
+  "react-dom/no-unsafe-iframe-sandbox": [2],
+  "react-dom/no-unsafe-target-blank": [2],
+  "react-dom/no-use-form-state": [2],
+  "react-dom/no-void-elements-with-children": [2],
+  "react-jsx/no-children-prop": [2],
+  "react-jsx/no-children-prop-with-children": [2],
+  "react-jsx/no-comment-textnodes": [2],
+  "react-jsx/no-key-after-spread": [2],
+  "react-jsx/no-leaked-dollar": [2],
+  "react-jsx/no-leaked-semicolon": [2],
+  "react-jsx/no-namespace": [2],
+  "react-jsx/no-useless-fragment": [0],
+  "react-naming-convention/context-name": [0],
+  "react-naming-convention/id-name": [0],
+  "react-naming-convention/ref-name": [0],
+  "react/no-access-state-in-setstate": [0], // covered by no-class-component
+  "react/no-array-index-key": [0],
+  "react/no-children-count": [0],
+  "react/no-children-for-each": [0],
+  "react/no-children-map": [0],
+  "react/no-children-only": [0],
+  "react/no-children-to-array": [0],
+  "react/no-class-component": [2],
+  "react/no-clone-element": [0],
+  "react/no-component-will-mount": [0], // covered by no-class-component
+  "react/no-component-will-receive-props": [0], // covered by no-class-component
+  "react/no-component-will-update": [0], // covered by no-class-component
+  "react/no-context-provider": [2],
+  "react/no-direct-mutation-state": [0], // covered by no-class-component
+  "react/no-duplicate-key": [2],
+  "react/no-forward-ref": [2],
+  "react/no-implicit-children": [0],
+  "react/no-implicit-key": [2],
+  "react/no-implicit-ref": [0],
+  "react/no-leaked-conditional-rendering": [0], // false-positives with ReactNode
+  "react/no-missing-component-display-name": [0],
+  "react/no-missing-key": [2],
+  "react/no-nested-component-definitions": [2],
+  "react/no-nested-lazy-component-declarations": [2],
+  "react/no-set-state-in-component-did-mount": [0], // covered by no-class-component
+  "react/no-set-state-in-component-did-update": [0], // covered by no-class-component
+  "react/no-set-state-in-component-will-update": [0], // covered by no-class-component
+  "react/no-unsafe-component-will-mount": [0], // covered by no-class-component
+  "react/no-unsafe-component-will-receive-props": [0], // covered by no-class-component
+  "react/no-unsafe-component-will-update": [0], // covered by no-class-component
+  "react/no-unstable-context-value": [2],
+  "react/no-unstable-default-props": [2],
+  "react/no-unused-class-component-members": [0], // covered by no-class-component
+  "react/no-unused-props": [2],
+  "react/static-components": [0], // experimental
+  "@stylistic/exp-jsx-props-style": [0],
+  "@stylistic/jsx-child-element-spacing": [0],
+  "@stylistic/jsx-closing-bracket-location": [0],
+  "@stylistic/jsx-closing-tag-location": [2],
+  "@stylistic/jsx-curly-brace-presence": [0],
+  "@stylistic/jsx-curly-newline": [2, "consistent"],
+  "@stylistic/jsx-curly-spacing": [2, {when: "never"}],
+  "@stylistic/jsx-equals-spacing": [2, "never"],
+  "@stylistic/jsx-first-prop-new-line": [0],
+  "@stylistic/jsx-function-call-newline": [0],
+  "@stylistic/jsx-indent-props": [0], // handled by @stylistic/indent
+  "@stylistic/jsx-max-props-per-line": [0],
+  "@stylistic/jsx-newline": [0],
+  "@stylistic/jsx-one-expression-per-line": [0],
+  "@stylistic/jsx-pascal-case": [2, {allowAllCaps: true}],
+  "@stylistic/jsx-quotes": [0],
+  "@stylistic/jsx-self-closing-comp": [2],
+  "@stylistic/jsx-tag-spacing": [2, {beforeSelfClosing: "never", beforeClosing: "never"}],
+  "@stylistic/jsx-wrap-multilines": [2],
+  "jsx-a11y/alt-text": [0],
+  "jsx-a11y/anchor-ambiguous-text": [2],
+  "jsx-a11y/anchor-has-content": [2],
+  "jsx-a11y/anchor-is-valid": [2],
+  "jsx-a11y/aria-activedescendant-has-tabindex": [2],
+  "jsx-a11y/aria-props": [2],
+  "jsx-a11y/aria-proptypes": [2],
+  "jsx-a11y/aria-role": [2],
+  "jsx-a11y/aria-unsupported-elements": [2],
+  "jsx-a11y/autocomplete-valid": [2],
+  "jsx-a11y/click-events-have-key-events": [0],
+  "jsx-a11y/control-has-associated-label": [0],
+  "jsx-a11y/heading-has-content": [2],
+  "jsx-a11y/html-has-lang": [0],
+  "jsx-a11y/iframe-has-title": [0],
+  "jsx-a11y/img-redundant-alt": [0],
+  "jsx-a11y/interactive-supports-focus": [2],
+  "jsx-a11y/label-has-associated-control": [2],
+  "jsx-a11y/lang": [2],
+  "jsx-a11y/media-has-caption": [0],
+  "jsx-a11y/mouse-events-have-key-events": [0],
+  "jsx-a11y/no-access-key": [2],
+  "jsx-a11y/no-aria-hidden-on-focusable": [0],
+  "jsx-a11y/no-autofocus": [0],
+  "jsx-a11y/no-distracting-elements": [2],
+  "jsx-a11y/no-interactive-element-to-noninteractive-role": [0],
+  "jsx-a11y/no-noninteractive-element-interactions": [0],
+  "jsx-a11y/no-noninteractive-element-to-interactive-role": [0],
+  "jsx-a11y/no-noninteractive-tabindex": [0],
+  "jsx-a11y/no-redundant-roles": [2],
+  "jsx-a11y/no-static-element-interactions": [0],
+  "jsx-a11y/prefer-tag-over-role": [2],
+  "jsx-a11y/role-has-required-aria-props": [2],
+  "jsx-a11y/role-supports-aria-props": [2],
+  "jsx-a11y/scope": [0],
+  "jsx-a11y/tabindex-no-positive": [2],
+  "react-refresh/only-export-components": [2, {allowConstantExport: true}],
+  "validate-jsx-nesting/no-invalid-jsx-nesting": [2],
+};
+
 const config: Array<Linter.Config> = [
   {
     ignores: [
@@ -67,7 +248,7 @@ const config: Array<Linter.Config> = [
     ],
   },
   {
-    files: [`**/*.{${[...jsExts, ...tsExts].join(",")}}`],
+    files: [`**/*.{${jsTsExts.join(",")}}`],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -97,10 +278,13 @@ const config: Array<Linter.Config> = [
       unicorn,
     },
     settings: {
-      "import-x/extensions": [...jsExts, ...tsExts].map(ext => `.${ext}`),
-      "import-x/parsers": {"@typescript-eslint/parser": [...jsExts, ...tsExts].map(ext => `.${ext}`)},
+      "import-x/extensions": jsTsExts.map(ext => `.${ext}`),
+      "import-x/parsers": {"@typescript-eslint/parser": jsTsExts.map(ext => `.${ext}`)},
       "import-x/resolver": {"eslint-import-resolver-typescript": true},
-      "react-x": {additionalRefHooks: "/^(useLazyRef|useMounted|useModifierKeyRef)$/"},
+      "react-x": {
+        additionalEffectHooks: "/^(useEffectOnce|useLayoutEffectOnce)$/",
+        additionalRefHooks: "/^(useLazyRef|useMounted|useModifierKeyRef)$/",
+      },
       // eslint-react currently does not support this, maybe in the future it will
       // "linkComponents": [{name: "Link", linkAttribute: "href"}],
     },
@@ -1035,8 +1219,8 @@ const config: Array<Linter.Config> = [
   },
   {
     files: [
-      `**/e2e/**/*.test.{${[...jsExts, ...tsExts].join(",")}}`,
-      `**/*.e2e.{${[...jsExts, ...tsExts].join(",")}}`,
+      `**/e2e/**/*.test.{${jsTsExts.join(",")}}`,
+      `**/*.e2e.{${jsTsExts.join(",")}}`,
     ],
     plugins: {playwright},
     languageOptions: {globals: {...globals.nodeBuiltin, ...globals.browser}},
@@ -1105,179 +1289,14 @@ const config: Array<Linter.Config> = [
     },
   },
   {
-    plugins: {
-      "react": reactX,
-      "react-jsx": reactJsx,
-      "react-dom": reactDom,
-      "react-web-api": reactWebApi,
-      "react-naming-convention": reactNamingConvention,
-      "react-refresh": reactRefresh,
-      "jsx-a11y": jsxA11y,
-      "validate-jsx-nesting": validateJsxNesting,
-    },
+    plugins: reactHookPlugins,
+    files: [`**/*.{${jsTsExts.join(",")}}`],
+    rules: reactHookRules,
+  },
+  {
+    plugins: jsxPlugins,
     files: [`**/*.{${jsxExts.join(",")}}`],
-    rules: {
-      "react-dom/no-dangerously-set-innerhtml": [0],
-      "react-dom/no-dangerously-set-innerhtml-with-children": [2],
-      "react-dom/no-find-dom-node": [2],
-      "react-dom/no-flush-sync": [2],
-      "react-dom/no-hydrate": [2],
-      "react-dom/no-missing-button-type": [0],
-      "react-dom/no-missing-iframe-sandbox": [0],
-      "react-dom/no-render": [2],
-      "react-dom/no-render-return-value": [2],
-      "react-dom/no-script-url": [2],
-      "react-dom/no-string-style-prop": [2],
-      "react-dom/no-unknown-property": [2, {ignore: ["css"], requireDataLowercase: true}],
-      "react-dom/no-unsafe-iframe-sandbox": [2],
-      "react-dom/no-unsafe-target-blank": [2],
-      "react-dom/no-use-form-state": [2],
-      "react-dom/no-void-elements-with-children": [2],
-      "react-jsx/no-children-prop": [2],
-      "react-jsx/no-children-prop-with-children": [2],
-      "react-jsx/no-comment-textnodes": [2],
-      "react-jsx/no-key-after-spread": [2],
-      "react-jsx/no-leaked-dollar": [2],
-      "react-jsx/no-leaked-semicolon": [2],
-      "react-jsx/no-namespace": [2],
-      "react-jsx/no-useless-fragment": [0],
-      // react-hooks rules with no react-x equivalent (require eslint-plugin-react-hooks)
-      // "react-hooks/automatic-effect-dependencies": [0],
-      // "react-hooks/capitalized-calls": [0],
-      // "react-hooks/config": [0],
-      // "react-hooks/fbt": [0],
-      // "react-hooks/fire": [0],
-      // "react-hooks/gating": [0],
-      // "react-hooks/hooks": [0],
-      // "react-hooks/incompatible-library": [2],
-      // "react-hooks/invariant": [0],
-      // "react-hooks/memoized-effect-dependencies": [0],
-      // "react-hooks/no-deriving-state-in-effects": [0],
-      // "react-hooks/preserve-manual-memoization": [2],
-      // "react-hooks/rule-suppression": [0],
-      // "react-hooks/syntax": [0],
-      // "react-hooks/todo": [0],
-      // "react-hooks/void-use-memo": [0],
-      "react-naming-convention/context-name": [0],
-      "react-naming-convention/id-name": [0],
-      "react-naming-convention/ref-name": [0],
-      "react-web-api/no-leaked-event-listener": [0], // too many false-positives
-      "react-web-api/no-leaked-fetch": [0], // experimental
-      "react-web-api/no-leaked-intersection-observer": [2],
-      "react-web-api/no-leaked-interval": [2],
-      "react-web-api/no-leaked-resize-observer": [2],
-      "react-web-api/no-leaked-timeout": [0], // too many false-positives
-      "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
-      "react/exhaustive-deps": [2, {additionalHooks: "^(useEffectOnce|useLayoutEffectOnce)$"}], // replaces react-hooks/exhaustive-deps
-      "react/globals": [0], // experimental
-      "react/immutability": [2],
-      "react/no-access-state-in-setstate": [0], // covered by no-class-component
-      "react/no-array-index-key": [0],
-      "react/no-children-count": [0],
-      "react/no-children-for-each": [0],
-      "react/no-children-map": [0],
-      "react/no-children-only": [0],
-      "react/no-children-to-array": [0],
-      "react/no-class-component": [2],
-      "react/no-clone-element": [0],
-      "react/no-component-will-mount": [0], // covered by no-class-component
-      "react/no-component-will-receive-props": [0], // covered by no-class-component
-      "react/no-component-will-update": [0], // covered by no-class-component
-      "react/no-context-provider": [2],
-      "react/no-create-ref": [2],
-      "react/no-direct-mutation-state": [0], // covered by no-class-component
-      "react/no-duplicate-key": [2],
-      "react/no-forward-ref": [2],
-      "react/no-implicit-children": [0],
-      "react/no-implicit-key": [2],
-      "react/no-implicit-ref": [0],
-      "react/no-leaked-conditional-rendering": [0], // false-positives with ReactNode
-      "react/no-missing-component-display-name": [0],
-      "react/no-missing-context-display-name": [2],
-      "react/no-missing-key": [2],
-      "react/no-misused-capture-owner-stack": [2],
-      "react/no-nested-component-definitions": [2],
-      "react/no-nested-lazy-component-declarations": [2],
-      "react/no-set-state-in-component-did-mount": [0], // covered by no-class-component
-      "react/no-set-state-in-component-did-update": [0], // covered by no-class-component
-      "react/no-set-state-in-component-will-update": [0], // covered by no-class-component
-      "react/no-unnecessary-use-prefix": [2],
-      "react/no-unsafe-component-will-mount": [0], // covered by no-class-component
-      "react/no-unsafe-component-will-receive-props": [0], // covered by no-class-component
-      "react/no-unsafe-component-will-update": [0], // covered by no-class-component
-      "react/no-unstable-context-value": [2],
-      "react/no-unstable-default-props": [2],
-      "react/no-unused-class-component-members": [0], // covered by no-class-component
-      "react/no-unused-props": [2],
-      "react/no-unused-state": [2],
-      "react/no-use-context": [2],
-      "react/purity": [2], // replaces react-hooks/purity
-      "react/refs": [2], // replaces react-hooks/refs
-      "react/rules-of-hooks": [2], // replaces react-hooks/rules-of-hooks
-      "react/set-state-in-effect": [0], // replaces react-hooks/set-state-in-effect
-      "react/set-state-in-render": [2], // replaces react-hooks/set-state-in-render
-      "react/static-components": [0], // experimental
-      "react/unsupported-syntax": [2], // replaces react-hooks/unsupported-syntax
-      "react/use-memo": [2], // replaces react-hooks/use-memo
-      "react/use-state": [2, {enforceAssignment: true, enforceSetterName: true}],
-      "@stylistic/exp-jsx-props-style": [0],
-      "@stylistic/jsx-child-element-spacing": [0],
-      "@stylistic/jsx-closing-bracket-location": [0],
-      "@stylistic/jsx-closing-tag-location": [2],
-      "@stylistic/jsx-curly-brace-presence": [0],
-      "@stylistic/jsx-curly-newline": [2, "consistent"],
-      "@stylistic/jsx-curly-spacing": [2, {when: "never"}],
-      "@stylistic/jsx-equals-spacing": [2, "never"],
-      "@stylistic/jsx-first-prop-new-line": [0],
-      "@stylistic/jsx-function-call-newline": [0],
-      "@stylistic/jsx-indent-props": [0], // handled by @stylistic/indent
-      "@stylistic/jsx-max-props-per-line": [0],
-      "@stylistic/jsx-newline": [0],
-      "@stylistic/jsx-one-expression-per-line": [0],
-      "@stylistic/jsx-pascal-case": [2, {allowAllCaps: true}],
-      "@stylistic/jsx-quotes": [0],
-      "@stylistic/jsx-self-closing-comp": [2],
-      "@stylistic/jsx-tag-spacing": [2, {beforeSelfClosing: "never", beforeClosing: "never"}],
-      "@stylistic/jsx-wrap-multilines": [2],
-      "jsx-a11y/alt-text": [0],
-      "jsx-a11y/anchor-ambiguous-text": [2],
-      "jsx-a11y/anchor-has-content": [2],
-      "jsx-a11y/anchor-is-valid": [2],
-      "jsx-a11y/aria-activedescendant-has-tabindex": [2],
-      "jsx-a11y/aria-props": [2],
-      "jsx-a11y/aria-proptypes": [2],
-      "jsx-a11y/aria-role": [2],
-      "jsx-a11y/aria-unsupported-elements": [2],
-      "jsx-a11y/autocomplete-valid": [2],
-      "jsx-a11y/click-events-have-key-events": [0],
-      "jsx-a11y/control-has-associated-label": [0],
-      "jsx-a11y/heading-has-content": [2],
-      "jsx-a11y/html-has-lang": [0],
-      "jsx-a11y/iframe-has-title": [0],
-      "jsx-a11y/img-redundant-alt": [0],
-      "jsx-a11y/interactive-supports-focus": [2],
-      "jsx-a11y/label-has-associated-control": [2],
-      "jsx-a11y/lang": [2],
-      "jsx-a11y/media-has-caption": [0],
-      "jsx-a11y/mouse-events-have-key-events": [0],
-      "jsx-a11y/no-access-key": [2],
-      "jsx-a11y/no-aria-hidden-on-focusable": [0],
-      "jsx-a11y/no-autofocus": [0],
-      "jsx-a11y/no-distracting-elements": [2],
-      "jsx-a11y/no-interactive-element-to-noninteractive-role": [0],
-      "jsx-a11y/no-noninteractive-element-interactions": [0],
-      "jsx-a11y/no-noninteractive-element-to-interactive-role": [0],
-      "jsx-a11y/no-noninteractive-tabindex": [0],
-      "jsx-a11y/no-redundant-roles": [2],
-      "jsx-a11y/no-static-element-interactions": [0],
-      "jsx-a11y/prefer-tag-over-role": [2],
-      "jsx-a11y/role-has-required-aria-props": [2],
-      "jsx-a11y/role-supports-aria-props": [2],
-      "jsx-a11y/scope": [0],
-      "jsx-a11y/tabindex-no-positive": [2],
-      "react-refresh/only-export-components": [2, {allowConstantExport: true}],
-      "validate-jsx-nesting/no-invalid-jsx-nesting": [2],
-    }
+    rules: jsxRules,
   },
   {
     plugins: {vitest, "testing-library": testingLibrary},

@@ -298,7 +298,7 @@ const config: Array<Linter.Config> = [
       "@eslint-community/eslint-comments/no-unlimited-disable": [2],
       "@eslint-community/eslint-comments/no-unused-enable": [2],
       "@eslint-community/eslint-comments/no-use": [0],
-      "@eslint-community/eslint-comments/require-description": [2, {"ignore": ["eslint", "eslint-enable", "eslint-env", "exported", "global", "globals"]}],
+      "@eslint-community/eslint-comments/require-description": [2, {"ignore": ["eslint", "eslint-enable", "eslint-env", "exported", "global", "globals"]}], // TODO: add oxlint directives once https://github.com/eslint-community/eslint-plugin-eslint-comments/pull/329 lands
       "@stylistic/array-bracket-newline": [0],
       "@stylistic/array-bracket-spacing": [2, "never"],
       "@stylistic/array-element-newline": [0],
@@ -415,6 +415,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-extraneous-class": [0],
       "@typescript-eslint/no-floating-promises": [0],
       "@typescript-eslint/no-for-in-array": [0], // handled by no-restricted-syntax banning ForInStatement
+      "@typescript-eslint/no-generated-empty-object-type": [2],
       "@typescript-eslint/no-implied-eval": [2],
       "@typescript-eslint/no-import-type-side-effects": [0], // dupe with consistent-type-imports
       "@typescript-eslint/no-inferrable-types": [0],

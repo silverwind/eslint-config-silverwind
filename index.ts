@@ -971,7 +971,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-slice-end": [2],
       "unicorn/no-unnecessary-splice": [2],
       "unicorn/no-unnecessary-string-trim": [2],
-      "unicorn/no-unreadable-array-destructuring": [0],
+      "unicorn/no-unreadable-array-destructuring": [2, {maximumIgnoredElements: 0}],
       "unicorn/no-unreadable-for-of-expression": [0],
       "unicorn/no-unreadable-iife": [0],
       "unicorn/no-unreadable-new-expression": [0], // too opinionated, flags idiomatic new X().prop

@@ -298,7 +298,7 @@ const config: Array<Linter.Config> = [
       "@eslint-community/eslint-comments/no-unlimited-disable": [2],
       "@eslint-community/eslint-comments/no-unused-enable": [2],
       "@eslint-community/eslint-comments/no-use": [0],
-      "@eslint-community/eslint-comments/require-description": [2, {"ignore": ["eslint", "eslint-enable", "eslint-env", "exported", "global", "globals"]}], // TODO: add oxlint directives once https://github.com/eslint-community/eslint-plugin-eslint-comments/pull/329 lands
+      "@eslint-community/eslint-comments/require-description": [2, {"additionalDirectives": ["oxlint-disable", "oxlint-disable-line", "oxlint-disable-next-line"], "ignore": ["eslint", "eslint-enable", "eslint-env", "exported", "global", "globals"]}],
       "@stylistic/array-bracket-newline": [0],
       "@stylistic/array-bracket-spacing": [2, "never"],
       "@stylistic/array-element-newline": [0],

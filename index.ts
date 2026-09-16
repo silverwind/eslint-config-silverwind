@@ -878,6 +878,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-array-sort-for-min-max": [2],
       "unicorn/no-array-splice": [0],
       "unicorn/no-asterisk-prefix-in-documentation-comments": [0],
+      "unicorn/no-async-iterator-callback": [2],
       "unicorn/no-async-promise-finally": [2],
       "unicorn/no-await-expression-member": [0],
       "unicorn/no-await-in-promise-methods": [2],
@@ -894,8 +895,11 @@ const config: Array<Linter.Config> = [
       "unicorn/no-console-spaces": [0],
       "unicorn/no-constant-zero-expression": [2],
       "unicorn/no-declarations-before-early-exit": [0], // hooks and pure pre-reads legitimately precede early returns
+      "unicorn/no-deprecated-css-features": [0],
       "unicorn/no-document-cookie": [2],
       "unicorn/no-double-comparison": [2],
+      "unicorn/no-duplicate-css-selectors": [0],
+      "unicorn/no-duplicate-font-family-names": [0],
       "unicorn/no-duplicate-if-branches": [2], // replaces sonarjs/no-all-duplicated-branches (if-chain subset)
       "unicorn/no-duplicate-logical-operands": [2],
       "unicorn/no-duplicate-loops": [0], // flags legitimate chained array methods in for-of headers
@@ -915,6 +919,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-invalid-character-comparison": [2],
       "unicorn/no-invalid-fetch-options": [2],
       "unicorn/no-invalid-file-input-accept": [2],
+      "unicorn/no-invalid-media-features": [0],
       "unicorn/no-invalid-remove-event-listener": [2],
       "unicorn/no-invalid-well-known-symbol-methods": [2],
       "unicorn/no-keyword-prefix": [0],
@@ -934,6 +939,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-negated-condition": [0],
       "unicorn/no-negation-in-equality-check": [2],
       "unicorn/no-nested-ternary": [0],
+      "unicorn/no-nesting-with-mixed-specificity": [0],
       "unicorn/no-new-array": [0],
       "unicorn/no-new-buffer": [2],
       "unicorn/no-non-function-verb-prefix": [0],
@@ -944,6 +950,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-optional-chaining-on-undeclared-variable": [2],
       "unicorn/no-process-exit": [0],
       "unicorn/no-redundant-comparison": [2],
+      "unicorn/no-redundant-nested-style-rules": [0],
       "unicorn/no-return-array-push": [2],
       "unicorn/no-selector-as-dom-name": [2],
       "unicorn/no-shorthand-property-overrides": [0], // only applies to css language
@@ -959,6 +966,8 @@ const config: Array<Linter.Config> = [
       "unicorn/no-typeof-undefined": [2],
       "unicorn/no-uncalled-method": [2],
       "unicorn/no-undeclared-class-members": [2],
+      "unicorn/no-unknown-css-annotations": [0],
+      "unicorn/no-unknown-pseudo-selectors": [0],
       "unicorn/no-unnecessary-array-flat-depth": [2],
       "unicorn/no-unnecessary-array-flat-map": [2],
       "unicorn/no-unnecessary-array-splice-count": [2],
@@ -982,7 +991,9 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unsafe-promise-all-settled-values": [2],
       "unicorn/no-unsafe-property-key": [0], // flags any computed key, false-positives on controlled keys
       "unicorn/no-unsafe-string-replacement": [0], // fires on any dynamic replacement, mostly false-positives
-      "unicorn/no-unused-array-method-return": [2],
+      "unicorn/no-unscoped-css-nesting-selector": [0],
+      "unicorn/no-unused-builtin-method-return": [2],
+      "unicorn/no-unused-iterator-helper": [2],
       "unicorn/no-unused-properties": [2],
       "unicorn/no-useless-boolean-cast": [2],
       "unicorn/no-useless-coercion": [2],
@@ -1001,10 +1012,12 @@ const config: Array<Linter.Config> = [
       "unicorn/no-useless-promise-resolve-reject": [2],
       "unicorn/no-useless-re-export": [2],
       "unicorn/no-useless-recursion": [0], // recursion is often clearer than the equivalent loop
+      "unicorn/no-useless-set-construction": [2],
       "unicorn/no-useless-spread": [2],
       "unicorn/no-useless-switch-case": [2],
       "unicorn/no-useless-template-literals": [0], // too noisy
       "unicorn/no-useless-undefined": [0],
+      "unicorn/no-using-resource-escape": [2],
       "unicorn/no-xor-as-exponentiation": [2],
       "unicorn/no-zero-fractions": [2],
       "unicorn/number-literal-case": [0],
@@ -1035,6 +1048,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-class-fields": [2],
       "unicorn/prefer-classlist-toggle": [2],
       "unicorn/prefer-code-point": [0],
+      "unicorn/prefer-combined-guards": [0],
       "unicorn/prefer-continue": [0],
       "unicorn/prefer-date-now": [2],
       "unicorn/prefer-default-parameters": [0],
@@ -1068,6 +1082,8 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-iterator-helpers": [2],
       "unicorn/prefer-iterator-to-array": [2],
       "unicorn/prefer-iterator-to-array-at-end": [2],
+      "unicorn/prefer-iterator-zip": [0],
+      "unicorn/prefer-json-import": [0],
       "unicorn/prefer-keyboard-event-key": [2],
       "unicorn/prefer-location-assign": [2],
       "unicorn/prefer-logical-operator-over-ternary": [2],
@@ -1076,6 +1092,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-math-constants": [2],
       "unicorn/prefer-math-min-max": [2],
       "unicorn/prefer-math-trunc": [2],
+      "unicorn/prefer-media-feature-range-syntax": [0],
       "unicorn/prefer-minimal-ternary": [0], // computed-key rewrite reads worse than the explicit ternary
       "unicorn/prefer-modern-dom-apis": [0],
       "unicorn/prefer-modern-math-apis": [2],
@@ -1129,6 +1146,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-structured-clone": [2],
       "unicorn/prefer-switch": [0],
       "unicorn/prefer-temporal": [0], // TODO: enable once Temporal is Baseline; currently Chrome/Edge 144+, Firefox 139+, no Safari
+      "unicorn/prefer-temporal-conversion": [2],
       "unicorn/prefer-ternary": [0],
       "unicorn/prefer-then-catch": [2],
       "unicorn/prefer-toggle-attribute": [0],
@@ -1136,6 +1154,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-type-error": [0],
       "unicorn/prefer-type-literal-last": [0],
       "unicorn/prefer-uint8array-base64": [0], // TODO: enable once Baseline-stable; currently Chrome/Edge 140+, Firefox 133+, Safari 18.2+
+      "unicorn/prefer-uint8array-hex": [0],
       "unicorn/prefer-unary-minus": [2],
       "unicorn/prefer-unicode-code-point-escapes": [0],
       "unicorn/prefer-url-can-parse": [2],

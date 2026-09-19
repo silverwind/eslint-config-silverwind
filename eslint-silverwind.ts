@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {execFileSync} from "node:child_process";
-import {argv, exit, platform} from "node:process";
+import {argv, env, exit, platform} from "node:process";
 
 const args = argv.slice(2);
 
@@ -10,6 +10,7 @@ try {
     "--concurrency": "2",
   }).filter(([flag]) => !args.includes(flag)).flat(), ...args], {
     stdio: "inherit",
+    env: {...env, NODE_OPTIONS: `${env.NODE_OPTIONS ?? ""} --disable-warning=ESLintPoorConcurrencyWarning`},
     ...(platform === "win32" && {shell: true}),
   });
 } catch (err: unknown) {

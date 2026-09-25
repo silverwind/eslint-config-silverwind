@@ -4,7 +4,10 @@
   "description": "Exhaustive ESLint configuration",
   "license": "BSD-2-Clause",
   "author": "silverwind <me@silverwind.io>",
-  "repository": "silverwind/eslint-config-silverwind",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silverwind/eslint-config-silverwind.git"
+  },
   "bin": {
     "eslint-silverwind": "dist/eslint-silverwind.js"
   },

@@ -15,7 +15,7 @@ lint: node_modules build
 
 .PHONY: lint-fix
 lint-fix: node_modules build
-	./eslint-silverwind.ts -c dist/index.js --color --fix .
+	./eslint-silverwind.ts -c dist/index.js --color . --fix
 	pnpm exec tsgo
 
 .PHONY: test
@@ -28,14 +28,18 @@ test-update: node_modules build
 	pnpm exec vitest -u
 
 .PHONY: build
-build: $(DIST_FILES)
+build: node_modules $(DIST_FILES)
 
 $(DIST_FILES): $(SOURCE_FILES) pnpm-lock.yaml package.json tsdown.config.ts
 	pnpm exec tsdown
 
 .PHONY: watch
-watch:
+watch: node_modules
 	pnpm exec tsdown --watch
+
+.PHONY: publish
+publish: node_modules
+	pnpm publish --no-git-checks
 
 .PHONY: update
 update: update-js update-actions
@@ -47,14 +51,10 @@ update-js: node_modules
 	pnpm install
 	@touch node_modules
 
-.PHONY: publish
-publish: node_modules
-	pnpm publish --no-git-checks
+.PHONY: update-actions
+update-actions: node_modules
+	pnpm exec updates -u -M actions
 
 .PHONY: patch minor major
 patch minor major: node_modules lint test
 	pnpm exec versions -R $@ package.json
-
-.PHONY: update-actions
-update-actions: node_modules
-	pnpm exec updates -u -M actions

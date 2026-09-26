@@ -242,9 +242,6 @@ importers:
       globals:
         specifier: 17.12.0
         version: 17.12.0
-      jest-extended:
-        specifier: 7.0.0
-        version: 7.0.0(typescript@6.0.3)
       react:
         specifier: 19.3.0
         version: 19.3.0

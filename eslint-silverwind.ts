@@ -16,7 +16,7 @@ try {
 } catch (err) {
   const {status} = err as {status?: number | null};
   if (status === undefined || status === null) {
-    console.error(Error.isError(err) ? err.message : err);
+    console.error(err instanceof Error ? err.message : err);
     exit(1);
   }
   exit(status);

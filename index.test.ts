@@ -1,5 +1,7 @@
 import configs from "./eslint.config.ts";
 import {ESLint} from "eslint";
+import {spawnSync} from "node:child_process";
+import {execPath} from "node:process";
 
 test("config", () => {
   expect(Array.isArray(configs)).toEqual(true);
@@ -18,4 +20,9 @@ test("require-description reports undescribed oxlint directives", async () => {
   const [{messages}] = await eslint.lintText(code, {filePath: "index.test.ts"});
   const ruleId = "@eslint-community/eslint-comments/require-description";
   expect(messages.filter(msg => msg.ruleId === ruleId).map(msg => msg.line)).toEqual([1]);
+});
+
+test("wrapper prints spawn errors and exits 1", () => {
+  const {status, stderr} = spawnSync(execPath, ["dist/eslint-silverwind.js"], {env: {PATH: ""}, encoding: "utf8"});
+  expect({status, stderr}).toEqual({status: 1, stderr: "spawnSync pnpm ENOENT\n"});
 });

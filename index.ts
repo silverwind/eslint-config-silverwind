@@ -231,7 +231,6 @@ const jsxRules: Linter.RulesRecord = {
 const config: Array<Linter.Config> = [
   {
     ignores: [
-      "**/!.storybook/",
       "**/*.snap",
       "**/.air/",
       "**/.claude/",

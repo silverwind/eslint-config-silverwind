@@ -28,8 +28,6 @@ class C { // eslint-disable-line @typescript-eslint/no-unused-vars -- fixture
   method() {}
 }
 
-// export default true; // eslint-disable-line import-x/no-unused-modules
-
 ["1", "2"].reverse().reduce((p, c) => p + c, ""); // eslint-disable-line unicorn/prefer-array-last-methods -- fixture
 Array.from([]).map((t) => t); // eslint-disable-line unicorn/no-unused-builtin-method-return, unicorn/prefer-array-from-map -- fixture
 

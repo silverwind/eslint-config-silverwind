@@ -4,9 +4,8 @@ const view = render(<div/>);
 screen.getByText("foo");
 view.getByText("foo"); // eslint-disable-line testing-library/prefer-screen-queries -- fixture
 
-// react/immutability is disabled in test files, so this mutation-in-render pattern lints clean without a directive
-function Mutating() {
+function MutatesInRenderWithoutImmutabilityError() {
   let mutated = 0;
   return <button onClick={() => { mutated = 1; }}>{mutated}</button>;
 }
-render(<Mutating/>);
+render(<MutatesInRenderWithoutImmutabilityError/>);

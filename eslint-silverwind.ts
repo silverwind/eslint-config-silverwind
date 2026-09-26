@@ -13,7 +13,7 @@ try {
     env: {...env, NODE_OPTIONS: `${env.NODE_OPTIONS ?? ""} --disable-warning=ESLintPoorConcurrencyWarning`},
     ...(platform === "win32" && {shell: true}),
   });
-} catch (err: unknown) {
+} catch (err) {
   const {status} = err as {status?: number | null};
   if (status === undefined || status === null) {
     console.error(Error.isError(err) ? err.message : err);

@@ -1327,7 +1327,7 @@ const config: Array<Linter.Config> = [
       "vitest.setup.*",
       "integration/**",
     ],
-    ignores: [`**/e2e/**`, `**/*.e2e.*`],
+    ignores: ["**/e2e/**", "**/*.e2e.*"],
     languageOptions: {globals: globals.vitest},
     rules: {
       "@typescript-eslint/no-deprecated": [0], // type-aware and slow, low value here

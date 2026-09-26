@@ -425,7 +425,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-meaningless-void-operator": [0],
       "@typescript-eslint/no-misused-new": [2],
       "@typescript-eslint/no-misused-promises": [2, {checksVoidReturn: {arguments: false, attributes: false, properties: false}}],
-      "@typescript-eslint/no-misused-spread": [0], // false-positives
+      "@typescript-eslint/no-misused-spread": [2],
       "@typescript-eslint/no-mixed-enums": [0],
       "@typescript-eslint/no-namespace": [2],
       "@typescript-eslint/no-non-null-asserted-nullish-coalescing": [2],
@@ -495,7 +495,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/return-await": [2, "error-handling-correctness-only"],
       "@typescript-eslint/strict-boolean-expressions": [0],
       "@typescript-eslint/strict-void-return": [0],
-      "@typescript-eslint/switch-exhaustiveness-check": [0],
+      "@typescript-eslint/switch-exhaustiveness-check": [2],
       "@typescript-eslint/triple-slash-reference": [2],
       "@typescript-eslint/unbound-method": [0], // too many false-positives
       "@typescript-eslint/unified-signatures": [2],
@@ -915,7 +915,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-incorrect-query-selector": [2],
       "unicorn/no-incorrect-template-string-interpolation": [0], // false-positives on intentional placeholder tokens
       "unicorn/no-instanceof-builtins": [2],
-      "unicorn/no-invalid-argument-count": [0], // redundant with TypeScript TS2554, and slow (~17% of lint time)
+      "unicorn/no-invalid-argument-count": [2],
       "unicorn/no-invalid-character-comparison": [2],
       "unicorn/no-invalid-fetch-options": [2],
       "unicorn/no-invalid-file-input-accept": [2],
@@ -990,7 +990,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unsafe-sqlite-interpolation": [2],
       "unicorn/no-unsafe-promise-all-settled-values": [2],
       "unicorn/no-unsafe-property-key": [0], // flags any computed key, false-positives on controlled keys
-      "unicorn/no-unsafe-string-replacement": [0], // fires on any dynamic replacement, mostly false-positives
+      "unicorn/no-unsafe-string-replacement": [2],
       "unicorn/no-unscoped-css-nesting-selector": [0],
       "unicorn/no-unused-builtin-method-return": [2],
       "unicorn/no-unused-iterator-helper": [2],
@@ -1359,7 +1359,7 @@ const config: Array<Linter.Config> = [
       "vitest/no-mocks-import": [0],
       "vitest/no-restricted-matchers": [0],
       "vitest/no-restricted-vi-methods": [0],
-      "vitest/no-standalone-expect": [0], // does not work in beforeAll
+      "vitest/no-standalone-expect": [2],
       "vitest/no-test-prefixes": [0],
       "vitest/no-test-return-statement": [0],
       "vitest/no-unneeded-async-expect-function": [2],

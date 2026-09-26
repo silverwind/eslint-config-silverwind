@@ -7,6 +7,11 @@ test("config", () => {
   expect(Array.isArray(configs)).toEqual(true);
 });
 
+test("dist loads without pnpm's NODE_PATH", () => {
+  const {status, stderr} = spawnSync(execPath, ["--input-type=module", "-e", `await import("./dist/index.js")`], {env: {}, encoding: "utf8"});
+  expect({status, stderr}).toEqual({status: 0, stderr: ""});
+});
+
 test("lint and format results", async () => {
   const eslint = new ESLint({overrideConfigFile: "./dist/index.js"});
   const results = await eslint.lintText("export {};\n", {filePath: "test.ts"});

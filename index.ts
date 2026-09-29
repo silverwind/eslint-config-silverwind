@@ -1359,7 +1359,7 @@ const config: Array<Linter.Config> = [
       "vitest/no-mocks-import": [0],
       "vitest/no-restricted-matchers": [0],
       "vitest/no-restricted-vi-methods": [0],
-      "vitest/no-standalone-expect": [2],
+      "vitest/no-standalone-expect": [0], // false-positives in hooks, unlike the playwright rule
       "vitest/no-test-prefixes": [0],
       "vitest/no-test-return-statement": [0],
       "vitest/no-unneeded-async-expect-function": [2],

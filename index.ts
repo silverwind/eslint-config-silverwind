@@ -826,6 +826,7 @@ const config: Array<Linter.Config> = [
       "unicorn/better-dom-traversing": [0], // false-positives on non-DOM `.children` access
       "unicorn/catch-error-name": [0],
       "unicorn/class-reference-in-static-methods": [2],
+      "unicorn/comma-spacing": [0], // only applies to json language
       "unicorn/comment-content": [0],
       "unicorn/consistent-arrow-return-style": [0],
       "unicorn/consistent-assert": [0],
@@ -856,8 +857,10 @@ const config: Array<Linter.Config> = [
       "unicorn/filename-case": [0],
       "unicorn/id-match": [2],
       "unicorn/import-style": [0],
+      "unicorn/indent": [0], // only applies to json and css languages
       "unicorn/isolated-functions": [2, {functions: []}],
       "unicorn/iteration-fallback-style": [2, "fallback"],
+      "unicorn/key-name-casing": [0], // only applies to json, yaml and toml languages
       "unicorn/logical-assignment-operators": [0],
       "unicorn/max-nested-calls": [0],
       "unicorn/name-replacements": [0],
@@ -890,21 +893,20 @@ const config: Array<Linter.Config> = [
       "unicorn/no-chained-comparison": [2],
       "unicorn/no-collection-bracket-access": [2],
       "unicorn/no-computed-property-existence-check": [0],
+      "unicorn/no-conflicting-constraints": [2],
       "unicorn/no-confusing-array-splice": [2],
       "unicorn/no-confusing-array-with": [2],
       "unicorn/no-console-spaces": [0],
       "unicorn/no-constant-zero-expression": [2],
       "unicorn/no-declarations-before-early-exit": [0], // hooks and pure pre-reads legitimately precede early returns
-      "unicorn/no-deprecated-css-features": [0],
       "unicorn/no-document-cookie": [2],
       "unicorn/no-double-comparison": [2],
-      "unicorn/no-duplicate-css-selectors": [0],
-      "unicorn/no-duplicate-font-family-names": [0],
       "unicorn/no-duplicate-if-branches": [2], // replaces sonarjs/no-all-duplicated-branches (if-chain subset)
       "unicorn/no-duplicate-logical-operands": [2],
       "unicorn/no-duplicate-loops": [0], // flags legitimate chained array methods in for-of headers
       "unicorn/no-duplicate-set-values": [2],
       "unicorn/no-empty-file": [0],
+      "unicorn/no-empty-link-text": [0], // only applies to markdown language
       "unicorn/no-error-property-assignment": [0], // no construction-time API for stack, reassigning it to synthesize or forward stacks is legitimate
       "unicorn/no-exports-in-scripts": [2],
       "unicorn/no-for-each": [2],
@@ -912,21 +914,34 @@ const config: Array<Linter.Config> = [
       "unicorn/no-global-object-property-assignment": [2],
       "unicorn/no-immediate-mutation": [0], // in some cases it makes the code less readable
       "unicorn/no-impossible-length-comparison": [2],
+      "unicorn/no-incomplete-accessor-override": [2],
       "unicorn/no-incorrect-query-selector": [2],
       "unicorn/no-incorrect-template-string-interpolation": [0], // false-positives on intentional placeholder tokens
+      "unicorn/no-ineffective-csp-directives": [2],
       "unicorn/no-instanceof-builtins": [2],
       "unicorn/no-invalid-argument-count": [2],
+      "unicorn/no-invalid-boolean-attribute-value": [2],
       "unicorn/no-invalid-character-comparison": [2],
+      "unicorn/no-invalid-dom-token": [2],
       "unicorn/no-invalid-fetch-options": [2],
       "unicorn/no-invalid-file-input-accept": [2],
-      "unicorn/no-invalid-media-features": [0],
+      "unicorn/no-invalid-integrity": [2],
+      "unicorn/no-invalid-intl-options": [2],
+      "unicorn/no-invalid-property-descriptor": [2],
       "unicorn/no-invalid-remove-event-listener": [2],
+      "unicorn/no-invalid-response-options": [2],
+      "unicorn/no-invalid-style-set-property": [2],
+      "unicorn/no-invalid-temporal-arithmetic": [2],
+      "unicorn/no-invalid-url-protocol-comparison": [2],
       "unicorn/no-invalid-well-known-symbol-methods": [2],
+      "unicorn/no-javascript-url": [0], // only applies to markdown language
       "unicorn/no-keyword-prefix": [0],
       "unicorn/no-late-current-target-access": [2],
       "unicorn/no-late-event-control": [2],
+      "unicorn/no-leading-empty-lines": [0], // handled by @stylistic/no-multiple-empty-lines
       "unicorn/no-lonely-if": [2],
       "unicorn/no-loop-iterable-mutation": [0],
+      "unicorn/no-loss-of-precision": [0], // only applies to json, toml and css languages
       "unicorn/no-magic-array-flat-depth": [0],
       "unicorn/no-manually-wrapped-comments": [0], // too opinionated
       "unicorn/no-mismatched-map-key": [2],
@@ -939,7 +954,6 @@ const config: Array<Linter.Config> = [
       "unicorn/no-negated-condition": [0],
       "unicorn/no-negation-in-equality-check": [2],
       "unicorn/no-nested-ternary": [0],
-      "unicorn/no-nesting-with-mixed-specificity": [0],
       "unicorn/no-new-array": [0],
       "unicorn/no-new-buffer": [2],
       "unicorn/no-non-function-verb-prefix": [0],
@@ -948,9 +962,9 @@ const config: Array<Linter.Config> = [
       "unicorn/no-object-as-default-parameter": [0],
       "unicorn/no-object-methods-with-collections": [2],
       "unicorn/no-optional-chaining-on-undeclared-variable": [2],
+      "unicorn/no-prevent-default-in-passive-listener": [2],
       "unicorn/no-process-exit": [0],
       "unicorn/no-redundant-comparison": [2],
-      "unicorn/no-redundant-nested-style-rules": [0],
       "unicorn/no-return-array-push": [2],
       "unicorn/no-selector-as-dom-name": [2],
       "unicorn/no-shorthand-property-overrides": [0], // only applies to css language
@@ -966,8 +980,6 @@ const config: Array<Linter.Config> = [
       "unicorn/no-typeof-undefined": [2],
       "unicorn/no-uncalled-method": [2],
       "unicorn/no-undeclared-class-members": [2],
-      "unicorn/no-unknown-css-annotations": [0],
-      "unicorn/no-unknown-pseudo-selectors": [0],
       "unicorn/no-unnecessary-array-flat-depth": [2],
       "unicorn/no-unnecessary-array-flat-map": [2],
       "unicorn/no-unnecessary-array-splice-count": [2],
@@ -976,6 +988,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-fetch-options": [0],
       "unicorn/no-unnecessary-global-this": [0], // strips globalThis from browser globals, breaks SSR/isomorphic code
       "unicorn/no-unnecessary-nested-ternary": [2],
+      "unicorn/no-unnecessary-parameters": [0], // refactor hint, autofix breaks recursion accumulators like `seen = new Map()`
       "unicorn/no-unnecessary-polyfills": [0],
       "unicorn/no-unnecessary-slice-end": [2],
       "unicorn/no-unnecessary-splice": [2],
@@ -987,14 +1000,15 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unreadable-object-destructuring": [0], // flags the standard computed-key rest-omit idiom
       "unicorn/no-unsafe-buffer-conversion": [2],
       "unicorn/no-unsafe-dom-html": [0],
+      "unicorn/no-unsafe-json-serialization": [2],
       "unicorn/no-unsafe-sqlite-interpolation": [2],
       "unicorn/no-unsafe-promise-all-settled-values": [2],
       "unicorn/no-unsafe-property-key": [0], // flags any computed key, false-positives on controlled keys
       "unicorn/no-unsafe-string-replacement": [2],
-      "unicorn/no-unscoped-css-nesting-selector": [0],
       "unicorn/no-unused-builtin-method-return": [2],
       "unicorn/no-unused-iterator-helper": [2],
       "unicorn/no-unused-properties": [2],
+      "unicorn/no-url-in-search-params": [2],
       "unicorn/no-useless-boolean-cast": [2],
       "unicorn/no-useless-coercion": [2],
       "unicorn/no-useless-collection-argument": [2],
@@ -1062,8 +1076,8 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-early-return": [0], // guard-clause vs wrapped if is a style choice, not a defect
       "unicorn/prefer-else-if": [2],
       "unicorn/prefer-error-is-error": [0],
+      "unicorn/prefer-escaped-irregular-whitespace": [2],
       "unicorn/prefer-event-target": [2],
-      "unicorn/prefer-explicit-viewport-units": [0], // only applies to css language
       "unicorn/prefer-export-from": [0],
       "unicorn/prefer-flat-math-min-max": [2],
       "unicorn/prefer-get-or-insert-computed": [2],
@@ -1085,6 +1099,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-iterator-zip": [0],
       "unicorn/prefer-json-import": [0],
       "unicorn/prefer-keyboard-event-key": [2],
+      "unicorn/prefer-literal-ascii": [2],
       "unicorn/prefer-location-assign": [2],
       "unicorn/prefer-logical-operator-over-ternary": [0],
       "unicorn/prefer-map-from-entries": [0],
@@ -1092,7 +1107,6 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-math-constants": [2],
       "unicorn/prefer-math-min-max": [2],
       "unicorn/prefer-math-trunc": [2],
-      "unicorn/prefer-media-feature-range-syntax": [0],
       "unicorn/prefer-minimal-ternary": [0], // computed-key rewrite reads worse than the explicit ternary
       "unicorn/prefer-modern-dom-apis": [0],
       "unicorn/prefer-modern-math-apis": [2],
@@ -1111,6 +1125,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-optional-catch-binding": [2],
       "unicorn/prefer-path2d": [2],
       "unicorn/prefer-private-class-fields": [0], // can't rename framework-mandated underscore methods like Node stream `_read`/`_write`/`_final`, and private class fields don't work with Proxy
+      "unicorn/prefer-promise-static-methods": [2],
       "unicorn/prefer-promise-try": [2],
       "unicorn/prefer-promise-with-resolvers": [2],
       "unicorn/prefer-prototype-methods": [2],
@@ -1125,6 +1140,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-set-methods": [0], // requires es2024
       "unicorn/prefer-set-size": [2],
       "unicorn/prefer-short-arrow-method": [2],
+      "unicorn/prefer-short-escape-sequences": [2],
       "unicorn/prefer-simple-condition-first": [0],
       "unicorn/prefer-simple-sort-comparator": [0], // false-positives
       "unicorn/prefer-simplified-conditions": [0],
@@ -1172,6 +1188,7 @@ const config: Array<Linter.Config> = [
       "unicorn/require-passive-events": [2],
       "unicorn/require-post-message-target-origin": [0],
       "unicorn/require-proxy-trap-boolean-return": [2],
+      "unicorn/require-text-decoder-streaming": [2],
       "unicorn/single-line-block-comment-style": [0],
       "unicorn/string-content": [0],
       "unicorn/switch-case-braces": [0],
@@ -1254,6 +1271,7 @@ const config: Array<Linter.Config> = [
       "playwright/max-expects": [0],
       "playwright/max-nested-describe": [2],
       "playwright/missing-playwright-await": [2],
+      "playwright/no-action-timeout": [0], // too opinionated
       "playwright/no-commented-out-tests": [0],
       "playwright/no-conditional-expect": [2],
       "playwright/no-conditional-in-test": [0],
@@ -1261,10 +1279,13 @@ const config: Array<Linter.Config> = [
       "playwright/no-duplicate-slow": [2],
       "playwright/no-element-handle": [2],
       "playwright/no-eval": [2],
+      "playwright/no-export": [2],
       "playwright/no-focused-test": [2],
       "playwright/no-force-option": [2],
       "playwright/no-get-by-title": [0],
       "playwright/no-hooks": [0],
+      "playwright/no-identical-title": [2],
+      "playwright/no-magic-timeouts": [0], // too opinionated
       "playwright/no-nested-step": [2],
       "playwright/no-networkidle": [0],
       "playwright/no-nth-methods": [0],
@@ -1276,6 +1297,8 @@ const config: Array<Linter.Config> = [
       "playwright/no-skipped-test": [2],
       "playwright/no-slowed-test": [0],
       "playwright/no-standalone-expect": [2],
+      "playwright/no-template-literal-title": [0], // flags parameterized tests in loops
+      "playwright/no-test-return-statement": [2],
       "playwright/no-unnecessary-assertions": [2],
       "playwright/no-unsafe-references": [2],
       "playwright/no-unused-locators": [2],
@@ -1285,6 +1308,7 @@ const config: Array<Linter.Config> = [
       "playwright/no-wait-for-selector": [2],
       "playwright/no-wait-for-timeout": [2],
       "playwright/prefer-comparison-matcher": [0],
+      "playwright/prefer-ending-with-an-expect": [0], // false-positives on assertion helpers and trailing cleanup steps
       "playwright/prefer-equality-matcher": [0],
       "playwright/prefer-hooks-in-order": [2],
       "playwright/prefer-hooks-on-top": [2],
@@ -1297,6 +1321,7 @@ const config: Array<Linter.Config> = [
       "playwright/prefer-to-have-count": [2],
       "playwright/prefer-to-have-length": [2],
       "playwright/prefer-web-first-assertions": [2],
+      "playwright/require-annotation-reason": [0], // skips are already banned by playwright/no-skipped-test
       "playwright/require-hook": [0],
       "playwright/require-soft-assertions": [0],
       "playwright/require-tags": [0],

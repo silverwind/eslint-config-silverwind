@@ -988,7 +988,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-unnecessary-fetch-options": [0],
       "unicorn/no-unnecessary-global-this": [0], // strips globalThis from browser globals, breaks SSR/isomorphic code
       "unicorn/no-unnecessary-nested-ternary": [2],
-      "unicorn/no-unnecessary-parameters": [0], // refactor hint, autofix breaks recursion accumulators like `seen = new Map()`
+      "unicorn/no-unnecessary-parameters": [0], // refactor hint, false-positives on recursion accumulators like `seen = new Map()`
       "unicorn/no-unnecessary-polyfills": [0],
       "unicorn/no-unnecessary-slice-end": [2],
       "unicorn/no-unnecessary-splice": [2],

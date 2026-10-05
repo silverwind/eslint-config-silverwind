@@ -1033,7 +1033,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-useless-undefined": [0],
       "unicorn/no-using-resource-escape": [2],
       "unicorn/no-xor-as-exponentiation": [2],
-      "unicorn/no-zero-fractions": [2],
+      "unicorn/no-zero-fractions": [0], // forbids leading-dot decimals like .9
       "unicorn/number-literal-case": [0],
       "unicorn/numeric-separators-style": [0],
       "unicorn/operator-assignment": [2],

@@ -13,6 +13,7 @@ import reactDom from "eslint-plugin-react-dom";
 import reactWebApi from "eslint-plugin-react-web-api";
 import reactNamingConvention from "eslint-plugin-react-naming-convention";
 import reactRefresh from "eslint-plugin-react-refresh";
+import reactHooks from "eslint-plugin-react-hooks";
 import validateJsxNesting from "eslint-plugin-validate-jsx-nesting";
 import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
@@ -50,11 +51,12 @@ const noRestrictedImports = {
 
 const reactHookPlugins = {
   "react": reactX,
+  "react-hooks": {rules: reactHooks.rules}, // its legacy `configs` shape fails ESLint's Plugin type
   "react-web-api": reactWebApi,
 };
 
 const reactHookRules: Linter.RulesRecord = {
-  // react-hooks rules with no react-x equivalent (require eslint-plugin-react-hooks)
+  // react-hooks rules with no react-x equivalent
   // "react-hooks/automatic-effect-dependencies": [0],
   // "react-hooks/capitalized-calls": [0],
   // "react-hooks/config": [0],
@@ -71,6 +73,7 @@ const reactHookRules: Linter.RulesRecord = {
   // "react-hooks/syntax": [0],
   // "react-hooks/todo": [0],
   // "react-hooks/void-use-memo": [0],
+  "react-hooks/exhaustive-deps": [2], // catches missing member-expression deps that react/exhaustive-deps misses
   "react-web-api/no-leaked-event-listener": [0], // too many false-positives
   "react-web-api/no-leaked-fetch": [0], // experimental
   "react-web-api/no-leaked-intersection-observer": [2],
@@ -78,7 +81,7 @@ const reactHookRules: Linter.RulesRecord = {
   "react-web-api/no-leaked-resize-observer": [2],
   "react-web-api/no-leaked-timeout": [0], // too many false-positives
   "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
-  "react/exhaustive-deps": [2], // replaces react-hooks/exhaustive-deps
+  "react/exhaustive-deps": [2],
   "react/globals": [0], // experimental
   "react/immutability": [2],
   "react/no-create-ref": [2],

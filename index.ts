@@ -79,7 +79,7 @@ const reactHookRules: Linter.RulesRecord = {
   "react-web-api/no-leaked-timeout": [0], // too many false-positives
   "react/error-boundaries": [2], // replaces react-hooks/error-boundaries
   "react/exhaustive-deps": [2], // replaces react-hooks/exhaustive-deps
-  "react/globals": [0], // experimental
+  "react/globals": [2],
   "react/immutability": [2],
   "react/no-create-ref": [2],
   "react/no-missing-context-display-name": [2],

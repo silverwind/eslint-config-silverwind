@@ -946,7 +946,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-manually-wrapped-comments": [0], // too opinionated
       "unicorn/no-mismatched-map-key": [2],
       "unicorn/no-misrefactored-assignment": [2],
-      "unicorn/no-missing-local-resource": [0], // only applies to html/css/markdown languages
+      "unicorn/no-missing-local-resource": [0], // false-positives on glob patterns passed through `new URL(…, import.meta.url)`
       "unicorn/no-multiple-promise-resolver-calls": [2],
       "unicorn/no-named-default": [2],
       "unicorn/no-negated-array-predicate": [2],
@@ -1150,7 +1150,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-single-call": [2],
       "unicorn/prefer-single-object-destructuring": [2],
       "unicorn/prefer-single-replace": [2],
-      "unicorn/prefer-smaller-scope": [2],
+      "unicorn/prefer-smaller-scope": [0], // style only, flags every module-level type alias used by a single function
       "unicorn/prefer-split-limit": [0], // too opinionated
       "unicorn/prefer-spread": [0],
       "unicorn/prefer-string-match-all": [2],

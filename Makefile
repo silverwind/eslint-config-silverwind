@@ -11,12 +11,12 @@ deps: node_modules
 .PHONY: lint
 lint: node_modules build
 	./eslint-silverwind.ts -c dist/index.js --color .
-	pnpm exec tsgo
+	pnpm exec tsc
 
 .PHONY: lint-fix
 lint-fix: node_modules build
 	./eslint-silverwind.ts -c dist/index.js --color . --fix
-	pnpm exec tsgo
+	pnpm exec tsc
 
 .PHONY: test
 test: node_modules build

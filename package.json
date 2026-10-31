@@ -2,22 +2,23 @@
   "name": "eslint-config-silverwind",
   "version": "155.2.0",
   "description": "Exhaustive ESLint configuration",
-  "license": "BSD-2-Clause",
   "author": "silverwind <me@silverwind.io>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/silverwind/eslint-config-silverwind.git"
   },
+  "license": "BSD-2-Clause",
+  "type": "module",
+  "sideEffects": false,
   "bin": {
     "eslint-silverwind": "dist/eslint-silverwind.js"
   },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "type": "module",
-  "sideEffects": false,
-  "types": "./dist/index.d.ts",
-  "exports": "./dist/index.js",
+  "packageManager": "pnpm@12.16.1",
   "dependencies": {
     "@eslint-community/eslint-utils": "4.10.1",
     "@eslint/css-tree": "4.1.2",
@@ -26,6 +27,9 @@
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import-x": "4.17.1",
     "typescript": "6.0.3"
+  },
+  "peerDependencies": {
+    "eslint": "*"
   },
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "4.8.1",
@@ -50,17 +54,13 @@
     "globals": "17.13.0",
     "react": "19.3.1",
     "tsdown": "0.23.4",
-    "tsdown-config-silverwind": "4.1.4",
+    "tsdown-config-silverwind": "4.2.0",
     "typescript-config-silverwind": "21.0.2",
     "typescript-eslint": "8.72.1",
     "updates": "19.3.0",
-    "updates-config-silverwind": "4.0.9",
+    "updates-config-silverwind": "4.1.0",
     "versions": "15.5.2",
     "vitest": "5.0.5",
     "vitest-config-silverwind": "12.0.6"
-  },
-  "peerDependencies": {
-    "eslint": "*"
-  },
-  "packageManager": "pnpm@12.16.1"
+  }
 }

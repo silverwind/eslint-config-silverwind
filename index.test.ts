@@ -9,6 +9,12 @@ test("config", () => {
   expect(Array.isArray(configs)).toEqual(true);
 });
 
+test("only js and ts files get a config", async () => {
+  const files = ["build.test.sh", "a.stories.mdx", "a.worker.wasm", "integration/data.json", "a.test.ts"];
+  const configured = await Promise.all(files.map(async file => (await eslint.calculateConfigForFile(file)) !== undefined));
+  expect(configured).toEqual([false, false, false, false, true]);
+});
+
 test("dist loads without pnpm's NODE_PATH", () => {
   const {status, stderr} = spawnSync(execPath, ["--input-type=module", "-e", `await import("./dist/index.js")`], {env: {}, encoding: "utf8"});
   expect({status, stderr}).toEqual({status: 0, stderr: ""});

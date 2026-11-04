@@ -23,6 +23,7 @@ import type {Linter} from "eslint";
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
 const tsExts = ["ts", "tsx", "mts", "cts"] as const;
 const jsTsExts = [...jsExts, ...tsExts];
+const jsTsGlob = `{${jsTsExts.join(",")}}`;
 const jsxExts = ["jsx", "tsx"] as const;
 
 const noRestrictedSyntax = [
@@ -260,7 +261,7 @@ const config: Array<Linter.Config> = [
     ],
   },
   {
-    files: [`**/*.{${jsTsExts.join(",")}}`],
+    files: [`**/*.${jsTsGlob}`],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
@@ -1261,7 +1262,7 @@ const config: Array<Linter.Config> = [
     }
   },
   {
-    files: ["**/*.worker.*", "**/*.sharedworker.*"],
+    files: [`**/*.worker.${jsTsGlob}`, `**/*.sharedworker.${jsTsGlob}`],
     languageOptions: {
       globals: globals.worker,
     },
@@ -1271,8 +1272,8 @@ const config: Array<Linter.Config> = [
   },
   {
     files: [
-      `**/e2e/**/*.test.{${jsTsExts.join(",")}}`,
-      `**/*.e2e.{${jsTsExts.join(",")}}`,
+      `**/e2e/**/*.test.${jsTsGlob}`,
+      `**/*.e2e.${jsTsGlob}`,
     ],
     plugins: {playwright},
     languageOptions: {globals: {...globals.nodeBuiltin, ...globals.browser}},
@@ -1350,7 +1351,7 @@ const config: Array<Linter.Config> = [
   },
   {
     plugins: reactHookPlugins,
-    files: [`**/*.{${jsTsExts.join(",")}}`],
+    files: [`**/*.${jsTsGlob}`],
     rules: reactHookRules,
   },
   {
@@ -1361,9 +1362,9 @@ const config: Array<Linter.Config> = [
   {
     plugins: {vitest, "testing-library": testingLibrary},
     files: [
-      "**/*.test.*",
-      "vitest.setup.*",
-      "integration/**",
+      `**/*.test.${jsTsGlob}`,
+      `vitest.setup.${jsTsGlob}`,
+      `integration/**/*.${jsTsGlob}`,
     ],
     ignores: ["**/e2e/**", "**/*.e2e.*"],
     languageOptions: {globals: globals.vitest},
@@ -1485,14 +1486,14 @@ const config: Array<Linter.Config> = [
     },
   },
   {
-    files: ["**/*.test.*"],
+    files: [`**/*.test.${jsTsGlob}`],
     rules: {
       "no-restricted-syntax": [2, ...noRestrictedSyntax],
       "react/error-boundaries": [0],
     },
   },
   {
-    files: ["**/*.stories.*"],
+    files: [`**/*.stories.${jsTsGlob}`],
     plugins: {storybook},
     rules: {
       "@typescript-eslint/no-deprecated": [0], // type-aware and slow, low value here

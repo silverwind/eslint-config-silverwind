@@ -1363,7 +1363,7 @@ const config: Array<Linter.Config> = [
     plugins: {vitest, "testing-library": testingLibrary},
     files: [
       `**/*.test.${jsTsGlob}`,
-      `vitest.setup.${jsTsGlob}`,
+      `vitest.setup*.${jsTsGlob}`,
       `integration/**/*.${jsTsGlob}`,
     ],
     ignores: ["**/e2e/**", "**/*.e2e.*"],

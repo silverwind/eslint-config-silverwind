@@ -40,6 +40,12 @@ test("insecure syntax is reported outside test files only", async () => {
   expect(await reportedLines("index.test.ts")).toEqual([]);
 });
 
+test("vitest setup files get the test rules", async () => {
+  for (const file of ["vitest.setup.ts", "vitest.setup.browser.ts"]) {
+    expect((await eslint.calculateConfigForFile(file)).rules["unicorn/no-global-object-property-assignment"]).toEqual([0]);
+  }
+});
+
 test("wrapper prints spawn errors and exits 1", () => {
   const {status, stderr} = spawnSync(execPath, ["dist/eslint-silverwind.js"], {env: {PATH: ""}, encoding: "utf8"});
   expect({status, stderr}).toEqual({status: 1, stderr: "spawnSync pnpm ENOENT\n"});

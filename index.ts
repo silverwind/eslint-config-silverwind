@@ -41,6 +41,17 @@ const noRestrictedSyntax = [
   },
 ];
 
+const insecureSyntax = [
+  {
+    selector: ":matches(Property[key.name='rejectUnauthorized'][value.value=false], AssignmentExpression[left.property.name='NODE_TLS_REJECT_UNAUTHORIZED'], Property[key.name='NODE_TLS_REJECT_UNAUTHORIZED'])",
+    message: "Keep TLS certificate verification on, or justify turning it off in a disable comment.",
+  },
+  {
+    selector: "CallExpression:matches([callee.name=/^create(Hash|Hmac)$/], [callee.property.name=/^create(Hash|Hmac)$/])[arguments.0.value=/^(md5|sha1)$/i]",
+    message: "Use SHA-256 or stronger instead of MD5 or SHA-1, or justify it in a disable comment.",
+  },
+];
+
 const noRestrictedImports = {
   paths: [
     {name: "punycode"},
@@ -667,7 +678,7 @@ const config: Array<Linter.Config> = [
       "no-restricted-globals": [2, "self"],
       "no-restricted-imports": [2, noRestrictedImports],
       "no-restricted-properties": [0],
-      "no-restricted-syntax": [2, ...noRestrictedSyntax],
+      "no-restricted-syntax": [2, ...noRestrictedSyntax, ...insecureSyntax],
       "no-return-assign": [0],
       "no-script-url": [2],
       "no-self-assign": [2, {"props": true}],
@@ -1476,6 +1487,7 @@ const config: Array<Linter.Config> = [
   {
     files: ["**/*.test.*"],
     rules: {
+      "no-restricted-syntax": [2, ...noRestrictedSyntax],
       "react/error-boundaries": [0],
     },
   },

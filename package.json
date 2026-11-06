@@ -18,7 +18,7 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@12.16.1",
+  "packageManager": "pnpm@12.18.0",
   "dependencies": {
     "@eslint-community/eslint-utils": "4.10.1",
     "@eslint/css-tree": "4.1.2",
@@ -47,14 +47,14 @@
     "eslint-plugin-react-web-api": "5.28.8",
     "eslint-plugin-react-x": "5.28.8",
     "eslint-plugin-regexp": "3.3.3",
-    "eslint-plugin-storybook": "10.6.5",
+    "eslint-plugin-storybook": "10.6.6",
     "eslint-plugin-testing-library": "7.16.2",
     "eslint-plugin-unicorn": "79.0.0",
     "eslint-plugin-validate-jsx-nesting": "0.1.1",
     "globals": "17.14.0",
     "react": "19.3.1",
     "tsdown": "0.23.5",
-    "tsdown-config-silverwind": "4.2.1",
+    "tsdown-config-silverwind": "4.3.0",
     "typescript-config-silverwind": "21.0.2",
     "typescript-eslint": "8.72.1",
     "updates": "20.0.0",

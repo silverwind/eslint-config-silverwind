@@ -18,7 +18,7 @@ import typescriptPlugin from "typescript-eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import storybook from "eslint-plugin-storybook";
 import testingLibrary from "eslint-plugin-testing-library";
-import type {Linter} from "eslint";
+import type {Linter, Rule} from "eslint";
 
 const jsExts = ["js", "jsx", "mjs", "cjs"] as const;
 const tsExts = ["ts", "tsx", "mts", "cts"] as const;
@@ -58,6 +58,14 @@ const noRestrictedImports = {
     {name: "punycode"},
     {name: "assert"},
   ],
+};
+
+const listStyle = stylistic.rules["list-style"];
+const listSpacing: Rule.RuleModule = { // list-style minus its line-break checks, replaces the deprecated bracket spacing rules
+  meta: listStyle.meta,
+  create: context => listStyle.create(Object.create(context, {
+    report: {value: (descriptor: Rule.ReportDescriptor & {messageId: string}) => descriptor.messageId.endsWith("Spacing") && context.report(descriptor)},
+  })),
 };
 
 const reactHookPlugins = {
@@ -198,6 +206,8 @@ const jsxRules: Linter.RulesRecord = {
   "@stylistic/jsx-pascal-case": [2, {allowAllCaps: true}],
   "@stylistic/jsx-quotes": [0],
   "@stylistic/jsx-self-closing-comp": [2],
+  "@stylistic/jsx-shorthand-boolean": [0], // explicit `prop={true}` is enforced via no-restricted-syntax
+  "@stylistic/jsx-shorthand-fragment": [0], // `<Fragment>` is preferred over `<>`
   "@stylistic/jsx-tag-spacing": [2, {beforeSelfClosing: "never", beforeClosing: "never"}],
   "@stylistic/jsx-wrap-multilines": [2],
   "jsx-a11y/alt-text": [0],
@@ -288,6 +298,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint": typescriptPlugin.plugin,
       "import-x": importPlugin,
       regexp,
+      "silverwind": {rules: {"list-spacing": listSpacing}},
       unicorn,
     },
     settings: {
@@ -310,9 +321,6 @@ const config: Array<Linter.Config> = [
       "@eslint-community/eslint-comments/no-unused-enable": [2],
       "@eslint-community/eslint-comments/no-use": [0],
       "@eslint-community/eslint-comments/require-description": [2, {"additionalDirectives": ["oxlint-disable", "oxlint-disable-line", "oxlint-disable-next-line"], "ignore": ["eslint", "eslint-enable", "eslint-env", "exported", "global", "globals"]}],
-      "@stylistic/array-bracket-newline": [0],
-      "@stylistic/array-bracket-spacing": [2, "never"],
-      "@stylistic/array-element-newline": [0],
       "@stylistic/arrow-parens": [0],
       "@stylistic/arrow-spacing": [2, {"before": true, "after": true}],
       "@stylistic/block-spacing": [0],
@@ -324,10 +332,7 @@ const config: Array<Linter.Config> = [
       "@stylistic/curly-newline": [0],
       "@stylistic/dot-location": [2, "property"],
       "@stylistic/eol-last": [2],
-      "@stylistic/exp-list-style": [0],
-      "@stylistic/function-call-argument-newline": [0],
       "@stylistic/function-call-spacing": [2, "never"],
-      "@stylistic/function-paren-newline": [0],
       "@stylistic/generator-star-spacing": [0],
       "@stylistic/implicit-arrow-linebreak": [0],
       "@stylistic/indent": [2, 2, {"ignoreComments": true, "SwitchCase": 1}],
@@ -338,6 +343,7 @@ const config: Array<Linter.Config> = [
       "@stylistic/linebreak-style": [2, "unix"],
       "@stylistic/lines-around-comment": [0],
       "@stylistic/lines-between-class-members": [0],
+      "@stylistic/list-style": [0],
       "@stylistic/max-len": [0],
       "@stylistic/max-statements-per-line": [0],
       "@stylistic/member-delimiter-style": [0],
@@ -357,9 +363,6 @@ const config: Array<Linter.Config> = [
       "@stylistic/no-trailing-spaces": [2],
       "@stylistic/no-whitespace-before-property": [2],
       "@stylistic/nonblock-statement-body-position": [2],
-      "@stylistic/object-curly-newline": [0],
-      "@stylistic/object-curly-spacing": [2, "never"],
-      "@stylistic/object-property-newline": [0],
       "@stylistic/one-var-declaration-per-line": [0],
       "@stylistic/operator-linebreak": [2, "after"],
       "@stylistic/padded-blocks": [2, "never"],
@@ -833,6 +836,7 @@ const config: Array<Linter.Config> = [
       "require-await": [0],
       "require-unicode-regexp": [0],
       "require-yield": [2],
+      "silverwind/list-spacing": [2, {singleLine: {spacing: "never"}, overrides: {"()": "off", "{}": {singleLine: {spacing: "never"}}}}],
       "sort-imports": [0],
       "sort-keys": [0],
       "sort-vars": [0],
@@ -898,7 +902,7 @@ const config: Array<Linter.Config> = [
       "unicorn/no-array-splice": [0],
       "unicorn/no-asterisk-prefix-in-documentation-comments": [0],
       "unicorn/no-async-iterator-callback": [2],
-      "unicorn/no-async-promise-finally": [2],
+      "unicorn/no-async-promise-finally": [0], // syntax convention, the equivalent try/finally with await passes
       "unicorn/no-await-expression-member": [0],
       "unicorn/no-await-in-promise-methods": [2],
       "unicorn/no-barrel-files": [0], // syntax-only, cannot tell a package entry point from an internal barrel
@@ -1141,6 +1145,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-object-iterable-methods": [2],
       "unicorn/prefer-observer-apis": [2],
       "unicorn/prefer-optional-catch-binding": [2],
+      "unicorn/prefer-options-parameter": [0],
       "unicorn/prefer-path2d": [2],
       "unicorn/prefer-private-class-fields": [0], // can't rename framework-mandated underscore methods like Node stream `_read`/`_write`/`_final`, and private class fields don't work with Proxy
       "unicorn/prefer-promise-static-methods": [2],
@@ -1151,6 +1156,7 @@ const config: Array<Linter.Config> = [
       "unicorn/prefer-queue-microtask": [2],
       "unicorn/prefer-reflect-apply": [0],
       "unicorn/prefer-regexp-escape": [0],
+      "unicorn/prefer-regexp-exec": [0],
       "unicorn/prefer-regexp-test": [2],
       "unicorn/prefer-response-static-json": [2],
       "unicorn/prefer-scoped-selector": [0],
@@ -1206,6 +1212,7 @@ const config: Array<Linter.Config> = [
       "unicorn/require-passive-events": [2],
       "unicorn/require-post-message-target-origin": [0],
       "unicorn/require-proxy-trap-boolean-return": [2],
+      "unicorn/require-spread-parentheses": [0],
       "unicorn/require-text-decoder-streaming": [2],
       "unicorn/single-line-block-comment-style": [0],
       "unicorn/string-content": [0],

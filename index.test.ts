@@ -30,6 +30,11 @@ test("require-description reports undescribed oxlint directives", async () => {
   expect(messages.filter(msg => msg.ruleId === "@eslint-community/eslint-comments/require-description").map(msg => msg.line)).toEqual([1]);
 });
 
+test("list-spacing reports bracket spacing but not line breaks", async () => {
+  const [{messages}] = await eslint.lintText("export const a = { b: [ 1 ] };\nexport const c = [\n  1, 2,\n];\n", {filePath: "index.ts"});
+  expect(messages.filter(msg => msg.ruleId === "silverwind/list-spacing").map(msg => msg.line)).toEqual([1, 1, 1, 1]);
+});
+
 test("insecure syntax is reported outside test files only", async () => {
   const code = `import crypto, {createHash} from "node:crypto";\nimport https from "node:https";\nprocess.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";\nhttps.get("https://localhost", {rejectUnauthorized: false});\ncreateHash("md5");\ncrypto.createHmac("sha1", "key");\n`;
   const reportedLines = async (filePath: string) => {

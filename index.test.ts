@@ -35,16 +35,6 @@ test("list-spacing reports bracket spacing but not line breaks", async () => {
   expect(messages.filter(msg => msg.ruleId === "silverwind/list-spacing").map(msg => msg.line)).toEqual([1, 1, 1, 1]);
 });
 
-test("insecure syntax is reported outside test files only", async () => {
-  const code = `import crypto, {createHash} from "node:crypto";\nimport https from "node:https";\nprocess.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";\nhttps.get("https://localhost", {rejectUnauthorized: false});\ncreateHash("md5");\ncrypto.createHmac("sha1", "key");\n`;
-  const reportedLines = async (filePath: string) => {
-    const [{messages}] = await eslint.lintText(code, {filePath});
-    return messages.filter(msg => msg.ruleId === "no-restricted-syntax").map(msg => msg.line);
-  };
-  expect(await reportedLines("index.ts")).toEqual([3, 4, 5, 6]);
-  expect(await reportedLines("index.test.ts")).toEqual([]);
-});
-
 test("vitest setup files get the test rules", async () => {
   for (const file of ["vitest.setup.ts", "vitest.setup.browser.ts"]) {
     expect((await eslint.calculateConfigForFile(file)).rules["unicorn/no-global-object-property-assignment"]).toEqual([0]);

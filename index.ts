@@ -324,7 +324,7 @@ const config: Array<Linter.Config> = [
       "@stylistic/function-call-spacing": [2, "never"],
       "@stylistic/generator-star-spacing": [0],
       "@stylistic/implicit-arrow-linebreak": [0],
-      "@stylistic/indent": [2, 2, {"ignoreComments": true, "SwitchCase": 1}],
+      "@stylistic/indent": [2, 2, {"ignoreComments": true, "SwitchCase": 1, "ignoredNodes": ["TSTypeAnnotation"]}], // stylistic 6 indents a type that wraps after its colon
       "@stylistic/indent-binary-ops": [0],
       "@stylistic/key-spacing": [2],
       "@stylistic/keyword-spacing": [2],

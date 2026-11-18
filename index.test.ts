@@ -35,6 +35,11 @@ test("list-spacing reports bracket spacing but not line breaks", async () => {
   expect(messages.filter(msg => msg.ruleId === "silverwind/list-spacing").map(msg => msg.line)).toEqual([1, 1, 1, 1]);
 });
 
+test("indent ignores a type wrapped after its colon but checks its members", async () => {
+  const [{messages}] = await eslint.lintText("export function f(\n  {a}:\n  {a: number},\n): number {\n  return a;\n}\nexport const b: {\n    c: string;\n} = {c: \"\"};\n", {filePath: "index.ts"});
+  expect(messages.filter(msg => msg.ruleId === "@stylistic/indent").map(msg => msg.line)).toEqual([8]);
+});
+
 test("vitest setup files get the test rules", async () => {
   for (const file of ["vitest.setup.ts", "vitest.setup.browser.ts"]) {
     expect((await eslint.calculateConfigForFile(file)).rules["unicorn/no-global-object-property-assignment"]).toEqual([0]);

@@ -453,6 +453,7 @@ const config: Array<Linter.Config> = [
       "@typescript-eslint/no-unsafe-argument": [0],
       "@typescript-eslint/no-unsafe-assignment": [0],
       "@typescript-eslint/no-unsafe-call": [0],
+      "@typescript-eslint/no-unsafe-class-instance-assignment": [0], // false positives on subclasses that only add optional fields
       "@typescript-eslint/no-unsafe-declaration-merging": [2],
       "@typescript-eslint/no-unsafe-enum-assignment": [0],
       "@typescript-eslint/no-unsafe-enum-comparison": [0],

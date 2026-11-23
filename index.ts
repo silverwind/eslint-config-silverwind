@@ -1202,7 +1202,7 @@ const config: Array<Linter.Config> = [
       "unicorn/require-passive-events": [2],
       "unicorn/require-post-message-target-origin": [0],
       "unicorn/require-proxy-trap-boolean-return": [2],
-      "unicorn/require-spread-parentheses": [0],
+      "unicorn/require-spread-parentheses": [2],
       "unicorn/require-text-decoder-streaming": [2],
       "unicorn/single-line-block-comment-style": [0],
       "unicorn/string-content": [0],

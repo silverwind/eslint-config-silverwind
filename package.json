@@ -18,11 +18,11 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@12.21.0",
+  "packageManager": "pnpm@12.23.0",
   "dependencies": {
     "@eslint-community/eslint-utils": "4.10.1",
-    "@typescript-eslint/parser": "8.73.0",
-    "@typescript-eslint/types": "8.73.0",
+    "@typescript-eslint/parser": "8.74.0",
+    "@typescript-eslint/types": "8.74.0",
     "eslint-import-resolver-typescript": "4.4.5",
     "eslint-plugin-import-x": "4.18.1",
     "eslint-plugin-unicorn": "80.0.0",
@@ -55,7 +55,7 @@
     "tsdown": "0.23.7",
     "tsdown-config-silverwind": "5.0.0",
     "typescript-config-silverwind": "21.0.2",
-    "typescript-eslint": "8.73.0",
+    "typescript-eslint": "8.74.0",
     "updates": "20.0.2",
     "updates-config-silverwind": "4.1.0",
     "versions": "15.5.2",
